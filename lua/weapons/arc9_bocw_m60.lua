@@ -61,7 +61,7 @@ SWEP.MirrorVMWM = true
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.WorldModelOffset = {
-    Pos = Vector(-5, 3, -6.2),
+    Pos = Vector(-10, 3, -6.2),
     Ang = Angle(-10, 0, 180),
     Scale = 1
 }
@@ -115,7 +115,7 @@ SWEP.BodyDamageMults = {
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory.
+SWEP.ClipSize = 20 -- Self-explanatory. // low clip size for easier empty reload testing
 SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 

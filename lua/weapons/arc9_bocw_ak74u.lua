@@ -1,25 +1,25 @@
 --=============================================================================
---   CALL OF DUTY: BLACK OPS COLD WAR        // can someone that knows the base better unfuck this and the m60's code
---   DMR 14                                  // theres two hundred percent stinky stuff in here that i dont know more about
---   LUA - MAIN                              // this is my first ever arc9 gun ever
+--   CALL OF DUTY: BLACK OPS COLD WAR
+--   AK-74u
+--   LUA - MAIN
 --=============================================================================
---[[                                         // i tried camos as well, couldnt get them to work at all
+--[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
---   BUILD : v0.5
---   SR.NO : 33101
+--   BUILD : v0.1
+--   SR.NO : 133103
 
 
-oooooooooo.   ooo        ooooo ooooooooo.        .o        .o   
-`888'   `Y8b  `88.       .888' `888   `Y88.    o888      .d88   
- 888      888  888b     d'888   888   .d88'     888    .d'888   
- 888      888  8 Y88. .P  888   888ooo88P'      888  .d'  888   
- 888      888  8  `888'   888   888`88b.        888  88ooo888oo 
- 888     d88'  8    Y     888   888  `88b.      888       888   
-o888bood8P'   o8o        o888o o888o  o888o    o888o     o888o  
-                                                                
-                                            
+      .o.       oooo    oooo          ooooooooo       .o               
+     .888.      `888   .8P'          d"""""""8'     .d88               
+    .8"888.      888  d8'                  .8'    .d'888   oooo  oooo  
+   .8' `888.     88888[                   .8'   .d'  888   `888  `888  
+  .88ooo8888.    888`88b.    8888888     .8'    88ooo888oo  888   888  
+ .8'     `888.   888  `88b.             .8'          888    888   888  
+o88o     o8888o o888o  o888o           .8'          o888o   `V88V"V8P' 
+                                                                       
+                                       
 ]]
 
 AddCSLuaFile()
@@ -31,15 +31,15 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "DMR 14"
-SWEP.TrueName = "M14"
-SWEP.Class = "Battle Rifle"
+SWEP.PrintName = "AK-74u"
+SWEP.TrueName = "AKS-74U"
+SWEP.Class = "Submachine Gun"
 SWEP.Trivia = {
-     Manufacturer = "Springfield Armory",
-     Calibre = "7.62x51mm NATO",
-     Mechanism = "Gas-operated, Rotating bolt",
-     Country = "USA",
-     Year = 1955
+     Manufacturer = "Tula Arms Plant",
+     Calibre = "5.45x39mm NATO",
+     Mechanism = "Gas-operated, Rotating Bolt",
+     Country = "USSR / Russia",
+     Year = 1979
 }
 
 SWEP.Credits = {
@@ -47,14 +47,14 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Semi-auto tactical rifle. Increased fire rate with minimal recoil. Maintains reliable damage over longer range encounters.]]
+SWEP.Description = [[Full-auto submachine gun. Improved damage with reliable weapon control. Utilizes 5.45mm ammo for superior penetration.]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_dmr14_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_dmr14_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_ak74u_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_ak74u_bocw.mdl"
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
@@ -73,8 +73,8 @@ SWEP.ViewModelFOVBase = 75
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 58 -- Damage done at point blank range
-SWEP.DamageMin = 25 -- Damage done at maximum range
+SWEP.DamageMax = 38 -- Damage done at point blank range
+SWEP.DamageMin = 27 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -115,8 +115,8 @@ SWEP.BodyDamageMults = {
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory.
-SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.ClipSize = 30 -- Self-explanatory.
+SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -132,7 +132,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 360
+SWEP.RPM = 697
 
 -- Works different to ArcCW
 
@@ -145,11 +145,7 @@ SWEP.RPM = 360
 
 SWEP.Firemodes = {
     {
-        Mode = 1,
-    },
-    {
         Mode = -1,
-        RPMOverride = 750,
     },
 }
 
@@ -241,13 +237,13 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.DMR14_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.DMR14_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.DMR14_fire_silenced"                    -- Fire silenced
+SWEP.ShootSound = "ARC9_BOCW.ak74u_fire"                            -- Fire
+SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.ak74u_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.DMR14_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.ak74u_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -255,7 +251,7 @@ SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_rifle.wav"
+SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_smg.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -307,7 +303,18 @@ SWEP.NoViewBob = false
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     [1] = "tag_bullet_deplete_sqtl_00_animate",
-    [2] = "tag_bullet_deplete_sqtl_01_animate"
+    [2] = "tag_bullet_deplete_sqtl_01_animate",
+    [3] = "tag_bullet_deplete_sqtl_02_animate",
+    [4] = "tag_bullet_deplete_sqtl_03_animate",
+    [5] = "tag_bullet_deplete_sqtl_04_animate",
+    [6] = "tag_bullet_deplete_sqtl_05_animate",
+    [7] = "tag_bullet_deplete_sqtl_06_animate",
+    [8] = "tag_bullet_deplete_sqtl_07_animate",
+    [9] = "tag_bullet_deplete_sqtl_08_animate",
+    [10] = "tag_bullet_deplete_sqtl_09_animate",
+    [11] = "tag_bullet_deplete_sqtl_10_animate",
+    [12] = "tag_bullet_deplete_sqtl_11_animate",
+    [13] = "tag_bullet_deplete_sqtl_12_animate"
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -320,9 +327,13 @@ SWEP.BulletBGs = {}
 SWEP.CaseBGs = {}
 SWEP.StripperClipBGs = {}
 
-SWEP.HideBones = {} -- bones to hide in third person and customize menu. {"list", "of", "bones"}
+SWEP.HideBones = {
+    "tag_clip1",
+    "tag_bullet_deplete_sqtl_00_animate1",
+    "tag_bullet_deplete_sqtl_01_animate1"
+} -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    -- [1] = {"list", "of", "bones"},
+    [1] = {"tag_clip1"},
     -- [2] = {"list", "of", "bones"}
 }
 
@@ -338,11 +349,15 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 
 -------------------------- CAMO SYSTEM
 
+SWEP.CustomCamoTexture = nil
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = nil
+
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.526, -6, 1.325),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.729, -3.5, 0.82),
+    Ang = Angle(0, 0, 2.549),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
@@ -373,7 +388,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(17, 30, 4)
+SWEP.CustomizePos = Vector(10, 32, 4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -405,26 +420,21 @@ SWEP.DefaultElements = {}
 
 SWEP.AttachmentElements = {
     ["ammo_papunch"] = {
-        NameChange = "DeMolisheR K14",
-    },
-    ["optic_mount"] = {
-        Bodygroups = {
-            {2, 1}
-        }
-    },
-    ["laser_mount"] = {
-        Bodygroups = {
-            {3, 1}
-        }
+        NameChange = "AK-74NOFU2",
     },
     ["maggone"] = {
         Bodygroups = {
             {1, 1}
         }
     },
-    ["stockgone"] = {
+    ["mag2gone"] = {
         Bodygroups = {
-            {6, 1}
+            {2, 1}
+        }
+    },
+    ["optic_mount"] = {
+        Bodygroups = {
+            {3, 1},
         }
     },
 }
@@ -448,7 +458,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(8, 0, 3.7),
+        Pos = Vector(2, 0, 4),
         Ang = Angle(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
@@ -456,22 +466,22 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        Bone = "tag_weapon",
-        Pos = Vector(31.1, 0, 2.4),
+        Bone = "tag_muzzle",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"dmr_muzzle", "muzzle", "bo1_muzzle"},
     },
     {
         PrintName = "Underbarrel",
         Bone = "tag_weapon",
-        Pos = Vector(15, 0, 0.8),
+        Pos = Vector(10, 0, 1.3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
     {
-        PrintName = "Gas Block",
+        PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(23.8, 0, 1.5),
+        Pos = Vector(10, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_rail_tactical"},
     },
@@ -480,17 +490,16 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_barrel"},
+        Category = {"bocw_ak74u_barrel"},
         DefaultName = [[19.8" Steyr]],
     },
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        DefaultIcon = Material("entities/bocw_atts/stocks/dmr14_stock.png", "mips smooth"),
         Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_stock"},
+        Category = {"bocw_ak74u_stock"},
     },
     {
         PrintName = "Magazine",
@@ -498,14 +507,14 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_mag"},
+        Category = {"bocw_ak74u_mag"},
     },
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_wrap"},
+        Category = {"bocw_ak74u_wrap"},
     },
     {
         PrintName = "Ammo Type",
@@ -521,36 +530,27 @@ SWEP.Attachments = {
         PrintName = "Sound",
         DefaultName = "BOCW Sound",
         DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_dmr14_sound"},
-    },
-    {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "Skin",
-        DefaultIcon = Material("arc9/def_att_icons/skin.png"),
-        Bone = "tag_weapon",
-        Pos = Vector(-7, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
+        Category = {"bocw_ak74u_sound"},
     },
 }
-
+--[[
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["dmr14_mag_ext"] then
+    if elements["ak74u_mag_ext"] then
         return anim .. "_extclip"
     end
 
-    if elements["dmr14_mag_mix"] then
+    if elements["ak74u_mag_mix"] then
         return anim .. "_mixclip"
     end
 
-    if elements["dmr14_mag_dual"] then
+    if elements["ak74u_mag_dual"] then
         return anim .. "_dualmag"
     end
 
 end
-
+]]
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -561,73 +561,17 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 0.8,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.4,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_draw", t = 0 },
-        },
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 0.8,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.4,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_draw", t = 0 },
-        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.4,
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_holster", t = 0 },
-        },
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 0.4,
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_holster", t = 0 },
-        },
     },
     ["ready"] = {
         Source = "ready",
         Time = 1.2,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.4,
-                lhik = 1,
-                rhik = 1
-            },
-        },
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_readyboltback", t = 0.4 },
-            { s = "ARC9_BOCW.DMR14_readyboltrelease", t = 0.6 },
+            { s = "ARC9_BOCW.ak74u_boltback", t = 0.4 },
+            { s = "ARC9_BOCW.ak74u_boltrelease", t = 0.6 },
         },
     },
     ["bash"] = {
@@ -636,109 +580,77 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.8,
+        Time = 0.4,
         EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 0.8,
-        EjectAt = 0,
-    },
-    ["fire_empty"] = {
-        Source = {"fire_last"},
-        Time = 0.8,
-        EjectAt = 0,
-    },
-    ["fire_iron_empty"] = {
-        Source = "fire_ads_last",
-        Time = 0.8,
+        Time = 0.3,
         EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.36 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.AK74u_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
+            { s = "ARC9_BOCW.AK74u_reload_magin", t = 1.65 },
+            { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3.2,
         MinProgress = 2,
-        MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.4 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.DMR14_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_magout", t = 0.6 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_magin", t = 1.3 },
+            { s = "ARC9_BOCW.AK74u_boltback", t = 2 },
+            { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.2 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.6 },
         },
     },
-    ["reload_extclip"] = {
-        Source = "reload_ext",
+    ["reload_drum"] = {
+        Source = "reload_drum",
         Time = 2.4,
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.36 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.ak74u_magout", t = 0.36 },
+            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
+            { s = "ARC9_BOCW.ak74u_reload_end", t = 1.9 },
         },
     },
-    ["reload_empty_extclip"] = {
-        Source = "reload_ext_empty",
+    ["reload_empty_drum"] = {
+        Source = "reload_drum_empty",
         Time = 3.2,
         MinProgress = 2,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.4 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.DMR14_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.ak74u_magout", t = 0.4 },
+            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
+            { s = "ARC9_BOCW.ak74u_boltback", t = 2.22 },
+            { s = "ARC9_BOCW.ak74u_boltrelease", t = 2.4 },
         },
     },
-    ["reload_mixclip"] = {
-        Source = "reload_mixclip",
+    ["reload_dual"] = {
+        Source = {"reload_dual", "reload_dual2"},
         Time = 2.4,
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.36 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.ak74u_magout", t = 0.36 },
+            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
+            { s = "ARC9_BOCW.ak74u_reload_end", t = 1.9 },
         },
     },
-    ["reload_empty_mixclip"] = {
-        Source = "reload_mixclip_empty",
+    ["reload_empty_dual"] = {
+        Source = {"reload_dual_empty", "reload_dual2_empty"},
         Time = 3.2,
         MinProgress = 2,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.4 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.DMR14_boltrelease", t = 2.4 },
-        },
-    },
-    ["reload_dualmag"] = {
-        Source = {"reload_dualmag", "reload_dualmag2"},
-        Time = 1.8,
-        MinProgress = 1.9,
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.35 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 0.95 },
-            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.5 },
-        },
-    },
-    ["reload_empty_dualmag"] = {
-        Source = {"reload_dualmag_empty", "reload_dualmag2_empty"},
-        Time = 2.5,
-        MinProgress = 2,
-        MagSwapTime = 1,
-        EventTable = {
-            { s = "ARC9_BOCW.DMR14_magout", t = 0.35 },
-            { s = "ARC9_BOCW.DMR14_magin", t = 0.95 },
-            { s = "ARC9_BOCW.DMR14_boltback", t = 1.8 },
-            { s = "ARC9_BOCW.DMR14_boltrelease", t = 1.9 },
+            { s = "ARC9_BOCW.ak74u_magout", t = 0.4 },
+            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
+            { s = "ARC9_BOCW.ak74u_boltback", t = 2.22 },
+            { s = "ARC9_BOCW.ak74u_boltrelease", t = 2.4 },
         },
     },
     ["enter_sprint"] = {
@@ -755,20 +667,18 @@ SWEP.Animations = {
     },
     ["enter_inspect"] = {
         Source = "inspect",
-        Time = 6.5,
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_inspect1", t = 0 },
-            { s = "ARC9_BOCW.DMR14_inspect2", t = 4.5 },
+            { s = "ARC9_BOCW.ak74u_inspect", t = 0 },
         },
     },
 }
 
 SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
-    local gunname = "M14"
+    local gunname = "AKS-74U"
 
     if attached["bo1_pap"] then
-        gunname = "DeMolisheR K14"
+        gunname = "AK-74NOFU2"
     end
 
     return gunname
