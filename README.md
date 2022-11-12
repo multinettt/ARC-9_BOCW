@@ -12,18 +12,18 @@ None
 
 ### Submachine Guns:
 
-- MP5        (MP5K)          [Not usable, VM Only]
-- Milano 821 (Type 821)      [Not usable, VM Only]
-- AK-74u     (AKS-74U)       [No Attachments]
+- MP5        (H&K MP5K)        [Not usable, VM Only]
+- Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
+- AK-74u     (AKS-74U)         [No Attachments]
 
 ### Tactical Rifles:
 
-- M16        (M16A3)         [Not usable, VM Only]
+- M16        (M16A3)           [Not usable, VM Only]
 - DMR 14     (M14)
 
 ### Light Machine Guns:
 
-- M60        (M60E3)         [No Attachments]
+- M60        (M60E3)           [No Attachments]
 
 ### Sniper Rifles:
 
@@ -35,7 +35,7 @@ None
 
 ### Shotguns:
 
-- Hauer 77 (Ithaca 37)      [Not usable, VM Only]
+- Hauer 77 (Ithaca 37)        [Not usable, VM Only]
 
 
 ## Attachments
