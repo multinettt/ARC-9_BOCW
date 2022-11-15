@@ -214,7 +214,7 @@ SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 0.96
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 1
 SWEP.SpeedMultSights = 0.30
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
@@ -380,7 +380,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(17, 30, 4)
+SWEP.CustomizePos = Vector(18, 30, 4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -450,7 +450,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(6, 0, 3.3),
+        Pos = Vector(5.5, 0, 2.7),
         Ang = Angle(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
@@ -488,7 +488,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        Bone = "tag_stock",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_pellington703_stock"},
@@ -496,7 +496,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         DefaultName = "20 Rnd",
-        Bone = "tag_clip",
+        Bone = "tag_bullet_latch_animate",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_pellington703_mag"},
@@ -539,8 +539,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.pellington_readyboltback", t = 0.4 },
-            { s = "ARC9_BOCW.pellington_readyboltforward", t = 0.6 },
+            { s = "ARC9_BOCW.pellington_boltforward", t = 0.4 },
         },
     },
     ["cycle"] = {
@@ -580,7 +579,7 @@ SWEP.Animations = {
         Source = "reload_out",
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.pellington_boltforward", t = 0.3 },
+            { s = "ARC9_BOCW.pellington_boltforward", t = 0.25 },
         },
     },
     ["enter_sprint"] = {
