@@ -151,7 +151,7 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.2
 
@@ -458,7 +458,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(2, 0, 4),
+        Pos = Vector(3, 0, 3.8),
         Ang = Angle(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
@@ -592,7 +592,7 @@ SWEP.Animations = {
         Source = "reload",
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.AK74u_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK74u_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.AK74u_reload_magin", t = 1.65 },
             { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },

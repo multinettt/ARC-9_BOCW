@@ -2,7 +2,7 @@ ATT.PrintName = "Leupold 8x"
 ATT.CompactName = "LPOLD"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[ ]]
-ATT.SortOrder = 0
+ATT.SortOrder = 8
 
 ATT.Model = "models/weapons/arc9/atts/pellington_scope.mdl"
 
