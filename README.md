@@ -8,7 +8,8 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Assault Rifles:
 
-None
+- (soon) XM4 (XM117E2)
+- (soon) Vargo 52 (VAHAN Rifle)
 
 ### Submachine Guns:
 
@@ -27,7 +28,7 @@ None
 
 ### Sniper Rifles:
 
-None
+- Pellington 703 (Remington 700) [No Attachments]
 
 ### Pistols:
 
@@ -38,6 +39,10 @@ None
 - Hauer 77 (Ithaca 37)        [Not usable, VM Only]
 
 
-## Attachments
+## Attachments:
 
-### Very Soon
+### Optics:
+
+- Axial Arms 3x
+- Royal & Kross 4x(broken)
+- Pellington 703 Scope 8x
