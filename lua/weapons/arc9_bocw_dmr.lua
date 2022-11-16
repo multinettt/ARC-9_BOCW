@@ -486,7 +486,6 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        DefaultIcon = Material("entities/bocw_atts/stocks/dmr14_stock.png", "mips smooth"),
         Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
