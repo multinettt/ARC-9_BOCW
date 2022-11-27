@@ -8,8 +8,8 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Assault Rifles:
 
-- (soon) XM4 (XM117E2)
-- (soon) Vargo 52 (VAHAN Rifle)
+- XM4 (XM117E2)                [Not usable, VM Only]
+- Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]
 
 ### Submachine Guns:
 
