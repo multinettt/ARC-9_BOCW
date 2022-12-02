@@ -32,7 +32,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Pistols:
 
-None
+- 1911 (M1911A1) [Not usable, VM Only]
 
 ### Shotguns:
 
