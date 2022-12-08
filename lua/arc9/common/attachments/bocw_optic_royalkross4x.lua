@@ -12,10 +12,10 @@ ATT.Folder = "BOCW SCOPE" -- test
 // Allows a custom sight position to be defined
 ATT.Sights = {
     {
-        Pos = Vector(0, 4, -1.25),
+        Pos = Vector(0, 4, -1.1),
         Ang = Angle(0, 0, 0),
-        Magnification = 4,
-        ViewModelFOV = 75
+        Magnification = 1,
+        ViewModelFOV = 60
     },
     -- {
     --     Pos = Vector(0, 7.5, -3.237175),
@@ -28,8 +28,8 @@ ATT.Sights = {
 ATT.RTScopeAdjustable = false
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 2
-ATT.RTScopeFOV = 1
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 6
 ATT.RTScopeReticle = Material("arc9/reticle_royalkross4x.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.2
 ATT.RTScopeColorable = true
@@ -37,4 +37,5 @@ ATT.RTScopeShadowIntensity = 10
 
 ATT.ScopeScreenRatio = 0.7
 
-ATT.ModelOffset = Vector(-1, 0, -0.06)
+ATT.ModelOffset = Vector(-1, 0, -0.04)
+ATT.Scale = 0.84

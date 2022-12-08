@@ -29,7 +29,7 @@ ATT.RTScopeAdjustable = false
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
-ATT.RTScopeFOV = 1
+ATT.RTScopeFOV = 8
 ATT.RTScopeReticle = Material("arc9/reticle_axialarms3x.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.5
 ATT.RTScopeColorable = true
