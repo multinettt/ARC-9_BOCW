@@ -44,5 +44,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 ### Optics:
 
 - Axial Arms 3x
-- Royal & Kross 4x(broken)
+- Royal & Kross 4x
+- SUSAT Multizoom 2-4x
+- Hangman RF 6x
 - Pellington 703 Scope 8x
