@@ -473,7 +473,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(23.8, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_rail_tactical"},
+        Category = {"bocw_dmr14_gasblock"},
     },
     {
         PrintName = "Barrel",
