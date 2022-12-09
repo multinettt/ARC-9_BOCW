@@ -48,3 +48,5 @@ Because of the sheer size of individual weapons, this pack and repository will b
 - SUSAT Multizoom 2-4x
 - Hangman RF 6x
 - Pellington 703 Scope 8x
+- AN/PVS-4 Thermal 2.3x
+- Noch Sova Thermal 2.3x (PN58) [not usable at the moment]
