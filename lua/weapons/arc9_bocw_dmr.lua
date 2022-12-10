@@ -524,7 +524,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Cosmetic",
-        DefaultCompactName = "Skin",
+        DefaultCompactName = "Skin (Couldn't get this to work)",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
         Bone = "tag_weapon",
         Pos = Vector(-7, 0, 2),
