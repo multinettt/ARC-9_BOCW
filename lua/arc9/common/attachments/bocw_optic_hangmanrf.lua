@@ -1,7 +1,9 @@
 ATT.PrintName = "Hangman RF 6x"
 ATT.CompactName = "HNGMN RF"
 ATT.Icon = Material("entities/bocw_atts/optics/hangmanrf.png", "mips smooth")
-ATT.Description = [[American rangefinder scope with 6.0x maginfication for reliable long-distance target acquisition.]]
+ATT.Description = [[American rangefinder scope with 6.0x maginfication for reliable long-distance target acquisition.
+
+The Hangman RF is an Optic Attachment available in Call of Duty: Black Ops Cold War. It is high range optic featuring a 6.0x zoom magnification available for Tactical Rifles, Light Machine Guns, and Sniper Rifles.]]
 ATT.SortOrder = 6
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_hangmanrf.mdl"

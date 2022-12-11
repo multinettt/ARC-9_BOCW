@@ -1,7 +1,10 @@
 ATT.PrintName = "Royal & Kross 4x"
 ATT.CompactName = "RO&KR 4x"
 ATT.Icon = Material("entities/bocw_atts/optics/royalkross4x.png", "mips smooth")
-ATT.Description = [[4.0x telescopic sight manufactured in the UK with a light aluminum body and comfortable eye rest improves targeting and hit potential from long range.]]
+ATT.Description = [[4.0x telescopic sight manufactured in the UK with a light aluminum body and comfortable eye rest improves targeting and hit potential from long range.
+
+The Royal & Kross 4x is a telescopic sight featured in Call of Duty: Black Ops Cold War. It features the highest zoom level (4x) of all telescopic optics.]]
+
 ATT.SortOrder = 4
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_royalkross4x.mdl"

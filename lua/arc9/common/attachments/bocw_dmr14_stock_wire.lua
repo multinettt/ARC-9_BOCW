@@ -1,7 +1,9 @@
 ATT.PrintName = "Wire Stock"
 ATT.CompactName = "WIR STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/dmr14_wire.png", "mips smooth")
-ATT.Description = "Lightweight stock improves versatility by improving sprint recovery time."
+ATT.Description = [[Lightweight stock improves versatility by improving sprint recovery time.
+
+The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
 
 ATT.Pros = {
 	"- 10% Sprint to Fire Time",

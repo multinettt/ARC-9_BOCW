@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models\weapons\arc9\bocw\c_transparent"
 	"$bumpmap" "models\weapons\arc9\bocw\n"
-
+	"$translucent" "1"
 
 	"$phong" "1"
 	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_atts\bodies\mixbody_west\glass_g"

@@ -1,7 +1,9 @@
 ATT.PrintName = "25 Rnd"
 ATT.CompactName = "25 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/dmr14_ext1.png", "mips smooth")
-ATT.Description = "Extended magazine loaded with 30 rounds of ammunition."
+ATT.Description = [[Extended magazine loaded with 30 rounds of ammunition.
+
+Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
 
 ATT.Pros = {
 	"+ 25% Magazine Ammo Capacity",

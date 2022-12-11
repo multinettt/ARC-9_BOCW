@@ -1,7 +1,10 @@
 ATT.PrintName = "AN/PVS-4 Thermal 2.3x"
 ATT.CompactName = "AN/PVS-4"
 ATT.Icon = Material("entities/bocw_atts/optics/anpvs4.png", "mips smooth")
-ATT.Description = [[Thermal imaging scope of American origin with 2.3x magnification highlights targets in all lightning conditions.]]
+ATT.Description = [[Thermal imaging scope of American origin with 2.3x magnification highlights targets in all lightning conditions.
+
+The AN/PVS-4 Thermal is an optical attachment available in Call of Duty: Black Ops Cold War and Call of Duty: Warzone. It is a NATO related Thermal Sight with a 2.3x zoom magnification available for Assault Rifles, Tactical Rifles, Light Machine Guns, Sniper Rifles, and the TEC-9 submachine gun. The Warsaw Pact equivalent is the Noch Sova Thermal.]]
+
 ATT.SortOrder = 2.3
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_anpvs4thermal.mdl"

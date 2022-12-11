@@ -47,7 +47,9 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto medium machine gun. Consistent ammo capacity with heavy - grain rounds provides premium stopping power and bullet economy. Slower fire rate and handling speeds.]]
+SWEP.Description = [[Full-auto medium machine gun. Consistent ammo capacity with heavy - grain rounds provides premium stopping power and bullet economy. Slower fire rate and handling speeds.
+
+The M60 is a light machine gun featured in Call of Duty: Black Ops, Call of Duty: Black Ops (DS), Call of Duty: Black Ops: Declassified, Call of Duty: Black Ops II and Call of Duty: Black Ops Cold War.]]
 
 SWEP.UseHands = true
 

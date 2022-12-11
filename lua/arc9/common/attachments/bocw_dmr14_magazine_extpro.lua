@@ -1,7 +1,9 @@
 ATT.PrintName = "STANAG 30 Rnd"
 ATT.CompactName = "30 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/dmr14_extpro.png", "mips smooth")
-ATT.Description = "High-capacity magazine holds 30 rounds of ammunition."
+ATT.Description = [[High-capacity magazine holds 30 rounds of ammunition.
+
+The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
 
 ATT.Pros = {
 	"+ 50% Magazine Ammo Capacity",

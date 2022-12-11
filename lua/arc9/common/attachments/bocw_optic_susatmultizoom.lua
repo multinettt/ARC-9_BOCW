@@ -1,7 +1,9 @@
 ATT.PrintName = "SUSAT Multizoom 2-4x"
 ATT.CompactName = "SUSAT"
 ATT.Icon = Material("entities/bocw_atts/optics/susat.png", "mips smooth")
-ATT.Description = [[Telescopic sight produced in the UK with variable 2.0x-4.0x magnification for long range target acquisition. Press [Change Zoom] to toggle between 2.0x and 4.0x.]]
+ATT.Description = [[Telescopic sight produced in the UK with variable 2.0x-4.0x magnification for long range target acquisition. Press [Change Zoom] to toggle between 2.0x and 4.0x.
+
+The SUSAT returns under the name of SUSAT Multizoom, available as an Optic attachment for all Primary class weaponry, except the TEC-9.]]
 ATT.SortOrder = 3
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_susatmultizoom.mdl"

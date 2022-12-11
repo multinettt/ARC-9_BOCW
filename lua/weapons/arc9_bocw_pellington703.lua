@@ -49,7 +49,9 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Bolt-action sniper rifle. Hand loaded with improved handling speeds and faster rechamber. 1-shot kill to the head or upper chest.]]
+SWEP.Description = [[Bolt-action sniper rifle. Hand loaded with improved handling speeds and faster rechamber. 1-shot kill to the head or upper chest.
+
+The R700 (called the Remington 700 in the game files and the official strategy guide) is a bolt-action sniper rifle that appears in Call of Duty 4: Modern Warfare, Call of Duty: Modern Warfare Remastered, Call of Duty: Black Ops Cold War and Call of Duty: Modern Warfare II. It is one of the most powerful sniper rifles available. It can also be used in Call of Duty: Modern Warfare 2, but only through console commands.]]
 
 SWEP.UseHands = true
 

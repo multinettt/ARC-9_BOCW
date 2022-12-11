@@ -47,7 +47,9 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto submachine gun. Improved damage with reliable weapon control. Utilizes 5.45mm ammo for superior penetration.]]
+SWEP.Description = [[Full-auto submachine gun. Improved damage with reliable weapon control. Utilizes 5.45mm ammo for superior penetration.
+
+The AKS-74U is a weapon appearing as a submachine gun in Call of Duty 4: Modern Warfare, Call of Duty: Black Ops, Call of Duty: Modern Warfare 3, Call of Duty: Black Ops II, Call of Duty: Black Ops: Declassified, Call of Duty Online, Call of Duty: Black Ops III, Call of Duty: Modern Warfare Remastered, Call of Duty: Mobile and Call of Duty: Black Ops Cold War, and as an assault rifle in Call of Duty: Modern Warfare II. It is also found in the game files of Call of Duty: Modern Warfare 2.]]
 
 SWEP.UseHands = true
 

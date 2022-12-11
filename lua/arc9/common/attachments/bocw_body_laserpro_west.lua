@@ -10,12 +10,49 @@ ATT.SortOrder = 3
 ATT.Model = "models/weapons/arc9/atts/bocw_body_laserprowest.mdl"
 
 ATT.Category = {"bocw_body_west"}
-ATT.Folder = "BOCW BODY" -- test
 
+ATT.ToggleOnF = true
+ATT.ToggleStats = {
+    {
+        PrintName = "H/IR",
+        Laser = true,
+        LaserStrength = 10,
+        LaserColor = Color(255, 0, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(255, 0, 0),
+        FlareSize = 50,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "L/IR",
+        Laser = true,
+        LaserStrength = 4,
+        LaserColor = Color(255, 0, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(255, 0, 0),
+        FlareSize = 25,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "OFF",
+        AimDownSightsTimeMult = 1.08
+    }
+}
+
+--[[
 ATT.Laser = true
 ATT.LaserStrength = 8
 ATT.LaserColor = Color(255, 0, 0)
 ATT.LaserAttachment = 1
+]]
 
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 90)

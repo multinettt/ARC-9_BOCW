@@ -1,7 +1,9 @@
 ATT.PrintName = "Axial Arms 3x"
 ATT.CompactName = "AXARM 3x"
 ATT.Icon = Material("entities/bocw_atts/optics/axialarms3x.png", "mips smooth")
-ATT.Description = [[American scope with 3.0x magnification features a mil-dot crosshair for advance targeting at extended ranges.]]
+ATT.Description = [[American scope with 3.0x magnification features a mil-dot crosshair for advance targeting at extended ranges.
+
+The Axial Arms 3x is an Optic class attachment in Call of Duty: Black Ops Cold War available for all Primary Weapons. It is a mil-dot telescopic sight that utilises a fixed 3.0x magnification level giving better coverage of medium to long distance encounters.]]
 ATT.SortOrder = 3
 
 ATT.Model = "models/weapons/arc9/atts/bocw_scope_axialarms3x.mdl"

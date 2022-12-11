@@ -47,7 +47,9 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto submachine gun. Fast fire rate with low recoil. Good visibility and control while firing.]]
+SWEP.Description = [[Full-auto submachine gun. Fast fire rate with low recoil. Good visibility and control while firing.
+
+The MP5 is a submachine gun featured in many games of the Modern Warfare series, as well as in Call of Duty: Black Ops II, Call of Duty Online, Call of Duty: Mobile and Call of Duty: Black Ops Cold War.]]
 
 SWEP.UseHands = true
 

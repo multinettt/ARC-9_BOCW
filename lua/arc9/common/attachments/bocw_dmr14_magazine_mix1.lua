@@ -1,7 +1,9 @@
 ATT.PrintName = "25 Rnd Speed Mag"
 ATT.CompactName = "25 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/dmr14_mix1.png", "mips smooth")
-ATT.Description = "Extended magazine with a makeshift pull loop to improve reload speed. Contains 25 rounds."
+ATT.Description = [[Extended magazine with a makeshift pull loop to improve reload speed. Contains 25 rounds.
+
+The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
 
 ATT.Pros = {
 	"+ 25% Magazine Ammo Capacity",

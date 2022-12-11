@@ -47,7 +47,9 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Semi-auto tactical rifle. Increased fire rate with minimal recoil. Maintains reliable damage over longer range encounters.]]
+SWEP.Description = [[Semi-auto tactical rifle. Increased fire rate with minimal recoil. Maintains reliable damage over longer range encounters.
+
+The M14 is a semi-automatic rifle appearing as an assault rifle in Call of Duty 4: Modern Warfare, Call of Duty: Black Ops, Call of Duty: Black Ops II, Call of Duty: Black Ops: Declassified, Call of Duty: Black Ops III and Call of Duty: Modern Warfare Remastered, as a sniper rifle in Call of Duty: Modern Warfare 3: Defiance, as a tactical rifle in Call of Duty: Black Ops Cold War, and as a battle rifle in Call of Duty: Modern Warfare II. It was also available in Call of Duty Online, but was removed for it. The M14 also makes a brief appearance in the Call of Duty Mobile battle pass comics.]]
 
 SWEP.UseHands = true
 

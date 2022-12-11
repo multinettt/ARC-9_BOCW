@@ -1,7 +1,9 @@
 ATT.PrintName = "Field Tape"
 ATT.CompactName = "FILD TPE"
 ATT.Icon = Material("entities/bocw_atts/handles/dmr14_fieldtape.png", "mips smooth")
-ATT.Description = "A layer of adhesive fabric tape absorbs shock to improve flinch stability."
+ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
+
+The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
 
 ATT.Pros = {
 	"+ 90% Flinch Resistance",

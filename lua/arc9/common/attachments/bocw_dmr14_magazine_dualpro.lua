@@ -1,7 +1,9 @@
 ATT.PrintName = "SAS Mag Clamp"
 ATT.CompactName = "SAS CLMP"
 ATT.Icon = Material("entities/bocw_atts/magazines/dmr14_dualpro.png", "mips smooth")
-ATT.Description = "Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads."
+ATT.Description = [[Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads.
+
+The SAS Mag Clamp is a Magazine attachment available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speeds but at the cost of a longer time to aim. The Warsaw Pact equivalent is the GRU Mag Clamp.]]
 
 ATT.Pros = {
 	"+ 35% Reload Quickness",

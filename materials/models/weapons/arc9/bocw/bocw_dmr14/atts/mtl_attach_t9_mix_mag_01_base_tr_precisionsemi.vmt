@@ -3,7 +3,6 @@
 	"$basetexture" "models\weapons\arc9\bocw\bocw_dmr14\atts\mix1_diff"
 	"$bumpmap" "models\weapons\arc9\bocw\bocw_dmr14\atts\mix1_n"
 
-
 	"$phong" "1"
 	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_dmr14\atts\mix1_g"
 	"$phongboost" "0.2"

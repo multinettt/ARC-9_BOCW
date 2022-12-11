@@ -1,7 +1,9 @@
 ATT.PrintName = "SAS Combat Stock"
 ATT.CompactName = "SAS STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/dmr14_sascombat.png", "mips smooth")
-ATT.Description = "Retrofitted cheek rest to improve movement speeds when aiming and firing."
+ATT.Description = [[Retrofitted cheek rest to improve movement speeds when aiming and firing.
+
+The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
 
 ATT.Pros = {
 	"+ 10% Shooting Move Speed",

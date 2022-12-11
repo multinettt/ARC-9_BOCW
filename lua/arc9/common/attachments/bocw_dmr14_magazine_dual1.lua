@@ -1,7 +1,9 @@
 ATT.PrintName = "Jungle-Style Mag"
 ATT.CompactName = "JNGL MAG"
 ATT.Icon = Material("entities/bocw_atts/magazines/dmr14_dual1.png", "mips smooth")
-ATT.Description = "Magazines secured together with duct tape to improve reload speed."
+ATT.Description = [[Magazines secured together with duct tape to improve reload speed.
+
+The Jungle-Style Mag is a variant of Fast Mag, available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speed with no downside. The Warsaw Pact equivalent is the Taped Mags.]]
 
 ATT.Pros = {
 	"+ 20% Reload Quickness",

@@ -10,7 +10,6 @@ ATT.SortOrder = 2
 ATT.Model = "models/weapons/arc9/atts/bocw_body_mixbodywest.mdl"
 
 ATT.Category = {"bocw_body_west"}
-ATT.Folder = "BOCW BODY" -- test
 
 ATT.Laser = true
 ATT.LaserStrength = 4
@@ -25,5 +24,5 @@ ATT.FlashlightDistance = 1024
 ATT.FlashlightFOV = 70
 ATT.FlashlightAttachment = 2
 
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0.25)
 ATT.ModelAngleOffset = Angle(0, 0, 90)

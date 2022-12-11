@@ -1,7 +1,9 @@
 ATT.PrintName = "Tactical Stock"
 ATT.CompactName = "TAC STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/dmr14_tactical.png", "mips smooth")
-ATT.Description = "Polyester cheek pad improves movement speeds when aiming down sights."
+ATT.Description = [[Polyester cheek pad improves movement speeds when aiming down sights.
+
+The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
 
 ATT.Pros = {
 	"+ 20% Aim Walking Movement Speed",
