@@ -26,3 +26,5 @@ ATT.FlashlightAttachment = 2
 
 ATT.ModelOffset = Vector(0, 0, 0.25)
 ATT.ModelAngleOffset = Angle(0, 0, 90)
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

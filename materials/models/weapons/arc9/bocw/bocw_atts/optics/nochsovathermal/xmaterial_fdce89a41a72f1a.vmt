@@ -1,17 +1,17 @@
 "VertexlitGeneric" // GLASS
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_atts\optics\anpvs4thermal\glass_diff"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_atts\optics\axialarms3x\lens_diff"
 	"$bumpmap" "models\weapons\arc9\bocw\bocw_atts\optics\anpvs4thermal\glass_n"
 
 
 	"$phong" "1"
-	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_atts\optics\axialarms3x\glass_g"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_atts\optics\axialarms3x\lens_g"
 	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_atts\optics\anpvs4thermal\glass_sc"
+	"$detail" 	"models\weapons\arc9\bocw\bocw_atts\optics\axialarms3x\lens_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.06"     
 	"$detailblendmode" "1"

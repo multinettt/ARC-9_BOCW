@@ -42,3 +42,5 @@ ATT.RTScopeShadowIntensity = 10
 ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(0, 0, 0.2)
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

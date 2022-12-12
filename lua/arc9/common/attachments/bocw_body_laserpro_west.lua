@@ -59,3 +59,5 @@ ATT.ModelAngleOffset = Angle(0, 0, 90)
 
 ATT.SpreadMultHipFire = 0.6
 ATT.AimDownSightsTimeMult = 1.08
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

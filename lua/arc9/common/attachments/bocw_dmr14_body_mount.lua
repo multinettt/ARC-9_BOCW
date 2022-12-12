@@ -16,6 +16,6 @@ ATT.Attachments = {
         Pos = Vector(0, 0, 0.7),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -1),
-        Category = "bocw_body_west"
+        Category = {"bocw_body_west", "bocw_dmr14_mount_light"}
     }
 }

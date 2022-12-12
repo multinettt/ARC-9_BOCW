@@ -46,3 +46,5 @@ ATT.SwayAdd = 0.075
 ATT.FreeAimRadiusMultSights = 0.1
 ATT.AimDownSightsTimeAdd = 0
 ATT.SprintToFireTimeAdd = 0.08
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

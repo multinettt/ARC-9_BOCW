@@ -75,3 +75,5 @@ ATT.RTScopeDrawFunc = function(swep, rtsize)
 end
 
 end
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

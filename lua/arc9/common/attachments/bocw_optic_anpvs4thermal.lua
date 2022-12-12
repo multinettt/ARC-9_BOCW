@@ -70,3 +70,5 @@ ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(0, 0, 0.087)
 ATT.Scale = 1
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"

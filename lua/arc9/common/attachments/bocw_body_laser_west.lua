@@ -5,7 +5,7 @@ ATT.Description = [[Dust-proof diode laser improves hipfire accuracy.
 
 The Steady Aim Laser is a Body attachment available for all Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts similar to the Laser Sight attachment from prior games, improving hip fire accuracy.]]
 
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 
 ATT.Model = "models/weapons/arc9/atts/bocw_body_laserwest.mdl"
 
@@ -40,3 +40,5 @@ ATT.LaserAttachment = 1
 
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 90)
+
+ATT.MenuCategory = "ARC-9 - BOCW Attachments"
