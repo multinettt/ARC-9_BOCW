@@ -54,6 +54,8 @@ Because of the sheer size of individual weapons, this pack and repository will b
 ### Tacticals:
 
 - Steady Aim Laser
+- Mounted Flashlight
 - SOF Target Designator
 - SWAT 5mw Laser Sight
+- Tiger Team Spotlight
 - Ember Sighting Point
