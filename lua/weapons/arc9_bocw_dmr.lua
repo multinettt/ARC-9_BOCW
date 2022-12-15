@@ -60,7 +60,7 @@ SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000001000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -134,7 +134,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 360
+SWEP.RPM = 400
 
 -- Works different to ArcCW
 
@@ -355,7 +355,7 @@ SWEP.HasSights = true
 SWEP.ActivePos = Vector(0, -1.2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-4, 1, -4)
+SWEP.CrouchPos = Vector(-2, -4, -3)
 SWEP.CrouchAng = Angle(0, 0, -30)
 
 -- Position when sprinting or safe
@@ -406,23 +406,92 @@ SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 SWEP.DefaultElements = {}
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NameChange = "DeMolisheR K14",
-    },
-    ["optic_mount"] = {
-        Bodygroups = {
-            {2, 1}
-        }
-    },
-    ["laser_mount"] = {
-        Bodygroups = {
-            {3, 1}
-        }
-    },
     ["maggone"] = {
         Bodygroups = {
             {1, 1}
         }
+    },
+    ["optic_mount"] = {
+        Bodygroups = {
+            {2, 1},
+            {5, 1}
+        }
+    },
+    ["laser_mount"] = {
+        Bodygroups = {
+            {3, 1},
+            {5, 1}
+        }
+    },
+    ["barrel_normal"] = {
+        Bodygroups = {
+            {4, 0},
+            {5, 0}
+        },
+    },
+    ["barrel_rapidfire"] = {
+        Bodygroups = {
+            {4, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-3.3, 0, 0),
+            }
+        },
+    },
+    ["barrel_titanium"] = {
+        Bodygroups = {
+            {4, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-4.93, 0, 0),
+            }
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        Bodygroups = {
+            {4, 1},
+            {5, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-3.28, 0, 0),
+            }
+        },
+    },
+    ["barrel_matchgrade"] = {
+        Bodygroups = {
+            {4, 1},
+            {5, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0, 0, 0),
+            }
+        },
+    },
+    ["barrel_striketeam"] = {
+        Bodygroups = {
+            {4, 1},
+            {5, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-3.28, 0, 0),
+            }
+        },
+    },
+    ["barrel_taskforce"] = {
+        Bodygroups = {
+            {4, 1},
+            {5, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0, 0, 0),
+            }
+        },
     },
     ["stockgone"] = {
         Bodygroups = {
@@ -458,17 +527,20 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        Bone = "tag_weapon",
-        Pos = Vector(31.1, 0, 2.4),
+        Bone = "tag_muzzle",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"dmr_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_762nato_muzzle", "muzzle", "bo1_muzzle"},
+        Attached = "bocw_muzzle_dmr14"
     },
     {
-        PrintName = "Underbarrel",
-        Bone = "tag_weapon",
-        Pos = Vector(15, 0, 0.8),
+        PrintName = "Barrel",
+        Bone = "tag_barrel",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Icon_Offset = Vector(8, 0, 0.5),
+        Category = {"bocw_dmr14_barrel"},
+        UnInstalledElements = {"barrel_normal"}
     },
     {
         PrintName = "Gas Block",
@@ -478,20 +550,11 @@ SWEP.Attachments = {
         Category = {"bocw_dmr14_gasblock"},
     },
     {
-        PrintName = "Barrel",
-        Bone = "tag_barrel",
-        Pos = Vector(0, 0, 0),
+        PrintName = "Underbarrel",
+        Bone = "tag_weapon",
+        Pos = Vector(15, 0, 0.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_barrel"},
-        DefaultName = [[19.8" Steyr]],
-    },
-    {
-        PrintName = "Stock",
-        DefaultName = "Default Stock",
-        Bone = "tag_stock",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bocw_dmr14_stock"},
+        Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Magazine",
@@ -507,6 +570,14 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_dmr14_wrap"},
+    },
+    {
+        PrintName = "Stock",
+        DefaultName = "Default Stock",
+        Bone = "tag_stock",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_dmr14_stock"},
     },
     {
         PrintName = "Ammo Type",
