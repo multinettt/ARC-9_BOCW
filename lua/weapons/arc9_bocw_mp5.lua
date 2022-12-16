@@ -96,14 +96,14 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 
 SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.25
+SWEP.HeadshotDamage = 1.4
 SWEP.ChestDamage = 1.05
 SWEP.StomachDamage = 1
 SWEP.ArmDamage = 0.8
 SWEP.LegDamage = 0.8
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.8,
+    [HITGROUP_HEAD] = 1.4,
     [HITGROUP_CHEST] = 1.05,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -134,7 +134,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 800
+SWEP.RPM = 857
 
 -- Works different to ArcCW
 
@@ -154,25 +154,25 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.4
+SWEP.RecoilSide = 0.1
 SWEP.RecoilUp = 0.2
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilKick = 0.6
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
-SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddMove = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
@@ -191,7 +191,7 @@ SWEP.NPCWeight = 50
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 10 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.2 -- How much the gun sways.
+SWEP.Sway = 0.3 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for
 SWEP.RestoreBreathTime = 4
@@ -200,15 +200,15 @@ SWEP.FreeAimRadiusMultSights = 0.25
 
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.325 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.350 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.275 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.233 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Speed = 0.96
+SWEP.Speed = 1
 
-SWEP.SpeedMult = 0.95
-SWEP.SpeedMultSights = 0.30
+SWEP.SpeedMult = 1
+SWEP.SpeedMultSights = 0.79
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
 SWEP.SpeedMultCrouch = 1
@@ -282,7 +282,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
 
@@ -477,7 +477,6 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_mp5_barrel"},
-        DefaultName = [[19.8" Steyr]],
     },
     {
         PrintName = "Stock",
@@ -489,10 +488,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        DefaultName = "20 Rnd",
+        DefaultName = "30 Rnd",
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0.6, 0, -2.5),
         Category = {"bocw_mp5_mag"},
     },
     {
@@ -500,6 +500,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-1, 0, -1),
         Category = {"bocw_mp5_wrap"},
     },
     {
@@ -523,8 +524,8 @@ SWEP.Attachments = {
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["mp5_mag_ext"] then
-        return anim .. "_extclip"
+    if elements["mp5_mag_drum"] then
+        return anim .. "_drum"
     end
 
     if elements["mp5_mag_mix"] then
@@ -575,7 +576,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        MinProgress = 1.5,
+        MinProgress = 1.89,
         EventTable = {
             { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
             { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
@@ -597,8 +598,7 @@ SWEP.Animations = {
     },
     ["reload_drum"] = {
         Source = "reload_drum",
-        Time = 2.4,
-        MinProgress = 1.5,
+        MinProgress = 2.07,
         EventTable = {
             { s = "ARC9_BOCW.mp5_magout", t = 0.36 },
             { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
@@ -607,8 +607,7 @@ SWEP.Animations = {
     },
     ["reload_empty_drum"] = {
         Source = "reload_drum_empty",
-        Time = 3.2,
-        MinProgress = 2,
+        MinProgress = 2.07,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.mp5_magout", t = 0.4 },
@@ -619,8 +618,7 @@ SWEP.Animations = {
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
-        Time = 2.4,
-        MinProgress = 1.5,
+        MinProgress = 1.57,
         EventTable = {
             { s = "ARC9_BOCW.mp5_magout", t = 0.36 },
             { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
@@ -629,9 +627,8 @@ SWEP.Animations = {
     },
     ["reload_empty_dual"] = {
         Source = {"reload_dual_empty", "reload_dual2_empty"},
-        Time = 3.2,
         MinProgress = 2,
-        MagSwapTime = 1,
+        MagSwapTime = 1.57,
         EventTable = {
             { s = "ARC9_BOCW.mp5_magout", t = 0.4 },
             { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
@@ -649,7 +646,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
     },
     ["enter_inspect"] = {
         Source = "inspect",

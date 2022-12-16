@@ -538,7 +538,7 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(8, 0, 0.5),
+        Icon_Offset = Vector(8, 0.35, 0.5),
         Category = {"bocw_dmr14_barrel"},
         UnInstalledElements = {"barrel_normal"}
     },

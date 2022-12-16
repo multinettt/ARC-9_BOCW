@@ -40,7 +40,7 @@ sound.Add({
     name = "ARC9_BOCW.MP5_boltgrab",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_mp5/mp5_boltgrab.wav"
+    sound = "weapons/arc9/bocw_mp5/mp5_reload_boltgrab.wav"
 })
 
 sound.Add({
