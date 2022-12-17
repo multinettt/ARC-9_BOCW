@@ -520,24 +520,20 @@ SWEP.Attachments = {
         Category = {"bocw_mp5_sound"},
     },
 }
---[[
+
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["mp5_mag_drum"] then
+    if elements["mp5_mag_ext"] then
         return anim .. "_drum"
     end
 
-    if elements["mp5_mag_mix"] then
-        return anim .. "_mixclip"
-    end
-
     if elements["mp5_mag_dual"] then
-        return anim .. "_dualmag"
+        return anim .. "_dual"
     end
 
 end
-]]
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -597,43 +593,47 @@ SWEP.Animations = {
         },
     },
     ["reload_drum"] = {
-        Source = "reload_drum",
+        Source = "reload_ext",
         MinProgress = 2.07,
         EventTable = {
-            { s = "ARC9_BOCW.mp5_magout", t = 0.36 },
-            { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
-            { s = "ARC9_BOCW.mp5_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
+            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.7 },
+            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.1 },
         },
     },
     ["reload_empty_drum"] = {
-        Source = "reload_drum_empty",
+        Source = "reload_ext_empty",
         MinProgress = 2.07,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.mp5_magout", t = 0.4 },
-            { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
-            { s = "ARC9_BOCW.mp5_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.mp5_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
+            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.85 },
+            { s = "ARC9_BOCW.MP5_reload_magin", t = 2.1 },
+            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.7 },
         },
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
         MinProgress = 1.57,
         EventTable = {
-            { s = "ARC9_BOCW.mp5_magout", t = 0.36 },
-            { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
-            { s = "ARC9_BOCW.mp5_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.38 },
         },
     },
     ["reload_empty_dual"] = {
         Source = {"reload_dual_empty", "reload_dual2_empty"},
         MinProgress = 2,
         MagSwapTime = 1.57,
+        RareSourceChance = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.mp5_magout", t = 0.4 },
-            { s = "ARC9_BOCW.mp5_magin", t = 1.2 },
-            { s = "ARC9_BOCW.mp5_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.mp5_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.38 },
+            --{ s = "ARC9_BOCW.MP5_boltgrab", t = 1.85 },
+            { s = "ARC9_BOCW.MP5_boltback", t = 1.9 },
+            { s = "ARC9_BOCW.MP5_boltrelease", t = 2 },
         },
     },
     ["enter_sprint"] = {
@@ -649,6 +649,12 @@ SWEP.Animations = {
     },
     ["enter_inspect"] = {
         Source = "inspect",
+        EventTable = {
+            { s = "ARC9_BOCW.mp5_inspect", t = 0 },
+        },
+    },
+    ["enter_inspect_drum"] = {
+        Source = "inspect_ext",
         EventTable = {
             { s = "ARC9_BOCW.mp5_inspect", t = 0 },
         },
