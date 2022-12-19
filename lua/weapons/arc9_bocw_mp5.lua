@@ -149,6 +149,9 @@ SWEP.Firemodes = {
     {
         Mode = -1,
     },
+    {
+        Mode = 3,
+    },
 }
 
 -------------------------- RECOIL
@@ -279,14 +282,14 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_mp5" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
 
-SWEP.ShellScale = 1.2
+SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShellPitch = 100 -- for shell sounds
