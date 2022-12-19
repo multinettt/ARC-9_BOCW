@@ -13,7 +13,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Submachine Guns:
 
-- MP5        (H&K MP5K)        [No Attachments]
+- MP5        (H&K MP5K)
 - Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
 - AK-74u     (AKS-74U)         [No Attachments]
 
