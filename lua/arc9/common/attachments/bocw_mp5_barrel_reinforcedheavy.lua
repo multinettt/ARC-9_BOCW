@@ -1,6 +1,6 @@
 ATT.PrintName = [[9.5" Reinforced Heavy]]
 ATT.CompactName = [[9.5" HEAVY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_heavy.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/barrels/mp5_reinforced.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
 
 The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The Warsaw Pact equivalent is the VDV Reinforced Barrel,]]

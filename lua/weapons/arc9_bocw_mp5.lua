@@ -60,7 +60,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000010000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -78,7 +78,7 @@ SWEP.ViewModelFOVBase = 75
 SWEP.DamageMax = 32 -- Damage done at point blank range
 SWEP.DamageMin = 23 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
@@ -111,6 +111,21 @@ SWEP.BodyDamageMults = {
     [HITGROUP_LEFTLEG] = 0.8,
     [HITGROUP_RIGHTLEG] = 0.8,
 }
+
+SWEP.AlwaysPhysBullet = true
+
+SWEP.PhysBulletMuzzleVelocity = 8202.5
+SWEP.PhysBulletDrag = 1
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
+
+-------------------------- TRACERS
+
+SWEP.TracerNum = 1 -- Tracer every X
+SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
+SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
+SWEP.TracerColor = Color(255, 200, 200)
+SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
@@ -426,6 +441,66 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
+    ["barrel_extended"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.889, 0, 0),
+            }
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(3.006, 0, 0),
+            }
+        },
+    },
+    ["barrel_reinforcedheavy"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.889, 0, 0),
+            }
+        },
+    },
+    ["barrel_ranger"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.889, 0, 0),
+            }
+        },
+    },
+    ["barrel_rifled"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.5, 0, 0),
+            }
+        },
+    },
+    ["barrel_taskforce"] = {
+        Bodygroups = {
+            {3, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.889, 0, 0),
+            }
+        },
+    },
 }
 
 -- Use to override attachment table entry data.
@@ -456,9 +531,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-0.01, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"dmr_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_9mm_muzzle", "muzzle", "bo1_muzzle"},
     },
     {
         PrintName = "Underbarrel",

@@ -9,7 +9,7 @@ ATT.SortOrder = 9.5
 
 ATT.Category = "bocw_mp5_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_ranger.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_extended.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -20,6 +20,6 @@ ATT.PhysBulletMuzzleVelocityMult = 1.4
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_ranger"}
+ATT.ActivateElements = {"barrel_extended"}
 
 ATT.MenuCategory = "ARC-9 - BOCW Attachments"
