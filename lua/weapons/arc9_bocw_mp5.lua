@@ -114,7 +114,7 @@ SWEP.BodyDamageMults = {
 
 SWEP.AlwaysPhysBullet = true
 
-SWEP.PhysBulletMuzzleVelocity = 8202.5
+SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
 SWEP.PhysBulletDrag = 1
 SWEP.PhysBulletGravity = 1
 SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
@@ -534,6 +534,7 @@ SWEP.Attachments = {
         Pos = Vector(-0.01, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_9mm_muzzle", "muzzle", "bo1_muzzle"},
+        Attached = "bocw_muzzle_mp5"
     },
     {
         PrintName = "Underbarrel",
