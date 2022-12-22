@@ -75,14 +75,14 @@ SWEP.ViewModelFOVBase = 75
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 58 -- Damage done at point blank range
-SWEP.DamageMin = 25 -- Damage done at maximum range
+SWEP.DamageMax = 50 -- Damage done at point blank range
+SWEP.DamageMin = 44 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 136000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMin = 75 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 1100 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 3725 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
 SWEP.Num = 1 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
@@ -96,28 +96,35 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 
 SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.25
-SWEP.ChestDamage = 1.05
+SWEP.HeadshotDamage = 1.4
+SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
-SWEP.ArmDamage = 0.8
-SWEP.LegDamage = 0.8
+SWEP.ArmDamage = 1
+SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
+
+SWEP.AlwaysPhysBullet = true
+
+SWEP.PhysBulletMuzzleVelocity = 600 * 39.37
+SWEP.PhysBulletDrag = 1
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
 
 -------------------------- MAGAZINE
 
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory. // low clip size for easier empty reload testing
+SWEP.ClipSize = 100 -- Self-explanatory. // low clip size for easier empty reload testing
 SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -153,18 +160,18 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.2
+SWEP.RecoilUp = 0.01
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilAutoControl = 0.1
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
@@ -200,15 +207,15 @@ SWEP.FreeAimRadiusMultSights = 0.25
 
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.325 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.350 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.600 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.300 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Speed = 0.96
+SWEP.Speed = 0.95
 
 SWEP.SpeedMult = 0.95
-SWEP.SpeedMultSights = 0.30
+SWEP.SpeedMultSights = 0.25
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
 SWEP.SpeedMultCrouch = 1
@@ -238,9 +245,9 @@ SWEP.ShootVolumeActual = 1
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
-SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.M60_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.M60_fire_int_decay"                  -- Fire indoors
+SWEP.FirstShootSound = "ARC9_BOCW.M60_fire"                       -- First fire
+--SWEP.ShootSound = "ARC9_BOCW.M60_fire"                            -- Fire
+--SWEP.ShootSoundIndoor = "ARC9_BOCW.M60_fire_int_decay"                  -- Fire indoors
 SWEP.ShootSoundSilenced = "ARC9_BOCW.M60_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
@@ -250,6 +257,12 @@ SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
+
+SWEP.ShootSoundLooping = "ARC9_BOCW.M60_fire_loop"
+SWEP.ShootSoundLoopingSilenced = nil
+SWEP.ShootSoundLoopingIndoor = nil
+SWEP.ShootSoundTail = "ARC9_BOCW.M60_fire_loop_end" -- played after the loop ends
+SWEP.ShootSoundTailIndoor = nil
 
 SWEP.Silencer = false -- Silencer installed or not?
 
@@ -354,7 +367,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.792, -8, 0.675),
+    Pos = Vector(-4.792, -10, 0.675),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.

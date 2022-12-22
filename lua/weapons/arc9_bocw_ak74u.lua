@@ -75,19 +75,19 @@ SWEP.ViewModelFOVBase = 75
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 38 -- Damage done at point blank range
+SWEP.DamageMax = 31 -- Damage done at point blank range
 SWEP.DamageMin = 27 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 136000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMin = 7.6 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 100 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 3000 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
 SWEP.Num = 1 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
 
-SWEP.Penetration = 5 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 3 -- Units of wood that can be penetrated by this gun.
 
 SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 -- DMG_BLAST will create explosive effects and create AOE damage.
@@ -96,21 +96,28 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 
 SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.25
-SWEP.ChestDamage = 1.05
+SWEP.HeadshotDamage = 1.4
+SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
-SWEP.ArmDamage = 0.8
-SWEP.LegDamage = 0.8
+SWEP.ArmDamage = 1
+SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
+
+SWEP.AlwaysPhysBullet = true
+
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
+SWEP.PhysBulletDrag = 1
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
 
 -------------------------- MAGAZINE
 
@@ -149,30 +156,33 @@ SWEP.Firemodes = {
     {
         Mode = -1,
     },
+    {
+        Mode = 1,
+    },
 }
 
 -------------------------- RECOIL
 
 SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.2
+SWEP.RecoilSide = 0.2
+SWEP.RecoilUp = 0.4
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilAutoControl = 0.1
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
-SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddMove = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
@@ -205,10 +215,10 @@ SWEP.SprintToFireTime = 0.350 -- How long it takes to go from sprinting to being
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Speed = 0.96
+SWEP.Speed = 1
 
-SWEP.SpeedMult = 0.95
-SWEP.SpeedMultSights = 0.30
+SWEP.SpeedMult = 1
+SWEP.SpeedMultSights = 0.79
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
 SWEP.SpeedMultCrouch = 1
@@ -358,7 +368,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.729, -3.5, 0.82),
+    Pos = Vector(-2.729, -3.74, 0.82),
     Ang = Angle(0, 0, 2.549),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.

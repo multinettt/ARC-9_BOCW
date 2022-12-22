@@ -80,9 +80,9 @@ SWEP.DamageMin = 23 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 136000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMin = 10 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 1560 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 40000 -- In Hammer units, how far bullets can travel, period.
 
 SWEP.Num = 1 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
@@ -97,19 +97,19 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
 SWEP.HeadshotDamage = 1.4
-SWEP.ChestDamage = 1.05
+SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
-SWEP.ArmDamage = 0.8
-SWEP.LegDamage = 0.8
+SWEP.ArmDamage = 1
+SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.4,
-    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
 
 SWEP.AlwaysPhysBullet = true
@@ -133,7 +133,7 @@ SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
-SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -171,7 +171,7 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.1
 SWEP.RecoilUp = 0.2
 
@@ -181,8 +181,8 @@ SWEP.RecoilRandomSide = 0.1
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.6
+SWEP.RecoilAutoControl = 0.1
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
@@ -203,7 +203,7 @@ SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg"
 SWEP.NPCWeight = 50
 
 -------------------------- HANDLING
@@ -368,7 +368,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.8, -8, 1.41228),
+    Pos = Vector(-4.8, -7.5, 1.41228),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -531,9 +531,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_muzzle",
-        Pos = Vector(-0.01, 0, 0),
+        Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_9mm_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_9_west_muzzle", "bocw_9_mp5sd_muzzle", "bo1_muzzle"},
         Attached = "bocw_muzzle_mp5"
     },
     {

@@ -147,6 +147,22 @@ sound.Add({ -- BLACK OPS COLD WAR
     sound = "weapons/arc9/bocw_m60/m60_fire.wav"
 })
 
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.M60_fire_loop",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_m60/m60_fire_loop.wav"
+})
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.M60_fire_loop_end",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_m60/m60_fire_loop_end.wav"
+})
+
 sound.Add({ -- WARZONE
     name = "ARC9_BOCW.M60_fire_wz",
     channel = CHAN_STATIC,

@@ -78,9 +78,9 @@ SWEP.ViewModelFOVBase = 75
 SWEP.DamageMax = 58 -- Damage done at point blank range
 SWEP.DamageMin = 25 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
+SWEP.RangeMin = 20 * 39.37 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 136000 -- In Hammer units, how far bullets can travel, period.
 
@@ -96,21 +96,28 @@ SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 
 SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.25
-SWEP.ChestDamage = 1.05
+SWEP.HeadshotDamage = 1.4
+SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
-SWEP.ArmDamage = 0.8
-SWEP.LegDamage = 0.8
+SWEP.ArmDamage = 1
+SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
+
+SWEP.AlwaysPhysBullet = true
+
+SWEP.PhysBulletMuzzleVelocity = 700 * 39.37
+SWEP.PhysBulletDrag = 1
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
 
 -------------------------- MAGAZINE
 
@@ -157,18 +164,18 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.2
+SWEP.RecoilUp = 0.1
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilAutoControl = 0.1
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
