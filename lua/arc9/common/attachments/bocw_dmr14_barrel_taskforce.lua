@@ -1,5 +1,5 @@
 ATT.PrintName = [[20.8" Task Force]]
-ATT.CompactName = [[20.8" TFORCE]]
+ATT.CompactName = [[20.8" TFRCE]]
 ATT.Icon = Material("entities/bocw_atts/barrels/dmr14_taskforce.png", "mips smooth")
 ATT.Description = [[Nitride lined barrel button rifled to improve bullet velocity, range, and damage.
 

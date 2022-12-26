@@ -427,7 +427,6 @@ SWEP.AttachmentElements = {
     ["laser_mount"] = {
         Bodygroups = {
             {3, 1},
-            {5, 1}
         }
     },
     ["barrel_normal"] = {

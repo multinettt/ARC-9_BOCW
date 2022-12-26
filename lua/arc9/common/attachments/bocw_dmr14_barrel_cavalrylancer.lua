@@ -1,5 +1,5 @@
 ATT.PrintName = [[17.1" Cavalry Lancer]]
-ATT.CompactName = [[17.1" CAVLRY]]
+ATT.CompactName = [[17.1" CVLRY]]
 ATT.Icon = Material("entities/bocw_atts/barrels/dmr14_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 

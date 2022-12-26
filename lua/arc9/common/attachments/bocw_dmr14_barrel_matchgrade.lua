@@ -1,5 +1,5 @@
 ATT.PrintName = [[20.8" Match Grade]]
-ATT.CompactName = [[20.8" MATCH]]
+ATT.CompactName = [[20.8" MTCH]]
 ATT.Icon = Material("entities/bocw_atts/barrels/dmr14_match.png", "mips smooth")
 ATT.Description = [[Extended barrel hammer forged from chromoly steel to improve damage range.
 

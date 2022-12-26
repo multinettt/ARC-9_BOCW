@@ -532,7 +532,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(4.5, 0, 5.4),
+        Pos = Vector(4.5, 0, 5.36),
         Ang = Angle(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
