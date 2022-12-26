@@ -501,6 +501,16 @@ SWEP.AttachmentElements = {
             }
         },
     },
+    ["stockgone"] = {
+        Bodygroups = {
+            {4, 1},
+        }
+    },
+    ["stockmountgone"] = {
+        Bodygroups = {
+            {5, 1},
+        }
+    },
 }
 
 -- Use to override attachment table entry data.
@@ -555,14 +565,16 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(5, 0, 0),
         Category = {"bocw_mp5_barrel"},
     },
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        Bone = "tag_stock",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-4, 0, 3),
         Category = {"bocw_mp5_stock"},
     },
     {
