@@ -43,6 +43,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Optics:
 
+- Visiontech 2x
 - Axial Arms 3x
 - Royal & Kross 4x
 - SUSAT Multizoom 2-4x
