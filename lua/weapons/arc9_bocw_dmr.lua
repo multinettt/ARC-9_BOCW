@@ -534,9 +534,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-0.01, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_762nato_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_762_west_muzzle", "muzzle", "bo1_muzzle"},
         Attached = "bocw_muzzle_dmr14"
     },
     {
