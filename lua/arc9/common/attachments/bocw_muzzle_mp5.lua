@@ -3,7 +3,7 @@ ATT.CompactName = "M5 MUZZ"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[ ]]
 
-ATT.SortOrder = -5
+ATT.SortOrder = -10
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mp5_muzzle.mdl"
 

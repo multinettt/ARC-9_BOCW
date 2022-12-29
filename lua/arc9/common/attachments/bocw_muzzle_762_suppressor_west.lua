@@ -1,4 +1,4 @@
-ATT.PrintName = "Suppressor"
+ATT.PrintName = "Silencer"
 ATT.CompactName = "SUPP"
 ATT.Icon = Material("entities/bocw_atts/muzzles/ar_suppressor556w.png", "mips smooth")
 ATT.Description = [[Reduces acoustic intensity of muzzle report and eliminates muzzle flash.
@@ -9,7 +9,7 @@ ATT.SortOrder = -3
 
 ATT.Model = "models/weapons/arc9/atts/bocw_muzzle_556_suppressor_west.mdl"
 
-ATT.Category = {"bocw_556_west_muzzle"}
+ATT.Category = {"bocw_762_west_muzzle"}
 
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
@@ -21,7 +21,6 @@ ATT.Silencer = true
 
 ATT.ShootVolumeMult = 0.8
 
-ATT.RangeMaxMult = 0.89
-ATT.PhysBulletMuzzleVelocityMult = 0.92
+ATT.PhysBulletMuzzleVelocityMult = 0.85
 
 ATT.MenuCategory = "ARC-9 - BOCW Attachments"
