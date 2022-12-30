@@ -1,6 +1,6 @@
 # ARC-9 BOCW
 
-Super early in development weapon pack for [ARC-9](https://github.com/HaodongMo/ARC-9)
+Early in development weapon pack for [ARC-9](https://github.com/HaodongMo/ARC-9)
 
 Because of the sheer size of individual weapons, this pack and repository will be split into different weapon classes in the future.
 
@@ -51,6 +51,17 @@ Because of the sheer size of individual weapons, this pack and repository will b
 - Pellington 703 Scope 8x
 - AN/PVS-4 Thermal 2.3x
 - Noch Sova Thermal 2.3x (PN58) [not usable at the moment]
+
+### Muzzles:
+
+- Muzzle Brake (5.56, 7.62, 9)
+- Flash Guard (5.56, 7.62, 9)
+- Suppressor (5.56)
+- Silencer (7.62)
+- Sound Suppressor (9)
+- Infantry Compensator (5.56, 9)
+- SOCOM Eliminator (5.56, 9)
+- Agency Suppressor (5.56, 9)
 
 ### Tacticals:
 
