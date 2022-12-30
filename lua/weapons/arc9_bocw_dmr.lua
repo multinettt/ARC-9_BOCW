@@ -704,8 +704,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            { s = "ARC9_BOCW.DMR14_readyboltback", t = 0.4 },
-            { s = "ARC9_BOCW.DMR14_readyboltrelease", t = 0.6 },
+            { s = "ARC9_BOCW.DMR14_readyboltback", t = 0.35 },
+            { s = "ARC9_BOCW.DMR14_readyboltrelease", t = 0.55 },
         },
     },
     ["bash"] = {

@@ -5,7 +5,7 @@ ATT.Description = [[Durable precision flashlight reveals enemy data at longer en
 
 The SOF Target Designator is a Body attachment available for all NATO related Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases the range which enemies are shown as hostiles at a much greater range than the Mounted Flashlight but is only active while aiming.]]
 
-ATT.SortOrder = 2
+ATT.SortOrder = 3
 
 ATT.Model = "models/weapons/arc9/atts/bocw_body_mixbodywest.mdl"
 

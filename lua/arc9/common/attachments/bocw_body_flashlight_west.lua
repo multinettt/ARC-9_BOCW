@@ -5,7 +5,7 @@ ATT.Description = [[Bright flashlight attachment crafted from aircraft grade alu
 
 The Mounted Flashlight is a Body attachment available for all Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It increases the range which enemies are shown as hostiles, rather than allies.]]
 
-ATT.SortOrder = 1
+ATT.SortOrder = 2
 
 ATT.Model = "models/weapons/arc9/atts/bocw_body_flashlightwest.mdl"
 
@@ -44,7 +44,7 @@ ATT.FlashlightFOV = 70
 ATT.FlashlightAttachment = 2
 ]]
 
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0, 0.08, -0.5)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MenuCategory = "ARC-9 - BOCW Attachments"

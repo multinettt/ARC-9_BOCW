@@ -644,7 +644,7 @@ SWEP.Animations = {
         Source = "ready",
         Time = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_ready_boltrelease", t = 0.4 },
+            { s = "ARC9_BOCW.MP5_ready_boltrelease", t = 0.35 },
         },
     },
     ["bash"] = {

@@ -572,24 +572,21 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.m60_draw", t = 0 },
         },
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.4,
         EventTable = {
             { s = "ARC9_BOCW.M60_holster", t = 0 },
         },
     },
     ["ready"] = {
         Source = "ready",
-        Time = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.M60_boltback", t = 0.4 },
-            { s = "ARC9_BOCW.M60_boltback", t = 0.6 },
+            { s = "ARC9_BOCW.M60_boltback", t = 0.3 },
+            { s = "ARC9_BOCW.M60_boltback", t = 0.5 },
         },
     },
     ["bash"] = {

@@ -14,7 +14,7 @@ ATT.Attachments = {
     {
         PrintName = "Body",
         Bone = "tag_weapon",
-        Pos = Vector(-1.45, 0, 1.05),
+        Pos = Vector(-1.45, -0.08, 0.55),
         Ang = Angle(0, 0, 0),
         --Icon_Offset = Vector(1.45, 0, -0.5),
         Category = "bocw_body_flashlight_west"

@@ -9,7 +9,7 @@ ATT.SortOrder = 1
 
 ATT.Model = "models/weapons/arc9/atts/bocw_body_laserwest.mdl"
 
-ATT.Category = {"bocw_body_west"}
+ATT.Category = {"bocw_laser_west"}
 
 ATT.ToggleOnF = true
 ATT.ToggleStats = {

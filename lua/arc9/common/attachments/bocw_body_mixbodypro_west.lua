@@ -5,7 +5,7 @@ ATT.Description = [[Hard anodized laser sight combo reveals enemy data and impro
 
 The Ember Sighting Point is a Body attachment available for all Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. Increasing the range which enemies are shown as hostiles and hipfire accuracy while decreasing both aiming speed and sprint to fire time.]]
 
-ATT.SortOrder = 4
+ATT.SortOrder = 6
 
 ATT.Model = "models/weapons/arc9/atts/bocw_body_mixbodyprowest.mdl"
 

@@ -1,5 +1,5 @@
 ATT.PrintName = [[9.5" Ranger SD]]
-ATT.CompactName = [[9.5"SD RANG]]
+ATT.CompactName = [[9.5"SD RNGR]]
 ATT.Icon = Material("entities/bocw_atts/barrels/mp5_ranger.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
