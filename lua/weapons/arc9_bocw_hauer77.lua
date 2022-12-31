@@ -1,27 +1,25 @@
 --=============================================================================
---   CALL OF DUTY: BLACK OPS COLD WAR        // can someone that knows the base better unfuck this and the m60's code
---   Pellington 703                          // theres two hundred percent stinky stuff in here that i dont know more about
---   LUA - MAIN                              // this is my first ever arc9 gun ever
+--   CALL OF DUTY: BLACK OPS COLD WAR
+--   Hauer77
+--   LUA - MAIN
 --=============================================================================
---[[                                         // i tried camos as well, couldnt get them to work at all
+--[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
 --   BUILD : v0.1
---   SR.NO : 33104
+--   SR.NO : 133105
 
 
-ooooooooo.             oooo  oooo   o8o                             .                             ooooooooo   .oooo.     .oooo.   
-`888   `Y88.           `888  `888   `"'                           .o8                            d"""""""8'  d8P'`Y8b  .dP""Y88b  
- 888   .d88'  .ooooo.   888   888  oooo  ooo. .oo.    .oooooooo .o888oo  .ooooo.  ooo. .oo.            .8'  888    888       ]8P' 
- 888ooo88P'  d88' `88b  888   888  `888  `888P"Y88b  888' `88b    888   d88' `88b `888P"Y88b          .8'   888    888     <88b.  
- 888         888ooo888  888   888   888   888   888  888   888    888   888   888  888   888         .8'    888    888      `88b. 
- 888         888    .o  888   888   888   888   888  `88bod8P'    888 . 888   888  888   888        .8'     `88b  d88' o.   .88P  
-o888o        `Y8bod8P' o888o o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888o o888o      .8'       `Y8bd8P'  `8bd88P'   
-                                                     d"     YD                                                                    
-                                                     "Y88888P'                                                                    
-                                                                
-                                            
+ooooo   ooooo                                              ooooooooo  ooooooooo 
+`888'   `888'                                             d"""""""8' d"""""""8' 
+ 888     888   .oooo.   oooo  oooo   .ooooo.  oooo d8b          .8'        .8'  
+ 888ooooo888  `P  )88b  `888  `888  d88' `88b `888""8P         .8'        .8'   
+ 888     888   .oP"888   888   888  888ooo888  888            .8'        .8'    
+ 888     888  d8(  888   888   888  888    .o  888           .8'        .8'     
+o888o   o888o `Y888""8o  `V88V"V8P' `Y8bod8P' d888b         .8'        .8'      
+                                                                                
+                                                                       
 ]]
 
 AddCSLuaFile()
@@ -33,15 +31,15 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Pellington 703"
-SWEP.TrueName = "Remington 700"
-SWEP.Class = "Sniper Rifle"
+SWEP.PrintName = "Hauer 77"
+SWEP.TrueName = "Ithaca 37"
+SWEP.Class = "Shotgun"
 SWEP.Trivia = {
-     Manufacturer = "Remington Arms",
-     Calibre = ".308 Winchester",
-     Mechanism = "Bolt-action, Rotating bolt",
+     Manufacturer = "Ithaca Gun Company",
+     Calibre = "12 Gauge",
+     Mechanism = "Manually operated, pump-action",
      Country = "USA",
-     Year = 1962
+     Year = 1937
 }
 
 SWEP.Credits = {
@@ -49,20 +47,22 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Bolt-action sniper rifle. Hand loaded with improved handling speeds and faster rechamber. 1-shot kill to the head or upper chest.
+SWEP.Description = [[Pump-action shotgun. High damage with a possible 1-shot kill in close quarters. Hand loaded with moderate rechamber speed.
 
-The R700 (called the Remington 700 in the game files and the official strategy guide) is a bolt-action sniper rifle that appears in Call of Duty 4: Modern Warfare, Call of Duty: Modern Warfare Remastered, Call of Duty: Black Ops Cold War and Call of Duty: Modern Warfare II. It is one of the most powerful sniper rifles available. It can also be used in Call of Duty: Modern Warfare 2, but only through console commands.]]
+The Ithaca Model 37 is a pump-action shotgun featured in Call of Duty: Black Ops (Nintendo DS) and Call of Duty: Black Ops Cold War.
+
+The Ithaca Model 37 returns in Call of Duty: Black Ops Cold War as the Hauer 77.]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_pellington_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_pellington_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_hauer77_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_hauer77_bocw.mdl"
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000010000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -77,51 +77,65 @@ SWEP.ViewModelFOVBase = 75
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 58 -- Damage done at point blank range
-SWEP.DamageMin = 25 -- Damage done at maximum range
+SWEP.DamageMax = 150 -- Damage done at point blank range
+SWEP.DamageMin = 0 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.02 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 800 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 32000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 136000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMin = 5 * 39.37 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 20 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 20 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
-SWEP.Num = 1 -- Number of bullets to shoot
+SWEP.Num = 8 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
 
-SWEP.Penetration = 5 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 2 -- Units of wood that can be penetrated by this gun.
 
 SWEP.DamageType = DMG_BULLET -- The damage type of the gun.
 -- DMG_BLAST will create explosive effects and create AOE damage.
 -- DMG_BURN will ignite the target.
 -- DMG_AIRBOAT will damage Combine Hunter-Choppers.
 
-SWEP.ArmorPiercing = 0.2 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
+SWEP.ArmorPiercing = 0.1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.HeadshotDamage = 1.25
-SWEP.ChestDamage = 1.05
+SWEP.HeadshotDamage = 1.4
+SWEP.ChestDamage = 1
 SWEP.StomachDamage = 1
-SWEP.ArmDamage = 0.8
-SWEP.LegDamage = 0.8
+SWEP.ArmDamage = 1
+SWEP.LegDamage = 1
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.8,
-    [HITGROUP_CHEST] = 1.05,
+    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.8,
-    [HITGROUP_RIGHTLEG] = 0.8,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
 }
+
+SWEP.AlwaysPhysBullet = true
+
+SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
+SWEP.PhysBulletDrag = 1
+SWEP.PhysBulletGravity = 1
+SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
+
+-------------------------- TRACERS
+
+SWEP.TracerNum = 1 -- Tracer every X
+SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
+SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
+SWEP.TracerColor = Color(255, 200, 200)
+SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "ar2" -- What ammo type this gun uses.
+SWEP.Ammo = "buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 5 -- Self-explanatory.
-SWEP.ShotgunReload = true
-SWEP.SupplyLimit = 4 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -130,14 +144,21 @@ SWEP.AmmoPerShot = 1 -- Ammo to use per shot
 SWEP.InfiniteAmmo = false -- Weapon does not take from reserve ammo
 SWEP.BottomlessClip = false -- Weapon never has to reload
 
+SWEP.ShotgunReload = true
+
 SWEP.ReloadWhileSprint = true -- This weapon can reload while the user is sprinting.
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
+SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
+SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.ManualActionEjectAnyway = false -- Eject a shell when firing anyway.
+
 -------------------------- FIREMODES
 
-SWEP.RPM = 360
+SWEP.RPM = 250
 
 -- Works different to ArcCW
 
@@ -154,34 +175,28 @@ SWEP.Firemodes = {
     },
 }
 
-SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
-SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
-SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
-SWEP.SlamFire = false
-SWEP.CycleTime = 1
-
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.2
+SWEP.RecoilSide = 0.1
+SWEP.RecoilUp = 0.5
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilAutoControl = 0.1
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
-SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddMove = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
@@ -194,13 +209,13 @@ SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 50
 
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 10 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.2 -- How much the gun sways.
+SWEP.Sway = 0.3 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for
 SWEP.RestoreBreathTime = 4
@@ -209,15 +224,15 @@ SWEP.FreeAimRadiusMultSights = 0.25
 
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.325 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.350 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.275 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.233 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
-SWEP.Speed = 0.96
+SWEP.Speed = 1
 
 SWEP.SpeedMult = 1
-SWEP.SpeedMultSights = 0.30
+SWEP.SpeedMultSights = 0.79
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
 SWEP.SpeedMultCrouch = 1
@@ -248,13 +263,13 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.pellington_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.pellington_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.pellington_fire_silenced"                    -- Fire silenced
+SWEP.ShootSound = "ARC9_BOCW.hauer77_fire"                            -- Fire
+SWEP.ShootSoundIndoor = "ARC9_BOCW.shotgun_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.hauer77_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.pellington_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.hauer77_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -262,7 +277,7 @@ SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_sniper.wav"
+SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_shotgun.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -288,10 +303,10 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 
 SWEP.ShellSmoke = true
 
@@ -313,10 +328,8 @@ SWEP.NoViewBob = false
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    [1] = "tag_bullet_deplete_sqtl_00_animate",
-    [2] = "tag_bullet_deplete_sqtl_01_animate",
-    [3] = "tag_bullet_deplete_sqtl_02_animate",
-    [4] = "tag_bullet_deplete_sqtl_03_animate"
+    [0] = "tag_ammo_01_animate",
+    [1] = "tag_ammo_02_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -329,10 +342,12 @@ SWEP.BulletBGs = {}
 SWEP.CaseBGs = {}
 SWEP.StripperClipBGs = {}
 
-SWEP.HideBones = {"tag_ammo_1_animate", "tag_ammo_2_animate", "tag_ammo_3_animate"} -- bones to hide in third person and customize menu. {"list", "of", "bones"}
+SWEP.HideBones = {
+    "tag_ammo_01_animate"
+} -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    -- [1] = {"list", "of", "bones"},
-    -- [2] = {"list", "of", "bones"}
+     [0] = {"tag_ammo_01_animate"},
+     [1] = {"tag_ammo_02_animate"}
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -347,10 +362,14 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 
 -------------------------- CAMO SYSTEM
 
+SWEP.CustomCamoTexture = nil
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = nil
+
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.526, -6, 1.325),
+    Pos = Vector(-2.72, -4, 1.625),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -382,7 +401,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(18, 30, 4)
+SWEP.CustomizePos = Vector(15, 32, 4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -413,22 +432,19 @@ SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 SWEP.DefaultElements = {}
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NameChange = "Pellegrino Della Morte",
-    },
-    ["optic_mount"] = {
+    ["maggone"] = {
         Bodygroups = {
             {1, 1}
         }
     },
-    ["laser_mount"] = {
+    ["optic_mount"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {6, 1}
+            {4, 1},
         }
     },
 }
@@ -452,7 +468,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(5.5, 0, 2.7),
+        Pos = Vector(6, 0, 2.5),
         Ang = Angle(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
@@ -460,32 +476,33 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        Bone = "tag_weapon",
-        Pos = Vector(31.1, 0, 2.4),
+        Bone = "tag_muzzle",
+        Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"pellington_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_12_west_muzzle", "bo1_muzzle"},
+        Attached = "bocw_muzzle_hauer77"
     },
     {
         PrintName = "Underbarrel",
         Bone = "tag_weapon",
-        Pos = Vector(15, 0, 0.8),
+        Pos = Vector(9.6, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
     {
-        PrintName = "Gas Block",
+        PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(23.8, 0, 1.5),
+        Pos = Vector(8.8, -0.02, 4.33),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_rail_tactical"},
+        Category = {"bocw_hauer77_bodymount"},
     },
     {
         PrintName = "Barrel",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_pellington703_barrel"},
-        DefaultName = [[19.8" Steyr]],
+        Icon_Offset = Vector(4, 0, 0),
+        Category = {"bocw_hauer77_barrel"},
     },
     {
         PrintName = "Stock",
@@ -493,22 +510,25 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_pellington703_stock"},
+        Icon_Offset = Vector(-4, 0, 3),
+        Category = {"bocw_hauer77_stock"},
     },
     {
         PrintName = "Magazine",
-        DefaultName = "20 Rnd",
-        Bone = "tag_bullet_latch_animate",
+        DefaultName = "30 Rnd",
+        Bone = "tag_end_cap_short",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_pellington703_mag"},
+        --Icon_Offset = Vector(0.6, 0, -2.5),
+        Category = {"bocw_hauer77_tube"},
     },
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_pellington703_wrap"},
+        Icon_Offset = Vector(-1, 0, -1),
+        Category = {"bocw_hauer77_wrap"},
     },
     {
         PrintName = "Ammo Type",
@@ -524,9 +544,18 @@ SWEP.Attachments = {
         PrintName = "Sound",
         DefaultName = "BOCW Sound",
         DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_pellington703_sound"},
+        Category = {"bocw_hauer77_sound"},
     },
 }
+
+SWEP.Hook_TranslateAnimation = function(swep, anim)
+    local elements = swep:GetElements()
+
+    if elements["optic_mount"] then
+        return anim .. "_optic"
+    end
+
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -541,17 +570,19 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.pellington_boltforward", t = 0.4 },
+            { s = "ARC9_BOCW.Hauer77_reload_start", t = 0 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.5 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.7 },
         },
     },
     ["cycle"] = {
         Source = "cycle",
         EjectAt = 0.6,
         EventTable = {
-            { s = "ARC9_BOCW.pellington_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.pellington_boltforward", t = 0.35 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.2 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.4 },
         },
-        MinProgress = 0.2,
+        MinProgress = 0.8,
         FireASAP = true
     },
     ["bash"] = {
@@ -560,28 +591,30 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
     },
+    ["fire_optic"] = {
+        Source = {"fire_optic"},
+    },
     ["reload_start"] = {
         Source = "reload_in",
-        MinProgress = 0.9,
+        MinProgress = 0.8,
         RestoreAmmo = 1,
         EventTable = {
-            { s = "ARC9_BOCW.pellington_boltback", t = 0.26 },
-            { s = "ARC9_BOCW.Pellington_bulletin", t = 1.2 },
+            { s = "ARC9_BOCW.Hauer77_reload_start", t = 0 },
+            { s = "ARC9_BOCW.Hauer77_shellin", t = 0.5 },
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
-        MinProgress = 2,
-        MagSwapTime = 1,
+        MinProgress = 0.8,
         EventTable = {
-            { s = "ARC9_BOCW.Pellington_bulletin", t = 0.55 },
+            { s = "ARC9_BOCW.Hauer77_shellin", t = 0.35 },
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
-        MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.pellington_boltforward", t = 0.25 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.2 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.45 },
         },
     },
     ["enter_sprint"] = {
@@ -594,33 +627,23 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
     },
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.pellington_inspectvar", t = 1.35 },
-            { s = "ARC9_BOCW.pellington_boltback", t = 2.4 },
-            { s = "ARC9_BOCW.Pellington_inspect_shelleject", t = 2.5 },
-            { s = "ARC9_BOCW.Pellington_bulletin", t = 4.9 },
-            { s = "ARC9_BOCW.pellington_boltforward", t = 5.5 },
-        },
-    },
-    ["enter_inspect"] = {
-        Source = "inspect_manguish",
-        EventTable = {
-            { s = "ARC9_BOCW.pellington_inspect_manguish", t = 0 },
+            { s = "ARC9_BOCW.hauer77_inspect", t = 0 },
         },
     },
 }
-
+--[[
 SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
-    local gunname = "Remington 700"
+    local gunname = "AKS-74U"
 
     if attached["bo1_pap"] then
-        gunname = "Pellegrino Della Morte"
+        gunname = "AK-74NOFU2"
     end
 
     return gunname
 end
+]]
