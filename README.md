@@ -36,7 +36,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Shotguns:
 
-- Hauer 77 (Ithaca 37)        [Not usable, VM Only]
+- Hauer 77 (Ithaca 37)        [No Attachments]
 
 
 ## Attachments:
