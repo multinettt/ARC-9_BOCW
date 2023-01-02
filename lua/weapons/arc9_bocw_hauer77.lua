@@ -193,7 +193,7 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 0.6
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = 0.1
@@ -401,8 +401,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15, 32, 4)
-SWEP.CustomizeSnapshotFOV = 90
+SWEP.CustomizePos = Vector(12, 32, 4)
+SWEP.CustomizeSnapshotFOV = 75
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
@@ -484,16 +484,17 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Bone = "tag_weapon",
-        Pos = Vector(9.6, 0, 2.5),
+        Bone = "tag_pump_animate",
+        Pos = Vector(0, 0, -0.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(8.8, -0.02, 4.33),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(25, 1, 1.6),
         Category = {"bocw_hauer77_bodymount"},
     },
     {
@@ -510,7 +511,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-4, 0, 3),
+        Icon_Offset = Vector(-6, 0, -1),
         Category = {"bocw_hauer77_stock"},
     },
     {
@@ -527,7 +528,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-1, 0, -1),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_hauer77_wrap"},
     },
     {
@@ -579,7 +580,7 @@ SWEP.Animations = {
         Source = "cycle",
         EjectAt = 0.6,
         EventTable = {
-            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.2 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 0.18 },
             { s = "ARC9_BOCW.Hauer77_pumpforward", t = 0.4 },
         },
         MinProgress = 0.8,
@@ -631,7 +632,11 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.hauer77_inspect", t = 0 },
+            { s = "ARC9_BOCW.Hauer77_reload_start", t = 0 },
+            { s = "ARC9_BOCW.Hauer77_inspectvar", t = 0.7 },
+            { s = "ARC9_BOCW.Hauer77_reload_start", t = 1.7 },
+            { s = "ARC9_BOCW.Hauer77_pumpback", t = 2 },
+            { s = "ARC9_BOCW.Hauer77_pumpforward", t = 2.5 },
         },
     },
 }
