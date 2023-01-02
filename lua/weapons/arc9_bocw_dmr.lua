@@ -421,7 +421,6 @@ SWEP.AttachmentElements = {
     ["optic_mount"] = {
         Bodygroups = {
             {2, 1},
-            {5, 1}
         }
     },
     ["laser_mount"] = {
@@ -738,7 +737,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.DMR14_magout", t = 0.36 },
             { s = "ARC9_BOCW.DMR14_magin", t = 1.2 },
-            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.DMR14_reload_end", t = 1.95 },
         },
     },
     ["reload_empty"] = {

@@ -1,5 +1,5 @@
 ATT.PrintName = "SUSAT Multizoom 2-4x"
-ATT.CompactName = "SUSAT"
+ATT.CompactName = "SUSAT 4x"
 ATT.Icon = Material("entities/bocw_atts/optics/susat.png", "mips smooth")
 ATT.Description = [[Telescopic sight produced in the UK with variable 2.0x-4.0x magnification for long range target acquisition. Press [Change Zoom] to toggle between 2.0x and 4.0x.
 

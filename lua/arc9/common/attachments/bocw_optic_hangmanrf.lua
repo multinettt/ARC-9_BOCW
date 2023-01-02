@@ -1,5 +1,5 @@
 ATT.PrintName = "Hangman RF 6x"
-ATT.CompactName = "HNGMN RF"
+ATT.CompactName = "HNGMN 6x"
 ATT.Icon = Material("entities/bocw_atts/optics/hangmanrf.png", "mips smooth")
 ATT.Description = [[American rangefinder scope with 6.0x maginfication for reliable long-distance target acquisition.
 

@@ -1,5 +1,5 @@
 ATT.PrintName = "Leupold 8x"
-ATT.CompactName = "LPOLD"
+ATT.CompactName = "LPOLD 8x"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[ ]]
 ATT.SortOrder = 8
@@ -9,7 +9,6 @@ ATT.Model = "models/weapons/arc9/atts/pellington_scope.mdl"
 ATT.Category = "optic_picatinny"
 ATT.Folder = "BOCW SCOPE"
 
-// Allows a custom sight position to be defined
 ATT.Sights = {
     {
         Pos = Vector(0, 8, -1.02),

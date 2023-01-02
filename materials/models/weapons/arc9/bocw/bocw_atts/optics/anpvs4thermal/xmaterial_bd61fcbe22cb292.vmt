@@ -1,7 +1,7 @@
 "VertexlitGeneric" // INSIDE SCOPE (NO TEXTURE)
 {
 	"$basetexture" "models\weapons\arc9\bocw\c"
-	"$bumpmap" "models\weapons\arc9\bocw\nn"
+	"$bumpmap" "models\weapons\arc9\bocw\n"
 
 
 	"$phong" "1"
