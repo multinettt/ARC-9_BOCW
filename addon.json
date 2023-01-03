@@ -1,0 +1,10 @@
+{
+    "title" : "ARC-9 deez nuts machine cold war",
+    "type" : "weapon",
+    "tags" : ["fun","realism"],
+	"ignore":
+	[
+        ".git/*",
+        "readme.md"
+	]
+}
