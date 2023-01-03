@@ -8,14 +8,14 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Assault Rifles:
 
-- XM4 (XM117E2)                [Not usable, VM Only]
+- XM4 (XM117E2)                [No Attachments yet]
 - Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]
 
 ### Submachine Guns:
 
 - MP5        (H&K MP5K)
 - Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
-- AK-74u     (AKS-74U)         [No Attachments]
+- AK-74u     (AKS-74U)         [No Attachments yet]
 
 ### Tactical Rifles:
 
@@ -24,11 +24,11 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Light Machine Guns:
 
-- M60        (M60E3)           [No Attachments]
+- M60        (M60E3)           [No Attachments yet]
 
 ### Sniper Rifles:
 
-- Pellington 703 (Remington 700) [No Attachments]
+- Pellington 703 (Remington 700) [No Attachments yet]
 
 ### Pistols:
 
@@ -36,7 +36,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Shotguns:
 
-- Hauer 77 (Ithaca 37)        [No Attachments]
+- Hauer 77 (Ithaca 37)        [No Attachments yet]
 
 
 ## Attachments:
