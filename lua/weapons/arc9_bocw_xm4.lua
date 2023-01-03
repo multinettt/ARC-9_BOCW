@@ -1,23 +1,23 @@
 --=============================================================================
 --   CALL OF DUTY: BLACK OPS COLD WAR
---   MP5
+--   XM4
 --   LUA - MAIN
 --=============================================================================
 --[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
---   BUILD : v1.0
---   SR.NO : 133104
+--   BUILD : v0.1
+--   SR.NO : 133108
 
 
-ooo        ooooo ooooooooo.     oooooooo 
-`88.       .888' `888   `Y88.  dP""""""" 
- 888b     d'888   888   .d88' d88888b.   
- 8 Y88. .P  888   888ooo88P'      `Y88b  
- 8  `888'   888   888               ]88  
- 8    Y     888   888         o.   .88P  
-o8o        o888o o888o        `8bd88P'   
+ooooooo  ooooo ooo        ooooo       .o   
+ `8888    d8'  `88.       .888'     .d88   
+   Y888..8P     888b     d'888    .d'888   
+    `8888'      8 Y88. .P  888  .d'  888   
+   .8PY888.     8  `888'   888  88ooo888oo 
+  d8'  `888b    8    Y     888       888   
+o888o  o88888o o8o        o888o     o888o  
                                                                        
                                        
 ]]
@@ -31,14 +31,14 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP5"
-SWEP.TrueName = "MP5A1"
-SWEP.Class = "Submachine Gun"
+SWEP.PrintName = "XM4"
+SWEP.TrueName = "XM177E1"
+SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
-     Manufacturer = "Heckler & Koch",
-     Calibre = "9x19mm Parabellum",
-     Mechanism = "Roller-Delayed Blowback, Closed Bolt",
-     Country = "Germany",
+     Manufacturer = "Colt Manufacturing Company",
+     Calibre = "5.56x45mm",
+     Mechanism = "Direct impingement",
+     Country = "USA",
      Year = 1966
 }
 
@@ -47,20 +47,20 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto submachine gun. Fast fire rate with low recoil. Good visibility and control while firing.
+SWEP.Description = [[Full-auto assault rifle. Reliable damage with improved fire rate. Fair weapon control when sustaining fire
 
-The MP5 is a submachine gun featured in many games of the Modern Warfare series, as well as in Call of Duty: Black Ops II, Call of Duty Online, Call of Duty: Mobile and Call of Duty: Black Ops Cold War.]]
+The XM4 is an assault rifle featured in Call of Duty: Black Ops Cold War.]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_mp5_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_mp5_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_xm4_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_xm4_bocw.mdl"
 
 SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000010000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -75,14 +75,14 @@ SWEP.ViewModelFOVBase = 75
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 32 -- Damage done at point blank range
-SWEP.DamageMin = 23 -- Damage done at maximum range
+SWEP.DamageMax = 30 -- Damage done at point blank range
+SWEP.DamageMin = 28 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 10 * 39.37 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 1560 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-SWEP.Distance = 40000 -- In Hammer units, how far bullets can travel, period.
+SWEP.RangeMax = 150 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.Distance = 1200 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
 SWEP.Num = 1 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
@@ -114,7 +114,7 @@ SWEP.BodyDamageMults = {
 
 SWEP.AlwaysPhysBullet = true
 
-SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 550 * 39.37
 SWEP.PhysBulletDrag = 1
 SWEP.PhysBulletGravity = 1
 SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
@@ -129,7 +129,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "smg1" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
@@ -149,7 +149,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 857
+SWEP.RPM = 722
 
 -- Works different to ArcCW
 
@@ -218,15 +218,15 @@ SWEP.FreeAimRadiusMultSights = 0.25
 
 SWEP.SwayMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.275 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.233 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.266 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 1
 
-SWEP.SpeedMult = 1
-SWEP.SpeedMultSights = 0.79
+SWEP.SpeedMult = 0.95
+SWEP.SpeedMultSights = 0.375
 SWEP.SpeedMultShooting = 0.8
 SWEP.SpeedMultMelee = 0.75
 SWEP.SpeedMultCrouch = 1
@@ -257,13 +257,13 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.mp5_fire"                            -- Fire
+SWEP.ShootSound = "ARC9_BOCW.xm4_fire"                            -- Fire
 SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.mp5_fire_silenced"                    -- Fire silenced
+SWEP.ShootSoundSilenced = "ARC9_BOCW.xm4_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.mp5_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.xm4_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -297,10 +297,10 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_mp5" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
 
 SWEP.ShellSmoke = true
 
@@ -322,11 +322,8 @@ SWEP.NoViewBob = false
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    [1] = "tag_bullet_deplete_sqtl_00_animate",
-    [2] = "tag_bullet_deplete_sqtl_01_animate",
-    [3] = "tag_bullet_deplete_sqtl_02_animate",
-    [4] = "tag_bullet_deplete_sqtl_03_animate",
-    [5] = "tag_bullet_deplete_sqtl_04_animate",
+    [1] = "tag_bullet_animate",
+    [2] = "tag_bullets",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -341,11 +338,11 @@ SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
     "tag_clip1",
-    "tag_bullet_deplete_sqtl_00_animate1",
-    "tag_bullet_deplete_sqtl_01_animate1"
+    "tag_bullet_animate1",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
     [1] = {"tag_clip1"},
+    [2] = {"tag_bullet_animate1"},
     -- [2] = {"list", "of", "bones"}
 }
 
@@ -368,8 +365,8 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.8, -7.5, 1.41228),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.14, -8, 0.78),
+    Ang = Angle(0, 0, 3.25),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
@@ -436,9 +433,10 @@ SWEP.AttachmentElements = {
             {1, 1}
         }
     },
-    ["optic_mount"] = {
+    ["optic_attached"] = {
         Bodygroups = {
-            {2, 1},
+            {3, 1},
+            {4, 2},
         }
     },
     ["barrel_extended"] = {
@@ -532,50 +530,52 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(4.5, 0, 5.36),
+        Pos = Vector(4.5, 0, 4.525),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-1, 0, 0.5),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
-        InstalledElements = {"optic_mount"},
+        InstalledElements = {"optic_attached"},
     },
     {
         PrintName = "Muzzle",
         Bone = "tag_muzzle",
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_9_west_muzzle", "bocw_9_mp5sd_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_mp5"
+        Category = {"bocw_556_west_muzzle", "bo1_muzzle"},
+        Attached = "bocw_muzzle_xm4"
     },
     {
         PrintName = "Underbarrel",
         Bone = "tag_weapon",
-        Pos = Vector(9.6, 0, 2.5),
+        Pos = Vector(10.5, 0, 2.5),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -1),
         Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(8.8, -0.02, 4.33),
+        Pos = Vector(15.25, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_mp5_bodymount"},
+        Category = {"bocw_xm4_bodymount"},
     },
     {
         PrintName = "Barrel",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(4, 0, 0),
-        Category = {"bocw_mp5_barrel"},
+        Icon_Offset = Vector(-5, 0, 0),
+        Category = {"bocw_xm4_barrel"},
     },
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        Bone = "tag_weapon",
+        Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-4, 0, 3),
-        Category = {"bocw_mp5_stock"},
+        Icon_Offset = Vector(3, 0, 0),
+        Category = {"bocw_xm4_stock"},
     },
     {
         PrintName = "Magazine",
@@ -583,16 +583,16 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.6, 0, -2.5),
-        Category = {"bocw_mp5_mag"},
+        Icon_Offset = Vector(0.25, 0, -2),
+        Category = {"bocw_xm4_mag"},
     },
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-1, 0, -1),
-        Category = {"bocw_mp5_wrap"},
+        Icon_Offset = Vector(-0.5, 0, -0.5),
+        Category = {"bocw_xm4_wrap"},
     },
     {
         PrintName = "Ammo Type",
@@ -608,19 +608,27 @@ SWEP.Attachments = {
         PrintName = "Sound",
         DefaultName = "BOCW Sound",
         DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_mp5_sound"},
+        Category = {"bocw_xm4_sound"},
     },
 }
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["mp5_mag_ext"] then
-        return anim .. "_drum"
+    if elements["xm4_mag_ext"] then
+        return anim .. "_ext"
     end
 
-    if elements["mp5_mag_dual"] then
+    if elements["xm4_mag_dual"] then
         return anim .. "_dual"
+    end
+
+    if elements["xm4_mag_mix"] then
+        return anim .. "_mix"
+    end
+
+    if elements["optic_attached"] then
+        return anim .. "_optic"
     end
 
 end
@@ -644,7 +652,10 @@ SWEP.Animations = {
         Source = "ready",
         Time = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_ready_boltrelease", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_ready_start", t = 0 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 0.3 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 0.5 },
+            { s = "ARC9_BOCW.XM4_ready_end", t = 0.9 },
         },
     },
     ["bash"] = {
@@ -653,78 +664,75 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.4,
         EjectAt = 0,
     },
-    ["fire_iron"] = {
-        Source = "fire_ads",
-        Time = 0.3,
+    ["fire_optic"] = {
+        Source = "fire_optic",
         EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-        MinProgress = 1.89,
+        MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.7 },
-            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 2,
+        MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.85 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 2.1 },
-            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.7 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
         },
     },
     ["reload_drum"] = {
         Source = "reload_ext",
-        MinProgress = 2.07,
+        MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.7 },
-            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_boltgrab", t = 0.15 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.7 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.1 },
         },
     },
     ["reload_empty_drum"] = {
         Source = "reload_ext_empty",
-        MinProgress = 2.07,
+        MinProgress = 1.62,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.MP5_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.85 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 2.1 },
-            { s = "ARC9_BOCW.MP5_boltrelease", t = 2.7 },
+            { s = "ARC9_BOCW.XM4_boltgrab", t = 0.15 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 0.2 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.85 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.7 },
         },
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
-        MinProgress = 1.57,
+        MinProgress = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.38 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.38 },
         },
     },
     ["reload_empty_dual"] = {
         Source = {"reload_dual_empty", "reload_dual2_empty"},
-        MinProgress = 2,
+        MinProgress = 1.2,
         MagSwapTime = 1.57,
         RareSourceChance = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.MP5_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.MP5_reload_magin", t = 1.38 },
-            --{ s = "ARC9_BOCW.MP5_boltgrab", t = 1.85 },
-            { s = "ARC9_BOCW.MP5_boltback", t = 1.9 },
-            { s = "ARC9_BOCW.MP5_boltrelease", t = 2 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.38 },
+            --{ s = "ARC9_BOCW.XM4_boltgrab", t = 1.85 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 1.9 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2 },
         },
     },
     ["enter_sprint"] = {
@@ -737,17 +745,20 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 0.4
     },
     ["enter_inspect"] = {
         Source = "inspect",
+        Time = 4.5,
         EventTable = {
-            { s = "ARC9_BOCW.mp5_inspect", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
         },
     },
-    ["enter_inspect_drum"] = {
+    ["enter_inspect_ext"] = {
         Source = "inspect_ext",
         EventTable = {
-            { s = "ARC9_BOCW.mp5_inspect", t = 0 },
+            { s = "ARC9_BOCW.xm4_inspect", t = 0 },
         },
     },
 }

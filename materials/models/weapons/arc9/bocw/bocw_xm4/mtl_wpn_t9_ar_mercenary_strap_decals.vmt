@@ -3,7 +3,6 @@
 	"$basetexture" "models\weapons\arc9\bocw\bocw_xm4\strapdecals_diff"
 	"$bumpmap" "models\weapons\arc9\bocw\bocw_xm4\strapdecals_n"
 	"$translucent" "1"
-	"$decal" "1"
 
 	"$phong" "1"
 	"$phongexponenttexture" "models\weapons\arc9\bocw\g"
