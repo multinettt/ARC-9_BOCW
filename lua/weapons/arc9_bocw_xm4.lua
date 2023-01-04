@@ -374,8 +374,8 @@ SWEP.IronSights = {
 
 SWEP.HasSights = true
 
-SWEP.ActivePos = Vector(0, -1.2, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(-0.2, -1.5, 0.1)
+SWEP.ActiveAng = Angle(2, -1, -2.5)
 
 SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -530,7 +530,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(4.5, 0, 4.525),
+        Pos = Vector(4, 0, 4.525),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-1, 0, 0.5),
         DefaultName = "Iron Sights",
