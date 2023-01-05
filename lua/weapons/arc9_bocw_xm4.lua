@@ -29,6 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "XM4"
@@ -375,7 +376,7 @@ SWEP.IronSights = {
 SWEP.HasSights = true
 
 SWEP.ActivePos = Vector(-0.2, -1.5, 0.1)
-SWEP.ActiveAng = Angle(2, -1, -2.5)
+SWEP.ActiveAng = Angle(1, -1, -2.5)
 
 SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -430,7 +431,13 @@ SWEP.DefaultElements = {}
 SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
-            {1, 1}
+            {1, 1},
+            {9, 1}
+        }
+    },
+    ["magtapegone"] = {
+        Bodygroups = {
+            {9, 1}
         }
     },
     ["optic_attached"] = {
@@ -581,6 +588,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultName = "30 Rnd",
         Bone = "tag_clip",
+        Bone2 = "tag_clip1",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0.25, 0, -2),
@@ -672,6 +680,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
+        NoMagSwap = true,
         MinProgress = 1.52,
         EventTable = {
             { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
@@ -684,6 +693,7 @@ SWEP.Animations = {
         MinProgress = 1.52,
         EventTable = {
             { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magdrop", t = 0.7 },
             { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
@@ -691,35 +701,35 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
         },
     },
-    ["reload_drum"] = {
+    ["reload_ext"] = {
         Source = "reload_ext",
         MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 0.2 },
             { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.7 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
         },
     },
-    ["reload_empty_drum"] = {
+    ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
         MinProgress = 1.62,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_boltgrab", t = 0.15 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 0.2 },
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.85 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 2.1 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.7 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
         },
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
         MinProgress = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.38 },
+            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 1.55 },
         },
     },
     ["reload_empty_dual"] = {
@@ -728,11 +738,31 @@ SWEP.Animations = {
         MagSwapTime = 1.57,
         RareSourceChance = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.38 },
-            --{ s = "ARC9_BOCW.XM4_boltgrab", t = 1.85 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 1.9 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2 },
+            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.5 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
+        },
+    },
+    ["reload_mix"] = {
+        Source = "reload_mix",
+        MinProgress = 1.52,
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+        },
+    },
+    ["reload_empty_mix"] = {
+        Source = "reload_mix_empty",
+        MinProgress = 1.52,
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
         },
     },
     ["enter_sprint"] = {
@@ -756,9 +786,26 @@ SWEP.Animations = {
         },
     },
     ["enter_inspect_ext"] = {
-        Source = "inspect_ext",
+        Source = "inspect_extmag",
+        Time = 4.5,
         EventTable = {
-            { s = "ARC9_BOCW.xm4_inspect", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+        },
+    },
+    ["enter_inspect_mix"] = {
+        Source = "inspect_mixmag",
+        Time = 4.5,
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+        },
+    },
+    ["enter_inspect_dual"] = {
+        Source = "inspect_dualmag",
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_inspect_dual1", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect_dual2", t = 3.2 },
         },
     },
 }

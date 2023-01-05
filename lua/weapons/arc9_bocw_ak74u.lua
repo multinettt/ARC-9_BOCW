@@ -29,6 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "AK-74u"
@@ -431,9 +432,6 @@ SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 SWEP.DefaultElements = {}
 
 SWEP.AttachmentElements = {
-    ["ammo_papunch"] = {
-        NameChange = "AK-74NOFU2",
-    },
     ["maggone"] = {
         Bodygroups = {
             {1, 1}

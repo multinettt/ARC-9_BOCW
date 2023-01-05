@@ -29,6 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M60"
@@ -400,7 +401,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(22, 32, 4)
-SWEP.CustomizeSnapshotFOV = 75
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false

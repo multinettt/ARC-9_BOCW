@@ -85,7 +85,7 @@ sound.Add({
     name = "ARC9_BOCW.XM4_reload_fast_boltrelease",
     channel = CHAN_AUTO,
     volume = 1.0,
-    sound = { "weapons/arc9/bocw_xm4/xm4_reload_dual_empty_boltrelease.wav", "weapons/arc9/bocw_xm4/xm4_reload_fast_boltrelease2.wav" }
+    sound = "weapons/arc9/bocw_xm4/xm4_reload_dual_empty_boltrelease.wav"
 })
 
 -- RELOAD FOLEY
@@ -153,7 +153,7 @@ sound.Add({
     name = "ARC9_BOCW.XM4_inspect_dual2",
     channel = CHAN_ITEM,
     volume = 1.0,
-    sound = "weapons/arc9/bocw_xm4/xm4_inspect_dual_part1.wav"
+    sound = "weapons/arc9/bocw_xm4/xm4_inspect_dual_part2.wav"
 })
 
 -- PULLOUT PUTAWAY

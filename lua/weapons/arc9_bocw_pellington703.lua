@@ -31,6 +31,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
+SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Pellington 703"
@@ -383,7 +384,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(18, 30, 4)
-SWEP.CustomizeSnapshotFOV = 75
+SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
