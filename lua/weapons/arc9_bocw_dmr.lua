@@ -348,7 +348,7 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 
 -------------------------- CAMO SYSTEM
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bocw/bocw_dmr14/receiver_diff"
+SWEP.CustomCamoTexture = "models/weapons/arc9/bocw/bocw_dmr14/stock_diff"
 SWEP.CustomCamoScale = 1
 
 -------------------------- POSITIONS
@@ -608,7 +608,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Cosmetic",
-        DefaultCompactName = "Skin (Couldn't get this to work)",
+        DefaultCompactName = "Skin",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
         Bone = "tag_weapon",
         Pos = Vector(-7, 0, 2),
@@ -617,6 +617,19 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(self, data)
+
+    local vm = data.model
+    local attached = data.elements
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
+    end
+
+    vm:SetSkin(camo)
+end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()

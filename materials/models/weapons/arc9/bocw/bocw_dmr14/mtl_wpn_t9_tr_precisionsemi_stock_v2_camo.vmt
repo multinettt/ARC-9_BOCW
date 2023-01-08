@@ -12,8 +12,8 @@
 	"$normalmapalphaenvmapmask" "1"
 
 	$detail ""
-	$detailblendfactor 5 
-	$detailblendmod 4
+	$detailblendfactor 0.25 
+	$detailblendmode 3
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
