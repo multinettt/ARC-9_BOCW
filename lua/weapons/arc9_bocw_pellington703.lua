@@ -31,7 +31,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
-SWEP.SubCategory = "Sniper Rifles"
+--SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Pellington 703"

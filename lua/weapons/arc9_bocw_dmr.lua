@@ -29,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
-SWEP.SubCategory = "Tactical Rifles"
+--SWEP.SubCategory = "Tactical Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "DMR 14"
@@ -348,6 +348,9 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 
 -------------------------- CAMO SYSTEM
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bocw/bocw_dmr14/receiver_diff"
+SWEP.CustomCamoScale = 1
+
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
@@ -611,6 +614,7 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

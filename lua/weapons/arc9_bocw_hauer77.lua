@@ -29,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
-SWEP.SubCategory = "Shotguns"
+--SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Hauer 77"
