@@ -432,6 +432,7 @@ SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
+            {2, 1},
             {9, 1}
         }
     },
@@ -592,6 +593,11 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0.25, 0, -2),
+        DuplicateModels = {
+            {
+                Bone = "tag_clip1",
+            }
+        },
         Category = {"bocw_xm4_mag"},
     },
     {
