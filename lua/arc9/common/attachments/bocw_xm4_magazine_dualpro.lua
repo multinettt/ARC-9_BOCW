@@ -15,7 +15,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.5
+ATT.ReloadTimeMult = 0.75
 ATT.AimDownSightsTimeMult = 0.9
 
 ATT.ClipSizeOverride = 25

@@ -61,7 +61,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000001000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -186,7 +186,7 @@ SWEP.RecoilAutoControl = 0.1
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
-SWEP.SpreadMultRecoil = 1.25
+SWEP.SpreadMultRecoil = 1.2
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
@@ -449,61 +449,61 @@ SWEP.AttachmentElements = {
     },
     ["barrel_extended"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.889, 0, 0),
-            }
+                Pos = Vector(0.955, 0, 0),
+            },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.006, 0, 0),
+                Pos = Vector(2.53, 0, 0),
             }
         },
     },
     ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.889, 0, 0),
+                Pos = Vector(4.46, 0, 0),
             }
         },
     },
     ["barrel_ranger"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.889, 0, 0),
+                Pos = Vector(5.35, 0, 0),
             }
         },
     },
-    ["barrel_rifled"] = {
+    ["barrel_takedown"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.5, 0, 0),
+                Pos = Vector(5.35, 0, 0),
             }
         },
     },
     ["barrel_taskforce"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.889, 0, 0),
+                Pos = Vector(4.46, 0, 0),
             }
         },
     },
@@ -547,7 +547,8 @@ SWEP.Attachments = {
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_556_west_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_xm4"
+        Attached = "bocw_muzzle_xm4",
+        Integral = false
     },
     {
         PrintName = "Underbarrel",
@@ -646,6 +647,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
+        Time = 10,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
