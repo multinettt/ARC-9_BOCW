@@ -141,6 +141,34 @@ sound.Add({
     sound = "weapons/arc9/bocw_ak74u/ak74u_inspect.wav"
 })
 
+sound.Add({
+    name = "ARC9_BOCW.AK74u_inspect_arap",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ak74u/ak74u_inspect_arap.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.AK74u_inspect_scalie_pt1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ak74u/ak74u_inspect_scalie_pt1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.AK74u_inspect_scalie_pt2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ak74u/ak74u_inspect_scalie_pt2.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.AK74u_inspect_scalie_pt3",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ak74u/ak74u_inspect_scalie_pt3.wav"
+})
+
 -- PULLOUT PUTAWAY
 
 sound.Add({

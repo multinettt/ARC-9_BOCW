@@ -434,7 +434,8 @@ SWEP.DefaultElements = {}
 SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
-            {1, 1}
+            {1, 1},
+            {2, 1}
         }
     },
     ["mag2gone"] = {
@@ -517,6 +518,11 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        DuplicateModels = {
+            {
+                Bone = "tag_clip1",
+            }
+        },
         Category = {"bocw_ak74u_mag"},
     },
     {
@@ -543,24 +549,24 @@ SWEP.Attachments = {
         Category = {"bocw_ak74u_sound"},
     },
 }
---[[
+
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
     if elements["ak74u_mag_ext"] then
-        return anim .. "_extclip"
+        return anim .. "_drum"
     end
 
     if elements["ak74u_mag_mix"] then
-        return anim .. "_mixclip"
+        return anim .. "_mix"
     end
 
     if elements["ak74u_mag_dual"] then
-        return anim .. "_dualmag"
+        return anim .. "_dual"
     end
 
 end
-]]
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -621,46 +627,68 @@ SWEP.Animations = {
     },
     ["reload_drum"] = {
         Source = "reload_drum",
-        Time = 2.4,
+        --Time = 2.4,
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.ak74u_magout", t = 0.36 },
-            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
-            { s = "ARC9_BOCW.ak74u_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_maggrab", t = 0.8 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_magin", t = 1.55 },
+            { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
         },
     },
     ["reload_empty_drum"] = {
         Source = "reload_drum_empty",
-        Time = 3.2,
         MinProgress = 2,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.ak74u_magout", t = 0.4 },
-            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
-            { s = "ARC9_BOCW.ak74u_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.ak74u_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_maggrab", t = 0.8 },
+            { s = "ARC9_BOCW.AK74u_reload_drum_magin", t = 1.65 },
+            { s = "ARC9_BOCW.AK74u_boltback", t = 2.3 },
+            { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.7 },
         },
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
-        Time = 2.4,
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.ak74u_magout", t = 0.36 },
-            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
-            { s = "ARC9_BOCW.ak74u_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.ak74u_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.ak74u_reload_magin", t = 0.95 },
+            { s = "ARC9_BOCW.ak74u_reload_end", t = 1.7 },
         },
     },
     ["reload_empty_dual"] = {
         Source = {"reload_dual_empty", "reload_dual2_empty"},
-        Time = 3.2,
         MinProgress = 2,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.ak74u_magout", t = 0.4 },
-            { s = "ARC9_BOCW.ak74u_magin", t = 1.2 },
-            { s = "ARC9_BOCW.ak74u_boltback", t = 2.22 },
-            { s = "ARC9_BOCW.ak74u_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.ak74u_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.ak74u_reload_magin", t = 0.95 },
+            { s = "ARC9_BOCW.ak74u_boltback", t = 1.5 },
+            { s = "ARC9_BOCW.ak74u_boltrelease", t = 1.7 },
+        },
+    },
+    ["reload_mix"] = {
+        Source = "reload",
+        MinProgress = 1.5,
+        EventTable = {
+            { s = "ARC9_BOCW.AK74u_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
+            { s = "ARC9_BOCW.AK74u_reload_magin", t = 1.65 },
+            { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
+        },
+    },
+    ["reload_empty_mix"] = {
+        Source = "reload_mix_empty",
+        MinProgress = 2,
+        EventTable = {
+            { s = "ARC9_BOCW.AK74u_reload_empty_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_magin", t = 1.6 },
+            { s = "ARC9_BOCW.AK74u_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.8 },
         },
     },
     ["enter_sprint"] = {
@@ -681,15 +709,18 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.ak74u_inspect", t = 0 },
         },
     },
+    ["1_enter_inspect"] = {
+        Source = "inspect_arap",
+        EventTable = {
+            { s = "ARC9_BOCW.ak74u_inspect_arap", t = 0 },
+        },
+    },
+    ["2_enter_inspect"] = {
+        Source = "inspect_scalie",
+        EventTable = {
+            { s = "ARC9_BOCW.ak74u_inspect_scalie_pt1", t = 0 },
+            { s = "ARC9_BOCW.ak74u_inspect_scalie_pt2", t = 2.5 },
+            { s = "ARC9_BOCW.ak74u_inspect_scalie_pt3", t = 4.2 },
+        },
+    },
 }
-
-SWEP.HookP_NameChange = function(self, name)
-    local attached = self:GetElements()
-    local gunname = "AKS-74U"
-
-    if attached["bo1_pap"] then
-        gunname = "AK-74NOFU2"
-    end
-
-    return gunname
-end
