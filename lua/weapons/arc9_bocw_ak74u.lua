@@ -164,18 +164,39 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.2
-SWEP.RecoilUp = 0.4
+SWEP.RecoilSeed = 123456789 -- Leave blank to use weapon class name as recoil seed.
+-- Should be a number.
+SWEP.RecoilPatternDrift = 40 -- Higher values = more extreme recoil patterns.
+SWEP.RecoilLookupTable = nil -- Use to set specific values for predictible recoil. If it runs out, it'll just use Recoil Seed.
+-- SWEP.RecoilLookupTable = {
+--     15,
+--     3,
+-- }
+SWEP.RecoilLookupTableOverrun = nil -- Repeatedly take values from this table if we run out in the main table
 
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 0.1
+-- General recoil multiplier
+SWEP.Recoil = 0.8
 
-SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
+-- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
+SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
-SWEP.RecoilAutoControl = 0.1
-SWEP.RecoilKick = 1
+-- This is for recoil that goes directly to camera, makes gun shoot where sights at but center of screen will be in different place. Like escape from t
+SWEP.ViewRecoil = nil -- true
+SWEP.ViewRecoilUpMult = nil -- 40-100
+SWEP.ViewRecoilSideMult = nil -- 1-20
+
+-- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
+-- This type of recoil CANNOT be predicted.
+SWEP.RecoilRandomUp = 0.01
+SWEP.RecoilRandomSide = 0.01
+
+SWEP.RecoilDissipationRate = 10 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
+
+SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
+
+SWEP.PushBackForce = 0 -- Push the player back when shooting.
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
@@ -186,15 +207,12 @@ SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
-
 SWEP.VisualRecoilUp = 0
 SWEP.VisualRecoilSide = 0
 SWEP.VisualRecoilRoll = 0
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
-
 
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 50
@@ -438,14 +456,34 @@ SWEP.AttachmentElements = {
             {2, 1}
         }
     },
-    ["mag2gone"] = {
-        Bodygroups = {
-            {2, 1}
-        }
-    },
     ["optic_mount"] = {
         Bodygroups = {
             {3, 1},
+        }
+    },
+    ["frontsightgone"] = {
+        Bodygroups = {
+            {4, 1},
+        }
+    },
+    ["barrelgone"] = {
+        Bodygroups = {
+            {5, 1},
+        }
+    },
+    ["handguardgone"] = {
+        Bodygroups = {
+            {6, 1},
+        }
+    },
+    ["stockgone"] = {
+        Bodygroups = {
+            {7, 1},
+        }
+    },
+    ["gripgone"] = {
+        Bodygroups = {
+            {8, 1},
         }
     },
 }
@@ -507,9 +545,10 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        Bone = "tag_stock",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-2, 0, 2),
         Category = {"bocw_ak74u_stock"},
     },
     {
@@ -530,6 +569,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-0.4, 0, -0.5),
         Category = {"bocw_ak74u_wrap"},
     },
     {
