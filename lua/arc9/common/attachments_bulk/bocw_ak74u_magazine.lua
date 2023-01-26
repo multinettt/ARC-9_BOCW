@@ -16,7 +16,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_ext1.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0.05, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 40
@@ -32,7 +32,7 @@ ATT.CompactName = "TAPD MAG"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dual1.png", "mips smooth")
 ATT.Description = [[Magazines secured together with duct tape to improve reload speed.
 
-The Jungle-Style Mag is a variant of Fast Mag, available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speed with no downside. The Warsaw Pact equivalent is the Taped Mags.]]
+The Taped Mags is a Magazine attachment available for all Warsaw Pact related Assault Rifles, Tactical Rifles and the AK-74U. It improves reload speeds. The NATO equivalent is the Jungle-Style Mag.]]
 
 ATT.SortOrder = 2
 
@@ -64,7 +64,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mix1.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0.05, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 40
@@ -83,7 +83,7 @@ ATT.CompactName = "50 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_extpro.png", "mips smooth")
 ATT.Description = [[High-capacity drum magazine contains 50 rounds of ammunition.
 
-The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
+The Spetsnaz is a type of Magazine attachment available for some Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time. The NATO equivalent is the STANAG Mag, alongside the Bakelite Mag which is also Warsaw Pact.]]
 
 ATT.SortOrder = 4
 
@@ -92,7 +92,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_extpro.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0.05, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 50
@@ -110,7 +110,7 @@ ATT.CompactName = "GRU CLMP"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dualpro.png", "mips smooth")
 ATT.Description = [[Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads.
 
-The SAS Mag Clamp is a Magazine attachment available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speeds but at the cost of a longer time to aim. The Warsaw Pact equivalent is the GRU Mag Clamp.]]
+The GRU Mag Clamp is a Magazine attachment available for all Warsaw Pact related Assault Rifles, Tactical Rifles and the AK-74U. It improves reload speeds in addition to giving an additional starting magazine but at the cost of a longer time to aim. The NATO equivalent is the SAS Mag Clamp.]]
 
 ATT.SortOrder = 5
 
@@ -137,7 +137,7 @@ ATT.CompactName = "40 RND FAST"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_mixpro.png", "mips smooth")
 ATT.Description = [[Paracord pull loop improves reload speed. Contains 40 rounds.
 
-The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
+The VDV Fast Mag is a type of Magazine attachment available for all Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The NATO equivalent is the Salvo Fast Mag.]]
 
 ATT.SortOrder = 6
 
@@ -146,7 +146,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mixpro.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0.05, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 40

@@ -37,7 +37,7 @@ SWEP.TrueName = "AKS-74U"
 SWEP.Class = "Submachine Gun"
 SWEP.Trivia = {
      Manufacturer = "Tula Arms Plant",
-     Calibre = "5.45x39mm NATO",
+     Calibre = "5.45x39mm",
      Mechanism = "Gas-operated, Rotating Bolt",
      Country = "USSR / Russia",
      Year = 1979
@@ -346,8 +346,8 @@ SWEP.HideBones = {
     "tag_bullet_deplete_sqtl_01_animate1"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    [1] = {"tag_clip1"},
-    -- [2] = {"list", "of", "bones"}
+    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate"},
+    [2] = {"tag_clip1", "tag_bullet_deplete_sqtl_00_animate1", "tag_bullet_deplete_sqtl_01_animate1"}
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -369,7 +369,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.729, -3.74, 0.82),
+    Pos = Vector(-2.729, -3.72, 0.82),
     Ang = Angle(0, 0, 2.549),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -533,7 +533,7 @@ SWEP.Attachments = {
         Category = {"bocw_ak74u_wrap"},
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Cartridge",
         DefaultName = "Normal Calibre",
         Category = {"ammo_bullet", "ammo_pap"}
     },
@@ -612,6 +612,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.AK74u_reload_magin", t = 1.65 },
             { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty"] = {
@@ -623,6 +624,11 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_boltback", t = 2 },
             { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.2 },
             { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.6 },
+            { hide = 2, t = 0 },
+            { hide = 0, t = 0.2 },
+            { hide = 1, t = 1.3 },
+            { hide = 0, t = 3.05 },
+            { hide = 2, t = 2.75 },
         },
     },
     ["reload_drum"] = {
@@ -634,6 +640,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_reload_drum_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.AK74u_reload_drum_magin", t = 1.55 },
             { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_drum"] = {
@@ -647,6 +654,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_boltback", t = 2.3 },
             { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.5 },
             { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.7 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_dual"] = {
@@ -656,6 +664,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.ak74u_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.ak74u_reload_magin", t = 0.95 },
             { s = "ARC9_BOCW.ak74u_reload_end", t = 1.7 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_dual"] = {
@@ -667,6 +676,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.ak74u_reload_magin", t = 0.95 },
             { s = "ARC9_BOCW.ak74u_boltback", t = 1.5 },
             { s = "ARC9_BOCW.ak74u_boltrelease", t = 1.7 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_mix"] = {
@@ -677,6 +687,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_reload_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.AK74u_reload_magin", t = 1.65 },
             { s = "ARC9_BOCW.AK74u_reload_end", t = 2.2 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_mix"] = {
@@ -689,6 +700,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK74u_boltback", t = 2.2 },
             { s = "ARC9_BOCW.AK74u_boltrelease", t = 2.4 },
             { s = "ARC9_BOCW.AK74u_reload_empty_end", t = 2.8 },
+            { hide = 2, t = 0 },
         },
     },
     ["enter_sprint"] = {
