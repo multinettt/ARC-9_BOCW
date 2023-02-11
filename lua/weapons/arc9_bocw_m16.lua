@@ -1,25 +1,25 @@
 --=============================================================================
 --   CALL OF DUTY: BLACK OPS COLD WAR
---   XM4
+--   M16
 --   LUA - MAIN
 --=============================================================================
 --[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
---   BUILD : v1.0
+--   BUILD : v0.1
 --   SR.NO : 133108
 
 
-ooooooo  ooooo ooo        ooooo       .o   
- `8888    d8'  `88.       .888'     .d88   
-   Y888..8P     888b     d'888    .d'888   
-    `8888'      8 Y88. .P  888  .d'  888   
-   .8PY888.     8  `888'   888  88ooo888oo 
-  d8'  `888b    8    Y     888       888   
-o888o  o88888o o8o        o888o     o888o  
+ooo        ooooo   .o      .ooo   
+`88.       .888' o888    .88'     
+ 888b     d'888   888   d88'      
+ 8 Y88. .P  888   888  d888P"Ybo. 
+ 8  `888'   888   888  Y88[   ]88 
+ 8    Y     888   888  `Y88   88P 
+o8o        o888o o888o  `88bod8'  
+                                  
                                                                        
-                                       
 ]]
 
 AddCSLuaFile()
@@ -29,12 +29,12 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
---SWEP.SubCategory = "Assault Rifles" -- use when more guns
+--SWEP.SubCategory = "Tactical Rifles" -- use when more guns
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "XM4"
-SWEP.TrueName = "XM177E1"
-SWEP.Class = "Assault Rifle"
+SWEP.PrintName = "M16"
+SWEP.TrueName = "M16A2"
+SWEP.Class = "Tactical Rifle"
 SWEP.Trivia = {
      Manufacturer = "Colt Manufacturing Company",
      Calibre = "5.56x45mm",
@@ -48,14 +48,14 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto assault rifle. Reliable damage with improved fire rate. Fair weapon control when sustaining fire
+SWEP.Description = [[3-round burst tactical rifle. Excellent burst fire accuracy when aiming down sights, and high damage in short range encounters.
 
-The XM4 is an assault rifle featured in Call of Duty: Black Ops Cold War.]]
+The M16 is an assault rifle featured in Call of Duty: Black Ops, Call of Duty: Black Ops: Declassified, Call of Duty: Advanced Warfare, Call of Duty: Black Ops III, Call of Duty: Black Ops 4, Call of Duty: Mobile, Call of Duty: Black Ops Cold War and Call of Duty: Modern Warfare II.]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_xm4_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_xm4_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_m16_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_m16_bocw.mdl"
 
 SWEP.Slot = 3
 
@@ -163,12 +163,16 @@ SWEP.RPM = 722
 
 SWEP.Firemodes = {
     {
-        Mode = -1,
-    },
-    {
         Mode = 3,
     },
+    {
+        Mode = 1,
+    },
 }
+
+SWEP.AutoBurst = false -- Hold fire to keep firing bursts
+SWEP.PostBurstDelay = 0.3
+SWEP.RunawayBurst = true -- Burst will keep firing until all of the burst has been expended.
 
 -------------------------- RECOIL
 
@@ -257,14 +261,14 @@ SWEP.ShootVolumeActual = 1
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
-SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.xm4_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.xm4_fire_silenced"                    -- Fire silenced
+--SWEP.FirstShootSound = "ARC9_BOCW.m16_fire"                       -- First fire
+SWEP.ShootSound = "ARC9_BOCW.m16_fire"                            -- Fire
+--SWEP.ShootSoundIndoor = "ARC9_BOCW.m16_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.m16_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.xm4_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.m16_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -366,8 +370,8 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.14, -8, 0.78),
-    Ang = Angle(0, 0, 3.25),
+    Pos = Vector(-3.579, -6, 0.545),
+    Ang = Angle(0, 0, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
@@ -375,8 +379,8 @@ SWEP.IronSights = {
 
 SWEP.HasSights = true
 
-SWEP.ActivePos = Vector(-0.2, -1.5, 0.1)
-SWEP.ActiveAng = Angle(1, -1, -2.5)
+SWEP.ActivePos = Vector(0, -1.2, 0)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -547,7 +551,7 @@ SWEP.Attachments = {
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_556_west_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_xm4",
+        Attached = "bocw_muzzle_m16",
         Integral = false
     },
     {
@@ -563,7 +567,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(15.25, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_xm4_bodymount"},
+        Category = {"bocw_m16_bodymount"},
     },
     {
         PrintName = "Barrel",
@@ -571,7 +575,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-5, 0, 0),
-        Category = {"bocw_xm4_barrel"},
+        Category = {"bocw_m16_barrel"},
     },
     {
         PrintName = "Stock",
@@ -580,7 +584,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-5, 0, 3.6),
-        Category = {"bocw_xm4_stock"},
+        Category = {"bocw_m16_stock"},
     },
     {
         PrintName = "Magazine",
@@ -595,7 +599,7 @@ SWEP.Attachments = {
                 Bone = "tag_clip1",
             }
         },
-        Category = {"bocw_xm4_mag"},
+        Category = {"bocw_m16_mag"},
     },
     {
         PrintName = "Handle",
@@ -603,7 +607,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-0.5, 0, -0.5),
-        Category = {"bocw_xm4_wrap"},
+        Category = {"bocw_m16_wrap"},
     },
     {
         PrintName = "Ammo Type",
@@ -619,22 +623,22 @@ SWEP.Attachments = {
         PrintName = "Sound",
         DefaultName = "BOCW Sound",
         DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_xm4_sound"},
+        Category = {"bocw_m16_sound"},
     },
 }
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["xm4_mag_ext"] then
+    if elements["m16_mag_ext"] then
         return anim .. "_ext"
     end
 
-    if elements["xm4_mag_dual"] then
+    if elements["m16_mag_dual"] then
         return anim .. "_dual"
     end
 
-    if elements["xm4_mag_mix"] then
+    if elements["m16_mag_mix"] then
         return anim .. "_mix"
     end
 
@@ -664,10 +668,8 @@ SWEP.Animations = {
         Source = "ready",
         Time = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_ready_start", t = 0 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 0.3 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 0.5 },
-            { s = "ARC9_BOCW.XM4_ready_end", t = 0.9 },
+            { s = "ARC9_BOCW.M16_boltback", t = 0.25 },
+            { s = "ARC9_BOCW.M16_boltrelease", t = 0.45 },
         },
     },
     ["bash"] = {
@@ -687,31 +689,33 @@ SWEP.Animations = {
         NoMagSwap = true,
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.M16_reload_start", t = 0 },
+            { s = "ARC9_BOCW.M16_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.M16_reload_magin_rattle", t = 1.5 },
+            { s = "ARC9_BOCW.M16_reload_magin", t = 1.8 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.3 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magdrop", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
+            { s = "ARC9_BOCW.M16_reload_start", t = 0 },
+            { s = "ARC9_BOCW.M16_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.M16_reload_magin_rattle", t = 1.5 },
+            { s = "ARC9_BOCW.M16_reload_magin", t = 1.8 },
+            { s = "ARC9_BOCW.M16_boltback", t = 2.4 },
+            { s = "ARC9_BOCW.M16_boltrelease", t = 2.6 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.9 },
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
         MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.M16_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.M16_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.1 },
         },
     },
     ["reload_empty_ext"] = {
@@ -719,21 +723,21 @@ SWEP.Animations = {
         MinProgress = 1.62,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
+            { s = "ARC9_BOCW.M16_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.M16_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.M16_reload_empty_magintap", t = 1.8 },
+            { s = "ARC9_BOCW.M16_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.M16_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.8 },
         },
     },
     ["reload_dual"] = {
         Source = {"reload_dual", "reload_dual2"},
         MinProgress = 1.2,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
-            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 1.55 },
+            { s = "ARC9_BOCW.M16_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.M16_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 1.55 },
         },
     },
     ["reload_empty_dual"] = {
@@ -742,31 +746,31 @@ SWEP.Animations = {
         MagSwapTime = 1.57,
         RareSourceChance = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
-            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
-            { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.5 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.M16_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.M16_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.M16_reload_fast_boltrelease", t = 1.5 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 1.9 },
         },
     },
     ["reload_mix"] = {
         Source = "reload_mix",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.M16_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.M16_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.1 },
         },
     },
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
-            { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
-            { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
+            { s = "ARC9_BOCW.M16_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.M16_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.M16_reload_empty_magintap", t = 1.8 },
+            { s = "ARC9_BOCW.M16_boltback", t = 2.2 },
+            { s = "ARC9_BOCW.M16_boltrelease", t = 2.5 },
+            { s = "ARC9_BOCW.M16_reload_end", t = 2.8 },
         },
     },
     ["enter_sprint"] = {
@@ -785,31 +789,31 @@ SWEP.Animations = {
         Source = "inspect",
         Time = 4.5,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
-            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+            { s = "ARC9_BOCW.M16_inspect1", t = 0 },
+            { s = "ARC9_BOCW.M16_inspect2", t = 3.2 },
         },
     },
     ["enter_inspect_ext"] = {
         Source = "inspect_extmag",
         Time = 4.5,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
-            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+            { s = "ARC9_BOCW.M16_inspect1", t = 0 },
+            { s = "ARC9_BOCW.M16_inspect2", t = 3.2 },
         },
     },
     ["enter_inspect_mix"] = {
         Source = "inspect_mixmag",
         Time = 4.5,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
-            { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+            { s = "ARC9_BOCW.M16_inspect1", t = 0 },
+            { s = "ARC9_BOCW.M16_inspect2", t = 3.2 },
         },
     },
     ["enter_inspect_dual"] = {
         Source = "inspect_dualmag",
         EventTable = {
-            { s = "ARC9_BOCW.XM4_inspect_dual1", t = 0 },
-            { s = "ARC9_BOCW.XM4_inspect_dual2", t = 3.2 },
+            { s = "ARC9_BOCW.M16_inspect_dual1", t = 0 },
+            { s = "ARC9_BOCW.M16_inspect_dual2", t = 3.2 },
         },
     },
 }

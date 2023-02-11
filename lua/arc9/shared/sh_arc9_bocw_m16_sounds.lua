@@ -7,21 +7,21 @@
 -- MAGAZINE
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magout",
+    name = "ARC9_BOCW.M16_reload_magout",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_magout.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magin",
+    name = "ARC9_BOCW.M16_reload_magin",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_magin.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magin_rattle",
+    name = "ARC9_BOCW.M16_reload_magin_rattle",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = { "weapons/arc9/bocw_m16/m16_reload_magin_rattle1.wav", "weapons/arc9/bocw_m16/m16_reload_magin_rattle2.wav", "weapons/arc9/bocw_m16/m16_reload_magin_rattle3.wav" }
@@ -29,14 +29,14 @@ sound.Add({
 
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magout_dual",
+    name = "ARC9_BOCW.M16_reload_magout_dual",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_dual_magout.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magin_dual",
+    name = "ARC9_BOCW.M16_reload_magin_dual",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_dual_magin.wav"
@@ -44,14 +44,14 @@ sound.Add({
 
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magout_dual2",
+    name = "ARC9_BOCW.M16_reload_magout_dual2",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_dual2_magout.wav"
 })
 
 sound.Add({
-    name = "ARC9_BOCW.M16_magin_dual2",
+    name = "ARC9_BOCW.M16_reload_magin_dual2",
     channel = CHAN_AUTO,
     volume = 1.0,
     sound = "weapons/arc9/bocw_m16/m16_reload_dual2_magin.wav"
@@ -160,6 +160,14 @@ sound.Add({ -- BLACK OPS COLD WAR
     sound = "weapons/arc9/bocw_m16/m16_fire.wav"
 })
 
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.M16_fire_burst",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_m16/m16_fire_burst.wav"
+})
+
 sound.Add({ -- WARZONE
     name = "ARC9_BOCW.M16_fire_wz",
     channel = CHAN_STATIC,
@@ -178,9 +186,9 @@ sound.Add({ -- BLACK OPS
 
 sound.Add({
     name = "ARC9_BOCW.M16_fire_dist",
-    channel = CHAN_AUTO,
+    channel = CHAN_STATIC,
     volume = 0.4,
-    sound = "weapons/arc9/bocw/rifle_fire_distant.wav"
+    sound = "weapons/arc9/bocw/rifle_close_decay.wav"
 })
 
 sound.Add({
@@ -194,5 +202,5 @@ sound.Add({
     name = "ARC9_BOCW.M16_fire_int_decay",
     channel = CHAN_AUTO,
     volume = 0.35,
-    sound = "weapons/arc9/bocw/ar_fire_interior.wav"
+    sound = "weapons/arc9/bocw/m16_fire_burst_interior.wav"
 })
