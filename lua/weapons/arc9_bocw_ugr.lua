@@ -386,12 +386,15 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.729, -3.72, 0.82),
-    Ang = Angle(0, 0, 2.549),
+    Pos = Vector(-3.9, -8, 1.4),
+    Ang = Angle(-0.4, -0.8, 3.4),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
 }
+
+SWEP.IronSightsPos = Vector(-3.942, -6, 1.159)
+SWEP.IronSightsAng = Vector(-1.196, -0.202, 3.437)
 
 SWEP.HasSights = true
 
@@ -596,7 +599,7 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
     },
-    ["draw"] = {
+    ["draw_empty"] = {
         Source = "draw_empty",
     },
     ["holster"] = {
@@ -610,7 +613,6 @@ SWEP.Animations = {
         Time = 1.2,
         EventTable = {
             { s = "ARC9_BOCW.ugr_boltback", t = 0.3 },
-            { s = "ARC9_BOCW.ugr_boltrelease", t = 0.5 },
         },
     },
     ["bash"] = {
@@ -621,39 +623,37 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.4,
-        EjectAt = 0,
+        --Time = 0.4,
+        EjectAt = 0.1,
     },
-    ["fire_iron"] = {
-        Source = "fire_ads",
-        Time = 0.3,
-        EjectAt = 0,
+    ["fire_empty"] = {
+        Source = {"fire_last"},
+        --Time = 0.4,
+        EjectAt = 0.1,
     },
     ["reload"] = {
         Source = "reload",
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.UGR_reload_maggrab", t = 0.8 },
-            { s = "ARC9_BOCW.UGR_reload_magin", t = 1.65 },
+            { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
+            { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
+            { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.2 },
-            { hide = 2, t = 0 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         MinProgress = 2,
         EventTable = {
-            { s = "ARC9_BOCW.UGR_reload_empty_magout", t = 0.6 },
-            { s = "ARC9_BOCW.UGR_reload_empty_magin", t = 1.3 },
-            { s = "ARC9_BOCW.UGR_boltback", t = 2 },
-            { s = "ARC9_BOCW.UGR_boltrelease", t = 2.2 },
+            { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
+            { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
+            { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
+            { s = "ARC9_BOCW.UGR_boltback", t = 2.4 },
             { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.6 },
-            { hide = 2, t = 0 },
-            { hide = 0, t = 0.2 },
-            { hide = 1, t = 1.3 },
-            { hide = 0, t = 3.05 },
-            { hide = 2, t = 2.75 },
         },
     },
     ["reload_ext"] = {
@@ -665,7 +665,6 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.UGR_reload_drum_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.UGR_reload_drum_magin", t = 1.55 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.2 },
-            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_ext"] = {
@@ -679,7 +678,6 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.UGR_boltback", t = 2.3 },
             { s = "ARC9_BOCW.UGR_boltrelease", t = 2.5 },
             { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.7 },
-            { hide = 2, t = 0 },
         },
     },
     ["enter_sprint"] = {
