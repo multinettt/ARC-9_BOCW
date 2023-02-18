@@ -128,7 +128,7 @@ SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Brow
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 30 -- Self-explanatory.
+SWEP.ClipSize = 27 -- Self-explanatory.
 SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -141,7 +141,7 @@ SWEP.BottomlessClip = false -- Weapon never has to reload
 SWEP.ReloadWhileSprint = true -- This weapon can reload while the user is sprinting.
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
-SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
+SWEP.CanFireUnderwater = true -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
@@ -160,14 +160,11 @@ SWEP.Firemodes = {
     {
         Mode = -1,
     },
-    {
-        Mode = 1,
-    },
 }
 
 -------------------------- RECOIL
 
-SWEP.RecoilSeed = 7305535 -- Leave blank to use weapon class name as recoil seed.
+SWEP.RecoilSeed = nil -- Leave blank to use weapon class name as recoil seed.
 -- Should be a number.
 SWEP.RecoilPatternDrift = 40 -- Higher values = more extreme recoil patterns.
 SWEP.RecoilLookupTable = nil -- Use to set specific values for predictible recoil. If it runs out, it'll just use Recoil Seed.
@@ -393,9 +390,6 @@ SWEP.IronSights = {
     CrosshairInSights = false,
 }
 
-SWEP.IronSightsPos = Vector(-3.942, -6, 1.159)
-SWEP.IronSightsAng = Vector(-1.196, -0.202, 3.437)
-
 SWEP.HasSights = true
 
 SWEP.ActivePos = Vector(0, -1.2, 0)
@@ -420,8 +414,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 --}
 
 -- Position for customizing
-SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(10, 32, 4)
+SWEP.CustomizeAng = Angle(90, -3.43672, -1.19473)
+SWEP.CustomizePos = Vector(16, 32, 5)
 SWEP.CustomizeSnapshotFOV = 75
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -498,8 +492,9 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(3, 0, 3.8),
+        Pos = Vector(3, 0, 4.72),
         Ang = Angle(0, 0, 0),
+        CorrectiveAng = Angle(-1, -1, 0),
         DefaultName = "Iron Sights",
         Category = {"optic_picatinny", "bo1_optic"},
         InstalledElements = {"optic_mount"},
@@ -514,14 +509,14 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "tag_weapon",
-        Pos = Vector(10, 0, 1.3),
+        Pos = Vector(17, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(10, 0, 4),
+        Pos = Vector(15, 0, 3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_rail_tactical"},
     },
@@ -530,6 +525,7 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(5.25, 0, 0.5),
         Category = {"bocw_ugr_barrel"},
     },
     {
@@ -547,11 +543,6 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        DuplicateModels = {
-            {
-                Bone = "tag_clip1",
-            }
-        },
         Category = {"bocw_ugr_mag"},
     },
     {
@@ -559,13 +550,13 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.4, 0, -0.5),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_ugr_wrap"},
     },
     {
         PrintName = "Cartridge",
         DefaultName = "Normal Calibre",
-        Category = {"ammo_bullet", "ammo_pap"}
+        Category = {"ammo_bullet", "bocw_ugr_cartridge"},
     },
     {
         PrintName = "Perk",
@@ -637,7 +628,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
             { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
-            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.55 },
             { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
             { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.2 },
@@ -649,11 +640,11 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
             { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
-            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.55 },
             { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
             { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_boltback", t = 2.4 },
-            { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.6 },
+            { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.85 },
         },
     },
     ["reload_ext"] = {
@@ -661,9 +652,11 @@ SWEP.Animations = {
         --Time = 2.4,
         MinProgress = 1.5,
         EventTable = {
-            { s = "ARC9_BOCW.UGR_reload_drum_magout", t = 0.25 },
-            { s = "ARC9_BOCW.UGR_reload_drum_maggrab", t = 0.8 },
-            { s = "ARC9_BOCW.UGR_reload_drum_magin", t = 1.55 },
+            { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
+            { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.55 },
+            { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
+            { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.2 },
         },
     },
@@ -672,12 +665,13 @@ SWEP.Animations = {
         MinProgress = 2,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.UGR_reload_drum_magout", t = 0.25 },
-            { s = "ARC9_BOCW.UGR_reload_drum_maggrab", t = 0.8 },
-            { s = "ARC9_BOCW.UGR_reload_drum_magin", t = 1.65 },
-            { s = "ARC9_BOCW.UGR_boltback", t = 2.3 },
-            { s = "ARC9_BOCW.UGR_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.7 },
+            { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
+            { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.25 },
+            { s = "ARC9_BOCW.UGR_reload_magout", t = 0.55 },
+            { s = "ARC9_BOCW.UGR_reload_maginstart", t = 1.4 },
+            { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
+            { s = "ARC9_BOCW.UGR_boltback", t = 2.4 },
+            { s = "ARC9_BOCW.UGR_reload_empty_end", t = 2.85 },
         },
     },
     ["enter_sprint"] = {
@@ -711,9 +705,9 @@ SWEP.Animations = {
         },
     },
     ["enter_inspect_empty"] = {
-        Source = "inspect",
+        Source = "inspect_empty",
         EventTable = {
-            { s = "ARC9_BOCW.ugr_inspect_empty", t = 0 },
+            { s = "ARC9_BOCW.ugr_inspect", t = 0 },
         },
     },
 }
