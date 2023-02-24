@@ -456,19 +456,69 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
-    ["barrelgone"] = {
+    ["barrel_extended"] = {
         Bodygroups = {
-            {5, 1},
-        }
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(3, 0, 0),
+            }
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-1.8, 0, 0),
+            }
+        },
+    },
+    ["barrel_vdvreinforced"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(0.2, 0, 0),
+            }
+        },
+    },
+    ["barrel_liberator"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(3, 0, 0),
+            }
+        },
+    },
+    ["barrel_rifled"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-0.2, 0, 0),
+            }
+        },
+    },
+    ["barrel_taskforce"] = {
+        Bodygroups = {
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-1.9, 0, 0),
+            }
+        },
     },
     ["stockgone"] = {
         Bodygroups = {
-            {7, 1},
-        }
-    },
-    ["gripgone"] = {
-        Bodygroups = {
-            {8, 1},
+            {4, 1},
         }
     },
 }
@@ -525,16 +575,16 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(5.25, 0, 0.5),
+        Icon_Offset = Vector(5.25, 0, 0),
         Category = {"bocw_ugr_barrel"},
     },
     {
         PrintName = "Stock",
         DefaultName = "Default Stock",
-        Bone = "tag_weapon",
+        Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-2, 0, 2),
+        Icon_Offset = Vector(-2, 0, 0),
         Category = {"bocw_ugr_stock"},
     },
     {
