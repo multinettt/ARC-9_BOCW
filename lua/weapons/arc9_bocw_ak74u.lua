@@ -164,7 +164,7 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.RecoilSeed = 123456789 -- Leave blank to use weapon class name as recoil seed.
+SWEP.RecoilSeed = nil -- Leave blank to use weapon class name as recoil seed.
 -- Should be a number.
 SWEP.RecoilPatternDrift = 40 -- Higher values = more extreme recoil patterns.
 SWEP.RecoilLookupTable = nil -- Use to set specific values for predictible recoil. If it runs out, it'll just use Recoil Seed.
@@ -175,11 +175,11 @@ SWEP.RecoilLookupTable = nil -- Use to set specific values for predictible recoi
 SWEP.RecoilLookupTableOverrun = nil -- Repeatedly take values from this table if we run out in the main table
 
 -- General recoil multiplier
-SWEP.Recoil = 0.8
+SWEP.Recoil = 1
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 1.2 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1.8 -- Multiplier for vertical recoil
 
 -- This is for recoil that goes directly to camera, makes gun shoot where sights at but center of screen will be in different place. Like escape from t
 SWEP.ViewRecoil = nil -- true
@@ -188,10 +188,10 @@ SWEP.ViewRecoilSideMult = nil -- 1-20
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.01
-SWEP.RecoilRandomSide = 0.01
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.6
 
-SWEP.RecoilDissipationRate = 10 -- How much recoil dissipates per second.
+SWEP.RecoilDissipationRate = 100 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
