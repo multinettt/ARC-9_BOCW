@@ -61,7 +61,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000000010000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -308,7 +308,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_1" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -466,10 +466,55 @@ SWEP.AttachmentElements = {
             {4, 1},
         }
     },
-    ["barrelgone"] = {
+    ["barrel_extended"] = {
         Bodygroups = {
-            {5, 1},
-        }
+            {6, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.26, 0, 0),
+            }
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+    },
+    ["barrel_vdvreinforced"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(1.26, 0, 0),
+            }
+        },
+    },
+    ["barrel_liberator"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(2.75, 0, 0),
+            }
+        },
+    },
+    ["barrel_rifled"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+    },
+    ["barrel_taskforce"] = {
+        Bodygroups = {
+            {6, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(2.75, 0, 0),
+            }
+        },
     },
     ["handguardgone"] = {
         Bodygroups = {
@@ -518,7 +563,8 @@ SWEP.Attachments = {
         Bone = "tag_muzzle",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"dmr_muzzle", "muzzle", "bo1_muzzle"},
+        Category = {"bocw_545_east_muzzle", "muzzle", "bocw_762_east_muzzle"},
+        Attached = "bocw_muzzle_ak74u"
     },
     {
         PrintName = "Underbarrel",
@@ -539,8 +585,16 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-1.75, 0, 0),
         Category = {"bocw_ak74u_barrel"},
-        DefaultName = [[19.8" Steyr]],
+        MergeSlots = {6},
+    },
+    {
+        Hidden = true,
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_ak74u_barrel_tagweapon"},
     },
     {
         PrintName = "Stock",

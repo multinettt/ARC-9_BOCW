@@ -2,7 +2,7 @@ local ATT = {} --40Rnd:5 Jngl:30 40RndSpd:53 50Rnd:81 SAS:108 Salvo:133
 
 ATT = {}
 
-ATT.PrintName = "40 Rnd Drum" --// 1
+ATT.PrintName = "40 Rnd Drum 5.45x39" --// 1
 ATT.CompactName = "40 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_ext1.png", "mips smooth")
 ATT.Description = [[Drum magazine designed for submachine guns. Contains 40 rounds.
@@ -23,11 +23,13 @@ ATT.ClipSizeOverride = 40
 
 ATT.ActivateElements = {"ak74u_mag_ext", "maggone"}
 
+ATT.ExcludeElements = {"magwellattached"}
+
 ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_ext1")
 
 ATT = {}
 
-ATT.PrintName = "Taped Mags" --// 2
+ATT.PrintName = "Taped Mags 5.45x39" --// 2
 ATT.CompactName = "TAPD MAG"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dual1.png", "mips smooth")
 ATT.Description = [[Magazines secured together with duct tape to improve reload speed.
@@ -50,7 +52,7 @@ ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_dual1")
 
 ATT = {}
 
-ATT.PrintName = "40 Rnd Speed Mag" --// 3
+ATT.PrintName = "40 Rnd Speed Mag 9x39" --// 3
 ATT.CompactName = "40 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_mix1.png", "mips smooth")
 ATT.Description = [[Extended magazine with a makeshift pull loop to improve reload speed.
@@ -64,7 +66,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mix1.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.05, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 40
@@ -78,7 +80,7 @@ ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz 50 Rnd Drum" --// 4
+ATT.PrintName = "Spetsnaz 50 Rnd Drum 5.45x39" --// 4
 ATT.CompactName = "50 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_extpro.png", "mips smooth")
 ATT.Description = [[High-capacity drum magazine contains 50 rounds of ammunition.
@@ -101,11 +103,13 @@ ATT.AimDownSightsTimeMult = 1.15
 
 ATT.ActivateElements = {"ak74u_mag_ext", "maggone"}
 
+ATT.ExcludeElements = {"magwellattached"}
+
 ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_extpro")
 
 ATT = {}
 
-ATT.PrintName = "GRU Mag Clamp" --// 5
+ATT.PrintName = "GRU Mag Clamp 5.45x39" --// 5
 ATT.CompactName = "GRU CLMP"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dualpro.png", "mips smooth")
 ATT.Description = [[Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads.
@@ -132,7 +136,7 @@ ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_dualpro")
 
 ATT = {}
 
-ATT.PrintName = "VDV 40 Rnd Fast Mag" --// 6
+ATT.PrintName = "VDV 40 Rnd Fast Mag 9x39" --// 6
 ATT.CompactName = "40 RND FAST"
 ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_mixpro.png", "mips smooth")
 ATT.Description = [[Paracord pull loop improves reload speed. Contains 40 rounds.
@@ -146,7 +150,7 @@ ATT.Category = "bocw_ak74u_mag"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mixpro.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.05, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 40

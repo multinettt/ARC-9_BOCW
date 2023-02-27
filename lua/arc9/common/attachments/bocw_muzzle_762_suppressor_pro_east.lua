@@ -7,7 +7,7 @@ The Silencer, Suppressor, and Sound Suppressor all return in Call of Duty: Black
 
 ATT.SortOrder = 3
 
-ATT.Model = "models/weapons/arc9/atts/bocw_muzzle_762_suppressorpro_west.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_muzzle_762_suppressorpro_east.mdl"
 
 ATT.Category = {"bocw_762_east_muzzle"}
 
