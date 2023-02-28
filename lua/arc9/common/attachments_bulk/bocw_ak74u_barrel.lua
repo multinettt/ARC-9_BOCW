@@ -151,7 +151,7 @@ ATT.Attachments = {
     {
         PrintName = "Mag Well",
         Bone = "tag_weapon",
-        Pos = Vector(-0.826, 0, 0),
+        Pos = Vector(-0.826, 0, -0.005),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-5.5, 0, -1.1),
         Category = {"bocw_ak74u_barrel_magwell"}

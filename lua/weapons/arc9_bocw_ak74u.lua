@@ -115,7 +115,7 @@ SWEP.BodyDamageMults = {
 
 SWEP.AlwaysPhysBullet = true
 
-SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 900 * 39.37
 SWEP.PhysBulletDrag = 1
 SWEP.PhysBulletGravity = 1
 SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
