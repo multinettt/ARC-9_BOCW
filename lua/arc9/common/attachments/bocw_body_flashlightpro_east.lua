@@ -1,17 +1,17 @@
 ATT.PrintName = "Tiger Team Spotlight"
 ATT.CompactName = "TGR TEAM"
-ATT.Icon = Material("entities/bocw_atts/bodies/flashlightpro_west.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/bodies/flashlightpro_east.png", "mips smooth")
 ATT.Description = [[Powerful spotlight with a longer reaching beam reveals enemy data from longer distances.
 
 The Tiger Team Spotlight is a Body attachment available for all Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. Increasing the range which enemies are shown as hostiles, rather than allies but increasing the time it takes to fire from sprinting.]]
 
 ATT.SortOrder = 5
 
-ATT.Model = "models/weapons/arc9/atts/bocw_body_flashlightprowest.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_body_flashlightproeast.mdl"
 
 ATT.Scale = 1.1
 
-ATT.Category = {"bocw_body_flashlight_west"}
+ATT.Category = {"bocw_body_flashlight_east"}
 
 ATT.ToggleOnF = true
 ATT.ToggleStats = {

@@ -1,19 +1,22 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_shared\762case_diff"
-	"$bumpmap" "models\weapons\arc9\bocw\bocw_shared\762case_n"
-	"$color2" "[ 0.712 0.712 0 ]"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_atts\bodies\flashlight_east\filament_c"
+	"$bumpmap" "models\weapons\arc9\bocw\n"
+
 
 	"$phong" "1"
 	"$phongexponenttexture" "models\weapons\arc9\bocw\g"
-	"$phongboost" "0.3"
+	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_shared\762case_sc"
+	"$translucent" "1"
+	"$alpha" "1"
+
+	"$detail" 	"models\weapons\arc9\bocw\sc"
 	"$detailscale" "1"
-	"$detailblendfactor" "0.4"     
+	"$detailblendfactor" "0.06"     
 	"$detailblendmode" "1"
 
 	//"$envmap" "env_cubemap"

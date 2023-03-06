@@ -387,7 +387,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.729, -3.72, 0.82),
+    Pos = Vector(-2.729, -3, 0.82),
     Ang = Angle(0, 0, 2.549),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -576,9 +576,10 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(10, 0, 4),
+        Pos = Vector(10.5, 0, 3.34),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_rail_tactical"},
+        Icon_Offset = Vector(-0.5, 0, 0.1),
+        Category = {"bocw_ak74u_body"},
     },
     {
         PrintName = "Barrel",
