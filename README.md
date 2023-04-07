@@ -74,3 +74,11 @@ Because of the sheer size of individual weapons, this pack and repository will b
 - SWAT 5mw Laser Sight
 - Tiger Team Spotlight
 - Ember Sighting Point
+
+## Personalization:
+
+Personalization by means of camo is currently available on the DMR14. You can grab some cold war camos from these two links below if you'd like. They will be published to the workshop when this project is done.
+
+[Multiplayer Camo Pack](https://drive.google.com/file/d/1kIQ_FBIrPxHiLvj5anPex2r8ETsjOIiy/view?usp=sharing)
+
+[Zombies Camo Pack](https://drive.google.com/file/d/1tRxhCJBShfAMNBydJd8yjiXYik7jyULg/view?usp=sharing)
