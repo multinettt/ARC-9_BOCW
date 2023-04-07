@@ -3,7 +3,7 @@
 --   DMR 14                                  // theres two hundred percent stinky stuff in here that i dont know more about
 --   LUA - MAIN                              // this is my first ever arc9 gun ever
 --=============================================================================
---[[                                         // i tried camos as well, couldnt get them to work at all
+--[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
@@ -611,7 +611,7 @@ SWEP.Attachments = {
         DefaultCompactName = "Skin",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
         Bone = "tag_weapon",
-        Pos = Vector(-7, 0, 2),
+        Pos = Vector(11, 0, 6.5),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
