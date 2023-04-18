@@ -1,17 +1,17 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_shared\sasstock2gallo_diff"
-	"$bumpmap" "models\weapons\arc9\bocw\bocw_shared\tacstock_n"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_shared\tacstock2dmr_diff"
+	"$bumpmap" "models\weapons\arc9\bocw\bocw_shared\tacstock2dmr_n"
 
 
 	"$phong" "1"
-	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_shared\tacstock_g"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_shared\tacstock2dmr_g"
 	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_shared\tacstock_sc"
+	//"$detail" 	"models\weapons\arc9\bocw\bocw_shared\tacstock2dmr_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.06"     
 	"$detailblendmode" "1"

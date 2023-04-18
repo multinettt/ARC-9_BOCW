@@ -165,9 +165,9 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.8
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.1
+SWEP.RecoilUp = 0.6
 
 SWEP.RecoilRandomUp = 0.1
 SWEP.RecoilRandomSide = 0.1
@@ -848,6 +848,18 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 1
+    },
+    ["enter_sprint_empty"] = {
+        Source = "supersprint_in_empty",
+        Time = 2
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 3
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
         Time = 1
     },
     ["enter_inspect"] = {
