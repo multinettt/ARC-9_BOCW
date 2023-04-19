@@ -401,7 +401,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15, 32, 4)
+SWEP.CustomizePos = Vector(15, 32, 5)
 SWEP.CustomizeSnapshotFOV = 75
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -659,7 +659,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 0.3,
+        Time = 0.4,
         EjectAt = 0,
     },
     ["reload"] = {

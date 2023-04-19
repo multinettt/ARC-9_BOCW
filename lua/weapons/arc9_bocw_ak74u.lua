@@ -660,6 +660,14 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         return anim .. "_dual"
     end
 
+    if elements["optic_mount"] then
+        return anim .. "_optic"
+    end
+
+    if elements["bocw_ak74u_barrel_magwell"] then
+        return anim .. "_magwell"
+    end
+
 end
 
 SWEP.Animations = {
@@ -694,9 +702,9 @@ SWEP.Animations = {
         Time = 0.4,
         EjectAt = 0,
     },
-    ["fire_iron"] = {
-        Source = "fire_ads",
-        Time = 0.3,
+    ["fire_optic"] = {
+        Source = "fire_optic",
+        Time = 0.4,
         EjectAt = 0,
     },
     ["reload"] = {
@@ -812,6 +820,12 @@ SWEP.Animations = {
     },
     ["enter_inspect"] = {
         Source = "inspect",
+        EventTable = {
+            { s = "ARC9_BOCW.ak74u_inspect", t = 0 },
+        },
+    },
+    ["enter_inspect_magwell"] = {
+        Source = "inspect_grip",
         EventTable = {
             { s = "ARC9_BOCW.ak74u_inspect", t = 0 },
         },
