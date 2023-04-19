@@ -186,8 +186,8 @@ sound.Add({ -- BLACK OPS
 
 sound.Add({
     name = "ARC9_BOCW.M16_fire_dist",
-    channel = CHAN_STATIC,
-    volume = 0.4,
+    channel = CHAN_WEAPON,
+    volume = 0.2,
     sound = "weapons/arc9/bocw/rifle_close_decay.wav"
 })
 

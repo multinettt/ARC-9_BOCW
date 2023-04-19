@@ -702,7 +702,7 @@ SWEP.Animations = {
         },
     },
 }
-
+--[[
 SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
     local gunname = "M14"
@@ -713,3 +713,4 @@ SWEP.HookP_NameChange = function(self, name)
 
     return gunname
 end
+]]
