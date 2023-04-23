@@ -298,11 +298,11 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
 
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShellPitch = 100 -- for shell sounds
@@ -320,8 +320,8 @@ SWEP.NoViewBob = false
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    [1] = "tag_bullet_animate",
-    [2] = "tag_bullets",
+    [1] = "tag_bullet_deplete_sqtl_00_animate",
+    [2] = "tag_bullet_deplete_sqtl_01_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -372,8 +372,8 @@ SWEP.IronSights = {
 
 SWEP.HasSights = true
 
-SWEP.ActivePos = Vector(-0.2, -1.5, 0.1)
-SWEP.ActiveAng = Angle(1, -1, -2.5)
+SWEP.ActivePos = Vector(0, -1.2, 0)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -430,18 +430,11 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {1, 1},
             {2, 1},
-            {9, 1}
         }
     },
     ["magtapegone"] = {
         Bodygroups = {
             {9, 1}
-        }
-    },
-    ["optic_attached"] = {
-        Bodygroups = {
-            {3, 1},
-            {4, 2},
         }
     },
     ["barrel_extended"] = {
@@ -531,19 +524,19 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(3, 0, 3.5),
+        Pos = Vector(1.25, 0, 3.34),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(2.25, -0.5, -1.45),
         DefaultName = "Iron Sights",
-        Category = {"optic_picatinny", "bo1_optic"},
-        InstalledElements = {"optic_attached"},
+        Category = {"bocw_1911_opticmount"},
+        InstalledElements = {"optic_mount"},
     },
     {
         PrintName = "Muzzle",
         Bone = "tag_weapon",
         Pos = Vector(7.1, 0, 2.55),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_556_west_muzzle", "bo1_muzzle"},
+        Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
         Attached = "bocw_muzzle_1911",
         Integral = false
     },
@@ -628,6 +621,15 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
         },
     },
+    ["ready_ext"] = {
+        Source = "ready_ext",
+        EventTable = {
+            { s = "ARC9_BOCW.1911_ready_magin", t = 0.4 },
+            { s = "ARC9_BOCW.1911_ready_slideback", t = 1 },
+            { s = "ARC9_BOCW.1911_sliderelease", t = 1.2 },
+            { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
+        },
+    },
     ["bash"] = {
         Source = "melee",
     },
@@ -664,9 +666,9 @@ SWEP.Animations = {
         Source = "reload_ext",
         MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.1911_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
+            { s = "ARC9_BOCW.1911_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.1911_reload_end", t = 1.6 },
         },
     },
     ["reload_empty_ext"] = {
@@ -676,36 +678,35 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.4 },
             { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.1911_reload_empty_magintap", t = 1.8 },
-            { s = "ARC9_BOCW.1911_boltback", t = 2.2 },
-            { s = "ARC9_BOCW.1911_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 2.8 },
+            { s = "ARC9_BOCW.1911_slideback", t = 1.9 },
+            { s = "ARC9_BOCW.1911_sliderelease", t = 2 },
+            { s = "ARC9_BOCW.1911_reload_end", t = 2.2 },
         },
     },
-    ["reload_mix"] = {
-        Source = "reload_mix",
-        MinProgress = 1.52,
+    ["reload_fast"] = {
+        Source = "reload_fast",
+        --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.1911_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
+            { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1.2 },
         },
     },
-    ["reload_empty_mix"] = {
-        Source = "reload_mix_empty",
-        MinProgress = 1.52,
+    ["reload_empty_fast"] = {
+        Source = "reload_fast_empty",
+        --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.1911_reload_empty_magintap", t = 1.8 },
-            { s = "ARC9_BOCW.1911_boltback", t = 2.2 },
-            { s = "ARC9_BOCW.1911_boltrelease", t = 2.5 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 2.8 },
+            { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
+            { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1 },
+            { s = "ARC9_BOCW.1911_reload_fast_sliderelease", t = 1.7 },
         },
     },
     ["enter_sprint"] = {
         Source = "supersprint_in",
         Time = 2
+    },
+    ["enter_sprint_walk"] = {
+        Source = "sprint_in",
+        Time = 0.6
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
