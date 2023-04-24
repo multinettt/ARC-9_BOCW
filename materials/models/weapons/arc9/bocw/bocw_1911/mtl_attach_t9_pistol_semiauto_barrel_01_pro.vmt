@@ -13,7 +13,7 @@
 
 	"$detail" 	"models\weapons\arc9\bocw\bocw_1911\slide_extendedchromelined_sc"
 	"$detailscale" "1"
-	"$detailblendfactor" "0.06"     
+	"$detailblendfactor" "0.08"     
 	"$detailblendmode" "1"
 
 	//"$envmap" "env_cubemap"

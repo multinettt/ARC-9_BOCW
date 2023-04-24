@@ -439,61 +439,55 @@ SWEP.AttachmentElements = {
     },
     ["barrel_extended"] = {
         Bodygroups = {
-            {5, 1}
+            {5, 1},
+            {3, 2}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.955, 0, 0),
+                Pos = Vector(9.15, 0, 2.55),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {5, 1}
-        },
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(2.53, 0, 0),
-            }
+            {5, 1},
         },
     },
     ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {5, 1}
+            {5, 1},
+            {3, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.46, 0, 0),
+                Pos = Vector(8.21, 0, 2.55),
+            },
+        },
+    },
+    ["barrel_chromelined"] = {
+        Bodygroups = {
+            {5, 1},
+            {3, 2}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(9.15, 0, 2.55),
             }
         },
     },
-    ["barrel_ranger"] = {
+    ["barrel_tacops"] = {
         Bodygroups = {
             {5, 1}
-        },
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(5.35, 0, 0),
-            }
-        },
-    },
-    ["barrel_takedown"] = {
-        Bodygroups = {
-            {5, 1}
-        },
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(5.35, 0, 0),
-            }
         },
     },
     ["barrel_taskforce"] = {
         Bodygroups = {
-            {5, 1}
+            {5, 1},
+            {3, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.46, 0, 0),
+                Pos = Vector(8.21, 0, 2.55),
             }
         },
     },
