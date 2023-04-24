@@ -572,7 +572,7 @@ SWEP.Attachments = {
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0.4, 0, 0.4),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_1911_wrap"},
