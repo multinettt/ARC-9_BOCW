@@ -537,9 +537,10 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(4, 0, 1),
+        Pos = Vector(5.3, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_1911_bodymount"},
+        Icon_Offset = Vector(-0.8, 0, 0.25),
+        Category = {"bocw_body_1911"},
     },
     {
         PrintName = "Barrel",
