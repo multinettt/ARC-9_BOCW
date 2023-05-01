@@ -16,11 +16,11 @@ Because of the sheer size of individual weapons, this pack and repository will b
 - MP5        (H&K MP5K)
 - Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
 - AK-74u     (AKS-74U)
-- UGR        (APS)             [No Attachments yet]
+- UGR        (APS)
 
 ### Tactical Rifles:
 
-- M16        (M16A3)           [Not usable, VM Only]
+- M16        (M16A3)           [No Attachments yet]
 - DMR 14     (M14)
 
 ### Light Machine Guns:
@@ -33,7 +33,8 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Pistols:
 
-- 1911 (M1911A1)                 [No Attachments yet]
+- 1911 (M1911A1)
+- Diamatti (Beretta M93 Raffica) [No Attachments yet]
 
 ### Shotguns:
 
