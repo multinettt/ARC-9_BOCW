@@ -1,6 +1,6 @@
 --=============================================================================
 --   CALL OF DUTY: BLACK OPS COLD WAR
---   1911
+--   Diamatti
 --   LUA - MAIN
 --=============================================================================
 --[[
@@ -8,17 +8,17 @@
 
 --   BASE  : ARC-9
 --   BUILD : v0.2
---   SR.NO : 133207
+--   SR.NO : 133107
 
 
-  .o   .ooooo.     .o    .o  
-o888  888' `Y88. o888  o888  
- 888  888    888  888   888  
- 888   `Vbood888  888   888  
- 888        888'  888   888  
- 888      .88P'   888   888  
-o888o   .oP'     o888o o888o 
-                                                       
+oooooooooo.    o8o                                            .       .    o8o  
+`888'   `Y8b   `"'                                          .o8     .o8    `"'  
+ 888      888 oooo   .oooo.   ooo. .oo.  .oo.    .oooo.   .o888oo .o888oo oooo  
+ 888      888 `888  `P  )88b  `888P"Y88bP"Y88b  `P  )88b    888     888   `888  
+ 888      888  888   .oP"888   888   888   888   .oP"888    888     888    888  
+ 888     d88'  888  d8(  888   888   888   888  d8(  888    888 .   888 .  888  
+o888bood8P'   o888o `Y888""8o o888o o888o o888o `Y888""8o   "888"   "888" o888o 
+                                                                                
                                        
 ]]
 
@@ -32,15 +32,15 @@ SWEP.Category = "ARC9 - Black Ops Cold War"
 --SWEP.SubCategory = "Assault Rifles" -- use when more guns
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "1911"
-SWEP.TrueName = "M1911A1"
+SWEP.PrintName = "Diamatti"
+SWEP.TrueName = "Beretta 93R"
 SWEP.Class = "Pistol"
 SWEP.Trivia = {
-     Manufacturer = "Colt Manufacturing Company",
-     Calibre = ".45 ACP",
+     Manufacturer = "Beretta",
+     Calibre = "9x19 Parabellum",
      Mechanism = "Short Recoil operation",
-     Country = "USA",
-     Year = 1926
+     Country = "Italy",
+     Year = 1979
 }
 
 SWEP.Credits = {
@@ -48,14 +48,14 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Semi-auto pistol. Good accuracy with a modest ammo capacity. High damage in close range encounters.
+SWEP.Description = [[3-round burst pistol. Fast cyclic rate of fire with a short delay between bursts. Increased ammo capacity and slightly slower reloading speeds.
 
-The M1911 is an American semi-automatic pistol featured in almost every installment of the Call of Duty series. It is the most frequently shown weapon in the series.]]
+The Beretta M93 Raffica is a burst-fire machine pistol featured in Call of Duty: Modern Warfare 2, Call of Duty Online and Call of Duty: Black Ops Cold War. It was cut from Call of Duty: Modern Warfare 3. ]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_1911_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_1911_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_diamatti_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_diamatti_bocw.mdl"
 
 SWEP.Slot = 2
 
@@ -115,7 +115,7 @@ SWEP.BodyDamageMults = {
 
 SWEP.AlwaysPhysBullet = true
 
-SWEP.PhysBulletMuzzleVelocity = 550 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 380 * 39.37
 SWEP.PhysBulletDrag = 1
 SWEP.PhysBulletGravity = 1
 SWEP.PhysBulletDontInheritPlayerVelocity = false -- Set to true to disable "Browning Effect"
@@ -133,7 +133,7 @@ SWEP.TracerSize = 0.5
 SWEP.Ammo = "smg1" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 7 -- Self-explanatory.
+SWEP.ClipSize = 15 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -150,7 +150,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 400
+SWEP.RPM = 1100
 
 -- Works different to ArcCW
 
@@ -163,9 +163,15 @@ SWEP.RPM = 400
 
 SWEP.Firemodes = {
     {
+        Mode = 3,
+    },
+    {
         Mode = 1,
     },
 }
+
+SWEP.RunawayBurst = false
+SWEP.PostBurstDelay = 0.1
 
 -------------------------- RECOIL
 
@@ -255,13 +261,13 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.1911_fire"                            -- Fire
+SWEP.ShootSound = "ARC9_BOCW.diamatti_fire"                            -- Fire
 SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.1911_fire_silenced"                    -- Fire silenced
+SWEP.ShootSoundSilenced = "ARC9_BOCW.diamatti_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.1911_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.diamatti_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -302,7 +308,7 @@ SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
 
-SWEP.ShellScale = 1.1
+SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShellPitch = 100 -- for shell sounds
@@ -322,6 +328,7 @@ SWEP.NoViewBob = false
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     [1] = "tag_bullet_deplete_sqtl_00_animate",
     [2] = "tag_bullet_deplete_sqtl_01_animate",
+    [3] = "tag_bullet_deplete_sqtl_02_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -336,12 +343,15 @@ SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
     "tag_clip1",
-    "tag_bullet_animate1",
+    "tag_bullet_deplete_sqtl_00_animate1",
+    "tag_bullet_deplete_sqtl_01_animate1",
+    "tag_bullet_deplete_sqtl_02_animate1",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
     [1] = {"tag_clip1"},
-    [2] = {"tag_bullet_animate1"},
-    -- [2] = {"list", "of", "bones"}
+    [2] = {"tag_bullet_deplete_sqtl_00_animate1"},
+    [3] = {"tag_bullet_deplete_sqtl_01_animate1"},
+    [4] = {"tag_bullet_deplete_sqtl_02_animate1"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -363,8 +373,8 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-0.63, 0, 2.98),
-    Ang = Angle(0, 0, 11),
+    Pos = Vector(-1.88, 0, 2.92),
+    Ang = Angle(-2, -0.5, 2.5),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
     CrosshairInSights = false,
@@ -394,8 +404,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 --}
 
 -- Position for customizing
-SWEP.CustomizeAng = Angle(90, -12, 0)
-SWEP.CustomizePos = Vector(17, 30, 4)
+SWEP.CustomizeAng = Angle(90, 0, -1)
+SWEP.CustomizePos = Vector(18, 30, 4)
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -522,7 +532,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(2.25, -0.5, -1.45),
         DefaultName = "Iron Sights",
-        Category = {"bocw_1911_opticmount"},
+        Category = {"bocw_diamatti_opticmount"},
         InstalledElements = {"optic_mount"},
     },
     {
@@ -531,7 +541,7 @@ SWEP.Attachments = {
         Pos = Vector(7.1, 0, 2.55),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_1911",
+        Attached = "bocw_muzzle_diamatti",
         Integral = false
     },
     {
@@ -540,7 +550,7 @@ SWEP.Attachments = {
         Pos = Vector(5.3, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-0.8, 0, 0.25),
-        Category = {"bocw_body_1911"},
+        Category = {"bocw_body_diamatti"},
     },
     {
         PrintName = "Barrel",
@@ -548,7 +558,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_1911_barrel"},
+        Category = {"bocw_diamatti_barrel"},
     },
     {
         PrintName = "Magazine",
@@ -562,7 +572,7 @@ SWEP.Attachments = {
                 Bone = "tag_clip1",
             }
         },
-        Category = {"bocw_1911_mag"},
+        Category = {"bocw_diamatti_mag"},
     },
     {
         PrintName = "Handle",
@@ -570,24 +580,24 @@ SWEP.Attachments = {
         Pos = Vector(0.4, 0, 0.4),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_1911_wrap"},
+        Category = {"bocw_diamatti_wrap"},
     },
     {
         PrintName = "Sound",
         DefaultName = "BOCW Sound",
         DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_1911_sound"},
+        Category = {"bocw_diamatti_sound"},
     },
 }
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["1911_mag_ext"] then
+    if elements["diamatti_mag_ext"] then
         return anim .. "_ext"
     end
 
-    if elements["1911_mag_fast"] then
+    if elements["diamatti_mag_fast"] then
         return anim .. "_fast"
     end
 
@@ -610,19 +620,18 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.1911_ready_magin", t = 0.4 },
-            { s = "ARC9_BOCW.1911_ready_slideback", t = 1 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 1.2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.Diamatti_slideback", t = 0.2 },
+            { s = "ARC9_BOCW.Diamatti_sliderelease", t = 0.3 },
+            { s = "ARC9_BOCW.Diamatti_reload_end", t = 0.7 },
         },
     },
     ["ready_ext"] = {
         Source = "ready_ext",
         EventTable = {
-            { s = "ARC9_BOCW.1911_ready_magin", t = 0.4 },
-            { s = "ARC9_BOCW.1911_ready_slideback", t = 1 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 1.2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.Diamatti_ready_magin", t = 0.4 },
+            { s = "ARC9_BOCW.Diamatti_ready_slideback", t = 1 },
+            { s = "ARC9_BOCW.Diamatti_sliderelease", t = 1.2 },
+            { s = "ARC9_BOCW.Diamatti_reload_end", t = 1.4 },
         },
     },
     ["bash"] = {
@@ -641,29 +650,29 @@ SWEP.Animations = {
         NoMagSwap = true,
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.1911_reload_magin", t = 0.8 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.3 },
+            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.45 },
+            { s = "ARC9_BOCW.diamatti_reload_magin", t = 0.8 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 1.3 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.3 },
-            { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1 },
-            { s = "ARC9_BOCW.1911_slideback", t = 1.5 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 1.6 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.8 },
+            { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.3 },
+            { s = "ARC9_BOCW.diamatti_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.diamatti_slideback", t = 1.5 },
+            { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.6 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 2 },
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
         MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.1911_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.4 },
+            { s = "ARC9_BOCW.diamatti_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 1.6 },
         },
     },
     ["reload_empty_ext"] = {
@@ -671,28 +680,28 @@ SWEP.Animations = {
         MinProgress = 1.62,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.1911_slideback", t = 1.9 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 2.2 },
+            { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.diamatti_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.diamatti_slideback", t = 1.9 },
+            { s = "ARC9_BOCW.diamatti_sliderelease", t = 2 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 2.2 },
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
         --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
-            { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1.2 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_magout", t = 0.25 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 1.2 },
         },
     },
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
         --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
-            { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1 },
-            { s = "ARC9_BOCW.1911_reload_fast_sliderelease", t = 1.7 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_magout", t = 0.25 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 1 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_sliderelease", t = 1.7 },
         },
     },
     ["enter_sprint"] = {
@@ -713,8 +722,9 @@ SWEP.Animations = {
     },
     ["enter_inspect"] = {
         Source = "inspect",
+        Time = 5.8,
         EventTable = {
-            { s = "ARC9_BOCW.1911_inspect", t = 0 },
+            { s = "ARC9_BOCW.diamatti_inspect", t = 0 },
         },
     },
 }
