@@ -52,7 +52,7 @@ ATT.ClipSizeOverride = 8
 
 ATT.ReloadTimeMult = 0.8
 
-ARC9.LoadAttachment(ATT, "bocw_1911_magazine_dual1")
+ARC9.LoadAttachment(ATT, "bocw_1911_magazine_fast1")
 
 ATT = {}
 
@@ -136,7 +136,7 @@ ATT.ReloadTimeMult = 0.6
 
 ATT.AimDownSightsTimeMult = 1.06
 
-ARC9.LoadAttachment(ATT, "bocw_1911_magazine_dualpro")
+ARC9.LoadAttachment(ATT, "bocw_1911_magazine_fastpro")
 
 ATT = {}
 

@@ -449,8 +449,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_extended"] = {
         Bodygroups = {
-            {5, 1},
-            {3, 2}
+            {3, 1}
         },
         AttPosMods = {
             [2] = {
@@ -460,12 +459,11 @@ SWEP.AttachmentElements = {
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {5, 1},
+            {3, 1},
         },
     },
     ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {5, 1},
             {3, 1}
         },
         AttPosMods = {
@@ -476,8 +474,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_chromelined"] = {
         Bodygroups = {
-            {5, 1},
-            {3, 2}
+            {3, 1}
         },
         AttPosMods = {
             [2] = {
@@ -487,12 +484,11 @@ SWEP.AttachmentElements = {
     },
     ["barrel_tacops"] = {
         Bodygroups = {
-            {5, 1}
+            {3, 1}
         },
     },
     ["barrel_taskforce"] = {
         Bodygroups = {
-            {5, 1},
             {3, 1}
         },
         AttPosMods = {
@@ -554,10 +550,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        Bone = "tag_barrel",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(2.4, 0, 2.6),
         Category = {"bocw_diamatti_barrel"},
     },
     {
@@ -566,7 +562,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.8, 0, -2),
+        Icon_Offset = Vector(-1, 0, -5.2),
         DuplicateModels = {
             {
                 Bone = "tag_clip1",
@@ -577,9 +573,9 @@ SWEP.Attachments = {
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
-        Pos = Vector(0.4, 0, 0.4),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Pos = Vector(0.55, 0, 0.3),
+        Ang = Angle(10, 0, 0),
+        Icon_Offset = Vector(-0.5, 0, -0.5),
         Category = {"bocw_diamatti_wrap"},
     },
     {
@@ -625,15 +621,6 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Diamatti_reload_end", t = 0.7 },
         },
     },
-    ["ready_ext"] = {
-        Source = "ready_ext",
-        EventTable = {
-            { s = "ARC9_BOCW.Diamatti_ready_magin", t = 0.4 },
-            { s = "ARC9_BOCW.Diamatti_ready_slideback", t = 1 },
-            { s = "ARC9_BOCW.Diamatti_sliderelease", t = 1.2 },
-            { s = "ARC9_BOCW.Diamatti_reload_end", t = 1.4 },
-        },
-    },
     ["bash"] = {
         Source = "melee",
     },
@@ -670,9 +657,9 @@ SWEP.Animations = {
         Source = "reload_ext",
         MinProgress = 1.62,
         EventTable = {
-            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.diamatti_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.diamatti_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.45 },
+            { s = "ARC9_BOCW.diamatti_reload_magin", t = 0.8 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 1.3 },
         },
     },
     ["reload_empty_ext"] = {
@@ -680,28 +667,29 @@ SWEP.Animations = {
         MinProgress = 1.62,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.diamatti_reload_empty_magin", t = 1.1 },
-            { s = "ARC9_BOCW.diamatti_slideback", t = 1.9 },
-            { s = "ARC9_BOCW.diamatti_sliderelease", t = 2 },
-            { s = "ARC9_BOCW.diamatti_reload_end", t = 2.2 },
+            { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.3 },
+            { s = "ARC9_BOCW.diamatti_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.diamatti_slideback", t = 1.5 },
+            { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.6 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 2 },
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
         --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.diamatti_reload_fast_magout", t = 0.25 },
-            { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 1.2 },
+            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.Diamatti_reload_fast_magin", t = 0.8 },
+            { s = "ARC9_BOCW.diamatti_reload_end", t = 1.5 },
         },
     },
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
         --MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.diamatti_reload_fast_magout", t = 0.25 },
-            { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 1 },
-            { s = "ARC9_BOCW.diamatti_reload_fast_sliderelease", t = 1.7 },
+            { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 0.8 },
+            { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.5 },
         },
     },
     ["enter_sprint"] = {

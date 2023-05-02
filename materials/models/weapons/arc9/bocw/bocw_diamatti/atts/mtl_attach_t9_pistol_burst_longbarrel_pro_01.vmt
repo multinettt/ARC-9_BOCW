@@ -1,17 +1,17 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_1911\atts\ext1_c"
-	"$bumpmap" "models\weapons\arc9\bocw\bocw_1911\atts\ext1_n"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_diamatti\atts\chromelined_diff"
+	"$bumpmap" "models\weapons\arc9\bocw\bocw_diamatti\atts\chromelined_n"
 
 
 	"$phong" "1"
-	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_1911\atts\ext1_g"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_diamatti\atts\chromelined_g"
 	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_1911\atts\ext1_sc"
+	"$detail" 	"models\weapons\arc9\bocw\bocw_diamatti\atts\chromelined_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.06"     
 	"$detailblendmode" "1"
