@@ -61,7 +61,7 @@ SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00010000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -134,7 +134,7 @@ SWEP.Ammo = "357" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 6 -- Self-explanatory.
-SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.SupplyLimit = 5 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
@@ -271,7 +271,7 @@ SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_pistol.wav"
+SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_revolver.wav"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -446,53 +446,73 @@ SWEP.AttachmentElements = {
             {5, 1},
         }
     },
+    ["moonclip"] = {
+        Bodygroups = {
+            {6, 1},
+        }
+    },
+    ["moonclippro"] = {
+        Bodygroups = {
+            {7, 1},
+        }
+    },
     ["barrel_extended"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(9.15, 0, 2.55),
+                Pos = Vector(11.56, 0, 3.355),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {3, 1},
+            {2, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(9.18, 0, 3.355),
+            }
         },
     },
     ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(8.21, 0, 2.55),
+                Pos = Vector(10.8, 0, 3.355),
             },
         },
     },
     ["barrel_chromelined"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(9.15, 0, 2.55),
+                Pos = Vector(12.42, 0, 3.355),
             }
         },
     },
     ["barrel_tacops"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(7.28, 0, 3.355),
+            }
         },
     },
     ["barrel_taskforce"] = {
         Bodygroups = {
-            {3, 1}
+            {2, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(8.21, 0, 2.55),
+                Pos = Vector(11.56, 0, 3.355),
             }
         },
     },
@@ -533,9 +553,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_weapon",
-        Pos = Vector(10.95, 0, 3.35),
+        Pos = Vector(10.804, 0, 3.355),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
+        Category = {"bocw_357_muzzle", "bo1_muzzle"},
         Attached = "bocw_muzzle_magnum",
         Integral = false
     },
@@ -558,18 +578,18 @@ SWEP.Attachments = {
     {
         PrintName = "Cylinder",
         DefaultName = "30 Rnd",
-        Bone = "tag_clip_animate",
+        Bone = "tag_clip_crane_animate",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1,0,0),
+        Icon_Offset = Vector(-1.5,0,1.2),
         Category = {"bocw_magnum_mag"},
     },
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
-        Ang = Angle(10, 0, 0),
-        Icon_Offset = Vector(0,0,0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-0.75,0,0),
         Category = {"bocw_magnum_wrap"},
     },
     {
@@ -660,10 +680,21 @@ SWEP.Animations = {
         MinProgress = 1.52,
         EventTable = {
             { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.15 },
-            { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 0.6 },
-            { s = "ARC9_BOCW.Magnum_reload_casings", t = 1.3 },
-            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 1.7 },
-            { s = "ARC9_BOCW.Magnum_cylinderin", t = 2.5 },
+            { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 1 },
+            { s = "ARC9_BOCW.Magnum_reload_casings", t = 2.3 },
+            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 2.9 },
+            { s = "ARC9_BOCW.Magnum_cylinderin", t = 4.8 },
+        },
+    },
+    ["reload_mix"] = {
+        Source = "reload_mix",
+        MinProgress = 1.52,
+        EventTable = {
+            { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.15 },
+            { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 1 },
+            { s = "ARC9_BOCW.Magnum_reload_casings", t = 2.3 },
+            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 3.3 },
+            { s = "ARC9_BOCW.Magnum_cylinderin", t = 5.6 },
         },
     },
     ["enter_sprint"] = {
@@ -685,7 +716,6 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.magnum_inspect", t = 0 },
             { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.8 },
             { s = "ARC9_BOCW.Magnum_cylinderin", t = 4.3 },
         },
