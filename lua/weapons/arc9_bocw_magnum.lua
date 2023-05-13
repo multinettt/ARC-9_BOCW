@@ -339,16 +339,14 @@ SWEP.CaseBGs = {}
 SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
-    "tag_clip1",
-    "tag_bullet_deplete_sqtl_00_animate1",
-    "tag_bullet_deplete_sqtl_01_animate1",
-    "tag_bullet_deplete_sqtl_02_animate1",
+    "tag_bullet_01_animate",
+    "tag_speedloader_attach_animate",
+    "tag_speedloader_bullets_animate",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    [1] = {"tag_clip1"},
-    [2] = {"tag_bullet_deplete_sqtl_00_animate1"},
-    [3] = {"tag_bullet_deplete_sqtl_01_animate1"},
-    [4] = {"tag_bullet_deplete_sqtl_02_animate1"},
+    [1] = {"tag_bullet_01_animate"},
+    [2] = {"tag_speedloader_attach_animate"},
+    [3] = {"tag_speedloader_bullets_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -401,7 +399,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 --}
 
 -- Position for customizing
-SWEP.CustomizeAng = Angle(90, 0, -1)
+SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(18, 30, 4)
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
@@ -436,12 +434,16 @@ SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
-            {2, 1},
         }
     },
-    ["magtapegone"] = {
+    ["speedloader"] = {
         Bodygroups = {
-            {9, 1}
+            {4, 1},
+        }
+    },
+    ["speedloaderpro"] = {
+        Bodygroups = {
+            {5, 1},
         }
     },
     ["barrel_extended"] = {
@@ -521,9 +523,9 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(1.25, 0, 3.34),
+        Pos = Vector(3, 0, 4),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2.25, -0.5, -1.45),
+        Icon_Offset = Vector(0, 0, 0),
         DefaultName = "Iron Sights",
         Category = {"bocw_magnum_opticmount"},
         InstalledElements = {"optic_mount"},
@@ -531,7 +533,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_weapon",
-        Pos = Vector(7.1, 0, 2.55),
+        Pos = Vector(10.95, 0, 3.35),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
         Attached = "bocw_muzzle_magnum",
@@ -540,39 +542,34 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(5.3, 0, 1.5),
+        Pos = Vector(1, 0.6, 3),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.8, 0, 0.25),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_body_magnum"},
     },
     {
         PrintName = "Barrel",
-        Bone = "tag_weapon",
+        Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2.4, 0, 2.6),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_magnum_barrel"},
     },
     {
-        PrintName = "Magazine",
+        PrintName = "Cylinder",
         DefaultName = "30 Rnd",
-        Bone = "tag_clip",
+        Bone = "tag_clip_animate",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-1, 0, -5.2),
-        DuplicateModels = {
-            {
-                Bone = "tag_clip1",
-            }
-        },
+        Icon_Offset = Vector(1,0,0),
         Category = {"bocw_magnum_mag"},
     },
     {
         PrintName = "Handle",
         Bone = "tag_weapon",
-        Pos = Vector(0.55, 0, 0.3),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(10, 0, 0),
-        Icon_Offset = Vector(-0.5, 0, -0.5),
+        Icon_Offset = Vector(0,0,0),
         Category = {"bocw_magnum_wrap"},
     },
     {
@@ -586,12 +583,12 @@ SWEP.Attachments = {
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["magnum_mag_ext"] then
-        return anim .. "_ext"
-    end
-
     if elements["magnum_mag_fast"] then
         return anim .. "_fast"
+    end
+
+    if elements["magnum_mag_mix"] then
+        return anim .. "_mix"
     end
 
 end
@@ -660,11 +657,13 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        --MinProgress = 1.52,
+        MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.magnum_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.Magnum_reload_fast_magin", t = 0.8 },
-            { s = "ARC9_BOCW.magnum_reload_end", t = 1.5 },
+            { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.15 },
+            { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 0.6 },
+            { s = "ARC9_BOCW.Magnum_reload_casings", t = 1.3 },
+            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 1.7 },
+            { s = "ARC9_BOCW.Magnum_cylinderin", t = 2.5 },
         },
     },
     ["enter_sprint"] = {
