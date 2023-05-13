@@ -34,7 +34,7 @@ Because of the sheer size of individual weapons, this pack and repository will b
 ### Pistols:
 
 - 1911 (M1911A1)
-- Magnum (Some stupid airsoft revolver) [No Attachments yet]
+- Magnum (Some stupid airsoft revolver)
 - Diamatti (Beretta M93 Raffica)
 
 ### Shotguns:
