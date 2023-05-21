@@ -543,9 +543,9 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(3, 0, 4),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(3, 0, 4),
         DefaultName = "Iron Sights",
         Category = {"bocw_magnum_opticmount"},
         InstalledElements = {"optic_mount"},
