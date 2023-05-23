@@ -311,3 +311,42 @@ ATT.ModelOffset = Vector(-0.5, 0, 0.2)
 --ATT.SprintToFireTimeAdd = 0.02
 
 ARC9.LoadAttachment(ATT, "bocw_optic_snappoint")
+
+ATT = {}
+
+ATT.PrintName = "Kobra Red Dot"
+ATT.CompactName = "KOBRA"
+ATT.Icon = Material("entities/bocw_atts/optics/kobra.png", "mips smooth")
+ATT.Description = [[Red-dot sight of Soviet origin with 1.75x magnification features and illuminated aimpoint to improve aiming effectiveness and target aquisition.
+
+The attachment reappears in Call of Duty: Black Ops Cold War under the name Kobra Red Dot, as an Optic class attachment available for primary weapons. It is a red dot based sight providing the highest base magnification at 1.75x, but at the cost of having the highest profile of all the red dot sights.]]
+
+ATT.SortOrder = 1.75
+
+ATT.Model = "models/weapons/arc9/atts/bocw_optic_kobrareddot.mdl"
+
+ATT.Category = {"optic_picatinny_medium", "optic_picatinny"}
+ATT.Folder = "BOCW RDS"
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 4, -2),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.75,
+        ViewModelFOV = 75
+    }
+}
+
+ATT.HoloSight = true
+ATT.HoloSightReticle = Material("hud/arc9_bocw/reticles/bocw_optic_rds_reticle3.png", "mips smooth")
+ATT.HoloSightReticle:SetInt("$additive", 1)
+ATT.HoloSightSize = 1700
+ATT.HoloSightColor = Color(255, 0, 0)
+
+ATT.ModelOffset = Vector(-2, 0, 0.005)
+
+--ATT.SwayAdd = 0.01
+--ATT.FreeAimRadiusMultSights = 0.25
+--ATT.SprintToFireTimeAdd = 0.02
+
+ARC9.LoadAttachment(ATT, "bocw_optic_kobrareddot")

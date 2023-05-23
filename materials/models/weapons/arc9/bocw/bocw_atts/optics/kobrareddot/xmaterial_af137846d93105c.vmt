@@ -1,0 +1,27 @@
+"VertexlitGeneric" // REFLEX LIGHT GLASS
+{
+	"$basetexture" "models\weapons\arc9\bocw\c"
+	"$bumpmap" "models\weapons\arc9\bocw\n"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\g"
+	"$phongboost" "0.2"
+	"$phongalbedotint" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" 	"models\weapons\arc9\bocw\sc"
+	"$detailscale" "1"
+	"$detailblendfactor" "0.06"     
+	"$detailblendmode" "5"
+
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[.01 .01 .01]"
+
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+
+	"$nocull" "1"
+}
+
+
+
