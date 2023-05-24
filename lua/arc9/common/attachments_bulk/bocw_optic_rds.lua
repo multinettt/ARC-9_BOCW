@@ -237,7 +237,7 @@ ARC9.LoadAttachment(ATT, "bocw_optic_diamondbackreflex")
 ATT = {}
 
 ATT.PrintName = "Fastpoint Reflex"
-ATT.CompactName = "FASTPNT"
+ATT.CompactName = "FASTPOINT"
 ATT.Icon = Material("entities/bocw_atts/optics/fastpoint.png", "mips smooth")
 ATT.Description = [[Open reflex sight from Phantom with 1.37x magnification improves aiming precision and target acquisition.
 
@@ -276,7 +276,7 @@ ARC9.LoadAttachment(ATT, "bocw_optic_fastpointreflex")
 ATT = {}
 
 ATT.PrintName = "SnapPoint"
-ATT.CompactName = "SNAPPNT"
+ATT.CompactName = "SNAPPOINT"
 ATT.Icon = Material("entities/bocw_atts/optics/snappoint.png", "mips smooth")
 ATT.Description = [[Russian made mini-reflex optic with 1.5x magnification provides a clear sight picture adjusted for close quarters combat.
 
@@ -350,3 +350,42 @@ ATT.ModelOffset = Vector(-2, 0, 0.005)
 --ATT.SprintToFireTimeAdd = 0.02
 
 ARC9.LoadAttachment(ATT, "bocw_optic_kobrareddot")
+
+ATT = {}
+
+ATT.PrintName = "Sillix Holoscout"
+ATT.CompactName = "HOLOSCOUT"
+ATT.Icon = Material("entities/bocw_atts/optics/sillixholoscout.png", "mips smooth")
+ATT.Description = [[Well-rounded holographic sight fitted with a 1.75x magnification lens provides impressive distortion-free sight picture.
+
+The Sillix Holoscout is a Holographic style sight featured in Call of Duty: Black Ops Cold War. It provides a higher zoom level than most of the Red Dot/Reflex based sight options (1.75x), and a magnification on par with the Kobra Red Dot.]]
+
+ATT.SortOrder = 1.75
+
+ATT.Model = "models/weapons/arc9/atts/bocw_optic_sillixholoscout.mdl"
+
+ATT.Category = {"optic_picatinny_medium", "optic_picatinny"}
+ATT.Folder = "BOCW RDS"
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 4, -1.3),
+        Ang = Angle(0, 0, 0),
+        Magnification = 1.75,
+        ViewModelFOV = 75
+    }
+}
+
+ATT.HoloSight = true
+ATT.HoloSightReticle = Material("hud/arc9_bocw/reticles/bocw_optic_rds_holo_reticle.png", "mips smooth")
+ATT.HoloSightReticle:SetInt("$additive", 1)
+ATT.HoloSightSize = 3500
+ATT.HoloSightColor = Color(255, 0, 0)
+
+ATT.ModelOffset = Vector(-1, 0, 0.005)
+
+--ATT.SwayAdd = 0.01
+--ATT.FreeAimRadiusMultSights = 0.25
+--ATT.SprintToFireTimeAdd = 0.02
+
+ARC9.LoadAttachment(ATT, "bocw_optic_sillixholoscout")
