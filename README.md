@@ -46,6 +46,21 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 ### Optics:
 
+#### Red Dot/Reflex Sights:
+
+- Microflex LED
+- Quickdot LED
+- Diamondback Reflex
+- Fastpoint Reflex
+- Hawksmoor
+- Millstop Reflex
+- Otero Mini Reflex
+- SnapPoint
+- Sillix Holoscout
+- Kobra Red Dot
+
+#### Scopes:
+
 - Visiontech 2x
 - Axial Arms 3x
 - Royal & Kross 4x
