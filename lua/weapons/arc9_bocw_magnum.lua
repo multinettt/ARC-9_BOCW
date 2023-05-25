@@ -384,14 +384,14 @@ SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
 
 -- Position when sprinting or safe
-SWEP.RestPos = Vector(0, -1.2, 0)
+SWEP.RestPos = Vector(1, -4, 0)
 SWEP.RestAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, -1.2, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+--SWEP.SprintPos = Vector(0, -1.2, 0)
+--SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(0, 0, -5)
-SWEP.HolsterAng = Angle(0, -15, 25)
+SWEP.HolsterPos = Vector(0, 0, 0)
+SWEP.HolsterAng = Angle(0, 0, 0)
 
 --SWEP.SprintMidPoint = {
 --    Pos = Vector(4, 8, -4),
@@ -401,6 +401,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(18, 30, 4)
+SWEP.CustomizeRotateAnchor = Vector(18, -1.88, -4)
+
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -431,6 +433,11 @@ SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 SWEP.DefaultElements = {}
 
 SWEP.AttachmentElements = {
+    ["optic_mount"] = {
+        Bodygroups = {
+            {8, 1},
+        }
+    },
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
@@ -630,7 +637,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.Magnum_cylinderin", t = 0.4 },
+            { s = "ARC9_BOCW.Magnum_cylinderin", t = 0.35 },
         },
     },
     ["1_ready"] = {
@@ -653,7 +660,7 @@ SWEP.Animations = {
         Source = "reload_in",
         NoMagSwap = true,
         RestoreAmmo = 1,
-        MinProgress = 0.8,
+        MinProgress = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.15 },
             { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 0.6 },
@@ -664,7 +671,7 @@ SWEP.Animations = {
     ["reload_insert"] = {
         Source = "reload_loop",
         NoMagSwap = true,
-        MinProgress = 0.8,
+        MinProgress = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.Magnum_reload_roundin", t = 0.3 },
         },
@@ -698,10 +705,6 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "supersprint_in",
-        Time = 2
-    },
-    ["enter_sprint_walk"] = {
         Source = "sprint_in",
         Time = 0.6
     },
@@ -711,7 +714,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 0.4
+        Time = 0.3
     },
     ["enter_inspect"] = {
         Source = "inspect",

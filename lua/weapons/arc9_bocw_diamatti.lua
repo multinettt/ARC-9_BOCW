@@ -406,6 +406,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, -1)
 SWEP.CustomizePos = Vector(18, 30, 4)
+SWEP.CustomizeRotateAnchor = Vector(18, -1.88, -4)
+
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -543,9 +545,9 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Bone = "tag_weapon",
-        Pos = Vector(5.3, 0, 1.5),
+        Pos = Vector(5.9, 0.5606, 2.18),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-0.8, 0, 0.25),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_body_diamatti"},
     },
     {

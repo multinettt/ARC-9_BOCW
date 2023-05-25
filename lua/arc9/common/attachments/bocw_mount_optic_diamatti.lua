@@ -18,7 +18,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         CorrectiveAng = Angle(-1, -1, 0),
-        Category = {"optic_picatinny", "bo1_optic"},
+        Category = {"optic_picatinny_pistol"},
         InstalledElements = {"optic_mount"},
     }
 }

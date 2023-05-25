@@ -396,6 +396,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, -12, 0)
 SWEP.CustomizePos = Vector(17, 30, 4)
+SWEP.CustomizeRotateAnchor = Vector(18, -1.63, -5)
+
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -610,19 +612,19 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.1911_ready_magin", t = 0.4 },
-            { s = "ARC9_BOCW.1911_ready_slideback", t = 1 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 1.2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.1911_ready_magin", t = 0.3 },
+            { s = "ARC9_BOCW.1911_ready_slideback", t = 0.9 },
+            { s = "ARC9_BOCW.1911_sliderelease", t = 1.1 },
+            { s = "ARC9_BOCW.1911_reload_end", t = 1.3 },
         },
     },
     ["ready_ext"] = {
         Source = "ready_ext",
         EventTable = {
-            { s = "ARC9_BOCW.1911_ready_magin", t = 0.4 },
-            { s = "ARC9_BOCW.1911_ready_slideback", t = 1 },
-            { s = "ARC9_BOCW.1911_sliderelease", t = 1.2 },
-            { s = "ARC9_BOCW.1911_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.1911_ready_magin", t = 0.3 },
+            { s = "ARC9_BOCW.1911_ready_slideback", t = 0.9 },
+            { s = "ARC9_BOCW.1911_sliderelease", t = 1.1 },
+            { s = "ARC9_BOCW.1911_reload_end", t = 1.3 },
         },
     },
     ["bash"] = {

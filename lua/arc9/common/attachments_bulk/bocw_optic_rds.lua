@@ -13,7 +13,7 @@ ATT.SortOrder = 1.25
 
 ATT.Model = "models/weapons/arc9/atts/bocw_optic_quickdotled.mdl"
 
-ATT.Category = {"optic_picatinny_medium", "optic_picatinny"}
+ATT.Category = {"optic_picatinny_medium", "optic_picatinny", "optic_picatinny_pistol"}
 ATT.Folder = "BOCW RDS"
 
 ATT.Sights = {
@@ -52,7 +52,7 @@ ATT.SortOrder = 1.25
 
 ATT.Model = "models/weapons/arc9/atts/bocw_optic_microflexled.mdl"
 
-ATT.Category = {"optic_picatinny_medium", "optic_picatinny"}
+ATT.Category = {"optic_picatinny_medium", "optic_picatinny", "optic_picatinny_pistol"}
 ATT.Folder = "BOCW RDS"
 
 ATT.Sights = {
@@ -85,13 +85,13 @@ ATT.CompactName = "OTERO MINI"
 ATT.Icon = Material("entities/bocw_atts/optics/oterominireflex.png", "mips smooth")
 ATT.Description = [[Otero reflex sight with 1.37x magnification designed specifically for pistols.
 
-The Ostero Mini Reflex is a Optic Attachment available in Call of Duty: Black Ops Cold War. It is a low range but clear optic exclusively for Pistols.]]
+The Otero Mini Reflex is a Optic Attachment available in Call of Duty: Black Ops Cold War. It is a low range but clear optic exclusively for Pistols.]]
 
 ATT.SortOrder = 1.37
 
 ATT.Model = "models/weapons/arc9/atts/bocw_optic_oterominireflex.mdl"
 
-ATT.Category = {"optic_picatinny"}
+ATT.Category = {"optic_picatinny", "optic_picatinny_pistol"}
 ATT.Folder = "BOCW RDS"
 
 ATT.Sights = {
