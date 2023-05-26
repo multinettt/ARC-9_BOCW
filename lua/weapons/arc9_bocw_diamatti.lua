@@ -72,7 +72,7 @@ SWEP.WorldModelOffset = {
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.ViewModelFOVBase = 75
+SWEP.ViewModelFOVBase = 70
 
 -------------------------- DAMAGE PROFILE
 

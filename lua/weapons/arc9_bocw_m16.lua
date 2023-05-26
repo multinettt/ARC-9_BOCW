@@ -172,7 +172,7 @@ SWEP.Firemodes = {
 
 SWEP.AutoBurst = false -- Hold fire to keep firing bursts
 SWEP.PostBurstDelay = 0.3
-SWEP.RunawayBurst = true -- Burst will keep firing until all of the burst has been expended.
+SWEP.RunawayBurst = false -- Burst will keep firing until all of the burst has been expended.
 
 -------------------------- RECOIL
 

@@ -72,7 +72,7 @@ SWEP.WorldModelOffset = {
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.ViewModelFOVBase = 75
+SWEP.ViewModelFOVBase = 70
 
 -------------------------- DAMAGE PROFILE
 
@@ -394,8 +394,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 --}
 
 -- Position for customizing
-SWEP.CustomizeAng = Angle(90, -12, 0)
 SWEP.CustomizePos = Vector(17, 30, 4)
+SWEP.CustomizeAng = Angle(90, -12, 0)
 SWEP.CustomizeRotateAnchor = Vector(18, -1.63, -5)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -606,8 +606,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
     },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+    },
     ["holster"] = {
         Source = "holster",
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
     },
     ["ready"] = {
         Source = "ready",
@@ -629,6 +635,9 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "melee",
+    },
+    ["bash_empty"] = {
+        Source = "melee_empty",
     },
     ["fire"] = {
         Source = {"fire"},
@@ -699,18 +708,29 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "supersprint_in",
-        Time = 2
-    },
-    ["enter_sprint_walk"] = {
-        Source = "sprint_in",
-        Time = 0.6
+        Time = 0.75,
+        NoStatAffectors = true
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 3
+        Time = 3,
+        NoStatAffectors = true
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 0.4,
+        NoStatAffectors = true
+    },
+    ["enter_sprint_empty"] = {
+        Source = "supersprint_in_empty",
+        Time = 2
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 3
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
         Time = 0.4
     },
     ["enter_inspect"] = {
