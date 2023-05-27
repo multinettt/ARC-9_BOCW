@@ -639,6 +639,9 @@ SWEP.Animations = {
     ["bash_empty"] = {
         Source = "melee_empty",
     },
+    ["1_bash"] = {
+        Source = "melee2",
+    },
     ["fire"] = {
         Source = {"fire"},
         EjectAt = 0,

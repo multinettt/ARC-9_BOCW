@@ -171,9 +171,9 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 4
 SWEP.RecoilSide = 0.1
-SWEP.RecoilUp = 0.2
+SWEP.RecoilUp = 0.4
 
 SWEP.RecoilRandomUp = 0.1
 SWEP.RecoilRandomSide = 0.1
@@ -567,12 +567,20 @@ SWEP.Attachments = {
         Integral = false
     },
     {
-        PrintName = "Tactical",
+        PrintName = "Tactical 1",
         Bone = "tag_weapon",
-        Pos = Vector(1, 0.6, 3),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_body_magnum"},
+        Icon_Offset = Vector(1.5, 0.6, 3),
+        Category = {"bocw_body1_magnum"},
+    },
+    {
+        PrintName = "Tactical 2",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0.8, 1.8),
+        Category = {"bocw_body2_magnum"},
     },
     {
         PrintName = "Barrel",
@@ -706,15 +714,18 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 0.6
+        Time = 0.3,
+        NoStatAffectors = true
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 3
+        Time = 3,
+        NoStatAffectors = true
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 0.3
+        Time = 0.3,
+        NoStatAffectors = true
     },
     ["enter_inspect"] = {
         Source = "inspect",
