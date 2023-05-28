@@ -530,9 +530,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_weapon",
-        Pos = Vector(7.1, 0, 2.55),
+        Pos = Vector(7.02, 0, 2.557),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
+        Category = {"bocw_1911_muzzle", "bocw_pistol_muzzle"},
         Attached = "bocw_muzzle_1911",
         Integral = false
     },
@@ -571,7 +571,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0.4, 0, 0.4),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(-0.25, 0, -0.5),
         Category = {"bocw_1911_wrap"},
     },
     {

@@ -261,13 +261,13 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.diamatti_fire"                            -- Fire
+SWEP.ShootSound = "ARC9_BOCW.Diamatti_fire"                            -- Fire
 SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.diamatti_fire_silenced"                    -- Fire silenced
+SWEP.ShootSoundSilenced = "ARC9_BOCW.1911_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.diamatti_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.Diamatti_fire_dist"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
 SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
@@ -538,9 +538,16 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(7.1, 0, 2.55),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_45_west_muzzle", "bo1_muzzle"},
-        Attached = "bocw_muzzle_diamatti",
+        Category = {"bocw_diamatti_muzzle", "bocw_pistol_muzzle"},
         Integral = false
+    },
+    {
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_diamatti_muzzle_comp"},
+        MergeSlots = {3,2},
+        Hidden = true
     },
     {
         PrintName = "Tactical",
