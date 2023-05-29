@@ -25,6 +25,8 @@ ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"1911_mag_ext", "maggone"}
 
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_1911_magazine_ext1.mdl"
+
 ARC9.LoadAttachment(ATT, "bocw_1911_magazine_ext1")
 
 ATT = {}
@@ -51,6 +53,8 @@ ATT.ActivateElements = {"1911_mag_fast", "maggone"}
 ATT.ClipSizeOverride = 8
 
 ATT.ReloadTimeMult = 0.8
+
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_1911_magazine_fast1.mdl"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_magazine_fast1")
 
@@ -108,6 +112,8 @@ ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"1911_mag_ext", "maggone"}
 
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_1911_magazine_extpro.mdl"
+
 ARC9.LoadAttachment(ATT, "bocw_1911_magazine_extpro")
 
 ATT = {}
@@ -135,6 +141,8 @@ ATT.ClipSizeOverride = 8
 ATT.ReloadTimeMult = 0.6
 
 ATT.AimDownSightsTimeMult = 1.06
+
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_1911_magazine_fastpro.mdl"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_magazine_fastpro")
 

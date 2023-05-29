@@ -148,6 +148,19 @@ SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 
+SWEP.ShouldDropMag = false
+SWEP.ShouldDropMagEmpty = false
+
+SWEP.DropMagazineModel = nil -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineSounds = {} -- Table of sounds a dropped magazine should play.
+SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
+SWEP.DropMagazineSkin = 0 -- Model skin of mag.
+SWEP.DropMagazineTime = 2
+SWEP.DropMagazineQCA = nil -- QC Attachment drop mag from, would drop from shell port if not defined
+SWEP.DropMagazinePos = Vector(0, -8, -6) -- offsets
+SWEP.DropMagazineAng = Angle(0, -90, 0)
+SWEP.DropMagazineVelocity = Vector(0, -60, 0) -- Put something here if your anim throws the mag with force
+
 -------------------------- FIREMODES
 
 SWEP.RPM = 400
@@ -298,9 +311,12 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
+SWEP.AfterShotEffect = "arc9_aftershoteffect"
+
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
+SWEP.NoShellEject = true
 
 SWEP.ShellScale = 1.1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -336,12 +352,10 @@ SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
     "tag_clip1",
-    "tag_bullet_animate1",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    [1] = {"tag_clip1"},
-    [2] = {"tag_bullet_animate1"},
-    -- [2] = {"list", "of", "bones"}
+    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate"},
+    [2] = {"tag_clip1"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -650,63 +664,84 @@ SWEP.Animations = {
         Source = "fire_optic",
         EjectAt = 0,
     },
+    ["fire_empty"] = {
+        Source = {"fire_empty"},
+        EjectAt = 0,
+    },
+    ["fire_optic_empty"] = {
+        Source = "fire_optic_empty",
+        EjectAt = 0,
+    },
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 1.52,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
             { s = "ARC9_BOCW.1911_reload_magin", t = 0.8 },
             { s = "ARC9_BOCW.1911_reload_end", t = 1.3 },
+            { hide = 2, t = 0 },
+            { hide = 0, t = 0.2 },
+            { hide = 1, t = 1.1 },
+            { hide = 2, t = 1.3 },
+            { hide = 0, t = 1.95 },
+            { hide = 2, t = 1.96 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 1.52,
+        MinProgress = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.3 },
             { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1 },
             { s = "ARC9_BOCW.1911_slideback", t = 1.5 },
             { s = "ARC9_BOCW.1911_sliderelease", t = 1.6 },
             { s = "ARC9_BOCW.1911_reload_end", t = 1.8 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 1.62,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
             { s = "ARC9_BOCW.1911_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.1911_reload_end", t = 1.6 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
-        MinProgress = 1.62,
+        MinProgress = 0.55,
         MagSwapTime = 1,
+        DropMagAt = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_empty_magout", t = 0.4 },
             { s = "ARC9_BOCW.1911_reload_empty_magin", t = 1.1 },
             { s = "ARC9_BOCW.1911_slideback", t = 1.9 },
             { s = "ARC9_BOCW.1911_sliderelease", t = 2 },
             { s = "ARC9_BOCW.1911_reload_end", t = 2.2 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        --MinProgress = 1.52,
+        MinProgress = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
             { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1.2 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
-        --MinProgress = 1.52,
+        MinProgress = 0.52,
+        DropMagAt = 0.85,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_fast_magout", t = 0.25 },
             { s = "ARC9_BOCW.1911_reload_fast_magin", t = 1 },
             { s = "ARC9_BOCW.1911_reload_fast_sliderelease", t = 1.7 },
+            { hide = 2, t = 0 },
         },
     },
     ["enter_sprint"] = {

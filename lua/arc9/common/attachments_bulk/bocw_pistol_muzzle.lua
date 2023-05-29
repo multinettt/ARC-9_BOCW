@@ -1,4 +1,4 @@
-local ATT = {} --Compensators:5 
+local ATT = {} --Compensator:5 60 115 FlashHider:170 227 284 Suppressor:341 372 404
 
 ATT = {} -- COMPENSATORS -- 1911 =========================================
 
