@@ -1,4 +1,4 @@
-local ATT = {} --24Rnd:5 Jngl:33 21RndSpd:56 30Rnd:84 SAS:112 Salvo:137
+local ATT = {} --24Rnd:5 Fast:34 21RndSpd:62 30Rnd:92 Vandal:122 Salvo:152
 
 ATT = {}
 
@@ -25,6 +25,8 @@ ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"diamatti_mag_ext", "maggone"}
 
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_ext1.mdl"
+
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_ext1")
 
 ATT = {}
@@ -46,9 +48,12 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"diamatti_mag_fast"}
+ATT.ActivateElements = {"diamatti_mag_fast", "maggone"}
 
 ATT.ReloadTimeMult = 0.8
+
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_fast1.mdl"
+ATT.DropMagazineVelocity = Vector(0, -20, 0)
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_fast1")
 
@@ -78,6 +83,8 @@ ATT.ReloadTimeMult = 0.75
 
 ATT.ActivateElements = {"diamatti_mag_mix", "maggone"}
 
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_mix1.mdl"
+
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_mix1")
 
 ATT = {}
@@ -106,6 +113,8 @@ ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"diamatti_mag_ext", "maggone"}
 
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_extpro.mdl"
+
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_extpro")
 
 ATT = {}
@@ -127,11 +136,14 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"diamatti_mag_fast"}
+ATT.ActivateElements = {"diamatti_mag_fast", "maggone"}
 
 ATT.ReloadTimeMult = 0.6
 
 ATT.AimDownSightsTimeMult = 1.06
+
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_fastpro.mdl"
+ATT.DropMagazineVelocity = Vector(0, -20, 0)
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_dualpro")
 
@@ -160,5 +172,7 @@ ATT.MultAimDownSightsTime = 1.06
 ATT.ReloadTimeMult = 0.6
 
 ATT.ActivateElements = {"diamatti_mag_mix", "maggone"}
+
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_diamatti_magazine_mixpro.mdl"
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_magazine_mixpro")

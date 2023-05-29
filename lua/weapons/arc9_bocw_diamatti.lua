@@ -7,7 +7,7 @@
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
---   BUILD : v0.2
+--   BUILD : v1.0
 --   SR.NO : 133107
 
 
@@ -147,6 +147,19 @@ SWEP.ReloadWhileSprint = true -- This weapon can reload while the user is sprint
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 
 SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
+
+SWEP.ShouldDropMag = false
+SWEP.ShouldDropMagEmpty = false
+
+SWEP.DropMagazineModel = "models/weapons/arc9/atts/bocw_diamatti_magazine.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineSounds = {} -- Table of sounds a dropped magazine should play.
+SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
+SWEP.DropMagazineSkin = 0 -- Model skin of mag.
+SWEP.DropMagazineTime = 2
+SWEP.DropMagazineQCA = nil -- QC Attachment drop mag from, would drop from shell port if not defined
+SWEP.DropMagazinePos = Vector(0, -8, -6) -- offsets
+SWEP.DropMagazineAng = Angle(0, -90, 0)
+SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 
@@ -307,6 +320,7 @@ SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 
 SWEP.ShellSmoke = true
+SWEP.NoShellEject = true
 
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -348,10 +362,10 @@ SWEP.HideBones = {
     "tag_bullet_deplete_sqtl_02_animate1",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
-    [1] = {"tag_clip1"},
-    [2] = {"tag_bullet_deplete_sqtl_00_animate1"},
-    [3] = {"tag_bullet_deplete_sqtl_01_animate1"},
-    [4] = {"tag_bullet_deplete_sqtl_02_animate1"},
+    [0] = {},
+    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [2] = {"tag_clip1", "tag_bullet_deplete_sqtl_00_animate1", "tag_bullet_deplete_sqtl_01_animate1", "tag_bullet_deplete_sqtl_02_animate1"},
+    [3] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate", "tag_clip1", "tag_bullet_deplete_sqtl_00_animate1", "tag_bullet_deplete_sqtl_01_animate1", "tag_bullet_deplete_sqtl_02_animate1"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -538,6 +552,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(7.1, 0, 2.55),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0.48, 0, 0.1),
         Category = {"bocw_diamatti_muzzle", "bocw_pistol_muzzle"},
         Integral = false
     },
@@ -644,61 +659,81 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 1.52,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.45 },
             { s = "ARC9_BOCW.diamatti_reload_magin", t = 0.8 },
             { s = "ARC9_BOCW.diamatti_reload_end", t = 1.3 },
+            { hide = 2, t = 0 },
+            { hide = 0, t = 0.3 },
+            { hide = 3, t = 1.1 },
+            { hide = 2, t = 1.5 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 1.52,
+        MinProgress = 0.5,
+        DropMagAt = 0.4,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.3 },
             { s = "ARC9_BOCW.diamatti_reload_magin", t = 1 },
             { s = "ARC9_BOCW.diamatti_slideback", t = 1.5 },
             { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.6 },
             { s = "ARC9_BOCW.diamatti_reload_end", t = 2 },
+            { hide = 2, t = 0 },
+            { hide = 3, t = 0.4 },
+            { hide = 2, t = 0.85 },
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 1.62,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.45 },
             { s = "ARC9_BOCW.diamatti_reload_magin", t = 0.8 },
             { s = "ARC9_BOCW.diamatti_reload_end", t = 1.3 },
+            { hide = 2, t = 0 },
+            { hide = 0, t = 0.3 },
+            { hide = 3, t = 1.1 },
+            { hide = 2, t = 1.5 },
         },
     },
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
-        MinProgress = 1.62,
+        MinProgress = 0.5,
         MagSwapTime = 1,
+        DropMagAt = 0.4,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_empty_magout", t = 0.3 },
             { s = "ARC9_BOCW.diamatti_reload_magin", t = 1 },
             { s = "ARC9_BOCW.diamatti_slideback", t = 1.5 },
             { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.6 },
             { s = "ARC9_BOCW.diamatti_reload_end", t = 2 },
+            { hide = 2, t = 0 },
+            { hide = 3, t = 0.4 },
+            { hide = 2, t = 0.85 },
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-        --MinProgress = 1.52,
+        MinProgress = 0.55,
+        DropMagAt = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.Diamatti_reload_fast_magin", t = 0.8 },
             { s = "ARC9_BOCW.diamatti_reload_end", t = 1.5 },
+            { hide = 2, t = 0 },
         },
     },
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
-        --MinProgress = 1.52,
+        MinProgress = 0.45,
+        DropMagAt = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.diamatti_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.diamatti_reload_fast_magin", t = 0.8 },
             { s = "ARC9_BOCW.diamatti_sliderelease", t = 1.5 },
+            { hide = 2, t = 0 },
         },
     },
     ["enter_sprint"] = {
