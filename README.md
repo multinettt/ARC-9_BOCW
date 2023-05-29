@@ -1,6 +1,6 @@
 # ARC-9 BOCW
 
-Early in development weapon pack for [ARC-9](https://github.com/HaodongMo/ARC-9)
+Early in development weapon pack for [ARC9](https://github.com/HaodongMo/ARC-9)
 
 Because of the sheer size of individual weapons, this pack and repository will be split into different weapon classes in the future.
 
