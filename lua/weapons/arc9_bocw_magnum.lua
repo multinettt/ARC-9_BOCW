@@ -344,9 +344,14 @@ SWEP.HideBones = {
     "tag_speedloader_bullets_animate",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
+    [0] = {},
     [1] = {"tag_bullet_01_animate"},
-    [2] = {"tag_speedloader_attach_animate"},
-    [3] = {"tag_speedloader_bullets_animate"},
+    [2] = {"tag_casing_01_animate", "tag_casing_02_animate", "tag_casing_03_animate", "tag_casing_04_animate", "tag_casing_05_animate", "tag_casing_06_animate"},
+    [3] = {"tag_bullet_01_animate", "tag_casing_01_animate", "tag_casing_02_animate", "tag_casing_03_animate", "tag_casing_04_animate", "tag_casing_05_animate", "tag_casing_06_animate"},
+    [4] = {"tag_bullet_01_animate", "tag_speedloader_attach_animate", "tag_speedloader_bullets_animate"},
+    [5] = {"tag_bullet_01_animate", "tag_speedloader_attach_animate", "tag_speedloader_bullets_animate", "tag_casing_01_animate", "tag_casing_02_animate", "tag_casing_03_animate", "tag_casing_04_animate", "tag_casing_05_animate", "tag_casing_06_animate"},
+    [6] = {"tag_bullet_01_animate", "tag_speedloader_bullets_animate", "tag_casing_01_animate", "tag_casing_02_animate", "tag_casing_03_animate", "tag_casing_04_animate", "tag_casing_05_animate", "tag_casing_06_animate"},
+    [7] = {"tag_bullet_01_animate", "tag_moon_clip_top_animate", "tag_moon_clip_bot_animate", "tag_casing_01_animate", "tag_casing_02_animate", "tag_casing_03_animate", "tag_casing_04_animate", "tag_casing_05_animate", "tag_casing_06_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -674,6 +679,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 0.6 },
             { s = "ARC9_BOCW.Magnum_reload_casings", t = 1.2 },
             { s = "ARC9_BOCW.Magnum_reload_roundin", t = 1.3 },
+            { hide = 1, t = 0 },
+            { hide = 3, t = 1.1 },
         },
     },
     ["reload_insert"] = {
@@ -682,12 +689,14 @@ SWEP.Animations = {
         MinProgress = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.Magnum_reload_roundin", t = 0.3 },
+            { hide = 3, t = 0 },
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
         EventTable = {
             { s = "ARC9_BOCW.Magnum_cylinderin", t = 0.2 },
+            { hide = 1, t = 0 },
         },
     },
     ["reload_fast"] = {
@@ -699,6 +708,11 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Magnum_reload_casings", t = 2.3 },
             { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 2.9 },
             { s = "ARC9_BOCW.Magnum_cylinderin", t = 4.8 },
+            { hide = 4, t = 0 },
+            { hide = 5, t = 2.2 },
+            { hide = 2, t = 3.4 },
+            { hide = 6, t = 3.7 },
+            { hide = 4, t = 4.6 },
         },
     },
     ["reload_mix"] = {
@@ -710,6 +724,11 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Magnum_reload_casings", t = 2.3 },
             { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 3.3 },
             { s = "ARC9_BOCW.Magnum_cylinderin", t = 5.6 },
+            { hide = 4, t = 0 },
+            { hide = 5, t = 2.2 },
+            { hide = 2, t = 3.4 },
+            { hide = 6, t = 3.7 },
+            { hide = 4, t = 4.6 },
         },
     },
     ["enter_sprint"] = {

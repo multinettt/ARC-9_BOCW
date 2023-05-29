@@ -469,7 +469,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(9.15, 0, 2.55),
+                Pos = Vector(7.086, 0, 2.66),
             },
         },
     },
@@ -484,7 +484,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(8.21, 0, 2.55),
+                Pos = Vector(7.086, 0, 2.66),
             },
         },
     },
@@ -494,7 +494,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(9.15, 0, 2.55),
+                Pos = Vector(7.086, 0, 2.66),
             }
         },
     },
@@ -509,7 +509,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(8.21, 0, 2.55),
+                Pos = Vector(7.086, 0, 2.66),
             }
         },
     },
@@ -542,7 +542,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(1.25, 0, 3.34),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2.25, -0.5, -1.45),
+        Icon_Offset = Vector(3.1, -0.5, -1.6),
         DefaultName = "Iron Sights",
         Category = {"bocw_diamatti_opticmount"},
         InstalledElements = {"optic_mount"},
@@ -550,9 +550,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "tag_weapon",
-        Pos = Vector(7.1, 0, 2.55),
+        Pos = Vector(7.086, 0, 2.66),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.48, 0, 0.1),
+        Icon_Offset = Vector(0.48, 0, 0),
         Category = {"bocw_diamatti_muzzle", "bocw_pistol_muzzle"},
         Integral = false
     },
@@ -569,7 +569,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(5.9, 0.5606, 2.18),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(0, 0.3, -0.3),
         Category = {"bocw_body_diamatti"},
     },
     {
