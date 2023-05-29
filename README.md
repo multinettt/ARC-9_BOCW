@@ -76,14 +76,14 @@ UPDATE: Pistols will be released to the workshop soon. This repository will be s
 
 ### Muzzles:
 
-- Muzzle Brake (5.56, 7.62, 9)
-- Flash Guard (5.56, 7.62, 9)
+- Muzzle Brake (5.56, 7.62, 9, .45)
+- Flash Guard (5.56, 7.62, 9, .45)
 - Suppressor (5.56)
 - Silencer (7.62)
-- Sound Suppressor (9)
-- Infantry Compensator (5.56, 9)
+- Sound Suppressor (9, .45, .357)
+- Infantry Compensator (5.56, 9, .45, .357)
 - SOCOM Eliminator (5.56, 9)
-- Agency Suppressor (5.56, 9)
+- Agency Suppressor (5.56, 9, .45, .357)
 
 ### Tacticals:
 
