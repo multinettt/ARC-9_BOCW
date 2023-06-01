@@ -705,7 +705,7 @@ SWEP.Animations = {
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.1911_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.1911_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.1911_reload_magin", t = 1.2 },
             { s = "ARC9_BOCW.1911_reload_end", t = 1.6 },
             { hide = 2, t = 0 },
         },

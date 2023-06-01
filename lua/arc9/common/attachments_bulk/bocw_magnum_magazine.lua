@@ -2,8 +2,8 @@ local ATT = {} --6Rnd:5 Fast:33 6RndSpd:53 6Rnd:84 SAS:112 Salvo:137
 
 ATT = {}
 
-ATT.PrintName = "6 Rnd" --// 1
-ATT.CompactName = "6 RND"
+ATT.PrintName = "6 Rnd .41 Remington Magnum" --// 1
+ATT.CompactName = "6 RND .41"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_ext1.png", "mips smooth")
 ATT.Description = [[Round revolver cylinder holds 6 rounds.
 
@@ -50,7 +50,7 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_fast1")
 
 ATT = {}
 
-ATT.PrintName = "6 Rnd Speed Mag" --// 3
+ATT.PrintName = "6 Rnd Speed Mag .41 Remington Magnum" --// 3
 ATT.CompactName = "6 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_mix1.png", "mips smooth")
 ATT.Description = [[Hexagonal cylinder with moonclip speedloader improves reload speed.
@@ -80,10 +80,10 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "STANAG 6 Rnd" --// 4
-ATT.CompactName = "6 RND"
+ATT.PrintName = "STANAG 6 Rnd .44 Smith & Wesson Special" --// 4
+ATT.CompactName = "6 RND .44SW"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_extpro.png", "mips smooth")
-ATT.Description = [[Custom revolver cylinder holds 6 rounds.
+ATT.Description = [[Custom revolver cylinder holds 6 .44 S&W rounds.
 
 The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
 
@@ -131,7 +131,7 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_fastpro")
 
 ATT = {}
 
-ATT.PrintName = "Salvo 6 Rnd Fast Mag" --// 6
+ATT.PrintName = "Salvo 6 Rnd Fast Mag .44 Smith & Wesson Special" --// 6
 ATT.CompactName = "6 RND FAST"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_mixpro.png", "mips smooth")
 ATT.Description = [[Lightweight hexagonal revolver cylinder contains 6 rounds and improves reload speed.
