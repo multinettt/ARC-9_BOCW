@@ -314,7 +314,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_1" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
@@ -740,16 +740,24 @@ SWEP.Animations = {
         Source = "supersprint_in",
         Time = 2
     },
-    ["enter_sprint_walk"] = {
-        Source = "sprint_in",
-        Time = 0.6
-    },
     ["idle_sprint"] = {
         Source = "sprint_loop",
         Time = 3
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 0.4
+    },
+    ["enter_sprint_empty"] = {
+        Source = "supersprint_in_empty",
+        Time = 2
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 3
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
         Time = 0.4
     },
     ["enter_inspect"] = {

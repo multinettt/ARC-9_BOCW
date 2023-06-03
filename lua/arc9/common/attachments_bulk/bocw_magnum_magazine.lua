@@ -2,7 +2,7 @@ local ATT = {} --6Rnd:5 Fast:33 6RndSpd:53 6Rnd:84 SAS:112 Salvo:137
 
 ATT = {}
 
-ATT.PrintName = "6 Rnd .41 Remington Magnum" --// 1
+ATT.PrintName = "6 Rnd .41 Magnum" --// 1
 ATT.CompactName = "6 RND .41"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_ext1.png", "mips smooth")
 ATT.Description = [[Round revolver cylinder holds 6 rounds.
@@ -19,9 +19,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 6
+ATT.DamageMaxMult = 1.2
+ATT.RangeMaxMult = 1.2
+ATT.PhysBulletMuzzleVelocityMult = 1.5
 
---ATT.ReloadTimeMult = 1.33
+ATT.Recoil = 1.95
+ATT.RecoilUpMult = 1.3
+ATT.RecoilSideMult = 1.2
+
+ATT.ReloadTimeMult = 1.33
 
 ATT.ActivateElements = {"magnum_mag_ext", "maggone"}
 
@@ -50,7 +56,7 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_fast1")
 
 ATT = {}
 
-ATT.PrintName = "6 Rnd Speed Mag .41 Remington Magnum" --// 3
+ATT.PrintName = "6 Rnd Speed Mag .41 Magnum" --// 3
 ATT.CompactName = "6 RND SPD"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_mix1.png", "mips smooth")
 ATT.Description = [[Hexagonal cylinder with moonclip speedloader improves reload speed.
@@ -67,7 +73,13 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 6
+ATT.DamageMaxMult = 1.2
+ATT.RangeMaxMult = 1.2
+ATT.PhysBulletMuzzleVelocityMult = 1.5
+
+ATT.Recoil = 1.95
+ATT.RecoilUpMult = 1.3
+ATT.RecoilSideMult = 1.2
 
 ATT.AimDownSightsTimeMult = 1.15
 ATT.ReloadTimeMult = 0.44
@@ -80,10 +92,10 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "STANAG 6 Rnd .44 Smith & Wesson Special" --// 4
+ATT.PrintName = "STANAG 6 Rnd .44 Magnum" --// 4
 ATT.CompactName = "6 RND .44SW"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_extpro.png", "mips smooth")
-ATT.Description = [[Custom revolver cylinder holds 6 .44 S&W rounds.
+ATT.Description = [[Custom revolver cylinder holds 6 .44 Magnum rounds.
 
 The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
 
@@ -97,10 +109,16 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 6
+ATT.DamageMaxMult = 1.8
+ATT.RangeMaxMult = 1.8
+ATT.PhysBulletMuzzleVelocityMult = 2.2
 
---ATT.AimDownSightsTimeMult = 1.15
---ATT.ReloadTimeMult = 1.67
+ATT.Recoil = 5
+ATT.RecoilUpMult = 2
+ATT.RecoilSideMult = 1.35
+
+ATT.AimDownSightsTimeMult = 1.15
+ATT.ReloadTimeMult = 1.3
 
 ATT.ActivateElements = {"magnum_mag_ext", "maggone"}
 
@@ -131,10 +149,10 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_fastpro")
 
 ATT = {}
 
-ATT.PrintName = "Salvo 6 Rnd Fast Mag .44 Smith & Wesson Special" --// 6
+ATT.PrintName = "Salvo 6 Rnd Fast Mag .44 Magnum" --// 6
 ATT.CompactName = "6 RND FAST"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_mixpro.png", "mips smooth")
-ATT.Description = [[Lightweight hexagonal revolver cylinder contains 6 rounds and improves reload speed.
+ATT.Description = [[Lightweight hexagonal revolver cylinder contains 6 powerful rounds and improves reload speed.
 
 The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
 
@@ -148,7 +166,13 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 6
+ATT.DamageMaxMult = 1.8
+ATT.RangeMaxMult = 1.8
+ATT.PhysBulletMuzzleVelocityMult = 2.2
+
+ATT.Recoil = 5
+ATT.RecoilUpMult = 2
+ATT.RecoilSideMult = 1.35
 
 ATT.MultAimDownSightsTime = 1.25
 ATT.ReloadTimeMult = 0.35

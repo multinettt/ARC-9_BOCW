@@ -76,7 +76,7 @@ SWEP.ViewModelFOVBase = 70
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 50 -- Damage done at point blank range
+SWEP.DamageMax = 80 -- Damage done at point blank range
 SWEP.DamageMin = 28 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.01 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
@@ -173,7 +173,7 @@ SWEP.Firemodes = {
 
 SWEP.Recoil = 4
 SWEP.RecoilSide = 0.1
-SWEP.RecoilUp = 0.4
+SWEP.RecoilUp = 1.4
 
 SWEP.RecoilRandomUp = 0.1
 SWEP.RecoilRandomSide = 0.1
@@ -297,7 +297,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_1" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"

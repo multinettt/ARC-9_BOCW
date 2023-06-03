@@ -134,7 +134,7 @@ ATT.CompactName = [[5.63" TACOP]]
 ATT.Icon = Material("entities/bocw_atts/barrels/1911_tacops.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel machine rifled to improve damage range.
 
-The Takedown barrel is a barrel attachment type in Call of Duty: Black Ops Cold War available for Assault Rifles and the AMP63 pistol. It increases effective damage range at the cost of sprinting movement speed.]]
+The Tac Ops barrel is a barrel attachment type in Call of Duty: Black Ops Cold War available for the 1911 and Diamatti pistols. It increases effective damage range at the cost of sprinting movement speed.]]
 
 ATT.SortOrder = 5.63
 
