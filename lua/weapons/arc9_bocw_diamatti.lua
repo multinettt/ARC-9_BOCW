@@ -767,6 +767,13 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.diamatti_inspect", t = 0 },
         },
     },
+    ["enter_inspect_empty"] = {
+        Source = "inspect_empty",
+        Time = 5.8,
+        EventTable = {
+            { s = "ARC9_BOCW.diamatti_inspect", t = 0 },
+        },
+    },
 }
 --[[
 SWEP.HookP_NameChange = function(self, name)
