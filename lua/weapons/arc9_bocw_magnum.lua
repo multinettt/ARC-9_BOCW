@@ -257,21 +257,21 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.magnum_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.magnum_fire_silenced"                    -- Fire silenced
+SWEP.ShootSound = "ARC9_BOCW.Magnum_fire"                            -- Fire
+SWEP.ShootSoundIndoor = "ARC9_BOCW.Magnum_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.Magnum_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.magnum_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.Shared_Decay_Close_Rifle"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
-SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
+SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Null"            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_revolver.wav"
+SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_Revolver"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -688,7 +688,7 @@ SWEP.Animations = {
         NoMagSwap = true,
         MinProgress = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.Magnum_reload_roundin", t = 0.3 },
+            { s = "ARC9_BOCW.Magnum_reload_roundin", t = 0.2 },
             { hide = 3, t = 0 },
         },
     },
@@ -722,7 +722,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.15 },
             { s = "ARC9_BOCW.Magnum_cylinder_eject", t = 1 },
             { s = "ARC9_BOCW.Magnum_reload_casings", t = 2.3 },
-            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 3.3 },
+            { s = "ARC9_BOCW.Magnum_reload_fast_speedloader", t = 3.4 },
             { s = "ARC9_BOCW.Magnum_cylinderin", t = 5.6 },
             { hide = 4, t = 0 },
             { hide = 5, t = 2.2 },
@@ -732,8 +732,8 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 0.3,
+        Source = "supersprint_in",
+        Time = 0.8,
         NoStatAffectors = true
     },
     ["idle_sprint"] = {
@@ -749,8 +749,8 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.8 },
-            { s = "ARC9_BOCW.Magnum_cylinderin", t = 4.3 },
+            { s = "ARC9_BOCW.Magnum_cylinderout", t = 0.75 },
+            { s = "ARC9_BOCW.Magnum_cylinderin", t = 4.25 },
         },
     },
 }

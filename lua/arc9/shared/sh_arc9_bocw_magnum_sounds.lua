@@ -149,7 +149,8 @@ sound.Add({
 
 sound.Add({
     name = "ARC9_BOCW.Magnum_fire_int_decay",
-    channel = CHAN_AUTO,
-    volume = 0.35,
-    sound = "weapons/arc9/bocw/ar_fire_interior.wav"
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    sound = "weapons/arc9/bocw_magnum/magnum_fire_interior.wav"
 })

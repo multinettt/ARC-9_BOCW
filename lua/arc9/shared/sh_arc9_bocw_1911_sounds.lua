@@ -90,6 +90,13 @@ sound.Add({
     sound = "weapons/arc9/bocw_1911/1911_ready_slideback.wav"
 })
 
+sound.Add({
+    name = "ARC9_BOCW.1911_fire_last",
+    channel = CHAN_AUTO,
+    volume = 0.6,
+    sound = "weapons/arc9/bocw_1911/1911_fire_last_end.wav"
+})
+
 -- INSPECT AND RELOAD FOLEY
 
 sound.Add({
@@ -158,13 +165,6 @@ sound.Add({ -- BLACK OPS
 })
 
 sound.Add({
-    name = "ARC9_BOCW.1911_fire_dist",
-    channel = CHAN_AUTO,
-    volume = 0.4,
-    sound = "weapons/arc9/bocw/rifle_fire_distant.wav"
-})
-
-sound.Add({
     name = "ARC9_BOCW.1911_fire_silenced",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -173,7 +173,8 @@ sound.Add({
 
 sound.Add({
     name = "ARC9_BOCW.1911_fire_int_decay",
-    channel = CHAN_AUTO,
-    volume = 0.35,
-    sound = "weapons/arc9/bocw/ar_fire_interior.wav"
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_1911/1911_fire_interior.wav"
 })

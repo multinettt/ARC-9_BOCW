@@ -93,7 +93,7 @@ ARC9.LoadAttachment(ATT, "bocw_magnum_magazine_mix1")
 ATT = {}
 
 ATT.PrintName = "STANAG 6 Rnd .44 Magnum" --// 4
-ATT.CompactName = "6 RND .44SW"
+ATT.CompactName = "6 RND .44"
 ATT.Icon = Material("entities/bocw_atts/magazines/magnum_extpro.png", "mips smooth")
 ATT.Description = [[Custom revolver cylinder holds 6 .44 Magnum rounds.
 

@@ -269,20 +269,20 @@ SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
 SWEP.ShootSound = "ARC9_BOCW.1911_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundIndoor = "ARC9_BOCW.1911_fire_int_decay"                  -- Fire indoors
 SWEP.ShootSoundSilenced = "ARC9_BOCW.1911_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.1911_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.Shared_Decay_Close_Pistol"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
-SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
+SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Null"            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "weapons/arc9/bocw/dryfire_pistol.wav"
+SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_Pistol"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -667,10 +667,16 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = {"fire_empty"},
         EjectAt = 0,
+        EventTable = {
+            { s = "ARC9_BOCW.1911_fire_last", t = 0 },
+        },
     },
     ["fire_optic_empty"] = {
         Source = "fire_optic_empty",
         EjectAt = 0,
+        EventTable = {
+            { s = "ARC9_BOCW.1911_fire_last", t = 0 },
+        },
     },
     ["reload"] = {
         Source = "reload",

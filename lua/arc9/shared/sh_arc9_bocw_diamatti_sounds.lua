@@ -135,7 +135,7 @@ sound.Add({
 
 sound.Add({
     name = "ARC9_BOCW.Diamatti_fire_int_decay",
-    channel = CHAN_AUTO,
-    volume = 0.35,
-    sound = "weapons/arc9/bocw/ar_fire_interior.wav"
+    channel = CHAN_STATIC,
+    volume = 1,
+    sound = "weapons/arc9/bocw_diamatti/diamatti_fire_interior.wav"
 })
