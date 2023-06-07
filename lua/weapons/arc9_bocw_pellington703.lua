@@ -1,9 +1,9 @@
 --=============================================================================
---   CALL OF DUTY: BLACK OPS COLD WAR        // can someone that knows the base better unfuck this and the m60's code
---   Pellington 703                          // theres two hundred percent stinky stuff in here that i dont know more about
---   LUA - MAIN                              // this is my first ever arc9 gun ever
+--   CALL OF DUTY: BLACK OPS COLD WAR
+--   Pellington 703
+--   LUA - MAIN
 --=============================================================================
---[[                                         // i tried camos as well, couldnt get them to work at all
+--[[
 --   SWEP INFORMATION:
 
 --   BASE  : ARC-9
@@ -20,8 +20,6 @@ ooooooooo.             oooo  oooo   o8o                             .           
 o888o        `Y8bod8P' o888o o888o o888o o888o o888o `8oooooo.    "888" `Y8bod8P' o888o o888o      .8'       `Y8bd8P'  `8bd88P'   
                                                      d"     YD                                                                    
                                                      "Y88888P'                                                                    
-                                                                
-                                            
 ]]
 
 AddCSLuaFile()
@@ -31,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
---SWEP.SubCategory = "Sniper Rifles"
+SWEP.SubCategory = "WIP"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Pellington 703"

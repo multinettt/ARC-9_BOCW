@@ -1,4 +1,4 @@
-local ATT = {} --ANPVS:5 AXARM:84 HNGMN:133 NSOVA:217 LEUPO:296 RO&KR:350 SUSAT:400 ULTRAZ:451 VSTCH:497 VLTUR:546
+local ATT = {} --ANPVS:5 AXARM:84 HNGMN:133 NSOVA:217 UNRTL:296 RO&KR:350 SUSAT:400 ULTRAZ:451 VSTCH:497 VLTUR:546
 
 ATT = {}
 
@@ -293,8 +293,8 @@ ARC9.LoadAttachment(ATT, "bocw_optic_nochsovathermal")
 
 ATT = {}
 
-ATT.PrintName = "Leupold 8x"
-ATT.CompactName = "LPOLD 8x"
+ATT.PrintName = "Unertl USMC Sniper Scope 10x"
+ATT.CompactName = "UNERTL 10x"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[ ]]
 ATT.SortOrder = 8

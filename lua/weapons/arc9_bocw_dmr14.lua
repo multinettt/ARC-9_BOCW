@@ -1,7 +1,7 @@
 --=============================================================================
---   CALL OF DUTY: BLACK OPS COLD WAR        // can someone that knows the base better unfuck this and the m60's code
---   DMR 14                                  // theres two hundred percent stinky stuff in here that i dont know more about
---   LUA - MAIN                              // this is my first ever arc9 gun ever
+--   CALL OF DUTY: BLACK OPS COLD WAR        
+--   DMR 14                                  
+--   LUA - MAIN                              
 --=============================================================================
 --[[
 --   SWEP INFORMATION:
@@ -29,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
---SWEP.SubCategory = "Tactical Rifles"
+SWEP.SubCategory = "WIP"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "DMR 14"

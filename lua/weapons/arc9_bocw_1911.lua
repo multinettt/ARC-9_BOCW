@@ -29,7 +29,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
---SWEP.SubCategory = "Assault Rifles" -- use when more guns
+SWEP.SubCategory = "Pistols"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "1911"
@@ -587,12 +587,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-0.25, 0, -0.5),
         Category = {"bocw_1911_wrap"},
-    },
-    {
-        PrintName = "Sound",
-        DefaultName = "BOCW Sound",
-        DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_1911_sound"},
     },
     {
         PrintName = "Cosmetic",
