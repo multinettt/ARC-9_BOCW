@@ -26,7 +26,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_extended"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.Attachments = {
     {
@@ -68,7 +68,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_cavalrylancer"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_cavalry")
 
@@ -102,7 +102,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_vdvreinforced"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.Attachments = {
     {
@@ -145,7 +145,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_liberator"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.Attachments = {
     {
@@ -188,7 +188,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_rifled"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_rifled")
 
@@ -223,7 +223,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_taskforce"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.Attachments = {
     {
@@ -259,6 +259,6 @@ ATT.ReloadTimeMult = 0.95
 
 ATT.ActivateElements = {"magwellattached"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_magwell")

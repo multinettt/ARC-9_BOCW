@@ -23,4 +23,4 @@ ATT.RecoilUpMult = 0.87
 ATT.SpeedMultShooting = 0.9
 ATT.RecoilSideMult = 1.15
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"

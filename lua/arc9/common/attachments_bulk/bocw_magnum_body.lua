@@ -45,7 +45,7 @@ ATT.LaserAttachment = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_body_laser")
 
@@ -100,7 +100,7 @@ ATT.FlashlightAttachment = 2
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_body_flashlight")
 
@@ -154,7 +154,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.SpreadMultHipFire = 0.6
 ATT.AimDownSightsTimeMult = 1.08
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_body_laserpro")
 
@@ -211,6 +211,6 @@ ATT.FlashlightAttachment = 2
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_body_flashlightpro")

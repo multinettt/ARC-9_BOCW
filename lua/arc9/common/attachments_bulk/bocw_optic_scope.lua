@@ -75,7 +75,7 @@ ATT.ScopeScreenRatio = 0.7
 ATT.ModelOffset = Vector(0, 0, 0.087)
 ATT.Scale = 1
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_anpvs4thermal")
 
@@ -124,7 +124,7 @@ ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(0, 0, 0)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_axialarms3x")
 
@@ -208,7 +208,7 @@ end
 
 end
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_hangmanrf")
 
@@ -287,7 +287,7 @@ ATT.ScopeScreenRatio = 0.7
 ATT.ModelOffset = Vector(0, 0, 0.087)
 ATT.Scale = 1
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_nochsovathermal")
 
@@ -341,7 +341,7 @@ ATT.FreeAimRadiusMultSights = 0.1
 ATT.AimDownSightsTimeAdd = 0
 ATT.SprintToFireTimeAdd = 0.08
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_pellingtonscope")
 
@@ -391,7 +391,7 @@ ATT.ScopeScreenRatio = 0.7
 ATT.ModelOffset = Vector(-1, 0, -0.04)
 ATT.Scale = 0.84
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_royalkross4x")
 
@@ -442,7 +442,7 @@ ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(0, 0, 0.2)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_susatmultizoom")
 
@@ -488,7 +488,7 @@ ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(-1.3, 0, 0)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_ultrazoomcustom")
 
@@ -537,7 +537,7 @@ ATT.ScopeScreenRatio = 0.8
 
 ATT.ModelOffset = Vector(-0.5, 0, 0.18)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_visiontech2x")
 
@@ -583,6 +583,6 @@ ATT.ScopeScreenRatio = 0.7
 
 ATT.ModelOffset = Vector(0, 0, 0.2)
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_optic_vulturecustomzoom")

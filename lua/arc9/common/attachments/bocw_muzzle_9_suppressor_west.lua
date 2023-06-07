@@ -23,6 +23,6 @@ ATT.ShootVolumeMult = 0.8
 
 ATT.RangeMaxMult = 0.85
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.ExcludeElements = {"bocw_mp5sd"}

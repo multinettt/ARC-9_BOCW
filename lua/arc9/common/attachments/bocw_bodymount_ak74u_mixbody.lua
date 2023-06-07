@@ -3,7 +3,7 @@ ATT.CompactName = "MIXBDY MNT"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[Mount for attaching laser&light combo tacticals on the AK-74 handguard.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 ATT.Free = true
 
 ATT.Category = {"bocw_ak74u_body"}

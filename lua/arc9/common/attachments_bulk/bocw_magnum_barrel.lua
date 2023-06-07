@@ -23,7 +23,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.4
 
 ATT.ActivateElements = {"barrel_extended"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_extended")
 
@@ -51,7 +51,7 @@ ATT.ArmorPiercingMult = 3.5
 
 ATT.ActivateElements = {"barrel_cavalrylancer"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_cavalry")
 
@@ -82,7 +82,7 @@ ATT.SpeedMultSights = 0.85
 
 ATT.ActivateElements = {"barrel_reinforcedheavy"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_reinforcedheavy")
 
@@ -111,7 +111,7 @@ ATT.SpeedMultSights = 0.75
 
 ATT.ActivateElements = {"barrel_chromelined"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_chromelined")
 
@@ -142,7 +142,7 @@ ATT.RecoilUpMult = 1.33
 
 ATT.ActivateElements = {"barrel_tacops"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_tacops")
 
@@ -175,6 +175,6 @@ ATT.SupplyLimit = 4
 
 ATT.ActivateElements = {"barrel_taskforce"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_barrel_taskforce")

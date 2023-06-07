@@ -23,7 +23,7 @@ ATT.MuzzleDevice = true
 
 ATT.RecoilUpMult = 0.95
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_muzzle_compensator")
 
@@ -51,7 +51,7 @@ ATT.MuzzleDevice = true
 ATT.RecoilUpMult = 0.88
 ATT.RecoilSideMult = 1.08
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_muzzle_compensatorpro")
 
@@ -78,7 +78,7 @@ ATT.MuzzleDevice = true
 
 ATT.RecoilUpMult = 0.95
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_muzzle_compensator")
 
@@ -106,7 +106,7 @@ ATT.MuzzleDevice = true
 ATT.RecoilUpMult = 0.88
 ATT.RecoilSideMult = 1.08
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_muzzle_compensatorpro")
 
@@ -133,7 +133,7 @@ ATT.MuzzleDevice = true
 
 ATT.RecoilUpMult = 0.95
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_muzzle_compensator")
 
@@ -161,7 +161,7 @@ ATT.MuzzleDevice = true
 ATT.RecoilUpMult = 0.88
 ATT.RecoilSideMult = 1.08
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_muzzle_compensatorpro")
 
@@ -187,7 +187,7 @@ ATT.MuzzleParticleOverride = "muzzleflash_pistol"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_muzzle_flashhider")
 
@@ -218,7 +218,7 @@ ATT.RecoilUpMult = 0.83
 ATT.SpeedMultShooting = 0.9
 ATT.RecoilSideMult = 1.1
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_muzzle_flashhiderpro")
 
@@ -244,7 +244,7 @@ ATT.MuzzleParticleOverride = "muzzleflash_pistol"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_muzzle_flashhider")
 
@@ -275,7 +275,7 @@ ATT.RecoilUpMult = 0.83
 ATT.SpeedMultShooting = 0.9
 ATT.RecoilSideMult = 1.07
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_diamatti_muzzle_flashhiderpro")
 
@@ -301,7 +301,7 @@ ATT.MuzzleParticleOverride = "muzzleflash_pistol"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_muzzle_flashhider")
 
@@ -332,7 +332,7 @@ ATT.RecoilUpMult = 0.83
 ATT.SpeedMultShooting = 0.9
 ATT.RecoilSideMult = 1.07
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_muzzle_flashhiderpro")
 
@@ -363,7 +363,7 @@ ATT.ShootVolumeMult = 0.8
 
 ATT.RangeMaxMult = 0.85
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_pistol_muzzle_suppressor")
 
@@ -395,7 +395,7 @@ ATT.RecoilUpMult = 0.92
 
 ATT.RangeMaxMult = 0.75
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_pistol_muzzle_suppressorpro")
 
@@ -426,6 +426,6 @@ ATT.ShootVolumeMult = 0.8
 
 ATT.RangeMaxMult = 0.85
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_magnum_muzzle_suppressor") -- gg

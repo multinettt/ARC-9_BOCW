@@ -3,7 +3,7 @@ ATT.CompactName = "LASER MNT"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[Integrated rail mount for attaching lasers to the DMR 14.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 ATT.Free = true
 
 ATT.Category = {"bocw_dmr14_gasblock"}

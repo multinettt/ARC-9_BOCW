@@ -24,4 +24,4 @@ ATT.ShootVolumeMult = 0.8
 ATT.RangeMaxMult = 0.89
 ATT.PhysBulletMuzzleVelocityMult = 0.92
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"

@@ -24,6 +24,6 @@ ATT.RecoilUpMult = 0.93
 
 ATT.RangeMaxMult = 0.75
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ATT.RequireElements = {"bocw_mp5sd"}

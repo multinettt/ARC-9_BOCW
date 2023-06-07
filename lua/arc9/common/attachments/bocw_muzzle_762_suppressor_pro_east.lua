@@ -25,4 +25,4 @@ ATT.RecoilUpMult = 0.94
 ATT.RangeMaxMult = 0.73
 ATT.PhysBulletMuzzleVelocityMult = 0.85
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"

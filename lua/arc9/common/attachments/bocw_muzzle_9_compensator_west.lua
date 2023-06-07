@@ -19,4 +19,4 @@ ATT.MuzzleDevice = true
 
 ATT.RecoilUpMult = 0.96
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"

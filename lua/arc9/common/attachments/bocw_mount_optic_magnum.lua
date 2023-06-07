@@ -3,7 +3,7 @@ ATT.CompactName = "OPTIC MNT"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[Rail mount for attaching optics to the Magnum.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 ATT.Free = true
 
 ATT.Category = {"bocw_magnum_opticmount"}

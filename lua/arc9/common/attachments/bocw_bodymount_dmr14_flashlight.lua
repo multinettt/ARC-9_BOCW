@@ -3,7 +3,7 @@ ATT.CompactName = "FLSHLGHT"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[Addition to the tactical rail mount of the DMR 14 in order to attach flashlights.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 ATT.Free = true
 
 ATT.Category = {"bocw_dmr14_mount_light"}

@@ -26,7 +26,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_extended"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_extended")
 
@@ -57,7 +57,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_cavalrylancer"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_cavalry")
 
@@ -91,7 +91,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_reinforcedheavy"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_reinforcedheavy")
 
@@ -123,7 +123,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_chromelined"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_chromelined")
 
@@ -155,7 +155,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_tacops"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_tacops")
 
@@ -190,6 +190,6 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_taskforce"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_1911_barrel_taskforce")

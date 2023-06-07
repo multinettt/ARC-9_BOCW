@@ -3,7 +3,7 @@ ATT.CompactName = "OPTIC MNT"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [[Side installed rail mount for attaching optics to the Diamatti.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 ATT.Free = true
 
 ATT.Category = {"bocw_diamatti_opticmount"}

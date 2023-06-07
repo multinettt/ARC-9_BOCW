@@ -26,7 +26,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_rapidfire"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_rapidfire")
 
@@ -57,7 +57,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_cavalrylancer"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_cavalry")
 
@@ -91,7 +91,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_striketeam"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_striketeam")
 
@@ -123,7 +123,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_titanium"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_titanium")
 
@@ -155,7 +155,7 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_matchgrade"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_matchgrade")
 
@@ -190,6 +190,6 @@ ATT.MuzzleDevice = true
 
 ATT.ActivateElements = {"barrel_taskforce"}
 
-ATT.MenuCategory = "ARC-9 - BOCW Attachments"
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_dmr14_barrel_taskforce")
