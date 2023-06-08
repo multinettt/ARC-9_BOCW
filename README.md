@@ -100,7 +100,7 @@ UPDATE: Pistols will be released to the workshop soon. This repository will be s
 
 ## Personalization:
 
-Personalization by means of camo is currently available on the DMR14. You can grab some cold war camos from these two links below if you'd like. They will be published to the workshop when this project is done.
+Personalization by means of camo is currently available on the DMR14. You can grab some cold war camos from these two links below if you'd like. They will be published to the workshop soon.
 
 [Multiplayer Camo Pack](https://drive.google.com/file/d/1kIQ_FBIrPxHiLvj5anPex2r8ETsjOIiy/view?usp=sharing)
 
