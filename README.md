@@ -1,4 +1,4 @@
-# ARC-9 BOCW
+# ARC9 BOCW
 
 Early in development weapon pack for [ARC9](https://github.com/HaodongMo/ARC-9)
 
