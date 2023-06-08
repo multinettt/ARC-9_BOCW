@@ -6,6 +6,10 @@ Because of the sheer size of individual weapons, this pack and repository will b
 
 UPDATE: Pistols will be released to the workshop soon. This repository will be split into different parts. Shared content, attachments and pistols will be ejected and have their own repositories. This big one will stay as the work-in-progress guns.
 
+## UPDATE 2: [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content)
+
+## SHARED CONTENT HAS BEEN EJECTED! You must clone the repository linked above to avoid missing textures, materials and sounds!
+
 ## Weapons List:
 
 ### Assault Rifles:
