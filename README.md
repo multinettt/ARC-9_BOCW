@@ -8,7 +8,9 @@ UPDATE: Pistols will be released to the workshop soon. This repository will be s
 
 ## UPDATE 2: [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content)
 
-## SHARED CONTENT HAS BEEN EJECTED! You must clone the repository linked above to avoid missing textures, materials and sounds!
+## UPDATE 3: [Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
+
+## SHARED CONTENT AND ATTACHMENTS HAVE BEEN EJECTED! You must clone the repository linked above to avoid missing content, textures, materials and sounds!
 
 ## Weapons List:
 
