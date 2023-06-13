@@ -35,6 +35,8 @@ This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon cl
 
 - Pellington 703 (Remington 700) [No Attachments yet]
 
+### [Pistols](https://github.com/multinettt/ARC-9_BOCW_Attachments)
+
 ### Shotguns:
 
 - Hauer 77 (Ithaca 37)        [No Attachments yet]
