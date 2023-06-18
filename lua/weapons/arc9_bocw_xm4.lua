@@ -538,7 +538,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-1, 0, 0.5),
         DefaultName = "Iron Sights",
-        Category = {"optic_picatinny", "bo1_optic"},
+        Category = {"optic_picatinny"},
         InstalledElements = {"optic_attached"},
     },
     {
