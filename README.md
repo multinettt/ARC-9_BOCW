@@ -9,18 +9,19 @@ This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon cl
 ## [BOCW Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
 
 ## Weapons List:
+Weapons written in bold are DLC weapons.
 
 ### Assault Rifles:
 
 - XM4 (XM117E2)
-- Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]
+- **Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]**
 
 ### Submachine Guns:
 
 - MP5        (H&K MP5K)
 - Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
 - AK-74u     (AKS-74U)
-- UGR        (APS)
+- **UGR        (APS)**
 
 ### Tactical Rifles:
 
@@ -36,6 +37,10 @@ This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon cl
 - Pellington 703 (Remington 700) [No Attachments yet]
 
 ### [Pistols](https://github.com/multinettt/ARC-9_BOCW_Pistols)
+- [1911](https://github.com/multinettt/ARC-9_BOCW_Pistols)
+- [Magnum](https://github.com/multinettt/ARC-9_BOCW_Pistols)
+- [Diamatti](https://github.com/multinettt/ARC-9_BOCW_Pistols)
+- **AMP63**
 
 ### Shotguns:
 
