@@ -618,6 +618,10 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         return anim .. "_fast"
     end
 
+    if elements["amp63_mag_mix"] then
+        return anim .. "_mix"
+    end
+
 end
 
 SWEP.Animations = {
@@ -659,7 +663,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 1.42,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
@@ -669,8 +673,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 0.5,
-        DropMagAt = 0.4,
+        MinProgress = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
@@ -682,11 +685,12 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 1.57,
+        MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.5 },
-            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.8 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.3 },
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.9 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
         },
     },
     ["reload_empty_ext"] = {
@@ -695,11 +699,12 @@ SWEP.Animations = {
         MagSwapTime = 1,
         DropMagAt = 0.4,
         EventTable = {
-            { s = "ARC9_BOCW.AMP63_reload_empty_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.9 },
-            { s = "ARC9_BOCW.AMP63_slideback", t = 1.55 },
-            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.65 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 2 },
+            { s = "ARC9_BOCW.AMP63_slideback", t = 1.6 },
+            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.7 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.9 },
         },
     },
     ["reload_fast"] = {
@@ -707,9 +712,10 @@ SWEP.Animations = {
         MinProgress = 1.12,
         DropMagAt = 0.75,
         EventTable = {
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_fast_magin", t = 0.85 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.5 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1 },
         },
     },
     ["reload_empty_fast"] = {
@@ -717,9 +723,36 @@ SWEP.Animations = {
         MinProgress = 0.45,
         DropMagAt = 0.7,
         EventTable = {
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_fast_magin", t = 0.85 },
-            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.55 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
+            { s = "ARC9_BOCW.AMP63_slideback", t = 1.25 },
+            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.35 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.6 },
+        },
+    },
+    ["reload_mix"] = {
+        Source = "reload_mix",
+        MinProgress = 0.7,
+        EventTable = {
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1 },
+        },
+    },
+    ["reload_empty_mix"] = {
+        Source = "reload_mix_empty",
+        MinProgress = 0.5,
+        MagSwapTime = 1,
+        DropMagAt = 0.4,
+        EventTable = {
+            { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
+            { s = "ARC9_BOCW.AMP63_slideback", t = 1.2 },
+            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.3 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
         },
     },
     ["enter_sprint"] = {
