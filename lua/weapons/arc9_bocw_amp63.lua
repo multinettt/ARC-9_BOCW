@@ -445,65 +445,71 @@ SWEP.AttachmentElements = {
             {1, 1},
         }
     },
-    ["optic_mount_slide1"] = {
+    ["optic_mount"] = {
         Bodygroups = {
             {2, 1},
-            {4, 1},
-        }
-    },
-    ["optic_mount_slide2"] = {
-        Bodygroups = {
-            {2, 1},
-            {4, 2},
+            {4, 1}
         }
     },
     ["barrel_extended"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(7.086, 0, 2.66),
+                Pos = Vector(11, 0, 2.6275),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
+            {5, 1},
             {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(11, 0, 2.6275),
+            },
         },
     },
     ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(7.086, 0, 2.66),
+                Pos = Vector(10.99, 0, 2.6275),
             },
         },
     },
     ["barrel_chromelined"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(7.086, 0, 2.66),
+                Pos = Vector(12.3, 0, 2.6275),
             }
         },
     },
-    ["barrel_tacops"] = {
+    ["barrel_takedown"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1},
+            {3, 1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(11.95, 0, 2.6275),
+            }
         },
     },
     ["barrel_taskforce"] = {
         Bodygroups = {
-            {3, 1}
+            {5, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(7.086, 0, 2.66),
+                Pos = Vector(11.95, 0, 2.6275),
             }
         },
     },
@@ -538,12 +544,12 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"optic_picatinny_pistol", "optic_picatinny"},
-        InstalledElements = {"optic_mount_slide1"},
+        InstalledElements = {"optic_mount"},
     },
     {
         PrintName = "MUZZLE",
         Bone = "tag_weapon",
-        Pos = Vector(8.2, 0, 2.66),
+        Pos = Vector(8.2, 0, 2.6275),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_amp63_muzzle", "bocw_pistol_muzzle"},
@@ -559,10 +565,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "BARREL",
-        Bone = "tag_weapon",
+        Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2.4, 0, 2.6),
+        Icon_Offset = Vector(5.5, 0, 0),
         Category = {"bocw_amp63_barrel"},
     },
     {
@@ -599,15 +605,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
+
     local camo = 0
     if attached["universal_camo"] then
         camo = 1
     end
 
     vm:SetSkin(camo)
+
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
+    
     local elements = swep:GetElements()
 
     if elements["amp63_mag_ext"] then
@@ -713,9 +722,9 @@ SWEP.Animations = {
         DropMagAt = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
         },
     },
     ["reload_empty_fast"] = {
@@ -724,11 +733,11 @@ SWEP.Animations = {
         DropMagAt = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
-            { s = "ARC9_BOCW.AMP63_slideback", t = 1.25 },
-            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.35 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
+            { s = "ARC9_BOCW.AMP63_slideback", t = 1.65 },
+            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.75 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 2 },
         },
     },
     ["reload_mix"] = {
@@ -736,9 +745,9 @@ SWEP.Animations = {
         MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
         },
     },
     ["reload_empty_mix"] = {
@@ -748,11 +757,11 @@ SWEP.Animations = {
         DropMagAt = 0.4,
         EventTable = {
             { s = "ARC9_BOCW.AMP63_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.6 },
-            { s = "ARC9_BOCW.AMP63_slideback", t = 1.2 },
-            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.3 },
-            { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
+            { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
+            { s = "ARC9_BOCW.AMP63_slideback", t = 1.6 },
+            { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.7 },
+            { s = "ARC9_BOCW.AMP63_reload_end", t = 2 },
         },
     },
     ["enter_sprint"] = {
