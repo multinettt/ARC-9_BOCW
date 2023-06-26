@@ -187,9 +187,9 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1
+SWEP.Recoil = 1.2
 SWEP.RecoilSide = 0.1
-SWEP.RecoilUp = 0.2
+SWEP.RecoilUp = 0.4
 
 SWEP.RecoilRandomUp = 0.1
 SWEP.RecoilRandomSide = 0.1
@@ -408,7 +408,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, -3, 0)
 SWEP.CustomizePos = Vector(17, 30, 4)
-SWEP.CustomizeRotateAnchor = Vector(18, -1.88, -4)
+SWEP.CustomizeRotateAnchor = Vector(17, -1.88, -5)
 
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
@@ -449,6 +449,11 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {2, 1},
             {4, 1}
+        }
+    },
+    ["foregripgone"] = {
+        Bodygroups = {
+            {6, 1},
         }
     },
     ["barrel_extended"] = {
@@ -557,11 +562,12 @@ SWEP.Attachments = {
     },
     {
         PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(5.7, 0, 0.5),
+        Bone = "tag_foregrip_animate",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_body_amp63"},
+        InstalledElements = {"foregripgone"},
     },
     {
         PrintName = "BARREL",
@@ -585,7 +591,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.35, 0, 0),
+        Icon_Offset = Vector(0.2, 0, -0.8),
         Category = {"bocw_amp63_wrap"},
     },
     {
@@ -643,9 +649,43 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.45,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["ready"] = {
         Source = "ready",
@@ -654,12 +694,73 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_sliderelease", t = 0.3 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 0.5 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.6,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["bash"] = {
         Source = "melee",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["bash_empty"] = {
         Source = "melee_empty",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -679,6 +780,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.9 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -691,6 +814,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.7 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.9 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
@@ -700,6 +845,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.25 },
             { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.9 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_ext"] = {
@@ -715,6 +882,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.7 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.9 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
@@ -725,6 +914,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_fast"] = {
@@ -739,6 +950,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.75 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 2 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_mix"] = {
         Source = "reload_mix",
@@ -748,6 +981,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.AMP63_reload_magin", t = 0.7 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 1.4 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_mix"] = {
@@ -762,6 +1017,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_slideback", t = 1.6 },
             { s = "ARC9_BOCW.AMP63_sliderelease", t = 1.7 },
             { s = "ARC9_BOCW.AMP63_reload_end", t = 2 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["enter_sprint"] = {
@@ -800,6 +1077,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_inspect_part1", t = 0 },
             { s = "ARC9_BOCW.AMP63_inspect_part2", t = 2.4 }
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["enter_inspect_empty"] = {
         Source = "inspect_empty",
@@ -807,17 +1106,27 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AMP63_inspect_part1", t = 0 },
             { s = "ARC9_BOCW.AMP63_inspect_part2", t = 2.4 }
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
 }
---[[
-SWEP.HookP_NameChange = function(self, name)
-    local attached = self:GetElements()
-    local gunname = "AKS-74U"
-
-    if attached["bo1_pap"] then
-        gunname = "AK-74NOFU2"
-    end
-
-    return gunname
-end
-]]
