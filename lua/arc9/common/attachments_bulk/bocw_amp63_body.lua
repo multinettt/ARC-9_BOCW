@@ -15,7 +15,7 @@ ATT.Model = "models/weapons/arc9/atts/bocw_amp63_foregrip.mdl"
 
 ATT.Category = {"bocw_body_amp63"}
 
-ATT.ModelOffset = Vector(0.668, 0, -0.56)
+ATT.ModelOffset = Vector(0.66, 0, -0.57)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.LHIK = true
@@ -137,7 +137,7 @@ ATT = {}
 ATT.PrintName = "SOF Target Designator" -- TODO: Make this actually do what it says
 ATT.CompactName = "SOF TGT"
 ATT.Icon = Material("entities/bocw_atts/bodies/amp63_mixbody.png", "mips smooth")
-ATT.Description = [[Durable precision flashlight reveals enemy data at longer engagement distances. Must be activated by aiming down the sight.
+ATT.Description = [[Cutting-edge precision flashlight laser combination reveals enemy data at longer engagement distances. Must be activated by aiming down the sight.
 
 The SOF Target Designator is a Body attachment available for all NATO related Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases the range which enemies are shown as hostiles at a much greater range than the Mounted Flashlight but is only active while aiming.]]
 
@@ -147,18 +147,33 @@ ATT.Model = "models/weapons/arc9/atts/bocw_amp63_body_mixbody1.mdl"
 
 ATT.Category = {"bocw_body_amp63"}
 
-ATT.Laser = true
-ATT.LaserStrength = 4
-ATT.LaserColor = Color(255, 0, 0)
-ATT.LaserAttachment = 2
-
-ATT.Flashlight = true
-ATT.FlashlightColor = Color(255, 255, 255)
-ATT.FlashlightMaterial = "effects/flashlight/soft"
-ATT.FlashlightBrightness = 3
-ATT.FlashlightDistance = 1024
-ATT.FlashlightFOV = 70
-ATT.FlashlightAttachment = 1
+ATT.ToggleOnF = true
+ATT.ToggleStats = {
+    {
+        PrintName = "ON",
+        Laser = true,
+        LaserStrength = 4,
+        LaserColor = Color(255, 0, 0),
+        LaserAttachment = 2,
+        Flashlight = true,
+        FlashlightColor = Color(255, 255, 255),
+        FlashlightMaterial = "effects/flashlight/soft",
+        FlashlightDistance = 1024,
+        FlashlightFOV = 70,
+        FlashlightAttachment = 1,
+        Flare = true,
+        FlareColor = Color(150, 255, 150),
+        FlareSize = 150,
+        FlareAttachment = 1,
+        SpreadMultHipFire = 0.7,
+        AimDownSightsTimeMult = 1.1,
+        SprintToFireTimeMult = 1.1
+    },
+    {
+        PrintName = "OFF",
+        AimDownSightsTimeMult = 1.08
+    }
+}
 
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
@@ -185,9 +200,9 @@ ATT.Category = {"bocw_body_amp63"}
 ATT.ToggleOnF = true
 ATT.ToggleStats = {
     {
-        PrintName = "ON",
+        PrintName = "ON MODE 1",
         Laser = true,
-        LaserStrength = 10,
+        LaserStrength = 4,
         LaserColor = Color(255, 0, 0),
         LaserAttachment = 1,
         Flare = true,
@@ -199,17 +214,80 @@ ATT.ToggleStats = {
         AimDownSightsTimeMult = 1.08
     },
     {
+        PrintName = "ON MODE 2",
+        Laser = true,
+        LaserStrength = 8,
+        LaserColor = Color(255, 0, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(255, 0, 0),
+        FlareSize = 100,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "ON MODE 3",
+        Laser = true,
+        LaserStrength = 16,
+        LaserColor = Color(255, 0, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(255, 0, 0),
+        FlareSize = 200,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "NV MODE 1",
+        Laser = true,
+        LaserStrength = 4,
+        LaserColor = Color(0, 200, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(0, 200, 0),
+        FlareSize = 100,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "NV MODE 2",
+        Laser = true,
+        LaserStrength = 8,
+        LaserColor = Color(0, 200, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(0, 200, 0),
+        FlareSize = 200,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
+        PrintName = "NV MODE 3",
+        Laser = true,
+        LaserStrength = 16,
+        LaserColor = Color(0, 200, 0),
+        LaserAttachment = 1,
+        Flare = true,
+        FlareColor = Color(0, 200, 0),
+        FlareSize = 50,
+        FlareAttachment = 1,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.6,
+        AimDownSightsTimeMult = 1.08
+    },
+    {
         PrintName = "OFF",
         AimDownSightsTimeMult = 1.08
     }
 }
-
---[[
-ATT.Laser = true
-ATT.LaserStrength = 8
-ATT.LaserColor = Color(255, 0, 0)
-ATT.LaserAttachment = 1
-]]
 
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
@@ -295,8 +373,23 @@ ATT.Category = {"bocw_body_amp63"}
 
 ATT.ToggleOnF = true
 ATT.ToggleStats = {
+    {
+        PrintName = "VIS ILL",
+        Flashlight = true,
+        FlashlightColor = Color(255, 255, 255),
+        FlashlightMaterial = "effects/flashlight/soft",
+        FlashlightDistance = 1024,
+        FlashlightFOV = 70,
+        FlashlightAttachment = 1,
+        Flare = true,
+        FlareColor = Color(255, 255, 255),
+        FlareSize = 125,
+        FlareAttachment = 1,
+        AimDownSightsTimeMult = 1.1,
+        SprintToFireTimeMult = 1.1
+    },
 	{
-        PrintName = "LASER + LIGHT",
+        PrintName = "VIS PT ILL",
         Laser = true,
         LaserStrength = 4,
         LaserColor = Color(255, 0, 0),
@@ -316,7 +409,7 @@ ATT.ToggleStats = {
         SprintToFireTimeMult = 1.1
     },
 	{
-        PrintName = "LASER",
+        PrintName = "VIS PT",
         Laser = true,
         LaserStrength = 8,
         LaserColor = Color(255, 0, 0),
@@ -331,17 +424,17 @@ ATT.ToggleStats = {
         SprintToFireTimeMult = 1.1
     },
     {
-        PrintName = "LIGHT",
-        Flashlight = true,
-        FlashlightColor = Color(255, 255, 255),
-        FlashlightMaterial = "effects/flashlight/soft",
-        FlashlightDistance = 1024,
-        FlashlightFOV = 70,
-        FlashlightAttachment = 1,
+        PrintName = "IR PT",
+        Laser = true,
+        LaserStrength = 8,
+        LaserColor = Color(0, 255, 0),
+        LaserAttachment = 2,
         Flare = true,
-        FlareColor = Color(255, 255, 255),
-        FlareSize = 125,
-        FlareAttachment = 1,
+        FlareColor = Color(0, 255, 0),
+        FlareSize = 50,
+        FlareAttachment = 2,
+        FlareFocus = true,
+        SpreadMultHipFire = 0.7,
         AimDownSightsTimeMult = 1.1,
         SprintToFireTimeMult = 1.1
     },

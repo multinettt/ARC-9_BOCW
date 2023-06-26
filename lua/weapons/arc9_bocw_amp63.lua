@@ -406,7 +406,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 --}
 
 -- Position for customizing
-SWEP.CustomizeAng = Angle(90, -3, 0)
+SWEP.CustomizeAng = Angle(90, -3.5, 0)
 SWEP.CustomizePos = Vector(17, 30, 4)
 SWEP.CustomizeRotateAnchor = Vector(17, -1.88, -5)
 
@@ -574,7 +574,7 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(5.5, 0, 0),
+        Icon_Offset = Vector(5.4, 0, 0),
         Category = {"bocw_amp63_barrel"},
     },
     {
