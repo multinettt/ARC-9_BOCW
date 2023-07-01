@@ -274,7 +274,7 @@ SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
 SWEP.ShootSound = "ARC9_BOCW.AMP63_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.AMP63_fire_int_decay"                  -- Fire indoors
+--SWEP.ShootSoundIndoor = "ARC9_BOCW.AMP63_fire_int_decay"                  -- Fire indoors
 SWEP.ShootSoundSilenced = "ARC9_BOCW.AMP63_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
@@ -429,7 +429,7 @@ SWEP.HoldTypeBlindfire = "pistol"
 SWEP.HoldTypeNPC = nil
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- While in TPIK only
+--SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- While in TPIK only
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- Non TPIK
 SWEP.AnimDraw = false
 SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
@@ -454,6 +454,11 @@ SWEP.AttachmentElements = {
     ["foregripgone"] = {
         Bodygroups = {
             {6, 1},
+        }
+    },
+    ["stockgone"] = {
+        Bodygroups = {
+            {7, 1},
         }
     },
     ["barrel_extended"] = {
@@ -518,12 +523,6 @@ SWEP.AttachmentElements = {
             }
         },
     },
-    ["stockgone"] = {
-        Bodygroups = {
-            {6, 1},
-            {8, 1},
-        }
-    },
 }
 
 -- Use to override attachment table entry data.
@@ -576,6 +575,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(5.4, 0, 0),
         Category = {"bocw_amp63_barrel"},
+    },
+    {
+        PrintName = "STOCK",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-3.25, 0, 2),
+        Category = {"bocw_amp63_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "MAGAZINE",

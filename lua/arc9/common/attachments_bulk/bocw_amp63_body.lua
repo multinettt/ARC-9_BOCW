@@ -1,4 +1,4 @@
-local ATT = {} --Laser:5 Flash:35 Mixbdy:66 LsrPro:100 FlshPro:132 MixPro:164
+local ATT = {} --FGrip:5 Laser:33 Light:82 Mixbdy:137 LsrPro:187 FlshPro:304 MixPro:361 Stock:470
 
 ATT = {}
 
@@ -464,3 +464,32 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_amp63_body_mixbodypro")
+
+ATT = {}
+
+ATT.PrintName = "Unfolded Stock"
+ATT.CompactName = "UNF STOCK"
+ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Description = [["Basic firing procedures with the PM-63 include unfolding of the stock."
+
+
+
+
+- PM63 RAK Manual (probably)]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_amp63_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_amp63_stock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RecoilUpMult = 0.88
+ATT.RecoilSideMult = 0.95
+
+ATT.SpeedMultSights = 0.95
+
+ARC9.LoadAttachment(ATT, "bocw_amp63_stock")
