@@ -11,10 +11,17 @@
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_amp63\slide_sc"
-	"$detailscale" "1"
-	"$detailblendfactor" "0.08"     
-	"$detailblendmode" "1"
+	$detail "models\weapons\arc9\bocw\bocw_amp63\slide_sc"
+	$detailblendfactor 0.5 
+	$detailblendmode 3
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            			blend $detailblendfactor
+		}
+	}
+
 
 	//"$envmap" "env_cubemap"
 	//"$envmaptint" "[.01 .01 .01]"

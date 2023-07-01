@@ -468,7 +468,7 @@ ARC9.LoadAttachment(ATT, "bocw_amp63_body_mixbodypro")
 ATT = {}
 
 ATT.PrintName = "Unfolded Stock"
-ATT.CompactName = "UNF STOCK"
+ATT.CompactName = "UNFOLDED"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
 ATT.Description = [["Basic firing procedures with the PM-63 include unfolding of the stock."
 
