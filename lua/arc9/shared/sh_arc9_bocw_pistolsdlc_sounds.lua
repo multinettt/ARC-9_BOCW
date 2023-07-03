@@ -131,6 +131,127 @@ sound.Add({
     sound = "weapons/arc9/bocw_amp63/amp63_fire_interior.wav"
 })
 
+--========== Marshal ==========================================================
+-- SHELLS
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_shellout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_reload_shellout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_shellsout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_reload_shellsout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_shellin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = { "weapons/arc9/bocw_marshal/marshal_reload_shellin1.wav", "weapons/arc9/bocw_marshal/marshal_reload_shellin2.wav" }
+})
+
+-- BREACH & HAMMER OPERATION
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_open",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_reload_open.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_close",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_reload_close.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_hammer",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_reload_hammer.wav"
+})
+
+-- INSPECT AND RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_inspect_part1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_inspect_part1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_inspect_part2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_inspect_part2.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_reload_casings",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = { "weapons/arc9/bocw_marshal/marshal_reload_casings1.wav", "weapons/arc9/bocw_marshal/marshal_reload_casings2.wav", "weapons/arc9/bocw_marshal/marshal_reload_casings3.wav" }
+})
+
+-- PULLOUT PUTAWAY ADS UP DOWN
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_draw",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_draw.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.Marshal_holster",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_marshal/marshal_holster.wav"
+})
+
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.Marshal_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = { "weapons/arc9/bocw_marshal/marshal_fire1.wav", "weapons/arc9/bocw_marshal/marshal_fire2.wav", "weapons/arc9/bocw_marshal/marshal_fire3.wav" }
+})
+
+sound.Add({ -- WARZONE
+    name = "ARC9_BOCW.Marshal_fire_wz",
+    channel = CHAN_STATIC,
+    volume = 0.7,
+    level = 100,
+    sound = "weapons/arc9/bocw_marshal/marshal_fire_warzone.wav"
+})
+--[[
+sound.Add({ -- BLACK OPS
+    name = "ARC9_BOCW.Marshal_fire_bo",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = { "weapons/arc9/bocw_marshal/Marshal_fire_bo_1.wav", "weapons/arc9/bocw_marshal/Marshal_fire_bo_2.wav","weapons/arc9/bocw_marshal/Marshal_fire_bo_3.wav", "weapons/arc9/bocw_marshal/Marshal_fire_bo_4.wav", "weapons/arc9/bocw_marshal/Marshal_fire_bo_5.wav" }
+})
+]]
+sound.Add({
+    name = "ARC9_BOCW.Marshal_fire_int_decay",
+    channel = CHAN_STATIC,
+    volume = 1,
+    sound = "weapons/arc9/bocw_marshal/marshal_fire_interior.wav"
+})
+
 --[[
 
 21.06.2023

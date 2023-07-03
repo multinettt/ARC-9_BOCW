@@ -6,7 +6,7 @@
 --[[
 --   SWEP INFORMATION:
 
---   BASE  : ARC-9
+--   BASE  : ARC9
 --   BUILD : v1.0
 --   SR.NO : 3325K23
 
