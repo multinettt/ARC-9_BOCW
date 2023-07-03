@@ -40,7 +40,8 @@ Weapons written in bold are DLC weapons.
 - [1911](https://github.com/multinettt/ARC-9_BOCW_Pistols)
 - [Magnum](https://github.com/multinettt/ARC-9_BOCW_Pistols)
 - [Diamatti](https://github.com/multinettt/ARC-9_BOCW_Pistols)
-- **AMP63**
+- **AMP63 (PM-63 RAK)**
+- **Marshal (TP-82)**
 
 ### Shotguns:
 
