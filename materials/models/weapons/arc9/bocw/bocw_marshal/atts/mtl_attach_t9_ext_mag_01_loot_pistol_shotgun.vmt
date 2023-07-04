@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_marshal\shell_diff"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_marshal\atts\dragon_diff"
 	"$bumpmap" "models\weapons\arc9\bocw\bocw_marshal\shell_n"
 
 
@@ -11,7 +11,7 @@
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_marshal\shell_sc"
+	"$detail" 	"models\weapons\arc9\bocw\bocw_marshal\atts\dragon_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.3"     
 	"$detailblendmode" "1"

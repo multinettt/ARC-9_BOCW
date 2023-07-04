@@ -85,7 +85,7 @@ SWEP.RangeMin = 10 * 39.37 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 150 * 39.37 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 SWEP.Distance = 1200 * 39.37 -- In Hammer units, how far bullets can travel, period.
 
-SWEP.Num = 6 -- Number of bullets to shoot
+SWEP.Num = 8 -- Number of bullets to shoot
 -- Bear in mind: Damage is divided by Num
 
 SWEP.Penetration = 5 -- Units of wood that can be penetrated by this gun.
@@ -195,10 +195,10 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.1
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(1.3 / 37.5)
+SWEP.Spread = 0.02
 SWEP.SpreadMultRecoil = 1.2
 
-SWEP.SpreadMultSights = 0.8
+SWEP.SpreadMultSights = 0.2
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = 0.1
@@ -513,10 +513,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-
     local camo = 0
+
     if attached["universal_camo"] then
         camo = 1
+    end
+
+    if attached["bocw_ammo_12_dragonsbreath"] then
+        camo = 2
+    end
+
+    if attached["universal_camo"] and attached["bocw_ammo_12_dragonsbreath"] then
+        camo = 3
     end
 
     vm:SetSkin(camo)
