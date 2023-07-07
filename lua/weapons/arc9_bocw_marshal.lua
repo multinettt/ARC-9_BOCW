@@ -182,9 +182,9 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1.8
 SWEP.RecoilSide = 0.1
-SWEP.RecoilUp = 0.4
+SWEP.RecoilUp = 0.8
 
 SWEP.RecoilRandomUp = 0.1
 SWEP.RecoilRandomSide = 0.1
@@ -533,11 +533,11 @@ end
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
 
-    if elements["marshal_barrel_extended"] then
+    if elements["barrel_extended"] then
         return anim .. "_extended"
     end
 
-    if elements["marshal_barrel_cutdown"] then
+    if elements["barrel_cutdown"] then
         return anim .. "_cutdown"
     end
 end
@@ -581,6 +581,18 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = {"fire_empty"},
     },
+    ["fire_extended"] = {
+        Source = {"fire_extended"},
+    },
+    ["fire_empty_extended"] = {
+        Source = {"fire_empty_extended"},
+    },
+    ["fire_cutdown"] = {
+        Source = {"fire_cutdown"},
+    },
+    ["fire_empty_cutdown"] = {
+        Source = {"fire_empty_cutdown"},
+    },
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
@@ -589,7 +601,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Marshal_reload_open", t = 0.2 },
             { s = "ARC9_BOCW.Marshal_reload_shellout", t = 0.6 },
             { s = "ARC9_BOCW.Marshal_reload_casings", t = 1.2 },
-            { s = "ARC9_BOCW.Marshal_reload_shellin", t = 1.35 },
+            { s = "ARC9_BOCW.Marshal_reload_shellin", t = 1.4 },
             { s = "ARC9_BOCW.Marshal_reload_close", t = 2 },
         },
     },
