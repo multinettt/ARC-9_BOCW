@@ -467,7 +467,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11, 0, 2.6275),
+                Pos = Vector(11.02, 0, 2.6225),
             },
         },
     },
@@ -478,7 +478,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11, 0, 2.6275),
+                Pos = Vector(11.02, 0, 2.6225),
             },
         },
     },
@@ -488,7 +488,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(10.99, 0, 2.6275),
+                Pos = Vector(11.02, 0, 2.6225),
             },
         },
     },
@@ -498,7 +498,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(12.3, 0, 2.6275),
+                Pos = Vector(12.36, 0, 2.6225),
             }
         },
     },
@@ -509,7 +509,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.95, 0, 2.6275),
+                Pos = Vector(11.95, 0, 2.6225),
             }
         },
     },
@@ -519,7 +519,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.95, 0, 2.6275),
+                Pos = Vector(11.96, 0, 2.6225),
             }
         },
     },
@@ -553,7 +553,7 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_weapon",
-        Pos = Vector(8.2, 0, 2.6275),
+        Pos = Vector(8.22, 0, 2.625),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_amp63_muzzle", "bocw_pistol_muzzle"},
