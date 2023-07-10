@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = "Unfolded Foregrip"
 ATT.CompactName = "FOREGRIP"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/bodies/amp63_foregrip.png", "mips smooth")
 ATT.Description = [[The internal foregrip that you're actually supposed to use while firing this weapon.
 
 The Grip, also known as Foregrip, is an attachment featured in every main game since Call of Duty 4: Modern Warfare, as well as appearing in Find Makarov: Operation Kingfish, Call of Duty: Black Ops: Declassified, Call of Duty Online, Call of Duty: Modern Warfare Remastered, Call of Duty: Black Ops 4, Modern Warfare 2 Campaign Remastered. and Call of Duty: Black Ops Cold War. It usually decreases recoil for weapons and/or adds centerspeed.]]
@@ -357,7 +357,7 @@ ATT = {}
 
 ATT.PrintName = "Unfolded Stock"
 ATT.CompactName = "UNFOLDED"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/bodies/amp63_stock.png", "mips smooth")
 ATT.Description = [["Basic firing procedures with the PM-63 include unfolding of the stock."
 
 
