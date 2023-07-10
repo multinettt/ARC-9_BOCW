@@ -1078,7 +1078,6 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.AMP63_inspect_part1", t = 0 },
             { s = "ARC9_BOCW.AMP63_inspect_part2", t = 2.4 }
         },
         IKTimeLine = {
@@ -1107,7 +1106,6 @@ SWEP.Animations = {
     ["enter_inspect_empty"] = {
         Source = "inspect_empty",
         EventTable = {
-            { s = "ARC9_BOCW.AMP63_inspect_part1", t = 0 },
             { s = "ARC9_BOCW.AMP63_inspect_part2", t = 2.4 }
         },
         IKTimeLine = {
