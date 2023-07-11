@@ -49,6 +49,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 20
+ATT.SupplyLimitOverride = 3
 
 ATT.ReloadTimeMult = 1.1
 
@@ -108,6 +109,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 20
+ATT.SupplyLimitOverride = 3
 
 ATT.AimDownSightsTimeMult = 1.15
 ATT.ReloadTimeMult = 0.75
@@ -138,6 +140,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 25
+ATT.SupplyLimitOverride = 3
 
 ATT.AimDownSightsTimeMult = 1.15
 ATT.ReloadTimeMult = 1.1
@@ -168,6 +171,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 16
+ATT.SupplyLimitOverride = 3
 
 ATT.ActivateElements = {"amp63_mag_fast", "maggone"}
 
@@ -200,6 +204,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 22
+ATT.SupplyLimitOverride = 3
 
 ATT.AimDownSightsTimeMult = 1.25
 ATT.ReloadTimeMult = 0.6

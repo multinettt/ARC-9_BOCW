@@ -596,7 +596,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 0.65,
+        MinProgress = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.Marshal_reload_open", t = 0.2 },
             { s = "ARC9_BOCW.Marshal_reload_shellout", t = 0.6 },
@@ -607,7 +607,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 0.55,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Marshal_reload_open", t = 0.2 },
             { s = "ARC9_BOCW.Marshal_reload_shellsout", t = 0.6 },
