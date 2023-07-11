@@ -4,6 +4,8 @@ Early in development weapon pack for [ARC9](https://github.com/HaodongMo/ARC-9)
 
 This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon classes(Assault Rifles, Shotguns etc.) get completed, they will be ejected from this repository and have their own. The reason behind this is that a single weapon weighs too much for a whole big weapon pack. I will release weapons to the workshop based on weapon classes from now on, not individually. Launch and DLC weapons will be separated.
 
+## Pistols DLC will be released soon. Expect detachment of AMP63 and Marshal at any moment.
+
 ## You need to have [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content) in order to avoid missing textures, materials and sounds.
 
 ## [BOCW Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
