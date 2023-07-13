@@ -348,7 +348,9 @@ SWEP.StripperClipBGs = {}
 
 SWEP.HideBones = {
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
-SWEP.ReloadHideBoneTables = { -- works only with TPIK
+SWEP.ReloadHideBoneTables = {
+    [1] = {"xstring_ab76d08b498e442", "tag_bullet_deplete_sqtl_01_animate"},
+    [2] = {"xstring_9a284c9e39505f4", "tag_bullet_deplete_sqtl_00_animate", "xstring_ab76d08b498e442", "tag_bullet_deplete_sqtl_01_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -603,6 +605,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Marshal_reload_casings", t = 1.2 },
             { s = "ARC9_BOCW.Marshal_reload_shellin", t = 1.4 },
             { s = "ARC9_BOCW.Marshal_reload_close", t = 2 },
+            { hide = 1, t = 1 },
+            { hide = 0, t = 1.25 },
         },
     },
     ["reload_empty"] = {
@@ -616,6 +620,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Marshal_reload_shellin", t = 1.85 },
             { s = "ARC9_BOCW.Marshal_reload_close", t = 2.3 },
             { s = "ARC9_BOCW.Marshal_reload_hammer", t = 2.5 },
+            { hide = 2, t = 0.95 },
+            { hide = 0, t = 1.25 },
         },
     },
     ["enter_sprint"] = {
