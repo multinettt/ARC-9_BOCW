@@ -13,6 +13,8 @@ This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon cl
 ## Weapons List:
 Weapons written in bold are DLC weapons.
 
+Weapons with links embedded to them are not present here and have their own repository.
+
 ### Assault Rifles:
 
 - XM4 (XM117E2)
