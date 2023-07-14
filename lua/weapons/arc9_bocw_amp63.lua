@@ -230,7 +230,7 @@ SWEP.Sway = 0.3 -- How much the gun sways.
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for
 SWEP.RestoreBreathTime = 4
 
-SWEP.FreeAimRadiusMultSights = 0.25
+SWEP.FreeAimRadiusSights = 0
 
 SWEP.SwayMultSights = 0.5
 
