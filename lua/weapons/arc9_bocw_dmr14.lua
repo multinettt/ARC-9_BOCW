@@ -202,7 +202,7 @@ SWEP.NPCWeight = 50
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 10 -- In degrees, how much this gun can free aim in hip fire.
+SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0.2 -- How much the gun sways.
 
 SWEP.HoldBreathTime = 5 -- time that you can hold breath for
