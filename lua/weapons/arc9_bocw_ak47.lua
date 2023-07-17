@@ -377,7 +377,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.795, -4, 1.12),
+    Pos = Vector(-3.79, -4, 1.12),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -478,9 +478,14 @@ SWEP.AttachmentElements = {
             {10, 0},
         }
     },
-    ["receiver_type56"] = {
+    ["receiver_akm"] = {
         Bodygroups = {
             {10, 1},
+        }
+    },
+    ["receiver_type56"] = {
+        Bodygroups = {
+            {10, 2},
         }
     },
     ["rearsight_ak47"] = {

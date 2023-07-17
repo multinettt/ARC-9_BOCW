@@ -11,7 +11,7 @@ ATT.SortOrder = 1
 
 ATT.Category = "bocw_ak47_receiver"
 
-ATT.ActivateElements = {"receiver_type56"}
+ATT.ActivateElements = {"receiver_ak47"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -28,11 +28,28 @@ ATT.SortOrder = 2
 
 ATT.Category = "bocw_ak47_receiver"
 
-ATT.ActivateElements = {"receiver_ak47"}
+ATT.ActivateElements = {"receiver_akm"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ak47_receiver_akm")
+
+ATT = {}
+
+ATT.PrintName = "Type 56-2 Receiver"
+ATT.CompactName = "T56 RCVR"
+ATT.Icon = Material("entities/bocw_atts/other/ak47_receiver.png", "mips smooth")
+ATT.Description = [[Type 3 AK-47 milled receiver. Manufacture date: 1953]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ak47_receiver"
+
+ATT.ActivateElements = {"receiver_type56"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ak47_receiver_type56")
 
 --------------------------------------------------------------------------
 
