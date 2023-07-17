@@ -287,7 +287,7 @@ SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
 SWEP.Silencer = false -- Silencer installed or not?
 
-SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_Pistol"
+SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_AR"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
 SWEP.ToggleAttSound = "items/flashlight1.wav"
@@ -452,14 +452,70 @@ SWEP.AttachmentElements = {
             {3, 1},
         }
     },
-    ["foregripgone"] = {
+    ["frontsight_ak47"] = {
         Bodygroups = {
-            {6, 1},
+            {4, 0},
+        }
+    },
+    ["frontsight_type56"] = {
+        Bodygroups = {
+            {4, 1},
+        }
+    },
+    ["handguard_ak47"] = {
+        Bodygroups = {
+            {8, 0},
+        }
+    },
+    ["handguard_type56"] = {
+        Bodygroups = {
+            {8, 1},
+            {7, 3},
+        }
+    },
+    ["receiver_ak47"] = {
+        Bodygroups = {
+            {10, 0},
+        }
+    },
+    ["receiver_type56"] = {
+        Bodygroups = {
+            {10, 1},
+        }
+    },
+    ["rearsight_ak47"] = {
+        Bodygroups = {
+            {9, 0},
+        }
+    },
+    ["rearsight_type56"] = {
+        Bodygroups = {
+            {9, 1},
+        }
+    },
+    ["grip_ak47"] = {
+        Bodygroups = {
+            {11, 0},
+        }
+    },
+    ["grip_type56"] = {
+        Bodygroups = {
+            {11, 1},
+        }
+    },
+    ["stock_ak47"] = {
+        Bodygroups = {
+            {12, 0},
+        }
+    },
+    ["stock_type56-2"] = {
+        Bodygroups = {
+            {12, 3},
         }
     },
     ["stockgone"] = {
         Bodygroups = {
-            {7, 1},
+            {12, 4},
         }
     },
     ["barrel_extended"] = {
@@ -548,6 +604,7 @@ SWEP.Attachments = {
         Pos = Vector(2.8, -1.15, 2.8),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
+        ExcludeElements = {"receiver_type56"},
         Category = {"bocw_ak47_opticmount"},
     },
     {
@@ -575,6 +632,56 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.75, 0, 0),
         Category = {"bocw_ak47_barrel"},
+    },
+    {
+        PrintName = "FRONT SIGHT",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(24.75, 0, 4.55),
+        Integral = true,
+        Installed = "bocw_ak47_frontsight_ak47",
+        Category = {"bocw_ak47_frontsight"},
+    },
+    {
+        PrintName = "HANDGUARD",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13, 0, 3.25),
+        Integral = true,
+        Installed = "bocw_ak47_handguard_ak47",
+        Category = {"bocw_ak47_handguard"},
+    },
+    {
+        PrintName = "REAR SIGHT",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(10, 0, 4.55),
+        Integral = true,
+        Installed = "bocw_ak47_rearsight_ak47",
+        Category = {"bocw_ak47_rearsight"},
+    },
+    {
+        PrintName = "RECEIVER",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(4.6, 0, 4),
+        Integral = true,
+        Installed = "bocw_ak47_receiver_ak47",
+        Category = {"bocw_ak47_receiver"},
+    },
+    {
+        PrintName = "GRIP",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0.3, 0, 1),
+        Integral = true,
+        Installed = "bocw_ak47_grip_ak47",
+        Category = {"bocw_ak47_grip"},
     },
     {
         PrintName = "STOCK",
