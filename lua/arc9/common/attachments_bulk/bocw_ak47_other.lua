@@ -5,7 +5,7 @@ ATT = {}
 ATT.PrintName = "AK-47 Receiver"
 ATT.CompactName = "AK-47 RCVR"
 ATT.Icon = Material("entities/bocw_atts/other/ak47_receiver.png", "mips smooth")
-ATT.Description = [[Type 3 AK-47 milled receiver. Manufacture date: 1953]]
+ATT.Description = [[Type 2 AK-47 milled receiver. Manufacture date: 1953]]
 
 ATT.SortOrder = 1
 
@@ -21,7 +21,7 @@ ATT = {}
 
 ATT.PrintName = "AKM Receiver"
 ATT.CompactName = "AKM RCVR"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/akm_receiver.png", "mips smooth")
 ATT.Description = [[Lighter sheet steel stamped receiver. Manufacture date: 1976]]
 
 ATT.SortOrder = 2
