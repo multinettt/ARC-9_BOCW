@@ -182,6 +182,7 @@ ATT.DamageMaxMult = 1.08
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.5
 
+ATT.SupplyLimitOverride = 2
 ATT.RecoilUpMult = 1.2
 ATT.RecoilSideMult = 1.15
 

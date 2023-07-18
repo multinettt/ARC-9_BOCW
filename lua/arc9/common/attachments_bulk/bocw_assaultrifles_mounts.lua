@@ -16,7 +16,7 @@ ATT.Attachments = {
     {
         PrintName = "OPTIC",
         Bone = "tag_weapon",
-        Pos = Vector(-1, 1.15, -2.35),
+        Pos = Vector(-0.5, 1.15, -2.35),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"optic_picatinny_pistol", "optic_picatinny"},

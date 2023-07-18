@@ -445,6 +445,7 @@ SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
+            {2, 1},
         }
     },
     ["optic_mount"] = {
@@ -708,6 +709,11 @@ SWEP.Attachments = {
         DefaultIcon = Material("entities/bocw_atts/magazines/ak47_mag.png", "mips smooth"),
         Icon_Offset = Vector(0, 0, -1),
         Category = {"bocw_ak47_mag"},
+        DuplicateModels = {
+            {
+                Bone = "tag_clip1",
+            }
+        },
     },
     {
         PrintName = "HANDLE",
@@ -752,8 +758,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         return anim .. "_ext"
     end
 
-    if elements["ak47_mag_fast"] then
-        return anim .. "_fast"
+    if elements["ak47_mag_dual"] then
+        return anim .. "_dual"
     end
 
     if elements["ak47_mag_mix"] then
@@ -947,7 +953,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.AK47_reload_empty_magin", t = 0.95 },
             { s = "ARC9_BOCW.AK47_boltback", t = 1.75 },
             { s = "ARC9_BOCW.AK47_boltrelease", t = 2 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 2.4 },
+            { s = "ARC9_BOCW.AK47_reload_end", t = 2.5 },
         },
         IKTimeLine = {
             {
@@ -976,10 +982,9 @@ SWEP.Animations = {
         Source = "reload_ext",
         MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AK47_reload_magin", t = 0.9 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.6 },
+            { s = "ARC9_BOCW.AK47_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.AK47_reload_end", t = 2 },
         },
         IKTimeLine = {
             {
@@ -1009,12 +1014,12 @@ SWEP.Animations = {
         MinProgress = 0.5,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.25 },
-            { s = "ARC9_BOCW.AK47_reload_magin", t = 0.9 },
-            { s = "ARC9_BOCW.AK47_slideback", t = 1.6 },
-            { s = "ARC9_BOCW.AK47_sliderelease", t = 1.7 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magoutstart", t = 0.45 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magout", t = 0.55 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magin", t = 0.95 },
+            { s = "ARC9_BOCW.AK47_boltback", t = 1.9 },
+            { s = "ARC9_BOCW.AK47_boltrelease", t = 2.2 },
+            { s = "ARC9_BOCW.AK47_reload_end", t = 2.7 },
         },
         IKTimeLine = {
             {
@@ -1039,14 +1044,12 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_fast"] = {
-        Source = "reload_fast",
-        MinProgress = 1.12,
+    ["reload_dual"] = {
+        Source = "reload_dualmag",
+        MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.2 },
-            { s = "ARC9_BOCW.AK47_reload_magin", t = 0.7 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 1.4 },
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.AK47_reload_dualmag_magin", t = 1 },
         },
         IKTimeLine = {
             {
@@ -1071,16 +1074,76 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_fast"] = {
-        Source = "reload_fast_empty",
-        MinProgress = 0.45,
+    ["reload_empty_dual"] = {
+        Source = "reload_dualmag_empty",
+        MinProgress = 0.5,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.2 },
-            { s = "ARC9_BOCW.AK47_reload_magin", t = 0.7 },
-            { s = "ARC9_BOCW.AK47_slideback", t = 1.65 },
-            { s = "ARC9_BOCW.AK47_sliderelease", t = 1.75 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 2 },
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK47_reload_dualmag_magin", t = 1 },
+            { s = "ARC9_BOCW.AK47_boltback", t = 1.9 },
+            { s = "ARC9_BOCW.AK47_boltrelease", t = 2.15 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["1_reload_dual"] = {
+        Source = "reload_dualmag2",
+        MinProgress = 0.65,
+        EventTable = {
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK47_reload_dualmag_magin", t = 1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["1_reload_empty_dual"] = {
+        Source = "reload_dualmag2_empty",
+        MinProgress = 0.5,
+        EventTable = {
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.AK47_reload_dualmag_magin", t = 1.15 },
+            { s = "ARC9_BOCW.AK47_boltback", t = 1.9 },
+            { s = "ARC9_BOCW.AK47_boltrelease", t = 2.15 },
         },
         IKTimeLine = {
             {
@@ -1109,8 +1172,7 @@ SWEP.Animations = {
         Source = "reload_mix",
         MinProgress = 0.7,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.2 },
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.6 },
             { s = "ARC9_BOCW.AK47_reload_magin", t = 0.7 },
             { s = "ARC9_BOCW.AK47_reload_end", t = 1.4 },
         },
@@ -1142,12 +1204,12 @@ SWEP.Animations = {
         MinProgress = 0.5,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_start", t = 0 },
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.2 },
-            { s = "ARC9_BOCW.AK47_reload_magin", t = 0.7 },
-            { s = "ARC9_BOCW.AK47_slideback", t = 1.6 },
-            { s = "ARC9_BOCW.AK47_sliderelease", t = 1.7 },
-            { s = "ARC9_BOCW.AK47_reload_end", t = 2 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magoutstart", t = 0.45 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magout", t = 0.55 },
+            { s = "ARC9_BOCW.AK47_reload_empty_magin", t = 0.95 },
+            { s = "ARC9_BOCW.AK47_boltback", t = 1.75 },
+            { s = "ARC9_BOCW.AK47_boltrelease", t = 2 },
+            { s = "ARC9_BOCW.AK47_reload_end", t = 2.5 },
         },
         IKTimeLine = {
             {
@@ -1217,12 +1279,12 @@ SWEP.Animations = {
             },
         },
     },
-    ["enter_inspect_dualmag"] = {
+    ["enter_inspect_dual"] = {
         Source = "inspect_dualmag",
         Time = 5.5,
         EventTable = {
             { s = "ARC9_BOCW.AK47_inspect_part1", t = 0.25 },
-            { s = "ARC9_BOCW.AK47_inspect_part2", t = 3.475 }
+            { s = "ARC9_BOCW.AK47_inspect_part2", t = 3.47 }
         },
         IKTimeLine = {
             {
