@@ -407,7 +407,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15.5, 35, 4)
+SWEP.CustomizePos = Vector(17.75, 38, 4)
 SWEP.CustomizeRotateAnchor = Vector(17, -1.88, -5)
 
 SWEP.CustomizeSnapshotFOV = 70
@@ -443,144 +443,114 @@ SWEP.AttachmentElements = {
     ["maggone"] = {
         Bodygroups = {
             {1, 1},
-            {2, 1},
         }
     },
     ["optic_mount"] = {
         Bodygroups = {
-            {3, 1},
+            {2, 1},
         }
     },
-    ["frontsight_krig6"] = {
+    ["stock_tac"] = {
         Bodygroups = {
-            {4, 0},
-        }
-    },
-    ["frontsight_type56"] = {
-        Bodygroups = {
-            {4, 1},
-        }
-    },
-    ["handguard_krig6"] = {
-        Bodygroups = {
-            {8, 0},
-        }
-    },
-    ["handguard_type56"] = {
-        Bodygroups = {
+            {7, 1},
             {8, 1},
-            {7, 3},
         }
     },
-    ["receiver_krig6"] = {
+    ["stock_wir"] = {
         Bodygroups = {
-            {10, 0},
+            {8, 2},
         }
     },
-    ["receiver_akm"] = {
-        Bodygroups = {
-            {10, 1},
-        }
-    },
-    ["receiver_type56"] = {
-        Bodygroups = {
-            {10, 2},
-        }
-    },
-    ["rearsight_krig6"] = {
-        Bodygroups = {
-            {9, 0},
-        }
-    },
-    ["rearsight_type56"] = {
+    ["stock_dst"] = {
         Bodygroups = {
             {9, 1},
         }
     },
-    ["grip_krig6"] = {
+    ["stock_non"] = {
         Bodygroups = {
-            {11, 0},
+            {8, 5},
         }
     },
-    ["grip_type56"] = {
+    ["stock_sas"] = {
         Bodygroups = {
-            {11, 1},
+            {7, 1},
+            {8, 3},
         }
     },
-    ["stock_krig6"] = {
+    ["stock_rdr"] = {
         Bodygroups = {
-            {12, 0},
+            {8, 4},
         }
     },
-    ["stock_type56-2"] = {
+    ["barrel_ultralight"] = {
         Bodygroups = {
-            {12, 3},
-        }
-    },
-    ["stockgone"] = {
-        Bodygroups = {
-            {12, 4},
-        }
-    },
-    ["barrel_extended"] = {
-        Bodygroups = {
-            {5, 1}
+            {3, 1},
+            {4, 1},
+            {5, 1},
+            {6, 1},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(-3.3, 0, 0),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {5, 1},
             {3, 1},
+            {4, 1},
+            {5, 0},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(-1.53, 0, 0),
             },
         },
     },
-    ["barrel_reinforcedheavy"] = {
+    ["barrel_contour"] = {
         Bodygroups = {
-            {5, 1}
+            {3, 1},
+            {4, 1},
+            {5, 2},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(-4.76, 0, 0),
             },
         },
     },
-    ["barrel_chromelined"] = {
+    ["barrel_ranger"] = {
         Bodygroups = {
-            {5, 1}
+            {3, 1},
+            {5, 3},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(12.36, 0, 2.6225),
+                Pos = Vector(0.94, 0, 0),
             }
         },
     },
     ["barrel_takedown"] = {
         Bodygroups = {
-            {5, 1},
             {3, 1},
+            {5, 4},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.95, 0, 2.6225),
+                Pos = Vector(0.94, 0, 0),
             }
         },
     },
-    ["barrel_taskforce"] = {
+    ["barrel_cmvmilspec"] = {
         Bodygroups = {
-            {5, 1}
+            {3, 1},
+            {4, 1},
+            {5, 5},
+            {6, 1},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.96, 0, 2.6225),
+                Pos = Vector(-5.72, 0, 0),
             }
         },
     },
@@ -605,10 +575,11 @@ SWEP.Attachments = {
     {
         PrintName = "OPTIC", -- print name
         Bone = "tag_weapon",
-        Pos = Vector(2.8, -1.15, 2.8),
+        Pos = Vector(2.8, 0, 5.24),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_krig6_opticmount"},
+        Category = {"optic_picatinny"},
+        InstalledElements = {"optic_mount"},
     },
     {
         PrintName = "MUZZLE",
@@ -617,12 +588,12 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_krig6_muzzle"},
-        Integral = false
+        Installed = "bocw_krig6_muzzle_base",
     },
     {
         PrintName = "BODY",
         Bone = "tag_weapon",
-        Pos = Vector(17.4, 0, 4),
+        Pos = Vector(16, 0, 4.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_body_krig6"},
@@ -633,15 +604,15 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(13.75, 0, 0),
+        Icon_Offset = Vector(-7, 0, 0),
         Category = {"bocw_krig6_barrel"},
     },
     {
         PrintName = "STOCK",
-        Bone = "tag_weapon",
+        Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-6, 0, 1.5),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_krig6_stock"},
         InstalledElements = {"stockgone"},
     },
@@ -651,7 +622,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, -1),
+        Icon_Offset = Vector(0.2, 0, -3),
         Category = {"bocw_krig6_mag"},
     },
     {
@@ -659,7 +630,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Icon_Offset = Vector(-0.5, 0, -0.75),
         Category = {"bocw_krig6_wrap"},
     },
     {
@@ -844,6 +815,10 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
+        EjectAt = 0,
+    },
+    ["fire_optic"] = {
+        Source = {"fire_optic"},
         EjectAt = 0,
     },
     ["reload"] = {
@@ -1185,8 +1160,9 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_inspect_part1", t = 0.25 },
-            { s = "ARC9_BOCW.Krig6_inspect_part2", t = 3.475 }
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 0.1 },
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 2.1 },
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 3.6 },
         },
         IKTimeLine = {
             {
