@@ -1,0 +1,35 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\arc9\bocw\bocw_krig6\atts\cmvmilspec_diff"
+	"$bumpmap" "models\weapons\arc9\bocw\bocw_krig6\atts\cmvmilspec_n"
+
+
+	"$phong" "1"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_krig6\atts\cmvmilspec_g"
+	"$phongboost" "0.2"
+	"$phongalbedotint" "1"
+
+	"$normalmapalphaenvmapmask" "1"
+
+	$detail "models\weapons\arc9\bocw\bocw_krig6\atts\cmvmilspec_sc"
+	$detailblendfactor 0.5 
+	$detailblendmode 3
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            			blend $detailblendfactor
+		}
+	}
+
+
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[.01 .01 .01]"
+
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+
+	"$nocull" "1"
+}
+
+
+

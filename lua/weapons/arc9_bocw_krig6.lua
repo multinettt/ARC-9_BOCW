@@ -622,7 +622,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.2, 0, -3),
+        Icon_Offset = Vector(0, 0, -2),
         Category = {"bocw_krig6_mag"},
     },
     {
