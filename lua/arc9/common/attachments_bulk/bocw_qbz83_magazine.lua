@@ -76,7 +76,7 @@ ATT.ReloadTimeMult = 0.75
 
 ATT.AimDownSightsTimeMult = 1.2
 
-ATT.ActivateElements = {"qbz83_mag_mix", "magtapegone"}
+ATT.ActivateElements = {"qbz83_mag_mix", "maggone"}
 
 ARC9.LoadAttachment(ATT, "bocw_qbz83_magazine_mix1")
 
@@ -153,9 +153,11 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.ClipSizeOverride = 50
+
 ATT.MultAimDownSightsTime = 1.25
 ATT.ReloadTimeMult = 0.65
 
-ATT.ActivateElements = {"qbz83_mag_mix", "magtapegone"}
+ATT.ActivateElements = {"qbz83_mag_mix", "maggone"}
 
 ARC9.LoadAttachment(ATT, "bocw_qbz83_magazine_mixpro")
