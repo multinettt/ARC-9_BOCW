@@ -18,6 +18,7 @@ Weapons with links embedded to them are not present here and have their own repo
 - XM4 (XM117E2)
 - AK-47 (AK-47/M Hybrid)
 - Krig 6 (Ak 5)
+- QBZ-83 (QBZ-95-1)
 - **Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]**
 
 ### Submachine Guns:
