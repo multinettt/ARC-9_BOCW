@@ -449,36 +449,14 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
-    ["stock_tac"] = {
+    ["stock_mrt"] = {
         Bodygroups = {
-            {7, 1},
-            {8, 1},
+            {4, 1},
         }
     },
-    ["stock_wir"] = {
+    ["stock_cqb"] = {
         Bodygroups = {
-            {8, 2},
-        }
-    },
-    ["stock_dst"] = {
-        Bodygroups = {
-            {9, 1},
-        }
-    },
-    ["stock_non"] = {
-        Bodygroups = {
-            {8, 5},
-        }
-    },
-    ["stock_sas"] = {
-        Bodygroups = {
-            {7, 1},
-            {8, 3},
-        }
-    },
-    ["stock_rdr"] = {
-        Bodygroups = {
-            {8, 4},
+            {4, 1},
         }
     },
     ["barrel_ultralight"] = {
@@ -611,7 +589,7 @@ SWEP.Attachments = {
         Bone = "tag_stock",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(2, 0, 0.5),
+        Icon_Offset = Vector(2.8, 0, 0.5),
         Category = {"bocw_qbz83_stock"},
         InstalledElements = {"stockgone"},
     },
@@ -789,7 +767,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.8 },
         },
         IKTimeLine = {
@@ -821,7 +799,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.QBZ83_boltback", t = 1.95 },
             { s = "ARC9_BOCW.QBZ83_boltrelease", t = 2.15 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 2.6 },

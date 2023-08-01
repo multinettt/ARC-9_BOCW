@@ -13,6 +13,12 @@ ATT.SortOrder = 0
 
 ATT.Category = "bocw_qbz83_stock"
 
+ATT.Model = "models/weapons/arc9/atts/bocw_qbz83_stock_tactical.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
 ATT.ActivateElements = {"stock_tac"}
 
 ATT.SpeedMultSights = 1.25
@@ -57,6 +63,12 @@ ATT.SortOrder = 2
 
 ATT.Category = "bocw_qbz83_stock"
 
+ATT.Model = "models/weapons/arc9/atts/bocw_qbz83_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
 ATT.ActivateElements = {"stock_dst"}
 
 ARC9.LoadAttachment(ATT, "bocw_qbz83_stock_duster")
@@ -74,11 +86,17 @@ ATT.SortOrder = 3
 
 ATT.Category = "bocw_qbz83_stock"
 
+ATT.Model = "models/weapons/arc9/atts/bocw_qbz83_stock_cqbpad.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
 ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stock_non"}
+ATT.ActivateElements = {"stock_cqb"}
 
 ARC9.LoadAttachment(ATT, "bocw_qbz83_stock_nostock")
 
@@ -94,6 +112,12 @@ The SAS Combat Stock is a Stock attachment available for all NATO related primar
 ATT.SortOrder = 5
 
 ATT.Category = "bocw_qbz83_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_qbz83_stock_sascombat.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultShooting = 1.05
 ATT.SpeedMultSighted = 1.4
@@ -116,6 +140,12 @@ The Raider Stock is a Stock attachment available for some NATO related primary w
 ATT.SortOrder = 6
 
 ATT.Category = "bocw_qbz83_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_qbz83_stock_raiderstock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
 
