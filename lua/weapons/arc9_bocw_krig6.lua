@@ -704,51 +704,9 @@ SWEP.Animations = {
             },
         },
     },
-    ["1_draw"] = {
-        Source = "draw_quick",
-        Time = 0.9,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.45,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.8,
-                lhik = 1,
-                rhik = 0
-            },
-        },
-    },
     ["holster"] = {
         Source = "holster",
         Time = 0.6,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-        },
-    },
-    ["1_holster"] = {
-        Source = "holster_quick",
-        Time = 1,
         IKTimeLine = {
             {
                 t = 0,
@@ -828,7 +786,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 0.5,
+        MinProgress = 0.75,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.35 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.35 },
@@ -859,7 +817,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 0.55,
+        MinProgress = 0.53,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.375 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.3 },
@@ -892,7 +850,7 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 0.65,
+        MinProgress = 0.7,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.35 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.45 },
@@ -923,10 +881,10 @@ SWEP.Animations = {
     },
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.54,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.375 },
+            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.4 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.45 },
             { s = "ARC9_BOCW.Krig6_boltback", t = 2.3 },
             { s = "ARC9_BOCW.Krig6_boltrelease", t = 2.45 },
@@ -988,7 +946,7 @@ SWEP.Animations = {
     },
     ["reload_empty_dual"] = {
         Source = "reload_dualmag_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.475,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
@@ -1051,7 +1009,7 @@ SWEP.Animations = {
     },
     ["1_reload_empty_dual"] = {
         Source = "reload_dualmag2_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.475,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
@@ -1083,7 +1041,7 @@ SWEP.Animations = {
     },
     ["reload_mix"] = {
         Source = "reload_mix",
-        MinProgress = 0.7,
+        MinProgress = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
             { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.1 },

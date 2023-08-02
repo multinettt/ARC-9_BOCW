@@ -462,72 +462,60 @@ SWEP.AttachmentElements = {
     ["barrel_ultralight"] = {
         Bodygroups = {
             {3, 1},
-            {4, 1},
-            {5, 1},
-            {6, 1},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-3.3, 0, 0),
+                Pos = Vector(-0.21, 0, 0),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
             {3, 1},
-            {4, 1},
-            {5, 0},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-1.53, 0, 0),
+                Pos = Vector(-0.21, 0, 0),
             },
         },
     },
-    ["barrel_contour"] = {
+    ["barrel_reinforcedheavy"] = {
         Bodygroups = {
             {3, 1},
-            {4, 1},
-            {5, 2},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-4.76, 0, 0),
+                Pos = Vector(1.38, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         Bodygroups = {
             {3, 1},
-            {5, 3},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.94, 0, 0),
+                Pos = Vector(2.375, 0, 0),
             }
         },
     },
     ["barrel_takedown"] = {
         Bodygroups = {
             {3, 1},
-            {5, 4},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.94, 0, 0),
+                Pos = Vector(1.38, 0, 0),
             }
         },
     },
-    ["barrel_cmvmilspec"] = {
+    ["barrel_taskforce"] = {
         Bodygroups = {
             {3, 1},
-            {4, 1},
-            {5, 5},
-            {6, 1},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.72, 0, 0),
+                Pos = Vector(1.38, 0, 0),
             }
         },
     },
@@ -565,7 +553,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_qbz83_muzzle"},
-        --Installed = "bocw_qbz83_muzzle_base",
+        Installed = "bocw_qbz83_muzzle_base",
     },
     {
         PrintName = "BODY",
@@ -763,7 +751,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 0.5,
+        MinProgress = 0.58,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
@@ -795,7 +783,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 0.55,
+        MinProgress = 0.45,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
@@ -829,7 +817,7 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 0.65,
+        MinProgress = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_ext_magout", t = 0.2 },
@@ -861,7 +849,7 @@ SWEP.Animations = {
     },
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.475,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
@@ -896,11 +884,11 @@ SWEP.Animations = {
     },
     ["reload_dual"] = {
         Source = "reload_dualmag",
-        MinProgress = 0.65,
+        MinProgress = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 0.9 },
+            { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.5 },
         },
         IKTimeLine = {
             {
@@ -927,10 +915,10 @@ SWEP.Animations = {
     },
     ["reload_empty_dual"] = {
         Source = "reload_dualmag_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.4,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.2 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 0.9 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 0.8 },
             { s = "ARC9_BOCW.QBZ83_boltback", t = 1.6 },
             { s = "ARC9_BOCW.QBZ83_boltrelease", t = 1.8 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 2.3 },
@@ -960,11 +948,11 @@ SWEP.Animations = {
     },
     ["1_reload_dual"] = {
         Source = "reload_dualmag2",
-        MinProgress = 0.65,
+        MinProgress = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
             { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.7 },
         },
         IKTimeLine = {
             {
@@ -991,7 +979,7 @@ SWEP.Animations = {
     },
     ["1_reload_empty_dual"] = {
         Source = "reload_dualmag2_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.45,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1 },
@@ -1024,7 +1012,7 @@ SWEP.Animations = {
     },
     ["reload_mix"] = {
         Source = "reload_mix",
-        MinProgress = 0.7,
+        MinProgress = 0.58,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
@@ -1056,12 +1044,12 @@ SWEP.Animations = {
     },
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
-        MinProgress = 0.5,
+        MinProgress = 0.45,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.15 },
             { s = "ARC9_BOCW.QBZ83_boltback", t = 1.95 },
             { s = "ARC9_BOCW.QBZ83_boltrelease", t = 2.15 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 2.6 },

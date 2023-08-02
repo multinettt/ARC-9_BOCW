@@ -16,6 +16,7 @@ ATT.Category = {"bocw_krig6_muzzle"}
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.MuzzleParticleOverride = "muzzleflash_4"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
@@ -39,6 +40,7 @@ ATT.Category = {"bocw_qbz83_muzzle"}
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.MuzzleParticleOverride = "muzzleflash_5"
 ATT.MuzzleParticleOverride_Priority = 10
 ATT.MuzzleDevice = true
 
