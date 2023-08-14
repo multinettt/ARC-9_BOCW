@@ -131,7 +131,7 @@ ARC9.LoadAttachment(ATT, "bocw_ffar1_barrel_ranger")
 ATT = {}
 
 ATT.PrintName = [[20.3" Takedown]]
-ATT.CompactName = [[20.3" TKDWN]]
+ATT.CompactName = [[20.3" TKDN]]
 ATT.Icon = Material("entities/bocw_atts/barrels/ffar1_takedown.png", "mips smooth")
 ATT.Description = [[Extended chrome lined barrel. Increased barrel length improves damage range.
 

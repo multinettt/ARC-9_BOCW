@@ -265,6 +265,13 @@ SWEP.BashDecal = "ManhackCut"
 SWEP.NotForNPCs = false -- Won't be given to NPCs.
 SWEP.NPCWeight = 100 -- How likely it is for an NPC to get this weapon as opposed to other weapons.
 
+-------------------------- BIPOD
+
+SWEP.Bipod = true -- This weapon comes with a bipod.
+SWEP.RecoilMultBipod = 0.25
+SWEP.SwayMultBipod = 0.25
+SWEP.FreeAimRadiusMultBipod = 0
+
 -------------------------- SOUNDS
 
 SWEP.ShootVolume = 125
@@ -417,7 +424,7 @@ SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
 
-SWEP.BipodPos = Vector(0, 4, -4)
+SWEP.BipodPos = Vector(0, -2, -0.5)
 SWEP.BipodAng = Angle(0, 0, 0)
 
 -------------------------- HoldTypes
@@ -454,105 +461,106 @@ SWEP.AttachmentElements = {
     },
     ["stock_tac"] = {
         Bodygroups = {
-            {7, 1},
-            {8, 1},
+            {7, 0},
         }
     },
-    ["stock_wir"] = {
+    ["stock_mrt"] = {
         Bodygroups = {
-            {8, 2},
+            {7, 1},
         }
     },
     ["stock_dst"] = {
         Bodygroups = {
-            {9, 1},
+            {7, 0},
+            {8, 1}
         }
     },
-    ["stock_non"] = {
+    ["stock_cqb"] = {
         Bodygroups = {
-            {8, 5},
+            {7, 1}
         }
     },
     ["stock_sas"] = {
         Bodygroups = {
-            {7, 1},
-            {8, 3},
+            {7, 0},
+            {8, 1}
         }
     },
     ["stock_rdr"] = {
         Bodygroups = {
-            {8, 4},
+            {7, 0},
+            {8, 1}
         }
     },
     ["barrel_ultralight"] = {
         Bodygroups = {
-            {3, 1},
+            {4, 1},
+            {5, 1},
+            {6, 5}
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(-3.1, 0, 0),
+            },
+        },
+    },
+    ["barrel_cavalrylancer"] = {
+        Bodygroups = {
             {4, 1},
             {5, 1},
             {6, 1},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-3.3, 0, 0),
+                Pos = Vector(-2.03, 0, 0),
             },
         },
     },
-    ["barrel_cavalrylancer"] = {
+    ["barrel_reinforcedheavy"] = {
         Bodygroups = {
-            {3, 1},
             {4, 1},
-            {5, 0},
+            {5, 1},
+            {6, 2},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-1.53, 0, 0),
-            },
-        },
-    },
-    ["barrel_contour"] = {
-        Bodygroups = {
-            {3, 1},
-            {4, 1},
-            {5, 2},
-        },
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(-4.76, 0, 0),
+                Pos = Vector(0.44, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         Bodygroups = {
-            {3, 1},
-            {5, 3},
+            {4, 1},
+            {5, 1},
+            {6, 3}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.94, 0, 0),
+                Pos = Vector(2.35, 0, 0),
             }
         },
     },
     ["barrel_takedown"] = {
         Bodygroups = {
-            {3, 1},
-            {5, 4},
+            {4, 1},
+            {5, 1},
+            {6, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(0.94, 0, 0),
+                Pos = Vector(1.06, 0, 0),
             }
         },
     },
-    ["barrel_cmvmilspec"] = {
+    ["barrel_taskforce"] = {
         Bodygroups = {
-            {3, 1},
             {4, 1},
-            {5, 5},
-            {6, 1},
+            {5, 1},
+            {6, 4}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(-5.72, 0, 0),
+                Pos = Vector(0.53, 0, 0),
             }
         },
     },
@@ -607,17 +615,16 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(6.75, 0, 0),
+        Icon_Offset = Vector(4, 0, 0),
         Category = {"bocw_ffar1_barrel"},
     },
     {
         PrintName = "STOCK",
-        Bone = "tag_stock",
+        Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(4, 0, 0.5),
+        Icon_Offset = Vector(-12, 0, 3),
         Category = {"bocw_ffar1_stock"},
-        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "MAGAZINE",
@@ -688,6 +695,10 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
+        Time = 10,
+    },
+    ["idle_bipod"] = {
+        Source = "idle_bipod",
         Time = 10,
     },
     ["draw"] = {
@@ -786,12 +797,46 @@ SWEP.Animations = {
         Source = {"fire"},
         EjectAt = 0,
     },
-    ["fire_optic"] = {
-        Source = {"fire_optic"},
+    ["fire_bipod"] = {
+        Source = {"fire_bipod"},
         EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
+        NoMagSwap = true,
+        Mult = 0.9,
+        MinProgress = 0.65,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.35 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_bipod"] = {
+        Source = "reload_bipod",
         NoMagSwap = true,
         Mult = 0.9,
         MinProgress = 0.65,
@@ -859,8 +904,76 @@ SWEP.Animations = {
             },
         },
     },
+    ["reload_bipod_empty"] = {
+        Source = "reload_empty_bipod",
+        Mult = 0.9,
+        MinProgress = 0.55,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magin", t = 1.5 },
+            { s = "ARC9_BOCW.FFAR1_boltback", t = 2.25 },
+            { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.9 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
     ["reload_ext"] = {
         Source = "reload_ext",
+        Mult = 0.9,
+        MinProgress = 0.65,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.35 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_bipod_ext"] = {
+        Source = "reload_ext_bipod",
         Mult = 0.9,
         MinProgress = 0.65,
         EventTable = {
@@ -928,8 +1041,76 @@ SWEP.Animations = {
             },
         },
     },
+    ["reload_bipod_empty_ext"] = {
+        Source = "reload_ext_empty_bipod",
+        Mult = 0.9,
+        MinProgress = 0.54,
+        MagSwapTime = 1,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magin", t = 1.5 },
+            { s = "ARC9_BOCW.FFAR1_boltback", t = 2.25 },
+            { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.425 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.9 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
     ["reload_dual"] = {
         Source = "reload_dualmag",
+        MinProgress = 0.65,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_bipod_dual"] = {
+        Source = "reload_dualmag_bipod",
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
@@ -994,8 +1175,74 @@ SWEP.Animations = {
             },
         },
     },
+    ["reload_bipod_empty_dual"] = {
+        Source = "reload_dualmag_empty_bipod",
+        MinProgress = 0.475,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.15 },
+            { s = "ARC9_BOCW.FFAR1_boltback", t = 2.15 },
+            { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.375 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
     ["1_reload_dual"] = {
         Source = "reload_dualmag2",
+        MinProgress = 0.65,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["1_reload_bipod_dual"] = {
+        Source = "reload_dualmag2_bipod",
         MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
@@ -1060,8 +1307,74 @@ SWEP.Animations = {
             },
         },
     },
+    ["1_reload_bipod_empty_dual"] = {
+        Source = "reload_dualmag2_empty_bipod",
+        MinProgress = 0.475,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.5 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.15 },
+            { s = "ARC9_BOCW.FFAR1_boltback", t = 2.15 },
+            { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.375 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
     ["reload_mix"] = {
         Source = "reload_mix",
+        MinProgress = 0.6,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_magout", t = 0.7 },
+            { s = "ARC9_BOCW.FFAR1_reload_magin", t = 1.35 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_bipod_mix"] = {
+        Source = "reload_mix_bipod",
         MinProgress = 0.6,
         EventTable = {
             { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
@@ -1099,7 +1412,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
             { s = "ARC9_BOCW.FFAR1_reload_empty_magout", t = 0.6 },
-            { s = "ARC9_BOCW.FFAR1_reload_empty_magin", t = 1.1 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magin", t = 1.15 },
             { s = "ARC9_BOCW.FFAR1_boltback", t = 2.275 },
             { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.475 },
             { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.9 },
@@ -1126,6 +1439,51 @@ SWEP.Animations = {
                 rhik = 0
             },
         },
+    },
+    ["reload_bipod_empty_mix"] = {
+        Source = "reload_mix_empty_bipod",
+        MinProgress = 0.45,
+        MagSwapTime = 1,
+        EventTable = {
+            { s = "ARC9_BOCW.FFAR1_reload_start", t = 0 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magout", t = 0.6 },
+            { s = "ARC9_BOCW.FFAR1_reload_empty_magin", t = 1.15 },
+            { s = "ARC9_BOCW.FFAR1_boltback", t = 2.275 },
+            { s = "ARC9_BOCW.FFAR1_boltrelease", t = 2.475 },
+            { s = "ARC9_BOCW.FFAR1_reload_end", t = 2.9 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["enter_bipod"] = {
+        Source = "bipod_in",
+        Time = 0.25,
+        NoStatAffectors = true
+    },
+    ["exit_bipod"] = {
+        Source = "bipod_out",
+        Time = 0.25,
+        NoStatAffectors = true
     },
     ["enter_sprint"] = {
         Source = "supersprint_in",

@@ -77,7 +77,7 @@ ATT = {}
 
 ATT.PrintName = "CQB Pad" --// 4
 ATT.CompactName = "CQB PAD"
-ATT.Icon = Material("entities/bocw_atts/stocks/ffar1_cqbpad.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/ffar1_cqb.png", "mips smooth")
 ATT.Description = [[Lightweight recoil pad absorbs shock to reduce draw time when exiting sprint.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]

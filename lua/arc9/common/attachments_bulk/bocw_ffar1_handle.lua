@@ -103,7 +103,7 @@ ATT.SortOrder = 5
 
 ATT.Category = "bocw_ffar1_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ffar1_handle_serpent.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ffar1_handle_serpentwrap.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
