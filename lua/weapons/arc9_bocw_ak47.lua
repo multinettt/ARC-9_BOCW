@@ -33,7 +33,7 @@ SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "AK-47"
-SWEP.TrueName = "AK-47/M Hybrid"
+SWEP.TrueName = "AK-47"
 SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
      Manufacturer = "Kalashnikov Concern",
@@ -187,18 +187,18 @@ SWEP.Firemodes = {
 
 -------------------------- RECOIL
 
-SWEP.Recoil = 1.6
-SWEP.RecoilSide = 0.2
-SWEP.RecoilUp = 0.5
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.5
+SWEP.RecoilUp = 0.65
 
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 0.1
+SWEP.RecoilRandomUp = 0
+SWEP.RecoilRandomSide = 0
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.1
-SWEP.RecoilKick = 1
+SWEP.RecoilAutoControl = 1.5
+SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(1.3 / 37.5)
 SWEP.SpreadMultRecoil = 1.2
@@ -209,14 +209,21 @@ SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
+SWEP.RecoilPatternDrift = 10
 
-SWEP.VisualRecoilUp = 0
+SWEP.UseVisualRecoil = true
+
+SWEP.VisualRecoil = 1
+SWEP.VisualRecoilMultSights = 1
+
+SWEP.VisualRecoilUp = 0.1
 SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
-SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilRoll = 0.1
+
+SWEP.VisualRecoilCenter = Vector(20, 0, 0)
+
+SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilPunchMultSights = 0.5
 
 
 SWEP.NPCWeaponType = "weapon_ar2"
@@ -637,16 +644,14 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(24.75, 0, 4.55),
-        Integral = true,
-        Installed = "bocw_ak47_frontsight_ak47",
         Category = {"bocw_ak47_frontsight"},
     },
     {
-        PrintName = "AK47BARREL",
+        PrintName = "BARREL",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        DefaultIcon = Material("entities/bocw_atts/barrels/ak47_barrel.png", "mips smooth"),
+        --DefaultIcon = Material("entities/bocw_atts/barrels/ak47_barrel.png", "mips smooth"),
         Icon_Offset = Vector(13.75, 0, 0),
         Category = {"bocw_ak47_barrel"},
     },
@@ -656,8 +661,6 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13, 0, 3.25),
-        Integral = true,
-        Installed = "bocw_ak47_handguard_ak47",
         Category = {"bocw_ak47_handguard"},
     },
     {
@@ -666,39 +669,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(10, 0, 4.55),
-        Integral = true,
-        Installed = "bocw_ak47_rearsight_ak47",
         Category = {"bocw_ak47_rearsight"},
-    },
-    {
-        PrintName = "RECEIVER",
-        Bone = "tag_weapon",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(4.6, 0, 4),
-        Integral = true,
-        Installed = "bocw_ak47_receiver_ak47",
-        Category = {"bocw_ak47_receiver"},
-    },
-    {
-        PrintName = "GRIP",
-        Bone = "tag_weapon",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.3, 0, 1),
-        Integral = true,
-        Installed = "bocw_ak47_grip_ak47",
-        Category = {"bocw_ak47_grip"},
-    },
-    {
-        PrintName = "AK-47 STOCK",
-        Bone = "tag_weapon",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        DefaultIcon = Material("entities/bocw_atts/stocks/ak47_stock.png", "mips smooth"),
-        Icon_Offset = Vector(-6, 0, 1.5),
-        Category = {"bocw_ak47_stock"},
-        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "MAGAZINE",
@@ -706,7 +677,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        DefaultIcon = Material("entities/bocw_atts/magazines/ak47_mag.png", "mips smooth"),
+        DefaultIcon = Material("arc9/def_att_icons/mag_ak.png", "mips smooth"),
         Icon_Offset = Vector(0, 0, -1),
         Category = {"bocw_ak47_mag"},
         DuplicateModels = {
@@ -714,6 +685,35 @@ SWEP.Attachments = {
                 Bone = "tag_clip1",
             }
         },
+    },
+    {
+        PrintName = "RECEIVER",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(4.6, 0, 4),
+        UnInstalledElements = {"receiver_ak47"},
+        Category = {"bocw_ak47_receiver"},
+    },
+    {
+        PrintName = "GRIP",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        DefaultIcon = Material("arc9/def_att_icons/grip_ak.png", "mips smooth"),
+        Icon_Offset = Vector(0.3, 0, 1),
+        UnInstalledElements = {"grip_type56"},
+        Category = {"bocw_ak47_grip"},
+    },
+    {
+        PrintName = "AK-47 STOCK",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        DefaultIcon = Material("arc9/def_att_icons/stock_ak.png", "mips smooth"),
+        Icon_Offset = Vector(-6, 0, 1.5),
+        Category = {"bocw_ak47_stock"},
+        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "HANDLE",

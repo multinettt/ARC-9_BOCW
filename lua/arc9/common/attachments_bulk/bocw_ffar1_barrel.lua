@@ -3,7 +3,7 @@ local ATT = {} --Extnd:5 Cvlry:35 Heavy:66 Rng:100 Rifle:132 TaskF:164
 ATT = {}
 
 ATT.PrintName = [[17.9" Ultralight]] --// 1
-ATT.CompactName = [[17.9" LGHT]]
+ATT.CompactName = [[17.9" LIGHT]]
 ATT.Icon = Material("entities/bocw_atts/barrels/ffar1_ultralight.png", "mips smooth")
 ATT.Description = [[Shortened steel barrel reduces weapon weight to improve maneuverability.
 
