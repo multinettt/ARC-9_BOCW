@@ -46,7 +46,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.9
+ATT.ReloadTimeMult = 0.8
 
 ATT.ActivateElements = {"xm4_mag_dual"}
 
@@ -126,7 +126,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.75
+ATT.ReloadTimeMult = 0.65
 ATT.AimDownSightsTimeMult = 0.9
 
 ATT.ClipSizeOverride = 25

@@ -61,7 +61,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000001000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -265,15 +265,15 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.xm4_fire"                            -- Fire
-SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.xm4_fire_silenced"                    -- Fire silenced
+SWEP.ShootSound = "ARC9_BOCW.XM4_fire"                            -- Fire
+--SWEP.ShootSoundIndoor = "ARC9_BOCW.rifle_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.XM4_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
-SWEP.DistantShootSound = "ARC9_BOCW.xm4_fire_dist"                     -- Distant fire
+SWEP.DistantShootSound = "ARC9_BOCW.Shared_Decay_Close_Pistol"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
-SWEP.DistantShootSoundSilenced = nil            -- Distant fire silenced
+SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Null"            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
@@ -347,6 +347,7 @@ SWEP.StripperClipBGs = {}
 SWEP.HideBones = {
     "tag_clip1",
     "tag_bullet_animate1",
+    "tag_bullets1",
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = { -- works only with TPIK
     [1] = {"tag_clip1"},
@@ -373,7 +374,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.14, -8, 0.78),
+    Pos = Vector(-3.14, -6.5, 0.78),
     Ang = Angle(0, 0, 3.25),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -406,6 +407,8 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(15, 32, 4)
+SWEP.CustomizeRotateAnchor = Vector(17, -1.88, -5)
+
 SWEP.CustomizeSnapshotFOV = 75
 SWEP.CustomizeSnapshotPos = Vector(0, 10, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -440,18 +443,43 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {1, 1},
             {2, 1},
-            {9, 1}
+            {10, 1}
         }
     },
     ["magtapegone"] = {
         Bodygroups = {
-            {9, 1}
+            {10, 1}
         }
     },
     ["optic_attached"] = {
         Bodygroups = {
             {3, 1},
-            {4, 2},
+            {4, 1},
+        }
+    },
+    ["stock_tac"] = {
+        Bodygroups = {
+            {6, 1},
+            {7, 1},
+            {9, 1},
+        }
+    },
+    ["stock_dst"] = {
+        Bodygroups = {
+            {6, 1},
+            {7, 2},
+            {9, 1},
+        }
+    },
+    ["stockgone"] = {
+        Bodygroups = {
+            {7, 3},
+            {9, 1},
+        }
+    },
+    ["slinggone"] = {
+        Bodygroups = {
+            {9, 1},
         }
     },
     ["barrel_extended"] = {
@@ -490,7 +518,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(5.35, 0, 0),
+                Pos = Vector(4.82, 0, 0),
             }
         },
     },
@@ -500,7 +528,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(5.35, 0, 0),
+                Pos = Vector(4.82, 0, 0),
             }
         },
     },
@@ -513,12 +541,6 @@ SWEP.AttachmentElements = {
                 Pos = Vector(4.46, 0, 0),
             }
         },
-    },
-    ["stockgone"] = {
-        Bodygroups = {
-            {6, 1},
-            {8, 1},
-        }
     },
 }
 
@@ -539,7 +561,7 @@ SWEP.AttachmentTableOverrides = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic", -- print name
+        PrintName = "OPTIC", -- print name
         Bone = "tag_weapon",
         Pos = Vector(4, 0, 4.525),
         Ang = Angle(0, 0, 0),
@@ -549,7 +571,7 @@ SWEP.Attachments = {
         InstalledElements = {"optic_attached"},
     },
     {
-        PrintName = "Muzzle",
+        PrintName = "MUZZLE",
         Bone = "tag_muzzle",
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -558,7 +580,7 @@ SWEP.Attachments = {
         Integral = false
     },
     {
-        PrintName = "Underbarrel",
+        PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
         Pos = Vector(10.5, 0, 2.5),
         Ang = Angle(0, 0, 0),
@@ -566,14 +588,14 @@ SWEP.Attachments = {
         Category = {"bo1_rail_underbarrel"},
     },
     {
-        PrintName = "Tactical",
+        PrintName = "BODY",
         Bone = "tag_weapon",
         Pos = Vector(15.25, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bocw_xm4_bodymount"},
     },
     {
-        PrintName = "Barrel",
+        PrintName = "BARREL",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -581,8 +603,7 @@ SWEP.Attachments = {
         Category = {"bocw_xm4_barrel"},
     },
     {
-        PrintName = "Stock",
-        DefaultName = "Default Stock",
+        PrintName = "STOCK",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -590,10 +611,8 @@ SWEP.Attachments = {
         Category = {"bocw_xm4_stock"},
     },
     {
-        PrintName = "Magazine",
-        DefaultName = "30 Rnd",
+        PrintName = "MAGAZINE",
         Bone = "tag_clip",
-        Bone2 = "tag_clip1",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0.25, 0, -2),
@@ -605,7 +624,7 @@ SWEP.Attachments = {
         Category = {"bocw_xm4_mag"},
     },
     {
-        PrintName = "Handle",
+        PrintName = "HANDLE",
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -613,20 +632,23 @@ SWEP.Attachments = {
         Category = {"bocw_xm4_wrap"},
     },
     {
-        PrintName = "Ammo Type",
-        DefaultName = "Normal Calibre",
-        Category = {"ammo_bullet", "ammo_pap"}
+        PrintName = "SLING",
+        Bone = "tag_weapon",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-3.1, -0.75, 4),
+        ExcludeElements = {"stockgone", "stock_tac", "stock_dst"},
+        Category = {"bocw_xm4_sling"},
     },
     {
-        PrintName = "Perk",
-        DefaultName = "No Perk",
-        Category = {"bo1_perk", "perk"}
-    },
-    {
-        PrintName = "Sound",
-        DefaultName = "BOCW Sound",
-        DefaultIcon = Material("materials/entities/acwatt_bocw.png", "mips smooth"),
-        Category = {"bocw_xm4_sound"},
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        DefaultIcon = Material("arc9/def_att_icons/skin.png"),
+        Bone = "tag_weapon",
+        Pos = Vector(3, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 
@@ -669,12 +691,20 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "ready",
-        Time = 1.2,
         EventTable = {
             { s = "ARC9_BOCW.XM4_ready_start", t = 0 },
             { s = "ARC9_BOCW.XM4_boltback", t = 0.3 },
             { s = "ARC9_BOCW.XM4_boltrelease", t = 0.5 },
             { s = "ARC9_BOCW.XM4_ready_end", t = 0.9 },
+        },
+    },
+    ["1_ready"] = {
+        Source = "ready_quick",
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_ready_start", t = 0 },
+            { s = "ARC9_BOCW.XM4_boltback", t = 0.1 },
+            { s = "ARC9_BOCW.XM4_boltrelease", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_ready_end", t = 0.7 },
         },
     },
     ["bash"] = {
@@ -692,19 +722,19 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         NoMagSwap = true,
-        MinProgress = 1.52,
+        MinProgress = 0.58,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.65 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.15 },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        MinProgress = 1.52,
+        MinProgress = 0.6,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
-            { s = "ARC9_BOCW.XM4_reload_empty_magdrop", t = 0.7 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.3 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magdrop", t = 0.8 },
             { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
@@ -714,7 +744,7 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        MinProgress = 1.62,
+        MinProgress = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
             { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
@@ -723,10 +753,10 @@ SWEP.Animations = {
     },
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
-        MinProgress = 1.62,
+        MinProgress = 0.6,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.3 },
             { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
@@ -735,8 +765,17 @@ SWEP.Animations = {
         },
     },
     ["reload_dual"] = {
-        Source = {"reload_dual", "reload_dual2"},
-        MinProgress = 1.2,
+        Source = "reload_dual",
+        MinProgress = 0.5,
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 1.55 },
+        },
+    },
+    ["1_reload_dual"] = {
+        Source = "reload_dual2",
+        MinProgress = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
             { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
@@ -744,8 +783,20 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_dual"] = {
-        Source = {"reload_dual_empty", "reload_dual2_empty"},
-        MinProgress = 1.2,
+        Source = "reload_dual_empty",
+        MinProgress = 0.5,
+        MagSwapTime = 1.57,
+        RareSourceChance = 0.5,
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
+            { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
+            { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.5 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
+        },
+    },
+    ["1_reload_empty_dual"] = {
+        Source = "reload_dual2_empty",
+        MinProgress = 0.5,
         MagSwapTime = 1.57,
         RareSourceChance = 0.5,
         EventTable = {
@@ -759,16 +810,17 @@ SWEP.Animations = {
         Source = "reload_mix",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.XM4_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+            { s = "ARC9_BOCW.XM4_reload_magout", t = 0.65 },
+            { s = "ARC9_BOCW.XM4_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.XM4_reload_end", t = 2.15 },
         },
     },
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
         MinProgress = 1.52,
         EventTable = {
-            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.4 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magout", t = 0.3 },
+            { s = "ARC9_BOCW.XM4_reload_empty_magdrop", t = 0.8 },
             { s = "ARC9_BOCW.XM4_reload_empty_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_empty_magintap", t = 1.8 },
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
@@ -778,15 +830,18 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "supersprint_in",
-        Time = 2
+        Time = 0.75,
+        NoStatAffectors = true
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 3
+        Time = 3,
+        NoStatAffectors = true
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 0.4
+        Time = 0.4,
+        NoStatAffectors = true
     },
     ["enter_inspect"] = {
         Source = "inspect",
@@ -820,15 +875,3 @@ SWEP.Animations = {
         },
     },
 }
---[[
-SWEP.HookP_NameChange = function(self, name)
-    local attached = self:GetElements()
-    local gunname = "AKS-74U"
-
-    if attached["bo1_pap"] then
-        gunname = "AK-74NOFU2"
-    end
-
-    return gunname
-end
-]]

@@ -13,22 +13,16 @@ ATT.SortOrder = 0
 
 ATT.Category = "bocw_xm4_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_xm4_stock_tactical.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
 ATT.SpeedMultSights = 1.2
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"stock_tac"}
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_stock_tactical")
 
 ATT = {}
 
 ATT.PrintName = "Wire Stock" --// 2
-ATT.CompactName = "WIRE STCK"
+ATT.CompactName = "WIRE STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/xm4_wire.png", "mips smooth")
 ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
 
@@ -63,20 +57,14 @@ ATT.SortOrder = 2
 
 ATT.Category = "bocw_xm4_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_xm4_stock_duster.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"stock_dst"}
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_stock_duster")
 
 ATT = {}
 
 ATT.PrintName = "Buffer Tube" --// 4
-ATT.CompactName = "BFFER TUBE"
+ATT.CompactName = "BUFFER TUBE"
 ATT.Icon = Material("entities/bocw_atts/stocks/xm4_buffer.png", "mips smooth")
 ATT.Description = [[Mil-Spec buffer tube reduces draw time when exiting sprint.
 
@@ -124,7 +112,7 @@ ATT.SpeedMultSighted = 1.4
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"stock_tac"}
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_stock_sascombat")
 
@@ -157,3 +145,20 @@ ATT.SpeedMultSighted = 1.4
 ATT.SpreadMultHipFire = 1.3
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_stock_raiderpad")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Remove Sling"
+ATT.CompactName = "NO SLING"
+ATT.Icon = Material("entities/bocw_atts/stocks/xm4_slingremove.png", "mips smooth")
+ATT.Description = [[Remove the sling manually if you don't feel like it.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_xm4_sling"
+
+ATT.ActivateElements = {"slinggone"}
+
+ARC9.LoadAttachment(ATT, "bocw_xm4_sling_removed")

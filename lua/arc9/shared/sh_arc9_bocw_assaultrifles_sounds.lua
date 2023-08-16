@@ -142,6 +142,7 @@ sound.Add({
     sound = "weapons/arc9/bocw_xm4/xm4_inspect_part2.wav"
 })
 
+
 sound.Add({
     name = "ARC9_BOCW.XM4_inspect_dual1",
     channel = CHAN_ITEM,
@@ -154,6 +155,21 @@ sound.Add({
     channel = CHAN_ITEM,
     volume = 1.0,
     sound = "weapons/arc9/bocw_xm4/xm4_inspect_dual_part2.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.XM4_inspect_giga1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_xm4/xm4_inspect_giga1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.XM4_inspect_giga2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_xm4/xm4_inspect_giga2.wav"
 })
 
 -- PULLOUT PUTAWAY

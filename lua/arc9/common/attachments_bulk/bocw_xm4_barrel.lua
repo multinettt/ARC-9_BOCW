@@ -111,7 +111,7 @@ ATT.Category = "bocw_xm4_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_xm4_barrel_ranger.mdl"
 
 ATT.Scale = 0.93
-ATT.ModelOffset = Vector(-13, 0, 0)
+ATT.ModelOffset = Vector(-13.5, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.PhysBulletMuzzleVelocityMult = 2
@@ -143,7 +143,7 @@ ATT.Category = "bocw_xm4_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_xm4_barrel_takedown.mdl"
 
 ATT.Scale = 0.93
-ATT.ModelOffset = Vector(-13, 0, 0)
+ATT.ModelOffset = Vector(-13.5, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMaxMult = 1.25
