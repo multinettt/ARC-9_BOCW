@@ -48,7 +48,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ReloadTimeMult = 0.8
 
-ATT.ActivateElements = {"xm4_mag_dual"}
+ATT.ActivateElements = {"xm4_mag_dual", "maggone"}
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_magazine_dual")
 
@@ -131,7 +131,7 @@ ATT.AimDownSightsTimeMult = 0.9
 
 ATT.ClipSizeOverride = 25
 
-ATT.ActivateElements = {"xm4_mag_dual"}
+ATT.ActivateElements = {"xm4_mag_dual", "maggone"}
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_magazine_dualpro")
 

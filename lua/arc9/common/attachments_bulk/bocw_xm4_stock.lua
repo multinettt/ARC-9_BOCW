@@ -153,7 +153,7 @@ ATT = {}
 ATT.PrintName = "Remove Sling"
 ATT.CompactName = "NO SLING"
 ATT.Icon = Material("entities/bocw_atts/stocks/xm4_slingremove.png", "mips smooth")
-ATT.Description = [[Remove the sling manually if you don't feel like it.]]
+ATT.Description = [[Manually remove the sling if you don't feel like it.]]
 
 ATT.SortOrder = 0
 

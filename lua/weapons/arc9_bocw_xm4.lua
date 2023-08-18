@@ -305,7 +305,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_1" -- Used for some muzzle effects.
 --SWEP.MuzzleEffect = "MuzzleFlash"
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
@@ -599,7 +599,7 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-5, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_xm4_barrel"},
     },
     {
@@ -651,6 +651,21 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(self, data)
+
+    local vm = data.model
+    local attached = data.elements
+
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
+    end
+
+    vm:SetSkin(camo)
+
+end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -790,7 +805,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
             { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
-            { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.5 },
+            { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.55 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
         },
     },
