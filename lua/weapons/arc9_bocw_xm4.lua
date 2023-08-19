@@ -428,7 +428,7 @@ SWEP.HoldTypeBlindfire = "pistol"
 SWEP.HoldTypeNPC = nil
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- While in TPIK only
+--SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- While in TPIK only
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- Non TPIK
 SWEP.AnimDraw = false
 SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
@@ -480,6 +480,11 @@ SWEP.AttachmentElements = {
     ["slinggone"] = {
         Bodygroups = {
             {9, 1},
+        }
+    },
+    ["handguard_quad"] = {
+        Bodygroups = {
+            {11, 1},
         }
     },
     ["barrel_extended"] = {
@@ -575,7 +580,7 @@ SWEP.Attachments = {
         Bone = "tag_muzzle",
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_556_west_muzzle", "bo1_muzzle"},
+        Category = {"bocw_556_west_muzzle", "bocw_xm4_muzzle"},
         Attached = "bocw_muzzle_xm4",
         Integral = false
     },
@@ -601,6 +606,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_xm4_barrel"},
+    },
+    {
+        PrintName = "HANDGUARD",
+        Bone = "tag_barrel",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-5, 0, 0),
+        Category = {"bocw_xm4_handguard"},
     },
     {
         PrintName = "STOCK",
@@ -864,6 +877,13 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
             { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
+        },
+    },
+    ["1_enter_inspect"] = {
+        Source = "inspect_elektrik",
+        EventTable = {
+            { s = "ARC9_BOCW.XM4_inspect_giga1", t = 0 },
+            { s = "ARC9_BOCW.XM4_inspect_giga2", t = 6.15 },
         },
     },
     ["enter_inspect_ext"] = {

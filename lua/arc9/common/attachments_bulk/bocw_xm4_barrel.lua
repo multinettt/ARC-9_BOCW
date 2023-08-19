@@ -193,3 +193,20 @@ ATT.ActivateElements = {"barrel_taskforce"}
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_barrel_taskforce")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Quad Rail Handguard"
+ATT.CompactName = "QDRL HNDG"
+ATT.Icon = Material("entities/bocw_atts/barrels/xm4_quadrail.png", "mips smooth")
+ATT.Description = [[Handguard with 4 rails on each side.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_xm4_handguard"
+
+ATT.ActivateElements = {"handguard_quad"}
+
+ARC9.LoadAttachment(ATT, "bocw_xm4_handguard_quadrail")
