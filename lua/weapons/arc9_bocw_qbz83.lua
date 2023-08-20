@@ -381,7 +381,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.83, -6, -0.085),
+    Pos = Vector(-3.83, -5, -0.085),
     Ang = Angle(0, 0, -4),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -413,7 +413,7 @@ SWEP.HolsterAng = Angle(0, -15, 25)
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 4, 0)
-SWEP.CustomizePos = Vector(14, 30, 4)
+SWEP.CustomizePos = Vector(14, 32, 4)
 SWEP.CustomizeRotateAnchor = Vector(17, -1.88, -5)
 
 SWEP.CustomizeSnapshotFOV = 70

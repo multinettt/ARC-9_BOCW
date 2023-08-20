@@ -580,7 +580,7 @@ SWEP.Attachments = {
         Bone = "tag_muzzle",
         Pos = Vector(-0.012, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_556_west_muzzle", "bocw_xm4_muzzle"},
+        Category = {"bocw_xm4_muzzle"},
         Attached = "bocw_muzzle_xm4",
         Integral = false
     },

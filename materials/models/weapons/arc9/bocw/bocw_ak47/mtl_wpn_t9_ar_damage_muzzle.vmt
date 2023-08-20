@@ -1,16 +1,16 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_ak47\muzzleslant_diff"
-	"$bumpmap" "models\weapons\arc9\bocw\bocw_ak47\muzzleslant_n"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_ak47\muzzle_diff"
+	"$bumpmap" "models\weapons\arc9\bocw\bocw_ak47\muzzle_n"
 
 	"$phong" "1"
-	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_ak47\muzzleslant_g"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_ak47\muzzle_g"
 	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_ak47\muzzleslant_sc"
+	"$detail" 	"models\weapons\arc9\bocw\bocw_ak47\muzzle_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.2"     
 	"$detailblendmode" "1"
