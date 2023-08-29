@@ -61,7 +61,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000000000000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -384,7 +384,7 @@ SWEP.IronSights = {
 SWEP.HasSights = true
 
 SWEP.ActivePos = Vector(-0.2, -1.5, 0.1)
-SWEP.ActiveAng = Angle(1, -1, -2.5)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, 1, -4)
 SWEP.CrouchAng = Angle(0, 0, -30)
@@ -455,6 +455,18 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {3, 1},
             {4, 1},
+        }
+    },
+    ["bodymount_lasermixbody"] = {
+        Bodygroups = {
+            {13, 1},
+            {14, 1},
+        }
+    },
+    ["bodymount_flashlight"] = {
+        Bodygroups = {
+            {13, 1},
+            {14, 2},
         }
     },
     ["stock_tac"] = {
@@ -595,9 +607,20 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_weapon",
-        Pos = Vector(15.25, 0, 2),
+        Pos = Vector(15.25, 0, 2.112),
         Ang = Angle(0, 0, 0),
-        Category = {"bocw_xm4_bodymount"},
+        Icon_Offset = Vector(0, 0, -0.3),
+        Category = {"bocw_xm4_body"},
+        InstalledElements = {"bodymount_lasermixbody"},
+    },
+    {
+        Hidden = true,
+        Bone = "tag_weapon",
+        Pos = Vector(15.5, 0, 1.77),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_xm4_body_flash"},
+        InstalledElements = {"bodymount_flashlight"},
+        MergeSlots = {4,5}
     },
     {
         PrintName = "BARREL",
