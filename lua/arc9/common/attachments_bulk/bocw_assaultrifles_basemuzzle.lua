@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = "Mercenary Muzzle Brake"
 ATT.CompactName = "MERC MUZZ"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/muzzles/xm4_base.png", "mips smooth")
 ATT.Description = [[5.56x45mm Muzzle Brake]]
 
 ATT.SortOrder = -10

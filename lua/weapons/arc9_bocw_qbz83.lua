@@ -456,6 +456,16 @@ SWEP.AttachmentElements = {
             {2, 1},
         }
     },
+    ["bodymount_lasermixbody"] = {
+        Bodygroups = {
+            {6, 1},
+        }
+    },
+    ["bodymount_flashlight"] = {
+        Bodygroups = {
+            {6, 2},
+        }
+    },
     ["stock_mrt"] = {
         Bodygroups = {
             {4, 1},
@@ -565,11 +575,20 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_weapon",
-        Pos = Vector(10.55, 0, 1.2),
+        Pos = Vector(10.55, 0, 1.39),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_body_qbz83"},
-        InstalledElements = {"foregripgone"},
+        Icon_Offset = Vector(0, 0, -0.3),
+        Category = {"bocw_qbz83_body"},
+        InstalledElements = {"bodymount_lasermixbody"},
+    },
+    {
+        Hidden = true,
+        Bone = "tag_weapon",
+        Pos = Vector(10.75, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_ak47_body_flash"},
+        InstalledElements = {"bodymount_flashlight"},
+        MergeSlots = {3,4}
     },
     {
         PrintName = "BARREL",
