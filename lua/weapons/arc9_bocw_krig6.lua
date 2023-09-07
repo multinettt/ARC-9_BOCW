@@ -599,10 +599,10 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_weapon",
-        Pos = Vector(16, 0, 4.5),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_body_krig6"},
+        Pos = Vector(15.5, 0.775, 4.05),
+        Ang = Angle(0, 0, -112),
+        Icon_Offset = Vector(0, 0, -0.25),
+        Category = {"bocw_xm4_body", "bocw_body_mount_flashlight"},
         InstalledElements = {"foregripgone"},
     },
     {

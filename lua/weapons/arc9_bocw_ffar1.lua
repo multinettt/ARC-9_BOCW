@@ -461,6 +461,11 @@ SWEP.AttachmentElements = {
             {1, 1},
         }
     },
+    ["tapegone"] = {
+        Bodygroups = {
+            {5, 1},
+        }
+    },
     ["optic_mount"] = {
         Bodygroups = {
             {3, 1},
@@ -611,11 +616,11 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_weapon",
-        Pos = Vector(12.5, 1, 3.5),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(11.9, 1.024, 3.5),
+        Ang = Angle(0, 0, -109),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_body_ffar1"},
-        InstalledElements = {"foregripgone"},
+        Category = {"bocw_ffar1_body", "bocw_body_mount_flashlight"},
+        InstalledElements = {"tapegone"},
     },
     {
         PrintName = "BARREL",
