@@ -4,7 +4,7 @@ ATT = {} -- AK-47 =========================================
 
 ATT.PrintName = "Optic Mount"
 ATT.CompactName = "OPTIC MNT"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/akm_rail.png", "mips smooth")
 ATT.Description = [[Side installed rail mount for attaching optics to the AK-47.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BOCW Attachments"

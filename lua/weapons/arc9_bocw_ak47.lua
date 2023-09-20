@@ -59,11 +59,11 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arc9/c_arc9_ak47_bocw.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_arc9_ak47_bocw.mdl"
 
-SWEP.Slot = 1
+SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "0000000000000200000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -521,6 +521,16 @@ SWEP.AttachmentElements = {
             {12, 0},
         }
     },
+    ["stock_tac"] = {
+        Bodygroups = {
+            {12, 1},
+        }
+    },
+    ["stock_pkm"] = {
+        Bodygroups = {
+            {12, 2},
+        }
+    },
     ["stock_type56-2"] = {
         Bodygroups = {
             {12, 3},
@@ -529,6 +539,11 @@ SWEP.AttachmentElements = {
     ["stockgone"] = {
         Bodygroups = {
             {12, 4},
+        }
+    },
+    ["muzzle_type56"] = {
+        Bodygroups = {
+            {13, 1},
         }
     },
     ["barrel_extended"] = {
@@ -644,6 +659,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(24.75, 0, 4.55),
+        DefaultIcon = Material("entities/bocw_atts/other/ak47_frontsight2.png", "mips smooth"),
         Category = {"bocw_ak47_frontsight"},
     },
     {
@@ -651,8 +667,8 @@ SWEP.Attachments = {
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        --DefaultIcon = Material("entities/bocw_atts/barrels/ak47_barrel.png", "mips smooth"),
-        Icon_Offset = Vector(13.75, 0, 0),
+        DefaultIcon = Material("entities/bocw_atts/barrels/ak47_barrel2.png", "mips smooth"),
+        Icon_Offset = Vector(11.5, 0, 0),
         Category = {"bocw_ak47_barrel"},
     },
     {
@@ -660,7 +676,8 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(13, 0, 3.25),
+        Icon_Offset = Vector(13.6, 0, 4),
+        DefaultIcon = Material("entities/bocw_atts/other/ak47_handguard1.png", "mips smooth"),
         Category = {"bocw_ak47_handguard"},
     },
     {
@@ -669,6 +686,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(10, 0, 4.55),
+        DefaultIcon = Material("entities/bocw_atts/other/akm_rearsight2.png", "mips smooth"),
         Category = {"bocw_ak47_rearsight"},
     },
     {
@@ -692,6 +710,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(4.6, 0, 4),
+        DefaultIcon = Material("entities/bocw_atts/other/ak47_receiver2.png", "mips smooth"),
         UnInstalledElements = {"receiver_ak47"},
         Category = {"bocw_ak47_receiver"},
     },
@@ -711,9 +730,8 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         DefaultIcon = Material("arc9/def_att_icons/stock_ak.png", "mips smooth"),
-        Icon_Offset = Vector(-6, 0, 1.5),
+        Icon_Offset = Vector(-6, 0, 2.75),
         Category = {"bocw_ak47_stock"},
-        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "HANDLE",
@@ -1012,7 +1030,6 @@ SWEP.Animations = {
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
         MinProgress = 0.5,
-        MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.AK47_reload_empty_magoutstart", t = 0.45 },
             { s = "ARC9_BOCW.AK47_reload_empty_magout", t = 0.55 },
@@ -1048,7 +1065,7 @@ SWEP.Animations = {
         Source = "reload_dualmag",
         MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.AK47_reload_magout", t = 0.4 },
             { s = "ARC9_BOCW.AK47_reload_dualmag_magin", t = 1 },
         },
         IKTimeLine = {

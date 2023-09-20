@@ -26,6 +26,51 @@ ARC9.LoadAttachment(ATT, "bocw_xm4_muzzle_base")
 
 ATT = {}
 
+ATT.PrintName = "AKM Muzzle Brake"
+ATT.CompactName = "AKM MUZZ"
+ATT.Icon = Material("entities/bocw_atts/muzzles/akm_base.png", "mips smooth")
+ATT.Description = [[7.62x39mm Muzzle Brake]]
+
+ATT.SortOrder = -9
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ak47_muzzle.mdl"
+
+ATT.Category = {"bocw_ak47_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_ak47"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ak47_muzzle_base")
+
+ATT = {}
+
+ATT.PrintName = "AK-47 Muzzle Brake"
+ATT.CompactName = "AK-47 MUZZ"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ak47_base.png", "mips smooth")
+ATT.Description = [[7.62x39mm Muzzle Brake]]
+
+ATT.SortOrder = -10
+
+ATT.Category = {"bocw_ak47_muzzle"}
+
+ATT.ActivateElements = {"muzzle_type56"}
+
+ATT.MuzzleParticleOverride = "muzzleflash_ak47"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_type56_muzzle_base")
+
+ATT = {}
+
 ATT.PrintName = "Ak 5 Muzzlebrake"
 ATT.CompactName = "Ak5 MUZZ"
 ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")

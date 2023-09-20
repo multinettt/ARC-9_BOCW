@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = "AKM Receiver"
 ATT.CompactName = "AKM RCVR"
-ATT.Icon = Material("entities/bocw_atts/other/akm_receiver.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/ak47_receiver4.png", "mips smooth")
 ATT.Description = [[Lighter sheet steel stamped receiver. Manufacture date: 1976]]
 
 ATT.SortOrder = 2
@@ -21,7 +21,7 @@ ATT = {}
 
 ATT.PrintName = "Type 56-2 Receiver"
 ATT.CompactName = "T56 RCVR"
-ATT.Icon = Material("entities/bocw_atts/other/ak47_receiver.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/ak47_receiver3.png", "mips smooth")
 ATT.Description = [[Type 3 AK-47 milled receiver. Manufacture date: 1953]]
 
 ATT.SortOrder = 3
@@ -40,7 +40,7 @@ ATT = {}
 
 ATT.PrintName = "Type 56 Rear Sight"
 ATT.CompactName = "T56 REAR"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/akm_rearsight3.png", "mips smooth")
 ATT.Description = [[Type 3 AK-47 milled receiver.]]
 
 ATT.SortOrder = 1
@@ -78,7 +78,7 @@ ATT = {}
 
 ATT.PrintName = "Type 56 Handguard"
 ATT.CompactName = "T56 HGRD"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/ak47_handguard3.png", "mips smooth")
 ATT.Description = [[Lighter sheet steel stamped receiver.]]
 
 ATT.SortOrder = 2

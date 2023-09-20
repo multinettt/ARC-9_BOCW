@@ -13,13 +13,9 @@ ATT.SortOrder = 0
 
 ATT.Category = "bocw_ak47_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak47_stock_tactical.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
 ATT.SpeedMultSights = 1.2
+
+ATT.ActivateElements = {"stock_tac"}
 
 ARC9.LoadAttachment(ATT, "bocw_ak47_stock_tactical")
 
@@ -111,18 +107,12 @@ ATT.SortOrder = 5
 
 ATT.Category = "bocw_ak47_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak47_stock_spetsnazpkm.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
 ATT.SpeedMultShooting = 1.05
-ATT.SpeedMultSighted = 1.15
+ATT.SpeedMultSights = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone", "gripgone"}
+ATT.ActivateElements = {"stock_pkm"}
 
 ARC9.LoadAttachment(ATT, "bocw_ak47_stock_spetsnazpkm")
 
@@ -150,7 +140,7 @@ ATT.MultAimDownSightsTime = 0.9
 ATT.ActivateElements = {"stockgone", "gripgone"}
 
 ATT.SprintToFireTimeMult = 1.3
-ATT.SpeedMultSighted = 1.4
+ATT.SpeedMultSights = 1.4
 
 ATT.SpreadMultHipFire = 1.3
 
