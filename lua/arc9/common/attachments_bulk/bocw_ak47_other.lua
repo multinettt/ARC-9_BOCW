@@ -97,7 +97,7 @@ ATT = {}
 
 ATT.PrintName = "Type 56 Front Sight"
 ATT.CompactName = "T56 FRNT"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/other/ak47_frontsight3.png", "mips smooth")
 ATT.Description = [[Lighter sheet steel stamped receiver.]]
 
 ATT.SortOrder = 2

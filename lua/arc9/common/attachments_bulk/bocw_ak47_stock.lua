@@ -17,6 +17,8 @@ ATT.SpeedMultSights = 1.2
 
 ATT.ActivateElements = {"stock_tac"}
 
+ATT.ExcludeElements = {"receiver_type56"}
+
 ARC9.LoadAttachment(ATT, "bocw_ak47_stock_tactical")
 
 ATT = {}
@@ -114,6 +116,8 @@ ATT.SpreadMultHipFire = 1.15
 
 ATT.ActivateElements = {"stock_pkm"}
 
+ATT.ExcludeElements = {"receiver_type56"}
+
 ARC9.LoadAttachment(ATT, "bocw_ak47_stock_spetsnazpkm")
 
 ATT = {}
@@ -139,9 +143,37 @@ ATT.MultAimDownSightsTime = 0.9
 
 ATT.ActivateElements = {"stockgone", "gripgone"}
 
+ATT.ExcludeElements = {"receiver_type56"}
+
 ATT.SprintToFireTimeMult = 1.3
 ATT.SpeedMultSights = 1.4
 
 ATT.SpreadMultHipFire = 1.3
 
 ARC9.LoadAttachment(ATT, "bocw_ak47_stock_kgbskeletal")
+
+ATT = {}
+
+ATT.PrintName = "Type 56-2 Stock" --// 6
+ATT.CompactName = "T56-2 STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ak47_kgbskeletal.png", "mips smooth")
+ATT.Description = [[Folding stock enables concealment versatility for improved sprint recovery and walking speed when aiming.
+
+The KGB Skeletal Stock is a Stock attachment available for some Warsaw Pact related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate Warsaw Pact equivalent with the KGB Pad. The NATO equivalents are the Raider Pad and Raider Stock, while Shotguns get the Marathon Stock.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ak47_stock"
+
+ATT.MultAimDownSightsTime = 0.9
+
+ATT.ActivateElements = {"stock_type56-2"}
+
+ATT.RequireElements = {"receiver_type56"}
+
+ATT.SprintToFireTimeMult = 1.3
+ATT.SpeedMultSights = 1.4
+
+ATT.SpreadMultHipFire = 1.3
+
+ARC9.LoadAttachment(ATT, "bocw_ak47_stock_type562")

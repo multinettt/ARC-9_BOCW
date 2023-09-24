@@ -24,7 +24,7 @@ ATT.SpeedMultSights = 1.1
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_ultralight"}
+ATT.ActivateElements = {"barrel_ultralight", "ak47_barrel"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -41,7 +41,7 @@ The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops C
 
 ATT.SortOrder = 16.5
 
-ATT.Category = "bocw_ak47_barrel_tagweapon"
+ATT.Category = "bocw_ak47_barrel"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_cavalry.mdl"
 
@@ -55,7 +55,7 @@ ATT.ArmorPiercingMult = 3
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_cavalrylancer"}
+ATT.ActivateElements = {"barrel_cavalrylancer", "ak47_barrel"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -77,7 +77,7 @@ ATT.Category = "bocw_ak47_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_vdvreinforced.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.808, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMaxMult = 2
@@ -89,7 +89,7 @@ ATT.SpeedMultSights = 0.8
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_vdvreinforced"}
+ATT.ActivateElements = {"barrel_vdvreinforced", "ak47_barrel"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -111,7 +111,7 @@ ATT.Category = "bocw_ak47_barrel"
 ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_liberator.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.808, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.PhysBulletMuzzleVelocityMult = 2
@@ -121,7 +121,7 @@ ATT.SpeedMultSights = 0.8
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_liberator"}
+ATT.ActivateElements = {"barrel_liberator", "ak47_barrel", "barrel_rpk"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -138,9 +138,9 @@ The Takedown barrel is a barrel attachment type in Call of Duty: Black Ops Cold 
 
 ATT.SortOrder = 18.2
 
-ATT.Category = "bocw_ak47_barrel_tagweapon"
+ATT.Category = "bocw_ak47_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_rifled.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_takedown.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -153,7 +153,7 @@ ATT.SpeedMult = 0.95
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_rifled"}
+ATT.ActivateElements = {"barrel_takedown", "ak47_barrel"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -172,10 +172,10 @@ ATT.SortOrder = 20
 
 ATT.Category = "bocw_ak47_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_taskforce.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ak47_barrel_spetsnazrpk.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.808, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.08
@@ -189,8 +189,30 @@ ATT.RecoilSideMult = 1.15
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_spetsnazrpk"}
+ATT.ActivateElements = {"barrel_spetsnazrpk", "ak47_barrel", "barrel_rpk"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ak47_barrel_taskforce")
+
+---
+
+ATT = {}
+
+ATT.PrintName = [[Type 56 Barrel]] --// 6
+ATT.CompactName = [[TYPE56]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ak47_barrel3.png", "mips smooth")
+ATT.Description = [[Barrel of the Type 56 assault rifle.]]
+
+ATT.SortOrder = -1
+
+ATT.Category = "bocw_ak47_barrel"
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_type56"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ak47_barrel_type56")

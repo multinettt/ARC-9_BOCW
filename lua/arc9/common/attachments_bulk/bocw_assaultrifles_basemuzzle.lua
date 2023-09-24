@@ -57,9 +57,12 @@ ATT.Description = [[7.62x39mm Muzzle Brake]]
 
 ATT.SortOrder = -10
 
+ATT.Model = "models/weapons/arc9/atts/bocw_ak47_muzzle2.mdl"
+
 ATT.Category = {"bocw_ak47_muzzle"}
 
-ATT.ActivateElements = {"muzzle_type56"}
+ATT.ModelOffset = Vector(0.329, -0.045, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MuzzleParticleOverride = "muzzleflash_ak47"
 ATT.MuzzleParticleOverride_Priority = 10

@@ -288,7 +288,7 @@ SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
 SWEP.DistantShootSound = "ARC9_BOCW.Shared_Decay_Close_Pistol"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
-SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Null"            -- Distant fire silenced
+SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Decay_Close_Suppressor"            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
@@ -346,6 +346,8 @@ SWEP.NoViewBob = false
 -------------------------- VISUALS
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
+    [1] = "tag_bullet_deplete_sqtl_00_animate",
+    [2] = "tag_bullet_deplete_sqtl_01_animate",
 }
 SWEP.CaseBones = {}
 -- Unlike BulletBones, these bones are determined by the missing bullet amount when reloading
@@ -475,12 +477,6 @@ SWEP.AttachmentElements = {
             {8, 0},
         }
     },
-    ["handguard_type56"] = {
-        Bodygroups = {
-            {8, 1},
-            {7, 3},
-        }
-    },
     ["receiver_ak47"] = {
         Bodygroups = {
             {10, 0},
@@ -541,72 +537,86 @@ SWEP.AttachmentElements = {
             {12, 4},
         }
     },
-    ["muzzle_type56"] = {
+    ["barrel_type56"] = {
         Bodygroups = {
-            {13, 1},
-        }
+            {6, 1},
+        },
     },
-    ["barrel_extended"] = {
+    ["barrel_ultralight"] = {
         Bodygroups = {
-            {5, 1}
+            {4, 2},
+            {6, 2},
+            {7, 1}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(-5.775, 0, 0),
             },
         },
     },
     ["barrel_cavalrylancer"] = {
         Bodygroups = {
-            {5, 1},
-            {3, 1},
+            {4, 2},
+            {6, 2},
+            {7, 2}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(-3.301, 0, 0),
             },
         },
     },
-    ["barrel_reinforcedheavy"] = {
+    ["barrel_vdvreinforced"] = {
         Bodygroups = {
-            {5, 1}
+            {4, 2},
+            {6, 2},
+            {7, 2}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.02, 0, 2.6225),
+                Pos = Vector(1.37, 0, 0),
             },
         },
     },
-    ["barrel_chromelined"] = {
+    ["barrel_liberator"] = {
         Bodygroups = {
-            {5, 1}
+            {4, 2},
+            {6, 2},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(12.36, 0, 2.6225),
+                Pos = Vector(6.1, 0, 0),
             }
         },
     },
     ["barrel_takedown"] = {
         Bodygroups = {
-            {5, 1},
-            {3, 1},
+            {4, 2},
+            {6, 2},
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.95, 0, 2.6225),
+                Pos = Vector(1.37, 0, 0),
             }
         },
     },
-    ["barrel_taskforce"] = {
+    ["barrel_spetsnazrpk"] = {
         Bodygroups = {
-            {5, 1}
+            {4, 2},
+            {6, 2},
+            {7, 2}
         },
         AttPosMods = {
             [2] = {
-                Pos = Vector(11.96, 0, 2.6225),
+                Pos = Vector(6.1, 0, 0),
             }
         },
+    },
+    ["handguard_type56"] = {
+        Bodygroups = {
+            {8, 1},
+            {7, 3},
+        }
     },
 }
 
@@ -659,16 +669,17 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(24.75, 0, 4.55),
+        ExcludeElements = {"ak47_barrel"},
         DefaultIcon = Material("entities/bocw_atts/other/ak47_frontsight2.png", "mips smooth"),
         Category = {"bocw_ak47_frontsight"},
     },
     {
         PrintName = "BARREL",
         Bone = "tag_barrel",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-2.85, 0, 0),
         Ang = Angle(0, 0, 0),
         DefaultIcon = Material("entities/bocw_atts/barrels/ak47_barrel2.png", "mips smooth"),
-        Icon_Offset = Vector(11.5, 0, 0),
+        Icon_Offset = Vector(12, 0, 0),
         Category = {"bocw_ak47_barrel"},
     },
     {
@@ -758,7 +769,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-
     local camo = 0
     if attached["universal_camo"] then
         camo = 1
@@ -766,6 +776,43 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "AK-47"
+
+    if attached["bocw_ak47_stock_duster"] then
+            gunname = "AKS-47"
+    end
+
+    if attached["bocw_ak47_stock_tactical"] and attached["barrel_rpk"] then
+            gunname = "RPK"
+    end
+
+    if attached["receiver_akm"] then
+        gunname = "AKM"
+
+        if attached["bocw_ak47_stock_duster"] then
+            gunname = "AKMS"
+        end
+    end
+
+    if attached["receiver_type56"] then
+        gunname = "Type 56"
+
+        if attached["bocw_ak47_stock_duster"] then
+            gunname = "Type 56-1"
+        end
+
+        if attached["bocw_ak47_stock_type562"] then
+            gunname = "Type 56-2"
+        end
+    end
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
@@ -965,6 +1012,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         MinProgress = 0.55,
+        MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.AK47_reload_empty_magoutstart", t = 0.45 },
             { s = "ARC9_BOCW.AK47_reload_empty_magout", t = 0.55 },
