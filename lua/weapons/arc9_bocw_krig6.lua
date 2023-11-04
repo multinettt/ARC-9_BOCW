@@ -572,9 +572,33 @@ SWEP.AttachmentSlotMods = {
 
 -- Adjust the stats of specific attachments when applied to this gun
 SWEP.AttachmentTableOverrides = {
-    -- ["att_name"] = {
-    --     Mult_Recoil = 1
-    -- }
+    ["bocw_optic_visiontech2x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_anpvs4thermal"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_axialarms3x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_hangmanrf"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_pellingtonscope"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_royalkross4x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_susatmultizoom"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_ultrazoomcustom"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_vulturecustomzoom"] = {
+        VisualRecoil = 0.2
+    },
 }
 
 SWEP.Attachments = {

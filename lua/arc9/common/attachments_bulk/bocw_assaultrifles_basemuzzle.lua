@@ -76,7 +76,7 @@ ATT = {}
 
 ATT.PrintName = "Ak 5 Muzzlebrake"
 ATT.CompactName = "Ak5 MUZZ"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/muzzles/krig6_base.png", "mips smooth")
 ATT.Description = [[ ]]
 
 ATT.SortOrder = -10

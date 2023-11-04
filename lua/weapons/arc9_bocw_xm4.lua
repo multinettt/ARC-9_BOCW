@@ -571,9 +571,33 @@ SWEP.AttachmentSlotMods = {
 
 -- Adjust the stats of specific attachments when applied to this gun
 SWEP.AttachmentTableOverrides = {
-    -- ["att_name"] = {
-    --     Mult_Recoil = 1
-    -- }
+    ["bocw_optic_visiontech2x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_anpvs4thermal"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_axialarms3x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_hangmanrf"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_pellingtonscope"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_royalkross4x"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_susatmultizoom"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_ultrazoomcustom"] = {
+        VisualRecoil = 0.2
+    },
+    ["bocw_optic_vulturecustomzoom"] = {
+        VisualRecoil = 0.2
+    },
 }
 
 SWEP.Attachments = {
@@ -599,10 +623,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(10.5, 0, 2.5),
+        Pos = Vector(-10, -4.42, 6.675),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, -1),
-        Category = {"bo1_rail_underbarrel"},
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_underbarrel_west"},
     },
     {
         PrintName = "BODY",
@@ -779,6 +803,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.15 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -792,6 +838,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
@@ -800,6 +868,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_magout", t = 0.7 },
             { s = "ARC9_BOCW.XM4_reload_magin", t = 1.2 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.1 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_ext"] = {
@@ -813,6 +903,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
             { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_dual"] = {
