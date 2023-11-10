@@ -225,7 +225,16 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_xm4_body"},
-    }
+    },
+    {
+        PrintName = "UNDRBARREL",
+        Bone = "tag_weapon",
+        Pos = Vector(26, -4.4, -3.1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_underbarrel_west"},
+        InstalledElements = {"handguard_quadgrip"}
+    },
 }
 
 ARC9.LoadAttachment(ATT, "bocw_xm4_handguard_quadrail")

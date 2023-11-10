@@ -621,6 +621,15 @@ SWEP.Attachments = {
         Installed = "bocw_krig6_muzzle_base",
     },
     {
+        PrintName = "UNDRBARREL",
+        Bone = "tag_weapon",
+        Pos = Vector(-9.4, -4.42, 6.62),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_underbarrel_west"},
+        InstalledElements = {"krig6_foregrip"},
+    },
+    {
         PrintName = "BODY",
         Bone = "tag_weapon",
         Pos = Vector(15.5, 0.775, 4.05),
@@ -706,6 +715,10 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         return anim .. "_mix"
     end
 
+    if elements["krig6_foregrip"] then
+        return anim .. "_grip"
+    end
+
 end
 
 SWEP.Animations = {
@@ -723,12 +736,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.45,
+                t = 0.25,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.7,
                 lhik = 1,
                 rhik = 0
             },
@@ -765,12 +778,7 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -862,17 +870,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.55,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.65,
                 lhik = 1,
                 rhik = 0
             },
@@ -898,12 +906,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -927,17 +935,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.55,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.65,
                 lhik = 1,
                 rhik = 0
             },
@@ -958,17 +966,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.75,
+                t = 0.8,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -990,7 +998,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
@@ -1021,7 +1029,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
@@ -1053,7 +1061,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
@@ -1094,7 +1102,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -1127,7 +1135,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -1155,6 +1163,12 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.Krig6_inspect_var", t = 2.1 },
             { s = "ARC9_BOCW.Krig6_inspect_var", t = 3.6 },
         },
+    },
+    ["1_enter_inspect"] = {
+        Source = "inspect_dragon",
+        EventTable = {
+            { s = "ARC9_BOCW.Krig6_inspect_dragon", t = 0 },
+        },
         IKTimeLine = {
             {
                 t = 0,
@@ -1178,10 +1192,12 @@ SWEP.Animations = {
             },
         },
     },
-    ["1_enter_inspect"] = {
-        Source = "inspect_dragon",
+    ["enter_inspect_grip"] = {
+        Source = "inspect_grip",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_inspect_dragon", t = 0 },
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 0.1 },
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 2.1 },
+            { s = "ARC9_BOCW.Krig6_inspect_var", t = 3.6 },
         },
         IKTimeLine = {
             {
@@ -1190,12 +1206,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.45,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.55,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.85,
                 lhik = 0,
                 rhik = 0
             },

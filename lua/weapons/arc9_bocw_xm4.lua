@@ -499,6 +499,11 @@ SWEP.AttachmentElements = {
             {11, 1},
         }
     },
+    ["handguard_quadgrip"] = {
+        Bodygroups = {
+            {12, 1},
+        }
+    },
     ["barrel_extended"] = {
         Bodygroups = {
             {5, 1}
@@ -623,10 +628,11 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-10, -4.42, 6.675),
+        Pos = Vector(-10.65, -4.42, 6.675),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
         Category = {"bocw_underbarrel_west"},
+        ExcludeElements = {"handguard_quad"},
     },
     {
         PrintName = "BODY",
@@ -772,6 +778,23 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_boltrelease", t = 0.5 },
             { s = "ARC9_BOCW.XM4_ready_end", t = 0.9 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.65,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["1_ready"] = {
         Source = "ready_quick",
@@ -781,10 +804,49 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_boltrelease", t = 0.4 },
             { s = "ARC9_BOCW.XM4_ready_end", t = 0.7 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.65,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["bash"] = {
         Source = "melee",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.55,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -935,6 +997,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 1.55 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["1_reload_dual"] = {
         Source = "reload_dual2",
@@ -943,6 +1027,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_magout_dual", t = 0.35 },
             { s = "ARC9_BOCW.XM4_reload_magin_dual", t = 0.8 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 1.55 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_dual"] = {
@@ -956,6 +1062,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.55 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["1_reload_empty_dual"] = {
         Source = "reload_dual2_empty",
@@ -968,6 +1096,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_fast_boltrelease", t = 1.5 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 1.9 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_mix"] = {
         Source = "reload_mix",
@@ -976,6 +1126,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_reload_magout", t = 0.65 },
             { s = "ARC9_BOCW.XM4_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.15 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_mix"] = {
@@ -989,6 +1161,28 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_boltback", t = 2.2 },
             { s = "ARC9_BOCW.XM4_boltrelease", t = 2.5 },
             { s = "ARC9_BOCW.XM4_reload_end", t = 2.8 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["enter_sprint"] = {
@@ -1013,12 +1207,56 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.XM4_inspect1", t = 0 },
             { s = "ARC9_BOCW.XM4_inspect2", t = 3.2 },
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.92,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.97,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["1_enter_inspect"] = {
         Source = "inspect_elektrik",
         EventTable = {
             { s = "ARC9_BOCW.XM4_inspect_giga1", t = 0 },
             { s = "ARC9_BOCW.XM4_inspect_giga2", t = 6.15 },
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.94,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.98,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["enter_inspect_ext"] = {
