@@ -201,39 +201,39 @@ ATT = {}
 ATT.PrintName = "Quad Rail Handguard"
 ATT.CompactName = "QDRL HNDG"
 ATT.Icon = Material("entities/bocw_atts/barrels/xm4_quadrail.png", "mips smooth")
-ATT.Description = [[Handguard with 4 rails on each side.]]
+ATT.Description = [[Handguard with 4 rails on each side. Cool if you're into that kind of stuff.]]
 
 ATT.SortOrder = 0
 
 ATT.Category = "bocw_xm4_handguard"
 
-ATT.ActivateElements = {"handguard_quad"}
+ATT.ActivateElements = {"handguard_quad", "slinggone"}
 
 ATT.Attachments = {
-    {
-        PrintName = "BODY 2",
-        Bone = "tag_weapon",
-        Pos = Vector(3, 1.1, 0),
-        Ang = Angle(0, 0, -90),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_xm4_body"},
-    },
-    {
-        PrintName = "BODY 3",
-        Bone = "tag_weapon",
-        Pos = Vector(5, 0, -1),
-        Ang = Angle(0, 0, 180),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_xm4_body"},
-    },
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
         Pos = Vector(26, -4.4, -3.1),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(20.25, 4.5, -5),
+        Icon_Offset = Vector(20.3, 4.5, -4.7),
         Category = {"bocw_underbarrel_west"},
         InstalledElements = {"handguard_quadgrip"}
+    },
+    {
+        PrintName = "BODY 2",
+        Bone = "tag_weapon",
+        Pos = Vector(4.57, 1.1, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, -0.5),
+        Category = {"bocw_xm4_body"},
+    },
+    {
+        PrintName = "BODY 3",
+        Bone = "tag_weapon",
+        Pos = Vector(4.57, -0.1, -1),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, -0.5),
+        Category = {"bocw_xm4_body"},
     },
 }
 
