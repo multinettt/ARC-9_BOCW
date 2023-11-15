@@ -63,7 +63,7 @@ SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 
-SWEP.DefaultBodygroups = "0000000000000200000000"
+SWEP.DefaultBodygroups = "0000000000000000000000"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-5, 3, -6.2),
@@ -310,9 +310,9 @@ SWEP.ExitUBGLSound = ""
 
 SWEP.MalfunctionSound = ""
 
-SWEP.MeleeHitSound = "arc9/melee_hitbody.wav"
+SWEP.MeleeHitSound = "ARC9_BOCW.Shared_Rifle_Melee_Hit"
 SWEP.MeleeHitWallSound = "arc9/melee_hitworld.wav"
-SWEP.MeleeSwingSound = "arc9/melee_miss.wav"
+SWEP.MeleeSwingSound = "ARC9_BOCW.Shared_Rifle_Melee_Swing"
 
 SWEP.BreathInSound = "arc9/breath_inhale.wav"
 SWEP.BreathOutSound = "arc9/breath_exhale.wav"
@@ -542,6 +542,16 @@ SWEP.AttachmentElements = {
             {6, 1},
         },
     },
+    ["bayonet_type56"] = {
+        Bodygroups = {
+            {5, 1},
+        },
+    },
+    ["sling_type56"] = {
+        Bodygroups = {
+            {14, 1},
+        },
+    },
     ["barrel_ultralight"] = {
         Bodygroups = {
             {4, 2},
@@ -688,7 +698,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
         Category = {"bocw_underbarrel_west", "bocw_underbarrel_east"},
-        ExcludeElements = {"handguard_quad"},
+        ExcludeElements = {"bayonet_type56"},
     },
     {
         PrintName = "BODY",
@@ -789,6 +799,25 @@ SWEP.Attachments = {
         Category = {"bocw_ak47_wrap"},
     },
     {
+        PrintName = "BAYONET LUG",
+        Bone = "tag_weapon",
+        Pos = Vector(22.7, 0, 2.36),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_ak47_bayonet"},
+        RequireElements = {"frontsight_type56", "handguard_type56"},
+    },
+    {
+        PrintName = "SLING",
+        Bone = "tag_weapon",
+        Pos = Vector(-1.5, -1, 2.8),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_ak47_sling"},
+        RequireElements = {"stock_type56-2"},
+        ExcludeElements = {"barrel_ultralight"},
+    },
+    {
         PrintName = "Cosmetic",
         DefaultCompactName = "CAMO",
         DefaultIcon = Material("arc9/def_att_icons/skin.png"),
@@ -886,12 +915,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.45,
+                t = 0.35,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.8,
+                t = 0.7,
                 lhik = 1,
                 rhik = 0
             },
@@ -905,12 +934,12 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.45,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -935,7 +964,7 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
         },
@@ -969,12 +998,12 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.6,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -998,12 +1027,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -1034,12 +1063,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -1064,12 +1093,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.05,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
@@ -1100,12 +1129,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -1129,12 +1158,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.05,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
@@ -1160,12 +1189,12 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.75,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -1192,12 +1221,12 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.75,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -1222,12 +1251,12 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.75,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -1254,12 +1283,12 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
                 t = 0.75,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
             {
@@ -1294,7 +1323,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -1319,7 +1348,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.05,
                 lhik = 0,
                 rhik = 0
             },
@@ -1329,7 +1358,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -1364,17 +1393,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.075,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.5,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.65,
                 lhik = 1,
                 rhik = 0
             },
@@ -1394,17 +1423,17 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.1,
+                t = 0.075,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.5,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.65,
                 lhik = 1,
                 rhik = 0
             },

@@ -100,7 +100,7 @@ ATT = {}
 
 ATT.PrintName = "QBZ-95 Muzzlebrake"
 ATT.CompactName = "QBZ MUZZ"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/muzzles/qbz83_base.png", "mips smooth")
 ATT.Description = [[ ]]
 
 ATT.SortOrder = -10
@@ -124,7 +124,7 @@ ATT = {}
 
 ATT.PrintName = "FFAR1 Muzzlebrake"
 ATT.CompactName = "FFR1 MUZZ"
-ATT.Icon = Material("entities/acwatt_bocw.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/muzzles/ffar1_base.png", "mips smooth")
 ATT.Description = [[ ]]
 
 ATT.SortOrder = -10

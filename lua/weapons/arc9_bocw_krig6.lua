@@ -307,9 +307,9 @@ SWEP.ExitUBGLSound = ""
 
 SWEP.MalfunctionSound = ""
 
-SWEP.MeleeHitSound = "arc9/melee_hitbody.wav"
+SWEP.MeleeHitSound = "ARC9_BOCW.Shared_Rifle_Melee_Hit"
 SWEP.MeleeHitWallSound = "arc9/melee_hitworld.wav"
-SWEP.MeleeSwingSound = "arc9/melee_miss.wav"
+SWEP.MeleeSwingSound = "ARC9_BOCW.Shared_Rifle_Melee_Swing"
 
 SWEP.BreathInSound = "arc9/breath_inhale.wav"
 SWEP.BreathOutSound = "arc9/breath_exhale.wav"

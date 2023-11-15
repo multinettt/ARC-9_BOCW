@@ -304,7 +304,11 @@ SWEP.Silencer = false -- Silencer installed or not?
 SWEP.DryFireSound = "ARC9_BOCW.Shared_DryFire_AR"
 
 SWEP.FiremodeSound = "arc9/firemode.wav"
-SWEP.ToggleAttSound = "items/flashlight1.wav"
+SWEP.ToggleAttSound = {
+    "arc9/toggles/flashlight_laser_toggle_on_01.ogg",
+    "arc9/toggles/flashlight_laser_toggle_on_02.ogg",
+    "arc9/toggles/flashlight_laser_toggle_on_03.ogg",
+}
 
 SWEP.EnterSightsSound = ""
 SWEP.ExitSightsSound = ""
@@ -317,9 +321,9 @@ SWEP.ExitUBGLSound = ""
 
 SWEP.MalfunctionSound = ""
 
-SWEP.MeleeHitSound = "arc9/melee_hitbody.wav"
+SWEP.MeleeHitSound = "ARC9_BOCW.Shared_Rifle_Melee_Hit"
 SWEP.MeleeHitWallSound = "arc9/melee_hitworld.wav"
-SWEP.MeleeSwingSound = "arc9/melee_miss.wav"
+SWEP.MeleeSwingSound = "ARC9_BOCW.Shared_Rifle_Melee_Swing"
 
 SWEP.BreathInSound = "arc9/breath_inhale.wav"
 SWEP.BreathOutSound = "arc9/breath_exhale.wav"
@@ -391,7 +395,7 @@ SWEP.CustomBlendFactor = nil
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.955, -5.9, 1.145),
+    Pos = Vector(-3.955, -3.5, 1.145),
     Ang = Angle(-1.45, -2.6, 0),
     Magnification = 1,
     --AssociatedSlot = 0, -- Attachment slot to associate the sights with. Causes RT scopes to render.
@@ -448,7 +452,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 --SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- While in TPIK only
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2 -- Non TPIK
 SWEP.AnimDraw = false
-SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
+--SWEP.AnimMelee = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 
 -------------------------- ATTACHMENTS
 
@@ -638,6 +642,14 @@ SWEP.Attachments = {
         Installed = "bocw_ffar1_muzzle_base",
     },
     {
+        PrintName = "UNDRBARREL",
+        Bone = "tag_weapon",
+        Pos = Vector(-12.2, -4.42, 6.23),
+        Ang = Angle(-1.14, 0, 0),
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_underbarrel_ffar"},
+    },
+    {
         PrintName = "BODY",
         Bone = "tag_weapon",
         Pos = Vector(11.9, 1.024, 3.5),
@@ -774,7 +786,7 @@ SWEP.Animations = {
             },
             {
                 t = 0.2,
-                lhik = 0,
+                lhik = 1,
                 rhik = 0
             },
         },
@@ -818,12 +830,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.75,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 0.8,
                 lhik = 1,
                 rhik = 0
             },
@@ -924,7 +936,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
@@ -1061,7 +1073,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
@@ -1134,12 +1146,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.75,
+                t = 0.8,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -1166,12 +1178,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.75,
+                t = 0.8,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -1266,12 +1278,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.75,
+                t = 0.8,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
@@ -1403,7 +1415,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.95,
                 lhik = 1,
                 rhik = 0
             },
@@ -1425,7 +1437,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
