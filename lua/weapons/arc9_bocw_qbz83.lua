@@ -285,7 +285,7 @@ SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
 SWEP.DistantShootSound = "ARC9_BOCW.Shared_Decay_Close_Pistol"                     -- Distant fire
 SWEP.DistantShootSoundIndoor = nil              -- Distant fire indoors
-SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Null"            -- Distant fire silenced
+SWEP.DistantShootSoundSilenced = "ARC9_BOCW.Shared_Decay_Close_Suppressor"            -- Distant fire silenced
 SWEP.DistantShootSoundIndoorSilenced = nil      -- Distant fire indoors silenced
 SWEP.FirstDistantShootSoundSilenced = nil       -- First distant fire silenced
 
@@ -813,7 +813,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.125 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 1.8 },
         },
         IKTimeLine = {
@@ -845,7 +845,7 @@ SWEP.Animations = {
         EventTable = {
             { s = "ARC9_BOCW.QBZ83_reload_start", t = 0 },
             { s = "ARC9_BOCW.QBZ83_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.QBZ83_reload_magin", t = 1.125 },
             { s = "ARC9_BOCW.QBZ83_boltback", t = 1.95 },
             { s = "ARC9_BOCW.QBZ83_boltrelease", t = 2.15 },
             { s = "ARC9_BOCW.QBZ83_reload_end", t = 2.6 },
