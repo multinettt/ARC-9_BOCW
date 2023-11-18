@@ -1,8 +1,8 @@
 # ARC9 BOCW
 
-Early in development weapon pack for [ARC9](https://github.com/HaodongMo/ARC-9)
+Various random weapons for early in development weapon pack on [ARC9](https://github.com/HaodongMo/ARC-9)
 
-This repository is a pile of work for my ARC9 BOCW Weapons project. As weapon classes(Assault Rifles, Shotguns etc.) get completed, they will be ejected from this repository and have their own. The reason behind this is that a single weapon weighs too much for a whole big weapon pack. I will release weapons to the workshop based on weapon classes from now on, not individually. Launch and DLC weapons will be separated.
+This repository is a pile of work for my ARC9 BOCW Weapons project. These are stuff thats been made whilst learning the new weapon base. New repositories will be made when development of a new weapon pack starts, and content included in this repository will be removed and added to said repositories. This repository is basically where it all began, and when I realized that the pack could not possibly be made under a single addon, I started splitting. From now on, newer weapon packs will start development in their own repositories. This one will simply stay as the weapons that havent had their packs made yet.
 
 ## You need to have [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content) in order to avoid missing textures, materials and sounds.
 
@@ -13,13 +13,13 @@ Weapons written in bold are DLC weapons.
 
 Weapons with links embedded to them are not present here and have their own repository.
 
-### Assault Rifles:
+### [Assault Rifles](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 
-- XM4 (XM177E2)
-- AK-47 (AK-47/M Hybrid)
-- Krig 6 (Ak 5)
-- QBZ-83 (QBZ-95-1)
-- FFAR 1 (FAMAS Hybrid)
+- [XM4](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
+- [AK-47](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
+- [Krig 6](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
+- [QBZ-83](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
+- [FFAR 1](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 - **Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]**
 
 ### Submachine Guns:
