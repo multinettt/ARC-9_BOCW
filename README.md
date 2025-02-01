@@ -14,32 +14,32 @@ Weapons written in bold are DLC weapons.
 Weapons with links embedded to them are not present here and have their own repository.
 
 ### [Assault Rifles](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
-
 - [XM4](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 - [AK-47](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 - [Krig 6](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 - [QBZ-83](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
 - [FFAR 1](https://github.com/multinettt/ARC-9_BOCW_AssaultRifles)
-- **Vargo 52 (VAHAN Rifle)       [Not usable, VM Only]**
+- **[Groza](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
+- **[FARA 83](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
+- **[C58](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
+- **[EM2](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
+- **[Grav](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
+- **[Vargo 52](https://github.com/multinettt/ARC-9_BOCW_AssaultRiflesDLC)**
 
 ### Submachine Guns:
-
 - MP5        (H&K MP5K)
 - Milano 821 (SOCIMI Type 821) [Not usable, VM Only]
 - AK-74u     (AKS-74U)
 - **UGR        (APS)**
 
 ### Tactical Rifles:
-
 - M16        (M16A3)           [No Attachments yet]
 - DMR 14     (M14)
 
 ### Light Machine Guns:
-
 - M60        (M60E3)           [No Attachments yet]
 
 ### Sniper Rifles:
-
 - Pellington 703 (Remington 700) [No Attachments yet]
 
 ### [Pistols](https://github.com/multinettt/ARC-9_BOCW_Pistols)
@@ -49,9 +49,11 @@ Weapons with links embedded to them are not present here and have their own repo
 - [**AMP63**](https://github.com/multinettt/ARC-9_BOCW_PistolsDLC)
 - [**Marshal**](https://github.com/multinettt/ARC-9_BOCW_PistolsDLC)
 
-### Shotguns:
-
-- Hauer 77 (Ithaca 37)        [No Attachments yet]
+### [Shotguns](https://github.com/multinettt/ARC-9_BOCW_Shotguns)
+- [Hauer 77](https://github.com/multinettt/ARC-9_BOCW_Shotguns)
+- [Gallo SA12](https://github.com/multinettt/ARC-9_BOCW_Shotguns)
+- **[Streetsweeper](https://github.com/multinettt/ARC-9_BOCW_ShotgunsDLC)**
+- **[.410 Ironhide](https://github.com/multinettt/ARC-9_BOCW_ShotgunsDLC)**
 
 ## Personalization:
 
